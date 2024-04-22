@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from shreethemes.in/bizcell/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:37:58 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <title>HUINIC | HomeGeneral</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
+    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in/" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/Icono.png">
+    <!-- BOOTSTRAP -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- ICON -->
+    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="../../../unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+    <!-- SLIDER-->
+    <link rel="stylesheet" href="css/tiny-slider.css" type="text/css">
+    <link rel="stylesheet" href="css/tobii.min.css">
+    <!-- Custom Css -->
+    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+</head>
+
+<body>
+    <!-- <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Navbar STart -->
+    <header id="topnav" class="defaultscroll sticky">
+        <div class="container">
+            <!-- Logo container-->
+            <a class="logo" href="index.html"><!-- Logooooo-->
+                <span class="logo-light-mode">
+                    <img src="images/Logo.png" class="l-dark" alt="" style="height: 40px;">
+                    <img src="images/Logo.png" class="l-light" alt="" style="height: 40px;">
+                </span>
+                <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+            </a>
+            <!-- End Logo container-->
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+
+            <!-- <ul class="buy-button list-inline mb-0">
+                <li class="list-inline-item search-icon mb-0">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-link text-decoration-none dropdown-toggle mb-0 p-0"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil uil-search h5 text-dark nav-light-icon-dark mb-0"></i>
+                            <i class="uil uil-search h5 text-white nav-light-icon-white mb-0"></i>
+                        </button>
+                        <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-4 py-0"
+                            style="width: 300px;">
+                            <form class="p-4">
+                                <input type="text" id="text" name="name" class="form-control border bg-white"
+                                    placeholder="Search...">
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul> -->
+
+            <div id="navigation">
+                <ul class="navigation-menu nav-light nav-right">
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Home</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="index.html" class="sub-menu-item">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-two.html" class="sub-menu-item">
+                                            Home two
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-three.html" class="sub-menu-item">
+                                            Home three
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-four.html" class="sub-menu-item">
+                                            Home four
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="index-five.html" class="sub-menu-item">
+                                            Home five
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-six.html" class="sub-menu-item">
+                                            Home six
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-seven.html" class="sub-menu-item">
+                                            Home seven
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-onepage.html" class="sub-menu-item">
+                                            Home onepage
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="page-about.html" class="sub-menu-item">About Us</a></li>
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a><span
+                                    class="submenu-arrow"></span>
+                                <ul class="submenu">
+                                    <li><a href="page-service-one.html" class="sub-menu-item">Services One</a></li>
+                                    <li><a href="page-service-two.html" class="sub-menu-item">Service Two</a></li>
+                                    <li><a href="page-service-three.html" class="sub-menu-item">Service Three</a></li>
+                                    <li><a href="page-service-detail.html" class="sub-menu-item">Service Detail </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a><span
+                                    class="submenu-arrow"></span>
+                                <ul class="submenu">
+                                    <li><a href="page-team.html" class="sub-menu-item">Team One</a></li>
+                                    <li><a href="page-team-two.html" class="sub-menu-item">Team Two</a></li>
+                                    <li><a href="page-team-three.html" class="sub-menu-item">Team Three</a></li>
+                                    <li><a href="page-team-detail.html" class="sub-menu-item">Team Detail </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="page-features.html" class="sub-menu-item">Features</a></li>
+                            <li><a href="page-faq.html" class="sub-menu-item">FAQs</a></li>
+                            <li><a href="page-pricing.html" class="sub-menu-item">Pricing</a></li>
+                            <li><a href="page-request.html" class="sub-menu-item">Request</a></li>
+                            
+
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">User Pages</a><span
+                                    class="submenu-arrow"></span>
+                                <ul class="submenu">
+                                    <li><a href="page-login.html" class="sub-menu-item"> Login Page</a></li>
+                                    <li><a href="page-signup.html" class="sub-menu-item"> Signup Page</a></li>
+                                    <li><a href="page-forgotpassword.html" class="sub-menu-item"> Forgot Password</a>
+                                    </li>
+                                    <li><a href="page-thankyou.html" class="sub-menu-item">Thank You</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="page-comingsoon.html" class="sub-menu-item">Coming Soon</a></li>
+                            <li><a href="page-404.html" class="sub-menu-item">404 Error</a></li>
+                            <li><a href="page-components.html" class="sub-menu-item">Components</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Portfolio</a><span class="menu-arrow"></span>
+                        <ul class="submenu megamenu">
+                            <li>
+                                <ul>
+                                    <li class="megamenu-head">Grid Portfolio</li>
+                                    <li><a href="portfolio-grid-two.html" class="sub-menu-item">Two Column</a></li>
+                                    <li><a href="portfolio-grid-three.html" class="sub-menu-item">Three Column</a></li>
+                                    <li><a href="portfolio-grid-four.html" class="sub-menu-item">Four Column</a></li>
+                                    <li><a href="portfolio-grid-five.html" class="sub-menu-item">Five Column</a></li>
+                                    <li><a href="portfolio-grid-six.html" class="sub-menu-item">Six Column</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="megamenu-head">Modern Portfolio</li>
+                                    <li><a href="portfolio-modern-two.html" class="sub-menu-item">Two Column</a></li>
+                                    <li><a href="portfolio-modern-three.html" class="sub-menu-item">Three Column</a>
+                                    </li>
+                                    <li><a href="portfolio-modern-four.html" class="sub-menu-item">Four Column</a></li>
+                                    <li><a href="portfolio-modern-five.html" class="sub-menu-item">Five Column</a></li>
+                                    <li><a href="portfolio-modern-six.html" class="sub-menu-item">Six Column</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="megamenu-head">Masonry Portfolio</li>
+                                    <li><a href="portfolio-masonry-two.html" class="sub-menu-item">Two Column</a></li>
+                                    <li><a href="portfolio-masonry-three.html" class="sub-menu-item">Three Column</a>
+                                    </li>
+                                    <li><a href="portfolio-masonry-four.html" class="sub-menu-item">Four Column</a></li>
+                                    <li><a href="portfolio-masonry-five.html" class="sub-menu-item">Five Column</a></li>
+                                    <li><a href="portfolio-masonry-six.html" class="sub-menu-item">Six Column</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li class="megamenu-head">Standard Portfolio</li>
+                                    <li><a href="portfolio-st-two.html" class="sub-menu-item">Two Column</a></li>
+                                    <li><a href="portfolio-st-three.html" class="sub-menu-item">Three Column</a></li>
+                                    <li><a href="portfolio-st-four.html" class="sub-menu-item">Four Column</a></li>
+                                    <li><a href="portfolio-st-five.html" class="sub-menu-item">Five Column</a></li>
+                                    <li><a href="portfolio-st-six.html" class="sub-menu-item">Six Column</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="megamenu-head">Portfolio Deatils</li>
+                                    <li><a href="portfolio-one.html" class="sub-menu-item"> Portfolio One</a></li>
+                                    <li><a href="portfolio-two.html" class="sub-menu-item"> Portfolio Two</a></li>
+                                    <li><a href="portfolio-three.html" class="sub-menu-item"> Portfolio Three</a></li>
+                                    <li><a href="portfolio-four.html" class="sub-menu-item"> Portfolio Four</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Blogs</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li><a href="blog-two-column.html" class="sub-menu-item">Blog 2 column</a></li>
+                            <li><a href="blog-three-column.html" class="sub-menu-item">Blog 3 column</a></li>
+                            <li><a href="blog-leftsidebar.html" class="sub-menu-item">Left Sidebar</a></li>
+                            <li><a href="blog-rightsidebar.html" class="sub-menu-item">Right Sidebar</a></li>
+                            <li><a href="blog-fullwidth.html" class="sub-menu-item">Full width</a></li>
+                            <li><a href="blog-detail.html" class="sub-menu-item"> Blog detail</a></li>
+                            <li><a href="blog-author.html" class="sub-menu-item">Author</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Contact</a><span
+                            class="submenu-arrow"></span>
+                        <ul class="submenu">
+                            <li><a href="page-contact-one.html" class="sub-menu-item">Contact One</a></li>
+                            <li><a href="page-contact-two.html" class="sub-menu-item">Contact Two</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--end navigation menu-->
+            </div>
+            <!--end navigation-->
+        </div>
+        <!--end container-->
+    </header>
+    <!--end header-->
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <section class="bg-home zoom-image d-flex align-items-center position-relative" id="home">
+        <div class="bg-overlay image-wrap" id="hero-images"></div>
+        <div class="bg-overlay bg-gradient"></div>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-6 col-12">
+                    <div class="title-heading text-center">
+                        <h1 class="heading text-white mb-4">Recursos Humanos
+                        </h1>
+                        <p class="text-white-50 mx-auto para-desc">Sistema de emparejamiento para 
+                            candidatos y empresas
+                        </p>
+                        <a href="#" class="btn btn-primary pt-2 mt-4">Informacion</a>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+    <!--end section--> <!--Desplazador y flecha para bajo-->
+    <!-- <div class="position-relative">
+        <div class="home-shape-arrow">
+            <a href="#about"><i class="mdi mdi-arrow-down arrow-icon text-dark h5 shadow"></i></a>
+        </div>
+
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div> -->
+    <!-- Hero End -->
+
+    <!-- Feature Start -->
+    <!-- <section class="section features bg-white" id="features">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="d-flex features feature-primary core-feature rounded shadow p-4">
+                        <div class="icons text-center mx-auto">
+                            <i class="mdi mdi-globe-model d-block mb-0"></i>
+                        </div>
+                        <div class="flex-1 ms-4">
+                            <h5 class="feature-head mb-1">Globally Partners</h5>
+                            <p class="text-muted mb-0">It is a long established fact that a reader will be distracted by
+                                the
+                                content of at its readable.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 mt-md-0 pt-2 pt-md-0">
+                    <div class="d-flex features feature-primary core-feature rounded shadow p-4">
+                        <div class="icons text-center mx-auto">
+                            <i class="mdi mdi-shield-outline d-block mb-0"></i>
+                        </div>
+                        <div class="flex-1 ms-4">
+                            <h5 class="feature-head mb-1">Trusted Partners</h5>
+                            <p class="text-muted mb-0">It is a long established fact that a reader will be distracted by
+                                the
+                                content of at its readable.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                    <div class="d-flex features feature-primary core-feature rounded shadow p-4">
+                        <div class="icons text-center mx-auto">
+                            <i class="mdi mdi-wallet-outline d-block mb-0"></i>
+                        </div>
+                        <div class="flex-1 ms-4">
+                            <h5 class="feature-head mb-1">Financial Analysis</h5>
+                            <p class="text-muted mb-0">It is a long established fact that a reader will be distracted by
+                                the
+                                content of at its readable.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section> -->
+    <!--end section-->
+    
+    <!-- Feature End -->
+
+    <!-- start ABOUT -->
+    <section class="section bg-light" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="about-image position-relative">
+                        <img src="images/about/1.jpg" class="img-fluid rounded shadow" alt="">
+
+                        <div class="about-image-position">
+                            <img src="images/about/2.jpg" class="img-fluid rounded shadow-lg" alt="">
+                            <!-- Boton de play -->
+                            <!-- <div class="position-absolute top-50 start-50 translate-middle">
+                                <div class="play-icon">
+                                    <div class="position-absolute top-50 start-50 translate-middle">
+                                        <a href="#!" data-type="youtube" data-id="yba7hPeTSjk"
+                                            class="play-btn lightbox border-0">
+                                            <i class="mdi mdi-play text-primary rounded-circle shadow text-center"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+
+                <div class="col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                    <div class="section-title ms-lg-5">
+                        <span class="badge bg-soft-primary text-uppercase text-primary py-2 px-3 rounded-pill mb-2">Informacion</span>
+                        <h3 class="title text-capitalize mb-4">Inicio</h3>
+                        <p class="text-muted">Conectando talento con oportunidades: ¡Nuestro sistema es tu puerta de entrada al empleo ideal!</p>
+                        <!-- <p class="text-muted">Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum est quis
+                            arcu posuere condimentum. Nullam justo eros, pellentesque a metus non, mattis volutpat
+                            libero. Praesent ornare felis ante, sit amet porta felis pellentesque fermentum.</p> -->
+                        <div class="mt-4 pt-2">
+                            <a href="page-about.html" class="btn btn-primary" style="width: 155px;">Inicia sesion</a>
+                        </div>
+                        <div class="mt-4 pt-2">
+                            <a href="page-about.html" class="btn btn-primary">Crear usuario</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!-- end about -->
+    <!-- end section -->
+
+  
+  
+
+    <!-- Partner Start -->
+    <section class="section-two bg-light">
+        <!-- <div class="page-triangle"></div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tiny-five-item">
+                        <div class="tiny-slide">
+                            <img src="images/testi/01.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/02.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/02.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/03.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/04.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/05.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/06.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/07.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/08.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/09.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/10.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--enn container-->
+    </section>
+    <!--end section-->
+    <!-- Partner End -->
+
+
+    <!-- Footer Start -->
+    <footer class="footer bg-dark" style="height: 210px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                    <a href="#" class="logo-footer">
+                        <img src="images/LogoBB.png" height="24" alt="">
+                    </a>
+                    <p class="mt-3 text-black-50"> Conectando oportunidades con grandes talentos en el area automotriz como corresponde</p>
+
+                    <div class="mt-3">
+                        <ul class="list-unstyled footer-icon social mb-0">
+                            <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
+                                        data-feather="facebook" class="fea icon-sm"></i></a></li>
+                            <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
+                                        data-feather="instagram" class="fea icon-sm"></i></a></li>
+                            <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
+                                        data-feather="twitter" class="fea icon-sm"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h4 class="text-light footer-head">Empresa</h4>
+                    <ul class="list-unstyled footer-list mt-4">
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Sobre nosotros</a></li>
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Equipo</a></li>
+                    </ul>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h4 class="text-light footer-head">Links</h4>
+                    <ul class="list-unstyled footer-list mt-4">
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Privacidad</a></li>
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Pagos</a></li>
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Temas de servicio</a></li>
+                    </ul>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h4 class="text-light fw-normal footer-head mb-4">Extra</h4>
+                    <ul class="list-unstyled footer-list">
+                        <li class="fs-6"><i class="mdi mdi-map-marker me-2"></i> 3/2/64 Mongus Street, UK</li>
+                        <li class="fs-6"><i class="mdi mdi-email me-2"></i> name@domain.com</li>
+                        <li class="fs-6"><i class="mdi mdi-earth me-2"></i> www.yourdomain.com</li>
+                    </ul>
+
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </footer>
+    <!--end footer-->
+
+    <footer class="footer footer-bar bg-dark border-top">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <div class="text-sm-start">
+                        <p class="mb-0">© <script>
+                                document.write(new Date().getFullYear())
+                            </script> HUINIC <i class="mdi mdi-heart text-danger"></i> by <a
+                                href="https://shreethemes.in/" target="_blank" class="text-reset">CEDVA</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end container-->
+    </footer>
+    <!--end footer-->
+    <!-- Footer End -->
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top rounded-pill text-center" id="back-to-top">
+        <i class="mdi mdi-chevron-up d-block"> </i>
+    </a>
+    <!-- Back to top -->
+
+    <!-- javascript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- SLIDER -->
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/tiny-slider-init.js"></script>
+    <!-- play-btn -->
+    <script src="js/tobii.min.js"></script>
+    <!-- PARALLAX -->
+    <script src="js/parallax.js"></script>
+    <!-- BACKGROUND -->
+    <script src="js/easy_background.js"></script>
+    <!-- Switcher -->
+    <script src="js/switcher.js"></script>
+    <script src="js/feather.min.js"></script>
+    <!-- Main Js -->
+    <script src="js/plugins.init.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        easy_background("#hero-images", {
+            slide: ["images/bg/bg02.jpg", "images/bg/bg02.jpg", "images/bg/bg02.jpg"],
+            delay: [5000, 5000, 5000]
+        });
+    </script>
+
+</body>
+
+
+<!-- Mirrored from shreethemes.in/bizcell/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:30 GMT -->
+</html>

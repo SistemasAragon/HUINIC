@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from shreethemes.in/bizcell/layouts/page-team.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:47 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <title>HUINIC | Resultados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
+    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in/" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/Icono.png">
+    <!-- BOOTSTRAP -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- ICON -->
+    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="../../../unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+    <!-- Slider -->
+    <link rel="stylesheet" href="css/tiny-slider.css">
+    <!-- Custom Css -->
+    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+</head>
+
+<body>
+    <!-- <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Navbar STart -->
+    <header id="topnav" class="defaultscroll sticky">
+        <div class="container">
+            <!-- Logo container-->
+            <a class="logo" href="index.html"><!-- Logooooo-->
+                <span class="logo-light-mode">
+                    <img src="images/Logo.png" class="l-dark" alt="" style="height: 40px;">
+                    <img src="images/Logo.png" class="l-light" alt="" style="height: 40px;">
+                </span>
+                <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+            </a>
+            <!-- End Logo container-->
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+            
+
+
+
+            <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
+                <li class="list-inline-item search-icon mb-0">
+                    <!--INICIO DE USUARIO-->
+                    <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <div style="display: flex; align-items: center;">
+                            <img src="images/home/home06.png" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
+                            <div>
+                                <h6 class="my-0">Victor Alejandro Patiño Mejia </h6>
+                                <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">¡Bienvenido!</h6>
+                        </div>
+                        <!-- item-->
+                        <a href="{% url 'cerrarSesion'%}" class="dropdown-item">
+                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
+                            <span>Salir</span>
+                        </a>
+                    </div>
+                    <!--FIN DE USUARIO-->
+                </li>
+            </ul>
+
+
+            <div id="navigation">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu nav-light nav-right">
+                    <li class="has-submenu parent-parent-menu-item ">
+                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-about.html" class="sub-menu-item">Info</a></li>
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a><span
+                                    class="submenu-arrow"></span>
+                                <ul class="submenu">
+                                    <li><a href="page-team.html" class="sub-menu-item">Team One</a></li>
+                                    <li><a href="page-team-two.html" class="sub-menu-item">Team Two</a></li>
+                                    <li><a href="page-team-three.html" class="sub-menu-item">Team Three</a></li>
+                                    <li><a href="page-team-detail.html" class="sub-menu-item">Team Detail </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!--end navigation menu-->
+            </div>
+
+            <!--end navigation-->
+        </div>
+        <!--end container-->
+    </header>
+    <!--end header-->
+    <!-- Navbar End -->
+
+    <!-- Start Home -->
+    <section class="bg-default page-next-level" style="background: url(images/bg/bg-page.png) center no-repeat;">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 mt-4">
+                            <div class="text-center">
+                                <h3 class="title-pager mb-0">Resultado vacantes</h3>
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </div>
+        </div>
+    </section>
+    <!--end section-->
+    <!-- End Home -->
+
+
+    <!-- Team START -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center" style="margin-top: -60px;">
+                <div class="col-12">
+                    <div class="section-title text-center mb-4 pb-1">
+                        <!-- <span class="badge bg-soft-primary text-uppercase text-primary py-2 px-3 rounded-pill mb-2">Ingenieros aeroespaciales</span> -->
+                        <h3 class="title text-capitalize mb-4">Los mejores del espacio</h3>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+
+                <div class="col-lg-4 col-md-4 col-12 ">
+                    <div class="card team-primary text-center border-0 ">
+                        <div
+                            class="card-img team-image position-relative d-inline-block mx-auto rounded-pill avatar avatar-ex-large overflow-hidden shadow">
+                            <img src="images/team/1.jpg" class="img-fluid" alt="">
+                            <div class="card-overlay avatar avatar-ex-large rounded-pill"></div>
+
+                            <ul class="list-unstyled social-icons mb-0">
+                                <li class="list-inline-item"><a href="#"><i 
+                                            title="Perfil">Ir</i></a></li>
+                                <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin"
+                                            title="linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-instagram"
+                                            title="instagram"></i></a></li> -->
+                            </ul>
+                            <!--end icon-->
+                        </div>
+
+                        <div class="content mt-2">
+                            <h5 class="member-name mb-1"><a href="page-team-detail.html" class="text-dark">Steve Mathew</a>
+                            </h5>
+                            <h6 class="text-muted mt-2 fw-normal">Ingeniero en Informatica</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-12 ">
+                    <div class="card team-primary text-center border-0 ">
+                        <div
+                            class="card-img team-image position-relative d-inline-block mx-auto rounded-pill avatar avatar-ex-large overflow-hidden shadow">
+                            <img src="images/team/2.jpg" class="img-fluid" alt="">
+                            <div class="card-overlay avatar avatar-ex-large rounded-pill"></div>
+
+                            <ul class="list-unstyled social-icons mb-0">
+                                <li class="list-inline-item"><a href="#"><i class=""
+                                            title="Perfil">Ir</i></a></li>
+                                <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin"
+                                            title="linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-instagram"
+                                            title="instagram"></i></a></li> -->
+                            </ul>
+                            <!--end icon-->
+                        </div>
+
+                        <div class="content mt-2">
+                            <h5 class="member-name mb-1"><a href="page-team-detail.html" class="text-dark">Jonny Ray</a></h5>
+                            <h6 class="text-muted mt-2 fw-normal">Ingeniero en Computacion</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+
+
+                <div class="col-lg-4 col-md-4 col-12 ">
+                    <div class="card team-primary text-center border-0 ">
+                        <div
+                            class="card-img team-image position-relative d-inline-block mx-auto rounded-pill avatar avatar-ex-large overflow-hidden shadow">
+                            <img src="images/team/3.jpg" class="img-fluid" alt="">
+                            <div class="card-overlay avatar avatar-ex-large rounded-pill"></div>
+
+                            <ul class="list-unstyled social-icons mb-0">
+                                <li class="list-inline-item"><a href="#"><i class=""
+                                            title="Perfil">Ir</i></a></li>
+                                <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin"
+                                            title="linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-instagram"
+                                            title="instagram"></i></a></li> -->
+                            </ul>
+                            <!--end icon-->
+                        </div>
+
+                        <div class="content mt-2">
+                            <h5 class="member-name mb-1"><a href="page-team-detail.html" class="text-dark">JJerry Fisher</a></h5>
+                            <h6 class="text-muted mt-2 fw-normal">Ingeniero en Computacion</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- Team END -->
+
+    
+
+    <!-- Service START -->
+    <section class="section">
+        <div class="container" >
+            
+            <div class="row justify-content-center" style="margin-top: -120px;">
+                <div class="col-12">
+                    <div class="section-title text-center mb-4 pb-1">
+                        <h4 class="title text-capitalize mb-4">Cursos auxiliares</h4>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: -60px;">
+                <div class="col-12 py-4 g-0">
+                    <div class="tiny-three-item">
+
+                        <div class="tiny-slide">
+                            <div class="rounded service-two shadow m-2">
+                                <div class="p-4">
+                                    <h5 class="serv-head">Nombre de curso 1</h5>
+                                    <p class="text-muted mb-1"> Vizualizacion curso </p>
+                                </div>
+
+                                <img src="images/service/03.jpg" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+
+                                <p></p>
+                                <div  class="centrar">
+                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>   
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--end services-->
+
+                        <div class="tiny-slide">
+                            <div class="rounded service-two shadow m-2">
+                                <div class="p-4">
+                                    <h5 class="serv-head">Nombre de curso 2</h5>
+                                    <p class="text-muted mb-1"> Vizualizacion curso </p>
+                                </div>
+                                <img src="images/service/03.jpg" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+
+                                <p></p>
+                                <div  class="centrar">
+                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>   
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--end services-->
+
+                        <div class="tiny-slide">
+                            <div class="rounded service-two shadow m-2">
+                                <div class="p-4">
+                                    <h5 class="serv-head">Nombre de curso 1</h5>
+                                    <p class="text-muted mb-1"> Vizualizacion curso </p>
+                                </div>
+                                <img src="images/service/03.jpg" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+
+                                <p></p>
+                                <div  class="centrar">
+                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>   
+                                </div>
+                            </div>
+                        </div>
+                        <!--end services-->
+
+                    </div>
+                    <!--end slide -->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- Service END -->
+
+
+    <!-- Partner Start -->
+    <section class="section-two bg-light">
+        <!-- <div class="page-triangle"></div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tiny-five-item">
+                        <div class="tiny-slide">
+                            <img src="images/testi/01.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/02.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/02.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/03.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/04.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/05.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/06.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/07.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/08.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/09.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                        <div class="tiny-slide">
+                            <img src="images/testi/10.png" class="img-fluid mx-auto d-block" alt="clients">
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--enn container-->
+    </section>
+    <!--end section-->
+    <!-- Partner End -->
+
+
+    <!-- Footer Start -->
+    <footer class="footer bg-dark" style="height: 210px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                    <a href="#" class="logo-footer">
+                        <img src="images/LogoBB.png" height="24" alt="">
+                    </a>
+                    <p class="mt-3 text-black-50"> Conectando oportunidades con grandes talentos en el area automotriz como corresponde</p>
+
+                    <div class="mt-3">
+                        <ul class="list-unstyled footer-icon social mb-0">
+                            <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
+                                        data-feather="facebook" class="fea icon-sm"></i></a></li>
+                            <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
+                                        data-feather="instagram" class="fea icon-sm"></i></a></li>
+                            <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
+                                        data-feather="twitter" class="fea icon-sm"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h4 class="text-light footer-head">Empresa</h4>
+                    <ul class="list-unstyled footer-list mt-4">
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Sobre nosotros</a></li>
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Equipo</a></li>
+                    </ul>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h4 class="text-light footer-head">Links</h4>
+                    <ul class="list-unstyled footer-list mt-4">
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Privacidad</a></li>
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Pagos</a></li>
+                        <li><a href="#" class="text-foot fs-6"><i class="mdi mdi-chevron-right"></i> Temas de servicio</a></li>
+                    </ul>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h4 class="text-light fw-normal footer-head mb-4">Extra</h4>
+                    <ul class="list-unstyled footer-list">
+                        <li class="fs-6"><i class="mdi mdi-map-marker me-2"></i> 3/2/64 Mongus Street, UK</li>
+                        <li class="fs-6"><i class="mdi mdi-email me-2"></i> name@domain.com</li>
+                        <li class="fs-6"><i class="mdi mdi-earth me-2"></i> www.yourdomain.com</li>
+                    </ul>
+
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </footer>
+    <!--end footer-->
+
+    <footer class="footer footer-bar bg-dark border-top">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <div class="text-sm-start">
+                        <p class="mb-0">© <script>
+                                document.write(new Date().getFullYear())
+                            </script> HUINIC <i class="mdi mdi-heart text-danger"></i> by <a
+                                href="https://shreethemes.in/" target="_blank" class="text-reset">CEDVA</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end container-->
+    </footer>
+    <!--end footer-->
+    <!-- Footer End -->
+
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top rounded-pill text-center" id="back-to-top">
+        <i class="mdi mdi-chevron-up d-block"> </i>
+    </a>
+    <!-- Back to top -->
+
+    <!-- javascript -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Slider -->
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/tiny-slider-init.js"></script>
+    <!-- Switcher -->
+    <script src="js/switcher.js"></script>
+    <script src="js/feather.min.js"></script>
+    <!-- Main Js -->
+    <script src="js/plugins.init.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+
+<!-- Mirrored from shreethemes.in/bizcell/layouts/page-team.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:47 GMT -->
+</html>
