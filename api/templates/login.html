@@ -1,8 +1,7 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from shreethemes.in/bizcell/layouts/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:49 GMT -->
 <head>
     <meta charset="utf-8" />
     <title>HUINIC | Login</title>
@@ -15,27 +14,18 @@
     <meta name="version" content="1.0.0" />
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="images/Icono.png">
+    <link rel="shortcut icon" href="{% static 'images/Icono.png'%}">
     <!-- BOOTSTRAP -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet" type="text/css" />
     <!-- ICON -->
-    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="{% static 'css/materialdesignicons.min.css'%}" rel="stylesheet">
     <link href="../../../unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
     <!-- Custom Css -->
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+    <link href="{% static 'css/style.min.css'%}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/colors/default.css'%}" rel="stylesheet" id="color-opt">
 </head>
 
 <body>
-    <!-- <div id="preloader">
-        <div id="status">
-            <div class="spinner">
-                <div class="cube1"></div>
-                <div class="cube2"></div>
-            </div>
-        </div>
-    </div> -->
-
     <div class="back-to-home rounded d-none d-sm-block">
         <a href="index.html" class="text-white rounded d-inline-block text-center"><svg
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -48,14 +38,14 @@
 
     <!-- Hero Start -->
     <section class="bg-userpage user-pages d-flex align-items-center"
-        style="background: url(images/bg/userpage.jpg);">
+        style="background: url({% static 'images/bg/userpage.jpg'%});">
         <div class="bg-overlay bg-black" style="opacity: 0.1;"></div><!-- Imagen fondo claridad-->
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="text-center">
                         <a href="javascript:void(0)">
-                            <img src="images/Logo.png" height="55" alt=""><!-- Imagen logo -->
+                            <img src="{% static 'images/Logo.png'%}" height="55" alt=""><!-- Imagen logo -->
                         </a>
                     </div>
                 </div>
@@ -89,14 +79,6 @@
 
                                 <div class="col-12">
                                     <div class="d-flex justify-content-between">
-                                        <!-- <div class="mb-3 d-inline-block">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                                <label class="form-check-label h6" for="flexCheckDefault">Remember
-                                                    me</label>
-                                            </div>
-                                        </div> -->
                                         <p class="forgot-pass mb-0"><a href="reset-password.html"
                                                 class="text-dark small fw-bold">¿Olvidaste tu contraseña?</a></p>
                                         <p>.</p>
@@ -107,32 +89,6 @@
                                 <div class="col-12 mb-0">
                                     <button class="btn btn-primary w-100">Iniciar sesión</button>
                                 </div>
-                                <!--end col-->
-
-                                <!-- <div class="col-12 mt-4 text-center">
-                                    <h6 class="mb-0">Or Login With</h6>
-                                </div> -->
-                                <!--end col-->
-
-                                <!-- <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-sm-6 mt-4">
-                                            <a href="#" class="btn w-100 btn-light"><i
-                                                    class="mdi mdi-facebook text-primary"></i> Facebook</a>
-                                        </div>
-                                        <div class="col-sm-6 mt-4">
-                                            <a href="#" class="btn w-100 btn-light"><i
-                                                    class="mdi mdi-google text-danger"></i> Google</a>
-                                        </div>
-                                    </div>
-                                </div> -->
-
-                                <!--end col-->
-
-                                <!-- <div class="col-12 text-center">
-                                    <p class="mb-0 mt-3"><small class="text-dark me-2">Don't have an account ?</small>
-                                        <a href="signup.html" class="text-dark fw-bold">Sign Up</a></p>
-                                </div> -->
                                 <!--end col-->
                             </div>
                             <!--end row-->
@@ -148,61 +104,17 @@
         <!--end container-->
     </section>
     <!--end section-->
-    <!-- Hero End -->
-
-
-    <!-- Style switcher -->
-    <!-- <div id="style-switcher" class="bg-light border p-3 pt-2 pb-2" onclick="toggleSwitcher()">
-        <div>
-            <h6 class="title text-center">Select Your Color</h6>
-            <ul class="pattern">
-                <li class="list-inline-item">
-                    <a class="color1" href="javascript: void(0);" onclick="setColor('default')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color2" href="javascript: void(0);" onclick="setColor('blue')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color3" href="javascript: void(0);" onclick="setColor('yellow')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color4" href="javascript: void(0);" onclick="setColor('dark-pink')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color5" href="javascript: void(0);" onclick="setColor('orange')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color6" href="javascript: void(0);" onclick="setColor('brown')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color7" href="javascript: void(0);" onclick="setColor('green')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color8" href="javascript: void(0);" onclick="setColor('purple')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color9" href="javascript: void(0);" onclick="setColor('firozi')"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="bottom">
-            <a href="javascript: void(0);" class="settings bg-white shadow d-block"><i
-                    class="mdi mdi-cog ms-1 mdi-24px position-absolute mdi-spin text-primary"></i></a>
-        </div>
-    </div> -->
-    <!-- end Style switcher -->
 
     <!-- javascript -->
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
     <!-- Switcher -->
-    <script src="js/switcher.js"></script>
-    <script src="js/feather.min.js"></script>
+    <script src="{% static 'js/switcher.js'%}"></script>
+    <script src="{% static 'js/feather.min.js'%}"></script>
     <!-- Main Js -->
-    <script src="js/plugins.init.js"></script>
-    <script src="js/app.js"></script>
+    <script src="{% static 'js/plugins.init.js'%}"></script>
+    <script src="{% static 'js/app.js'%}"></script>
 </body>
 
 
-<!-- Mirrored from shreethemes.in/bizcell/layouts/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:50 GMT -->
 </html>

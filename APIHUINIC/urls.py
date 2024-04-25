@@ -16,6 +16,29 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from api.views import(login,
+                    detallesCurso,
+                    formularioCurso,
+                    homeCandidato,
+                    homeCapacitador,
+                    homeGeneral,
+                    homeSistemas,
+                    recuperacionPass,
+                    registroCapacitador,
+                    resultadosVacantes,
+                    solicitudesCurso)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', login.as_view(), name="login"),
+    path('detallesCurso/', detallesCurso.as_view(), name="detallesCurso"),
+    path('formularioCurso/', formularioCurso.as_view(), name="formularioCurso"),
+    path('homeCandidato/', homeCandidato.as_view(), name="homeCandidato"),
+    path('homeCapacitador/', homeCapacitador.as_view(), name="homeCapacitador"),
+    path('homeGeneral/', homeGeneral.as_view(), name="homeGeneral"),
+    path('homeSistemas/', homeSistemas.as_view(), name="homeSistemas"),
+    path('recuperacionPass/', recuperacionPass.as_view(), name="recuperacionPass"),
+    path('registroCapacitador/', registroCapacitador.as_view(), name="registroCapacitador"),
+    path('resultadosVacantes/', resultadosVacantes.as_view(), name="resultadosVacantes"),
+    path('solicitudesCurso/', solicitudesCurso.as_view(), name="solicitudesCurso"),
 ]
