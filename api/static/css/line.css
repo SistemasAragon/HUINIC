@@ -360,7 +360,7 @@
   font-family: unicons-line;
   font-style: normal;
   font-weight: 400;
-  speak: none;
+  /*speak: none;*/
   display: inline-block;
   text-decoration: inherit;
   font-variant: normal;
