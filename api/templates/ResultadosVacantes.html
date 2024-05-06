@@ -15,17 +15,17 @@
     <meta name="version" content="1.0.0" />
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="images/Icono.png">
+    <link rel="shortcut icon" href="{% static 'images/Icono.png'%}">
     <!-- BOOTSTRAP -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/bootstrap.min.css" rel="stylesheet'%}" type="text/css" />
     <!-- ICON -->
-    <link href="css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="../../../unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+    <link href="{% static 'css/materialdesignicons.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/line.css'%}" rel="stylesheet">
     <!-- Slider -->
-    <link rel="stylesheet" href="css/tiny-slider.css">
+    <link rel="stylesheet" href="{% static 'css/tiny-slider.css'%}">
     <!-- Custom Css -->
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+    <link href="{% static 'css/style.min.css'%}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/colors/default.css'%}" rel="stylesheet" id="color-opt">
 </head>
 
 <body>
@@ -43,10 +43,10 @@
             <!-- Logo container-->
             <a class="logo" href="index.html"><!-- Logooooo-->
                 <span class="logo-light-mode">
-                    <img src="images/Logo.png" class="l-dark" alt="" style="height: 40px;">
-                    <img src="images/Logo.png" class="l-light" alt="" style="height: 40px;">
+                    <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
+                    <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
                 </span>
-                <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+                <img src="{% static 'images/logo-light.png'%}" class="logo-dark-mode" alt="">
             </a>
             <!-- End Logo container-->
             <div class="menu-extras">
@@ -84,7 +84,7 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <a href="{% url 'cerrarSesion'%}" class="dropdown-item">
+                        <a href="#" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
                         </a>
@@ -202,7 +202,7 @@
                     <div class="card team-primary text-center border-0 ">
                         <div
                             class="card-img team-image position-relative d-inline-block mx-auto rounded-pill avatar avatar-ex-large overflow-hidden shadow">
-                            <img src="images/team/2.jpg" class="img-fluid" alt="">
+                            <img src="{% static 'images/team/2.jpg'%}" class="img-fluid" alt="">
                             <div class="card-overlay avatar avatar-ex-large rounded-pill"></div>
 
                             <ul class="list-unstyled social-icons mb-0">
@@ -285,7 +285,7 @@
                                     <p class="text-muted mb-1"> Vizualizacion curso </p>
                                 </div>
 
-                                <img src="images/service/03.jpg" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                                <img src="{% static 'images/service/03.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
 
                                 <p></p>
                                 <div  class="centrar">
@@ -302,7 +302,7 @@
                                     <h5 class="serv-head">Nombre de curso 2</h5>
                                     <p class="text-muted mb-1"> Vizualizacion curso </p>
                                 </div>
-                                <img src="images/service/03.jpg" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                                <img src="{% static 'images/service/03.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
 
                                 <p></p>
                                 <div  class="centrar">
@@ -319,7 +319,7 @@
                                     <h5 class="serv-head">Nombre de curso 1</h5>
                                     <p class="text-muted mb-1"> Vizualizacion curso </p>
                                 </div>
-                                <img src="images/service/03.jpg" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                                <img src="{% static 'images/service/03.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
 
                                 <p></p>
                                 <div  class="centrar">
@@ -350,37 +350,37 @@
                 <div class="col-12">
                     <div class="tiny-five-item">
                         <div class="tiny-slide">
-                            <img src="images/testi/01.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/01.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/02.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/02.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/02.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/02.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/03.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/03.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/04.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/04.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/05.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/05.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/06.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/06.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/07.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/07.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/08.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/08.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/09.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/09.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                         <div class="tiny-slide">
-                            <img src="images/testi/10.png" class="img-fluid mx-auto d-block" alt="clients">
+                            <img src="{% static 'images/testi/10.png'%}" class="img-fluid mx-auto d-block" alt="clients">
                         </div>
                     </div>
                 </div>
@@ -400,7 +400,7 @@
             <div class="row">
                 <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
                     <a href="#" class="logo-footer">
-                        <img src="images/LogoBB.png" height="24" alt="">
+                        <img src="{% static 'images/LogoBB.png'%}" height="24" alt="">
                     </a>
                     <p class="mt-3 text-black-50"> Conectando oportunidades con grandes talentos en el area automotriz como corresponde</p>
 
@@ -481,19 +481,18 @@
 
     <!-- javascript -->
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
 
     <!-- Slider -->
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/tiny-slider-init.js"></script>
+    <script src="{% static 'js/tiny-slider.js'%}"></script>
+    <script src="{% static 'js/tiny-slider-init.js'%}"></script>
     <!-- Switcher -->
-    <script src="js/switcher.js"></script>
-    <script src="js/feather.min.js"></script>
+    <script src="{% static 'js/switcher.js'%}"></script>
+    <script src="{% static 'js/feather.min.js'%}"></script>
     <!-- Main Js -->
-    <script src="js/plugins.init.js"></script>
-    <script src="js/app.js"></script>
+    <script src="{% static 'js/plugins.init.js'%}"></script>
+    <script src="{% static 'js/app.js'%}"></script>
 </body>
 
 
-<!-- Mirrored from shreethemes.in/bizcell/layouts/page-team.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:47 GMT -->
 </html>
