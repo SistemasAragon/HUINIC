@@ -34,12 +34,12 @@ class homeGeneral(APIView):
         return render(request,self.template_name)
 
 class homeSistemas(APIView):
-    template_name= "login.html"
+    template_name= "homeSistemas.html"
     def get(self,request):
         return render(request,self.template_name)
 
 class recuperacionPass(APIView):
-    template_name= "login.html"
+    template_name= "recuperacionPass.html"
     def get(self,request):
         return render(request,self.template_name)
 
