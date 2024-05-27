@@ -26,10 +26,24 @@ from api.views import(login,
                     recuperacionPass,
                     registroCapacitador,
                     resultadosVacantes,
-                    solicitudesCurso)
+                    solicitudesCurso, 
+                    tipo_usuario_nuevo1,
+                    
+                    candidato_registro1,
+                    habilidades_candidato1,
+                    perfil_candidato1,
+                    registro_candidato1,
+                    registro_empresa1,
+                    solicitud_empresa1)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('candidato_registro1/', candidato_registro1.as_view(), name="candidato_registro1"),
+    path('habilidades_candidato1/', habilidades_candidato1.as_view(), name="habilidades_candidato1"),
+    path('perfil_candidato1/', perfil_candidato1.as_view(), name="perfil_candidato1"),
+    path('registro_candidato1/', registro_candidato1.as_view(), name="registro_candidato1"),
+    path('registro_empresa1/', registro_empresa1.as_view(), name="registro_empresa1"),
+    path('solicitud_empresa1/', solicitud_empresa1.as_view(), name="solicitud_empresa1"),
     path('login/', login.as_view(), name="login"),
     path('detallesCurso/', detallesCurso.as_view(), name="detallesCurso"),
     path('formularioCurso/', formularioCurso.as_view(), name="formularioCurso"),
@@ -41,4 +55,5 @@ urlpatterns = [
     path('registroCapacitador/', registroCapacitador.as_view(), name="registroCapacitador"),
     path('resultadosVacantes/', resultadosVacantes.as_view(), name="resultadosVacantes"),
     path('solicitudesCurso/', solicitudesCurso.as_view(), name="solicitudesCurso"),
+    path('tipo_usuario_nuevo1/', tipo_usuario_nuevo1.as_view(), name="tipo_usuario_nuevo1"),
 ]

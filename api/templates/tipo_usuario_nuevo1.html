@@ -3,10 +3,10 @@
 <html lang="en">
 
 
-<!-- Mirrored from shreethemes.in/bizcell/layouts/page-request.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:49 GMT -->
+<!-- Mirrored from shreethemes.in/bizcell/layouts/portfolio-st-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:59 GMT -->
 <head>
     <meta charset="utf-8" />
-    <title>HUINIC | RegistroCapacitador</title>
+    <title>HUNIC | Tipo de Usuario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
@@ -23,21 +23,33 @@
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
     <!--<link href="{% static 'css/materialdesignicons.min.css'%}" rel="stylesheet"> -->
     <link href="{% static 'css/line.css'%}" rel="stylesheet">
-    <!-- SLIDER -->
-    <link rel="stylesheet" href="{% static 'css/tiny-slider.css'%}">
+    <!-- SLIDER-->
+    <link rel="stylesheet" href="{% static 'css/tiny-slider.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/tobii.min.css'%}">
     <!-- Custom Css -->
     <link href="{% static 'css/style.min.css'%}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/colors/default.css'%}" rel="stylesheet" id="color-opt">
 </head>
 
 <body>
+    <!-- <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+        </div>
+    </div> -->
     <!-- Navbar STart -->
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="index.html">
-                <img src="{% static 'images/Logo.png'%}" class="logo-light-mode" alt="" style="height: 40px;">
-                <img src="{% static 'images/Logo.png'%}" class="logo-dark-mode" alt="" style="height: 40px;">
+            <a class="logo" href="index.html"><!-- Logooooo-->
+                <span class="logo-light-mode">
+                    <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
+                    <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
+                </span>
+                <img src="{% static 'images/logo-light.png'%}" class="logo-dark-mode" alt="">
             </a>
             <!-- End Logo container-->
             <div class="menu-extras">
@@ -54,30 +66,21 @@
                 </div>
             </div>
 
-            <ul class="buy-button list-inline mb-0" style="margin-top: 15px;">
+            <ul class="buy-button list-inline mb-0">
                 <li class="list-inline-item search-icon mb-0">
-                    <!--INICIO DE USUARIO-->
-                    <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <div style="display: flex; align-items: center;">
-                            <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
-                            <div>
-                                <h6 class="my-0">Nombre Usuario</h6>
-                                <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
-                            </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-link text-decoration-none dropdown-toggle mb-0 p-0"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil uil-search h5 text-dark mb-0"></i>
+                        </button>
+                        <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-4 py-0"
+                            style="width: 300px;">
+                            <form class="p-4">
+                                <input type="text" id="text" name="name" class="form-control border bg-white"
+                                    placeholder="Search...">
+                            </form>
                         </div>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
-                        <!-- item-->
-                        <div class="dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">¡Bienvenido!</h6>
-                        </div>
-                        <!-- item-->
-                        <a href="#" class="dropdown-item">
-                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
-                            <span>Salir</span>
-                        </a>
                     </div>
-                    <!--FIN DE USUARIO-->
                 </li>
             </ul>
 
@@ -85,85 +88,29 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-right">
                     <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Home</a><span class="menu-arrow"></span>
+                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
                                 <ul>
                                     <li>
                                         <a href="index.html" class="sub-menu-item">
-                                            Home
+                                            Inicio
                                         </a>
                                     </li>
                                     <li>
                                         <a href="index-two.html" class="sub-menu-item">
-                                            Home two
+                                            Ingresar
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="index-three.html" class="sub-menu-item">
-                                            Home three
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-four.html" class="sub-menu-item">
-                                            Home four
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="index-five.html" class="sub-menu-item">
-                                            Home five
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-six.html" class="sub-menu-item">
-                                            Home six
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-seven.html" class="sub-menu-item">
-                                            Home seven
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-onepage.html" class="sub-menu-item">
-                                            Home onepage
-                                        </a>
-                                    </li>
-
-
+                                    
                                 </ul>
                             </li>
-                        </ul>
-                    </li>
-                    <li><a href="page-about.html" class="sub-menu-item">About Us</a></li>
-
-
-                    <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Blogs</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li><a href="blog-two-column.html" class="sub-menu-item">Blog 2 column</a></li>
-                            <li><a href="blog-three-column.html" class="sub-menu-item">Blog 3 column</a></li>
-                            <li><a href="blog-leftsidebar.html" class="sub-menu-item">Left Sidebar</a></li>
-                            <li><a href="blog-rightsidebar.html" class="sub-menu-item">Right Sidebar</a></li>
-                            <li><a href="blog-fullwidth.html" class="sub-menu-item">Full width</a></li>
-                            <li><a href="blog-detail.html" class="sub-menu-item"> Blog detail</a></li>
-                            <li><a href="blog-author.html" class="sub-menu-item">Author</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Contact</a><span
-                            class="submenu-arrow"></span>
-                        <ul class="submenu">
-                            <li><a href="page-contact-one.html" class="sub-menu-item">Contact One</a></li>
-                            <li><a href="page-contact-two.html" class="sub-menu-item">Contact Two</a></li>
                         </ul>
                     </li>
                 </ul>
                 <!--end navigation menu-->
             </div>
             <!--end navigation-->
-
         </div>
         <!--end container-->
     </header>
@@ -176,10 +123,12 @@
             <div class="home-desc-center">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-12 mt-4">
+                        <div class="col-12">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0"> Registro de capacitador</h3>
+                                <h3 class="title-pager mb-0"> ¿Eres nuevo? </h3>
+                                <h3 class="title-pager mb-0"> Selecciona el tipo de perfil que deseas crear. </h3>
                             </div>
+                            
                         </div>
                         <!--end col-->
 
@@ -193,106 +142,63 @@
     <!--end section-->
     <!-- End Home -->
 
-    <!-- Start Section -->
-    <section class="section">
+    <!-- Start Work -->
+    <section class="section" id="portfolio">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-12 mb-4">
-                    <div class="rounded p-4 shadow border">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="primary-form mt-3">
 
-                                    <form method="post" id="myForm" name="myForm" onsubmit="return validateForm()">
-                                        <p class="mb-0" id="error-msg"></p>
-                                        <div class="centrar">
-                                            <h4>Informacion de capacitador</h4>
-                                        </div>
+                 <li class="filter-list list-inline-item categories fw-normal position-relative"
+                                data-group="finance">Finance</li>
+                            <li class="filter-list list-inline-item categories fw-normal position-relative"
+                                data-group="accounting">Accounting</li>
+                            <li class="filter-list list-inline-item categories fw-normal position-relative"
+                                data-group="research">Research</li>
+                            <li class="filter-list list-inline-item categories fw-normal position-relative"
+                                data-group="startup">Startup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+            <!--end row-->
 
-                                        <div class="row" style="margin-top: 20px;">
-                                            <div class="col-4">
-                                                <label class="form-label fs-6">Nombre <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="name" id="name" type="text" class="form-control ps-5 fs-6"
-                                                        placeholder="Nombre: ">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <label class="form-label fs-6">Apellido Materno <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="name" id="name" type="text" class="form-control ps-5 fs-6"
-                                                        placeholder="Apellido Materno: ">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <label class="form-label fs-6">Apellido Paterno <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="name" id="name" type="text" class="form-control ps-5 fs-6"
-                                                        placeholder="Apellido Paterno: ">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-6">
-                                                <label class="form-label fs-6 mt-3 mb-1">Correo</label>
-                                                <div class="form-icon position-relative">
-                                                    <i class="mdi mdi-book-outline icon-sm icons"></i>
-                                                    <input name="subject" id="subject" class="form-control ps-5 fs-6"
-                                                        placeholder="Correo:">
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-
-                                            <div class="col-6">
-                                                <label for="especialidad" class="form-label fs-6 mt-3 mb-1">Empresa</label>
-                                                    <select class="form-select" id="especialidad" name="especialidad" required>
-                                                        <option value="" disabled selected>Seleccione una empresa</option>
-                                                        <option value="">CUDE</option>
-                                                        <option value="">CEDVA</option>
-                                                        
-                                                    </select>
-                                            </div>
-                                            <!--end col-->
-                                        </div>
-                                        
-
-                                        <div class="row">
-                                            <div class="col-12 fs-6 mt-3 centrar">
-                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Guardar</button>
-                                            </div>
-                                            <!--end col-->
-                                        </div>
-                                        <!--end row-->
-                                    </form>
-                                    <!-- end form -->
-    
-                                </div>
-                                <!--end primary-form-->
+            <div id="grid" class="row g-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-2 row-cols-1">
+                <div class="col picture-item" data-groups='["accounting"]'>
+                    <div class="position-relative portfolio-standard overflow-hidden rounded">
+                        <a href="registro_candidato.html">
+                            <div class="position-relative port-image">
+                                <img src="{% static 'images/empleado.jpg'%}" class="img-fluid shadow" alt="work-image">
+                                <div class="overlay-work"></div>
                             </div>
-                            <!--end col-->
+                        </a>
+                        <div class="content bg-light p-3 text-center mb-2">
+                            <h5 class="work-title mb-0"><a href="portfolio-detail.html" class="text-dark">Crear perfil como candidato</a></h5>
                         </div>
-                        <!--end row-->
+                    </div>
+                </div>
+                <!--end col-->
+            
+                <div class="col picture-item" data-groups='["accounting"]'>
+                    <div class="position-relative portfolio-standard overflow-hidden rounded">
+                        <a href="registro_empresa.html">
+                            <div class="position-relative port-image">
+                                <div class="p-0 overflow-hidden">
+                                    <div class="overlay-work"></div>
+                                    <img src="{% static 'images/empresa.jpg'%}" class="img-fluid shadow" alt="work-image" style="height: 365px;">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="content bg-light p-3 text-center mb-2">
+                            <h5 class="work-title mb-0"><a href="portfolio-detail.html" class="text-dark">Crear perfil como empresa</a></h5>
+                        </div>
                     </div>
                 </div>
                 <!--end col-->
             </div>
-            <!--end row-->
+            
         </div>
         <!--end container-->
-
-        
-        <!--end container-->
-
     </section>
     <!--end section-->
-    <!-- End Section -->
+    <!-- End work -->
 
     <!-- Partner Start -->
     <section class="section-two bg-light">
@@ -363,10 +269,6 @@
                                         data-feather="instagram" class="fea icon-sm"></i></a></li>
                             <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
                                         data-feather="twitter" class="fea icon-sm"></i></a></li>
-                            <!-- <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
-                                        data-feather="linkedin" class="fea icon-sm"></i></a></li>
-                            <li class="list-inline-item mb-0"><a href="#" class="rounded icon-sm"><i
-                                        data-feather="dribbble" class="fea icon-sm"></i></a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -419,11 +321,29 @@
                     <div class="text-sm-start">
                         <p class="mb-0">© <script>
                                 document.write(new Date().getFullYear())
-                            </script> HUINIC <i class="mdi mdi-heart text-danger"></i> by <a
-                                href="https://shreethemes.in/" target="_blank" class="text-reset">CEDVA</a>.</p>
+                            </script> Bizcell. Design with <i class="mdi mdi-heart text-danger"></i> by <a
+                                href="https://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
                     </div>
                 </div>
+                <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <ul class="list-unstyled text-sm-end mb-0">
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img
+                                    src="images/footer/american-ex.png" class="avatar avatar-ex-sm"
+                                    title="American Express" alt=""></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img src="images/footer/discover.png"
+                                    class="avatar avatar-ex-sm" title="Discover" alt=""></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img
+                                    src="images/footer/master-card.png" class="avatar avatar-ex-sm" title="Master Card"
+                                    alt=""></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img src="images/footer/paypal.png"
+                                    class="avatar avatar-ex-sm" title="Paypal" alt=""></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img src="images/footer/visa.png"
+                                    class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+                    </ul>
+                </div>
                 <!--end col-->
+
+
             </div>
         </div>
         <!--end container-->
@@ -431,6 +351,46 @@
     <!--end footer-->
     <!-- Footer End -->
 
+    <!-- Style switcher -->
+    <div id="style-switcher" class="bg-light border p-3 pt-2 pb-2" onclick="toggleSwitcher()">
+        <div>
+            <h6 class="title text-center">Select Your Color</h6>
+            <ul class="pattern">
+                <li class="list-inline-item">
+                    <a class="color1" href="javascript: void(0);" onclick="setColor('default')"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="color2" href="javascript: void(0);" onclick="setColor('blue')"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="color3" href="javascript: void(0);" onclick="setColor('yellow')"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="color4" href="javascript: void(0);" onclick="setColor('dark-pink')"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="color5" href="javascript: void(0);" onclick="setColor('orange')"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="color6" href="javascript: void(0);" onclick="setColor('brown')"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="color7" href="javascript: void(0);" onclick="setColor('green')"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="color8" href="javascript: void(0);" onclick="setColor('purple')"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="color9" href="javascript: void(0);" onclick="setColor('firozi')"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <a href="javascript: void(0);" class="settings bg-white shadow d-block"><i
+                    class="mdi mdi-cog ms-1 mdi-24px position-absolute mdi-spin text-primary"></i></a>
+        </div>
+    </div>
+    <!-- end Style switcher -->
 
     <!-- Back to top -->
     <a href="#" class="back-to-top rounded-pill text-center" id="back-to-top">
@@ -441,6 +401,10 @@
     <!-- javascript -->
 
     <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+
+    <!-- Portfolio -->
+    <script src="{% static 'js/shuffle.min.js'%}"></script>
+    <script src="{% static 'js/tobii.min.js'%}"></script>
     <!-- Slider -->
     <script src="{% static 'js/tiny-slider.js'%}"></script>
     <script src="{% static 'js/tiny-slider-init.js'%}"></script>
@@ -453,4 +417,5 @@
 </body>
 
 
+<!-- Mirrored from shreethemes.in/bizcell/layouts/portfolio-st-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:59 GMT -->
 </html>
