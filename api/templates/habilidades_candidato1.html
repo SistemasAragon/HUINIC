@@ -3,7 +3,6 @@
 <html lang="en">
 
 
-<!-- Mirrored from shreethemes.in/bizcell/layouts/page-request.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:49 GMT -->
 <head>
     <meta charset="utf-8" />
     <title>HUNIC | Registro de Usuario</title>
@@ -32,14 +31,6 @@
 </head>
 
 <body>
-    <!-- <div id="preloader">
-        <div id="status">
-            <div class="spinner">
-                <div class="cube1"></div>
-                <div class="cube2"></div>
-            </div>
-        </div>
-    </div> -->
     <!-- Navbar STart -->
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
@@ -107,9 +98,6 @@
                                             Ingresar
                                         </a>
                                     </li>
-                                    
-
-
                                 </ul>
                             </li>
                         </ul>
@@ -128,7 +116,7 @@
     <!-- Navbar End -->
 
     <!-- Start Home -->
-    <section class="bg-default page-next-level" style="background: url(images/bg/bg-page.png) center no-repeat;">
+    <section class="bg-default page-next-level" style="background: url({% static 'images/bg/bg-page.png'%}) center no-repeat;">
         <div class="home-center">
             <div class="home-desc-center">
                 <div class="container">
@@ -541,8 +529,6 @@
         </div>
         
         <!--end container-->
-
-       
     </section>
     <script>
         //HABILIDADES
@@ -788,45 +774,6 @@
         
         
     </script>
-    <!-- <script>
-        var automovilRadioButton = document.getElementById("automovil");
-        var motocicletaRadioButton = document.getElementById("motocicleta");
-        var areasCarroDiv = document.getElementById("areas_carro");
-        var areasMotoDiv = document.getElementById("areas_moto");
-        var areaEspecificaAutomovilRadios = document.getElementsByName("area_especifica");
-        var areaEspecificaMotoRadios = document.getElementsByName("area_especificaM");
-    
-        automovilRadioButton.addEventListener("change", function() {
-            if (automovilRadioButton.checked) {
-                areasCarroDiv.style.display = "block";
-                areasMotoDiv.style.display = "none";
-            } else {
-                areasCarroDiv.style.display = "none";
-            }
-            // Desmarca todas las opciones del área específica del automóvil
-            areaEspecificaAutomovilRadios.forEach(function(radio) {
-                radio.checked = false;
-            });
-        });
-    
-        motocicletaRadioButton.addEventListener("change", function() {
-            if (motocicletaRadioButton.checked) {
-                areasCarroDiv.style.display = "none";
-                areasMotoDiv.style.display = "block";
-            }
-            // Desmarca todas las opciones del área específica de la motocicleta
-            areaEspecificaMotoRadios.forEach(function(radio) {
-                radio.checked = false;
-            });
-        });
-    </script> -->
-    
-    
-    
-    
-    
-    
-    
     
     <!--end section-->
     <!-- End Section -->
@@ -982,46 +929,6 @@
     <!--end footer-->
     <!-- Footer End -->
 
-    <!-- Style switcher -->
-    <div id="style-switcher" class="bg-light border p-3 pt-2 pb-2" onclick="toggleSwitcher()">
-        <div>
-            <h6 class="title text-center">Select Your Color</h6>
-            <ul class="pattern">
-                <li class="list-inline-item">
-                    <a class="color1" href="javascript: void(0);" onclick="setColor('default')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color2" href="javascript: void(0);" onclick="setColor('blue')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color3" href="javascript: void(0);" onclick="setColor('yellow')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color4" href="javascript: void(0);" onclick="setColor('dark-pink')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color5" href="javascript: void(0);" onclick="setColor('orange')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color6" href="javascript: void(0);" onclick="setColor('brown')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color7" href="javascript: void(0);" onclick="setColor('green')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color8" href="javascript: void(0);" onclick="setColor('purple')"></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="color9" href="javascript: void(0);" onclick="setColor('firozi')"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="bottom">
-            <a href="javascript: void(0);" class="settings bg-white shadow d-block"><i
-                    class="mdi mdi-cog ms-1 mdi-24px position-absolute mdi-spin text-primary"></i></a>
-        </div>
-    </div>
-    <!-- end Style switcher -->
 
     <!-- Back to top -->
     <a href="#" class="back-to-top rounded-pill text-center" id="back-to-top">
@@ -1044,5 +951,4 @@
 </body>
 
 
-<!-- Mirrored from shreethemes.in/bizcell/layouts/page-request.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:49 GMT -->
 </html>
