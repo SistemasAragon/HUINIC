@@ -78,19 +78,19 @@ class perfil_candidato1(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
-class registro_candidato1(APIView):
-    template_name= "registro_candidato1.html"
+class registroCandidato(APIView):
+    template_name= "registroCandidato.html"
     def get(self,request):
         return render(request,self.template_name)
     
-class registro_empresa1(APIView):
-    template_name= "registro_empresa1.html"
+class registroEmpresa(APIView):
+    template_name= "registroEmpresa.html"
     def get(self,request):
         return render(request,self.template_name)
     
     
-class solicitud_empresa1(APIView):
-    template_name= "solicitud_empresa1.html"
+class solicitudEmpresa(APIView):
+    template_name= "solicitudEmpresa.html"
     def get(self,request):
         return render(request,self.template_name)
     
