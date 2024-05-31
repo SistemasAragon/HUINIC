@@ -58,23 +58,23 @@ class solicitudesCurso(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
-class tipo_usuario_nuevo1(APIView):
-    template_name= "tipo_usuario_nuevo1.html"
+class usuarioNuevo(APIView):
+    template_name= "usuarioNuevo.html"
     def get(self,request):
         return render(request,self.template_name)
     
-class candidato_registro1(APIView):
-    template_name= "candidato_registro1.html"
+class candidatoRegistro(APIView):
+    template_name= "candidatoRegistro.html"
     def get(self,request):
         return render(request,self.template_name)
     
-class habilidades_candidato1(APIView):
-    template_name= "habilidades_candidato1.html"
+class habilidadesCandidato(APIView):
+    template_name= "habilidadesCandidato.html"
     def get(self,request):
         return render(request,self.template_name)
     
-class perfil_candidato1(APIView):
-    template_name= "perfil_candidato1.html"
+class perfilCandidato(APIView):
+    template_name= "perfilCandidato.html"
     def get(self,request):
         return render(request,self.template_name)
     
