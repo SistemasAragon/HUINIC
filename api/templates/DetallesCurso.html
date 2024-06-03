@@ -4,7 +4,6 @@
 <html lang="en">
 
 
-<!-- Mirrored from shreethemes.in/bizcell/layouts/page-service-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 16:38:47 GMT -->
 <head>
     
 </head>
@@ -14,9 +13,12 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="index.html">
-                <img src="{% static 'images/Logo.png'%}" class="logo-light-mode" alt="" style="height: 40px;">
-                <img src="{% static 'images/Logo.png'%}" class="logo-dark-mode" alt="" style="height: 40px;">
+            <a class="logo" href="index.html"><!-- Logooooo-->
+                <span class="logo-light-mode">
+                    <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
+                    <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
+                </span>
+                <img src="{% static 'images/logo-light.png'%}" class="logo-dark-mode" alt="">
             </a>
             <!-- End Logo container-->
             <div class="menu-extras">
@@ -32,15 +34,18 @@
                     <!-- End mobile menu toggle-->
                 </div>
             </div>
+            
 
-            <ul class="buy-button list-inline mb-0" style="margin-top: 15px;">
+
+
+            <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
                 <li class="list-inline-item search-icon mb-0">
                     <!--INICIO DE USUARIO-->
                     <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <div style="display: flex; align-items: center;">
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
-                                <h6 class="my-0">Nombre Usuario</h6>
+                                <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
                                 <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
                             </div>
                         </div>
@@ -60,87 +65,38 @@
                 </li>
             </ul>
 
+
             <div id="navigation">
                 <!-- Navigation Menu-->
-                <ul class="navigation-menu nav-right">
-                    <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Home</a><span class="menu-arrow"></span>
+                <ul class="navigation-menu nav-light nav-right">
+                    <li class="has-submenu parent-parent-menu-item ">
+                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
                         <ul class="submenu">
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="index.html" class="sub-menu-item">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-two.html" class="sub-menu-item">
-                                            Home two
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-three.html" class="sub-menu-item">
-                                            Home three
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-four.html" class="sub-menu-item">
-                                            Home four
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="index-five.html" class="sub-menu-item">
-                                            Home five
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-six.html" class="sub-menu-item">
-                                            Home six
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-seven.html" class="sub-menu-item">
-                                            Home seven
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index-onepage.html" class="sub-menu-item">
-                                            Home onepage
-                                        </a>
-                                    </li>
-
-
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-about.html" class="sub-menu-item">Info</a></li>
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a><span
+                                    class="submenu-arrow"></span>
+                                <ul class="submenu">
+                                    <li><a href="page-team.html" class="sub-menu-item">Team One</a></li>
+                                    <li><a href="page-team-two.html" class="sub-menu-item">Team Two</a></li>
+                                    <li><a href="page-team-three.html" class="sub-menu-item">Team Three</a></li>
+                                    <li><a href="page-team-detail.html" class="sub-menu-item">Team Detail </a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="page-about.html" class="sub-menu-item">About Us</a></li>
 
-
-                    <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Blogs</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li><a href="blog-two-column.html" class="sub-menu-item">Blog 2 column</a></li>
-                            <li><a href="blog-three-column.html" class="sub-menu-item">Blog 3 column</a></li>
-                            <li><a href="blog-leftsidebar.html" class="sub-menu-item">Left Sidebar</a></li>
-                            <li><a href="blog-rightsidebar.html" class="sub-menu-item">Right Sidebar</a></li>
-                            <li><a href="blog-fullwidth.html" class="sub-menu-item">Full width</a></li>
-                            <li><a href="blog-detail.html" class="sub-menu-item"> Blog detail</a></li>
-                            <li><a href="blog-author.html" class="sub-menu-item">Author</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Contact</a><span
-                            class="submenu-arrow"></span>
-                        <ul class="submenu">
-                            <li><a href="page-contact-one.html" class="sub-menu-item">Contact One</a></li>
-                            <li><a href="page-contact-two.html" class="sub-menu-item">Contact Two</a></li>
-                        </ul>
-                    </li>
                 </ul>
                 <!--end navigation menu-->
             </div>
+
             <!--end navigation-->
         </div>
         <!--end container-->
