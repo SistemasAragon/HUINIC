@@ -162,7 +162,8 @@
                         <div class="widget mb-4">
                             <h5 class="pb-2 widget-title border-bottom">Solicitudes</h5>
 
-                            <table id="TablaValidacion" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                            <table id="" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                                
                                 <tbody>
                                     <tr>
                                         <td>
@@ -233,7 +234,7 @@
             </div>
 
             <div class="row" style="margin-top: 30px;">
-                <table id="TablaValidacionPago" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                <table id="TablaEquipoAsignado" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
                             <th scope="col">Nombre</th>
@@ -275,9 +276,7 @@
                                 <a href="#" class="btn btn-primary  mt-2">Enviar</a>
                             </td>
                         </tr>
-                        
                     </tbody>
-
                 </table>
             </div>
         </div>
@@ -293,18 +292,20 @@
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
+
+
     <script>
         $(document).ready(function () {
-        $('#TablaValidacionPago').DataTable({
+        $('#TablaEquipoAsignado').DataTable({
             lengthMenu: [5, 10, 15, 20, 50, 100],
             pageLength: 5,
             destroy:true,
             "language": {
                 lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningún pago encontrado",
-                info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ pagos",
-                infoEmpty: "Ningún pago encontrado",
-                infoFiltered: "(filtrados desde _MAX_ pagos totales)",
+                zeroRecords: "Ningún empleado encontrado",
+                info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ empleados",
+                infoEmpty: "Ningún empleado encontrado",
+                infoFiltered: "(filtrados desde _MAX_ empleados totales)",
                 search: "Buscar:",
                 loadingRecords: "Cargando... ",
                 paginate: {
@@ -320,6 +321,7 @@
         });
 
     </script>
+
 
 </body>
 
