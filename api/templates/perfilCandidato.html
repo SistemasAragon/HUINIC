@@ -14,7 +14,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="index.html"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeEmpresa' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -71,27 +71,13 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
-                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
-                        </ul>
+                        <a href="{% url 'homeEmpresa' %}">Inicio</a><span class="menu-arrow"></span>
+                        
                     </li>
-                    <li><a href="page-about.html" class="sub-menu-item">Info</a></li>
+                    <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a><span
-                                    class="submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="page-team.html" class="sub-menu-item">Team One</a></li>
-                                    <li><a href="page-team-two.html" class="sub-menu-item">Team Two</a></li>
-                                    <li><a href="page-team-three.html" class="sub-menu-item">Team Three</a></li>
-                                    <li><a href="page-team-detail.html" class="sub-menu-item">Team Detail </a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        
                     </li>
 
                 </ul>
@@ -129,73 +115,50 @@
 
 
     <!-- Team detail START -->
-    <section class="section" style="height: 600px;">
+    <section class="section">
         <div class="container">
+            <h4 class="name text-center">Steve Mathew</h4>
+
             <div class="row align-items-center">
-                <div class="col-lg-4 col-md-3 col-12">
-                    <div class="team-img pt-0 p-4">
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="team-img  p-4">
                         <img src="{% static 'images/team/single.jpg'%}"
                             class="img-fluid mx-auto d-block position-relative about-tween" alt="aboutpic">
                     </div>
                 </div>
                 <!--end col-->
 
-                <div class="col-lg-7 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                    <div class="ms-lg-5 team-member shadow-none">
-                        <h4 class="name text-center">Steve Mathew</h4>
-                        <span class="text-muted">Mecanico general</span>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <span class="text-muted">24 años</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <span class="text-muted">Masculino</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <span class="text-muted">Soltero</span>
-                            </div>
-                            <div class="col-sm-6">
-                                <span class="text-muted">Ciudad de México</span>
-                            </div>
-                        </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="flex-1 ms-4">
+                        <h5 class="feature-head mb-1">Mecanico General</h5>
+                        <p class="text-muted mb-0">24 años</p>
+                        <p class="text-muted mb-0">Masculino</p>
+                        <p class="text-muted mb-0">Soltero</p>
+                        <p class="text-muted mb-0">Ciudad de México</p>
+                    </div>
+                </div>
+                <!--end col-->
 
+                <div class="col-lg-3 col-md-3 col-4 centrar">
+                    <div class="flex-1 ms-4">
+                        <h5 class="feature-head mb-1">Habilidades</h5>
+                        <p class="text-muted mb-0">Tolerancia</p>
+                        <p class="text-muted mb-0">Empatia</p>
+                        <p class="text-muted mb-0">Honestidad</p>
+                        <p class="text-muted mb-0">Respeto</p>
+                        <p class="text-muted mb-0">Liderazgo</p>
+                    </div>
+                </div>
+                <!--end col-->
 
-                        <!-- prueba -->
-                        <section class="section features " id="features">
-                            <div class="container" >
-                                <div class="row no-gutters">
-                                    <div class="col-lg-5 col-md-6 col-12">
-                                        <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-4">
-                                            
-                                            <div class="flex-1 ms-4">
-                                                <h5 class="feature-head mb-1">Habilidades</h5>
-                                                <p class="text-muted mb-0">Tolerancia</p>
-                                                <p class="text-muted mb-0">Empatia</p>
-                                                <p class="text-muted mb-0">Honestidad</p>
-                                                <p class="text-muted mb-0">Honestidad</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                    <div class="col-lg-7 col-md-6 col-12 mt-4 mt-md-0 pt-2 pt-md-0">
-                                        <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-4">
-                                            
-                                            <div class="flex-1 ms-4">
-                                                <h5 class="feature-head mb-1">Conocimientos</h5>
-                                                <p class="text-muted mb-0">Automovil - electrico - Básico</p>
-                                                <p class="text-muted mb-0">Automovil - frenos - Avanzado</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <!--end row-->
-                            </div>
-                            <!--end container-->
-                        </section>
-                        
+                <div class="col-lg-3 col-md-3 col-7 centrar">
+                    <div class="flex-1 ms-4">
+                        <h5 class="feature-head mb-1">Conocimientos</h5>
+                        <p class="text-muted mb-0">Automovil - electrico - Básico</p>
+                        <p class="text-muted mb-0">Automovil - frenos - Avanzado</p>
+                        <p class="text-muted mb-0">Automovil - frenos - Avanzado</p>
+                        <p class="text-muted mb-0">Automovil - frenos - Avanzado</p>
+                        <p class="text-muted mb-0">Automovil - frenos - Avanzado</p>
                     </div>
                 </div>
                 <!--end col-->
@@ -206,15 +169,15 @@
     </section>
     <!--end section-->
     
-    <section class="section features bg-light" id="features" >
-        <div class="text-center">
-            <h3 class="title-pager mb-0">Resultados de Pruebas </h3>
-        </div> 
+    <section class="section features" id="features" >
+        <h3 class="title-pager mb-0 centrar">Resultados de Pruebas </h3>
+        <p></p>
         <div class="container">
             <h5 class="title-pager mb-0">Prueba Psicométrica </h5>
+            <p></p>
             <div class="row no-gutters">
                 <div class="col-lg-12 col-md-6 col-12">
-                    <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-4">
+                    <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-4 bg-light">
                         <div class="flex-1 ms-4">
                             <h5 class="feature-head mb-1">Prueba </h5>
                             <p class="text-muted mb-0">Resultado.</p>
@@ -224,10 +187,11 @@
             </div>
             
             <div class="container">
+                <p></p>
                 <h5 class="title-pager mb-0">Prueba Técnica </h5>
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-md-6 col-12 mt-4">
-                        <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-4">
+                        <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-2 bg-light">
                             <div class="flex-1 ms-4">
                                 <h5 class="feature-head mb-1">Prueba 1</h5>
                                 <div class="col-12 fs-6 mt-3 text-center">
@@ -238,7 +202,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-4">
-                        <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-4">
+                        <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-2 bg-light">
                             <div class="flex-1 ms-4">
                                 <h5 class="feature-head mb-1">Prueba 2</h5> 
                                 <div class="col-12 fs-6 mt-3 text-center">
@@ -248,7 +212,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-4">
-                        <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-4">
+                        <div class="d-flex features feature-primary core-feature rounded shadow bg-white p-2 bg-light">
                             <div class="flex-1 ms-4">
                                 <h5 class="feature-head mb-1">Prueba 3</h5>
                                 <div class="col-12 fs-6 mt-3 text-center">

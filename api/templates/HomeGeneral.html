@@ -14,7 +14,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="index.html"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeGeneral' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -37,7 +37,7 @@
             </div>
 
 
-            <div id="navigation">
+            <!-- <div id="navigation">
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Home</a><span class="menu-arrow"></span>
@@ -216,8 +216,8 @@
                         </ul>
                     </li>
                 </ul>
-                <!--end navigation menu-->
-            </div>
+               
+            </div> -->
             <!--end navigation-->
         </div>
         <!--end container-->
@@ -233,7 +233,7 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-6 col-12">
                     <div class="title-heading text-center">
-                        <h1 class="heading text-white mb-4">Recursos Humanos
+                        <h1 class="heading text-white mb-4">BIENVENIDO
                         </h1>
                         <p class="text-white-50 mx-auto para-desc">Sistema de emparejamiento para 
                             candidatos y empresas
@@ -252,7 +252,7 @@
     <!-- Feature End -->
 
     <!-- start ABOUT -->
-    <section class="section bg-light" id="about">
+    <section class="section" id="about">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -276,10 +276,11 @@
                             arcu posuere condimentum. Nullam justo eros, pellentesque a metus non, mattis volutpat
                             libero. Praesent ornare felis ante, sit amet porta felis pellentesque fermentum.</p> -->
                         <div class="mt-4 pt-2">
-                            <a href="page-about.html" class="btn btn-primary" style="width: 155px;">Inicia sesion</a>
+                            <a href="{% url 'login' %}" class="btn btn-primary" style="width: 155px;">Inicia sesión</a>
+
                         </div>
                         <div class="mt-4 pt-2">
-                            <a href="page-about.html" class="btn btn-primary">Crear usuario</a>
+                            <a href="{% url 'usuarioNuevo' %}" class="btn btn-primary">Crear usuario</a>
                         </div>
                     </div>
                 </div>

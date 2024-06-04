@@ -13,7 +13,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="index.html"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeCapacitador' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -71,26 +71,12 @@
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
                         <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
-                        </ul>
+                       
                     </li>
-                    <li><a href="page-about.html" class="sub-menu-item">Info</a></li>
+                    <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a><span
-                                    class="submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="page-team.html" class="sub-menu-item">Team One</a></li>
-                                    <li><a href="page-team-two.html" class="sub-menu-item">Team Two</a></li>
-                                    <li><a href="page-team-three.html" class="sub-menu-item">Team Three</a></li>
-                                    <li><a href="page-team-detail.html" class="sub-menu-item">Team Detail </a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        
                     </li>
 
                 </ul>
@@ -147,57 +133,6 @@
                                         <p class="text-muted mb-0">" No solo se trata de aprender, se trata de saber vender "</p>
                                     </blockquote>
                                 </div>
-
-                                <h5 class="mt-5 pb-3 border-bottom">Objetivos</h5>
-
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 mt-4">
-                                        <div class="services text-center p-4">
-                                            <div class="icon text-primary">
-                                                <i
-                                                    class="mdi mdi-star-outline h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
-                                            </div>
-                                            <div class="content">
-                                                <h5 class="text-dark mt-2">Objetivo 1 </h5>
-                                                <p class="text-muted mt-2"> Dar a conocer los diferentes
-                                                    medios de comunicación
-                                                </p>
-                                                <!-- <div class="read-more fs-6 mt-2"><a href="#" class="text-dark"> Read More</a></div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-lg-4 col-md-4 mt-4">
-                                        <div class="services text-center p-4">
-                                            <div class="icon text-primary">
-                                                <i
-                                                    class="mdi mdi-dna h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
-                                            </div>
-                                            <div class="content">
-                                                <h5 class="text-dark mt-2">Objetivo 2</h5>
-                                                <p class="text-muted mt-2"> Enseñar a usar herramientas de informatica</p>
-                                                <!-- <div class="read-more fs-6 mt-2"><a href="#" class="text-dark"> Read More</a></div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-lg-4 col-md-4 mt-4">
-                                        <div class="services text-center p-4">
-                                            <div class="icon text-primary">
-                                                <i
-                                                    class="mdi mdi-atom h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
-                                            </div>
-                                            <div class="content">
-                                                <h5 class="text-dark mt-2"> Objetivo 3</h5>
-                                                <p class="text-muted mt-2"> Implementar conocimientos de informatica 
-                                                    en la vida
-                                                </p>
-                                                <!-- <div class="read-more mt-2 fs-6"><a href="#" class="text-dark"> Read More</a></div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                </div>
                                 <!--end row-->
                             </div>
                         </div>
@@ -246,6 +181,64 @@
                                 </div>
                             </div>
                             <!-- NEWSLETTER -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="service-detail">
+                                <h5 class="mt-5 pb-3 border-bottom">Objetivos</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4">
+                    <div class="services text-center p-4">
+                        <div class="icon text-primary">
+                            <i
+                                class="mdi mdi-star-outline h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
+                        </div>
+                        <div class="content">
+                            <h5 class="text-dark mt-2">Objetivo 1 </h5>
+                            <p class="text-muted mt-2"> Dar a conocer los diferentes
+                                medios de comunicación
+                            </p>
+                            <!-- <div class="read-more fs-6 mt-2"><a href="#" class="text-dark"> Read More</a></div> -->
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+                <div class="col-4">
+                    <div class="services text-center p-4">
+                        <div class="icon text-primary">
+                            <i
+                                class="mdi mdi-dna h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
+                        </div>
+                        <div class="content">
+                            <h5 class="text-dark mt-2">Objetivo 2</h5>
+                            <p class="text-muted mt-2"> Enseñar a usar herramientas de informatica</p>
+                            <!-- <div class="read-more fs-6 mt-2"><a href="#" class="text-dark"> Read More</a></div> -->
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+                <div class="col-4">
+                    <div class="services text-center p-4">
+                        <div class="icon text-primary">
+                            <i
+                                class="mdi mdi-atom h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
+                        </div>
+                        <div class="content">
+                            <h5 class="text-dark mt-2"> Objetivo 3</h5>
+                            <p class="text-muted mt-2"> Implementar conocimientos de informatica 
+                                en la vida
+                            </p>
+                            <!-- <div class="read-more mt-2 fs-6"><a href="#" class="text-dark"> Read More</a></div> -->
                         </div>
                     </div>
                 </div>

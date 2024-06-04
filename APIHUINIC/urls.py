@@ -33,6 +33,7 @@ from api.views import(login,
                     perfilCandidato,
                     registroCandidato,
                     registroEmpresa,
+                    homeEmpresa,
                     solicitudEmpresa)
 
 urlpatterns = [
@@ -48,6 +49,7 @@ urlpatterns = [
     path('formularioCurso/', formularioCurso.as_view(), name="formularioCurso"),
     path('homeCandidato/', homeCandidato.as_view(), name="homeCandidato"),
     path('homeCapacitador/', homeCapacitador.as_view(), name="homeCapacitador"),
+    path('homeEmpresa/', homeEmpresa.as_view(), name="homeEmpresa"),
     path('homeGeneral/', homeGeneral.as_view(), name="homeGeneral"),
     path('homeSistemas/', homeSistemas.as_view(), name="homeSistemas"),
     path('recuperacionPass/', recuperacionPass.as_view(), name="recuperacionPass"),

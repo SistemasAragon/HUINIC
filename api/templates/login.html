@@ -28,7 +28,7 @@
 
 <body>
     <div class="back-to-home rounded d-none d-sm-block">
-        <a href="index.html" class="text-white rounded d-inline-block text-center"><svg
+        <a href="{% url 'homeGeneral' %}" class="text-white rounded d-inline-block text-center"><svg
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-home fea icon-sm">
@@ -80,7 +80,7 @@
 
                                 <div class="col-12">
                                     <div class="d-flex justify-content-between">
-                                        <p class="forgot-pass mb-0"><a href="reset-password.html"
+                                        <p class="forgot-pass mb-0"><a href="{% url 'recuperacionPass' %}"
                                                 class="text-dark small fw-bold">¿Olvidaste tu contraseña?</a></p>
                                         <p>.</p>
                                     </div>

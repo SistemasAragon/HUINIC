@@ -13,12 +13,11 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="index.html"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeGeneral' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
                 </span>
-                <img src="{% static 'images/logo-light.png'%}" class="logo-dark-mode" alt="">
             </a>
             <!-- End Logo container-->
             <div class="menu-extras">
@@ -45,12 +44,12 @@
                             <li>
                                 <ul>
                                     <li>
-                                        <a href="index.html" class="sub-menu-item">
+                                        <a href="{% url 'homeGeneral' %}" class="sub-menu-item">
                                             Inicio
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="index-two.html" class="sub-menu-item">
+                                        <a href="{% url 'login' %}" class="sub-menu-item">
                                             Ingresar
                                         </a>
                                     </li>
@@ -101,14 +100,15 @@
             <div id="grid" class="row g-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-2 row-cols-1">
                 <div class="col picture-item" data-groups='["accounting"]'>
                     <div class="position-relative portfolio-standard overflow-hidden rounded">
-                        <a href="registro_candidato.html">
-                            <div class="position-relative port-image">
-                                <img src="{% static 'images/Persona2.png'%}" class="img-fluid shadow" alt="work-image">
+                        <a href="{% url 'registroCandidato' %}">
+                            <div class="position-relative port-image centrar">
+                                <!-- <img src="{% static 'images/empleado.jpg'%}" class="img-fluid shadow" alt="work-image" style="height: 345px; width: 900px;">-->                                
+                                <img src="{% static 'images/img1.jpg'%}" class="shadow" alt="work-image" style="height: 345px;">
                                 <div class="overlay-work"></div>
                             </div>
                         </a>
                         <div class="content bg-light p-3 text-center mb-2">
-                            <h5 class="work-title mb-0"><a href="portfolio-detail.html" class="text-dark">Crear perfil como candidato</a></h5>
+                            <h5 class="work-title mb-0"><a href="{% url 'registroCandidato' %}" class="text-dark">Crear perfil como candidato</a></h5>
                         </div>
                     </div>
                 </div>
@@ -116,16 +116,16 @@
             
                 <div class="col picture-item" data-groups='["accounting"]'>
                     <div class="position-relative portfolio-standard overflow-hidden rounded">
-                        <a href="registro_empresa.html">
-                            <div class="position-relative port-image">
+                        <a href="{% url 'registroEmpresa' %}">
+                            <div class="position-relative port-image centrar">
                                 <div class="p-0 overflow-hidden">
                                     <div class="overlay-work"></div>
-                                    <img src="{% static 'images/Logo.png'%}" class="img-fluid shadow" alt="work-image" style="height: 365px;">
+                                    <img src="{% static 'images/empresa.jpg'%}" class=" shadow" alt="work-image" style="height: 345px; ">
                                 </div>
                             </div>
                         </a>
                         <div class="content bg-light p-3 text-center mb-2">
-                            <h5 class="work-title mb-0"><a href="portfolio-detail.html" class="text-dark">Crear perfil como empresa</a></h5>
+                            <h5 class="work-title mb-0"><a href="{% url 'registroEmpresa' %}" class="text-dark">Crear perfil como empresa</a></h5>
                         </div>
                     </div>
                 </div>

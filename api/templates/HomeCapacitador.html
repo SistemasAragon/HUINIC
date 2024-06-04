@@ -14,12 +14,11 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="index.html"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeCapacitador' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
                 </span>
-                <img src="{% static 'images/logo-light.png'%}" class="logo-dark-mode" alt="">
             </a>
             <!-- End Logo container-->
             <div class="menu-extras">
@@ -70,30 +69,11 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
-                    <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
-                        </ul>
-                    </li>
 
-                    <li><a href="page-about.html" class="sub-menu-item">Nuevo curso</a></li>
+                    <li><a href="{% url 'formularioCurso' %}" class="sub-menu-item">Nuevo curso</a></li>
                     
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Graficos Cursos</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a><span
-                                    class="submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="page-team.html" class="sub-menu-item">Team One</a></li>
-                                    <li><a href="page-team-two.html" class="sub-menu-item">Team Two</a></li>
-                                    <li><a href="page-team-three.html" class="sub-menu-item">Team Three</a></li>
-                                    <li><a href="page-team-detail.html" class="sub-menu-item">Team Detail </a></li>
-                                </ul>
-                            </li>
-                        </ul>
                     </li>
 
                 </ul>
@@ -116,10 +96,9 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-6 col-12">
                     <div class="title-heading text-center">
-                        <h1 class="heading text-white mb-4">Recursos Humanos
+                        <h1 class="heading text-white mb-4">Bienvenido capacitador
                         </h1>
-                        <p class="text-white-50 mx-auto para-desc">Sistema de emparejamiento para 
-                            candidatos y empresas
+                        <p class="text-white-50 mx-auto para-desc">Mejora y ayuda a seguir con el conocimiento
                         </p>
                     </div>
                 </div>
@@ -145,17 +124,36 @@
                         <div class="tiny-slide">
                             <div class="rounded service-two shadow m-2">
                                 <div class="p-4">
-                                    <h5 class="serv-head">Nombre de curso 1</h5>
+                                    <h5 class="serv-head">Curso: Motores de inyección</h5>
                                     <p class="text-muted mb-1"> Vizualizacion curso </p>
                                 </div>
 
-                                <img src="{% static 'images/service/03.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                                <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/1.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
 
                                 <p></p>
                                 <div  class="centrar">
-                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
     
-                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                                    <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--end services -->
+
+                        <div class="tiny-slide">
+                            <div class="rounded service-two shadow m-2">
+                                <div class="p-4">
+                                    <h5 class="serv-head">Curso: Llantas vehiculares</h5>
+                                    <p class="text-muted mb-1"> Vizualizacion curso </p>
+                                </div>
+                                <img style="height: 181px; width: 236px; border-radius: 8px;" src="{% static 'images/2.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+
+                                <p></p>
+                                <div  class="centrar">
+                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+    
+                                    <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
                                 </div>
 
                             </div>
@@ -165,18 +163,17 @@
                         <div class="tiny-slide">
                             <div class="rounded service-two shadow m-2">
                                 <div class="p-4">
-                                    <h5 class="serv-head">Nombre de curso 2</h5>
+                                    <h5 class="serv-head">Curso: Motos general</h5>
                                     <p class="text-muted mb-1"> Vizualizacion curso </p>
                                 </div>
-                                <img src="{% static 'images/service/03.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                                <img style="height: 181px; width: 236px; border-radius: 8px;" src="{% static 'images/3.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
 
                                 <p></p>
                                 <div  class="centrar">
-                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
     
-                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                                    <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
                                 </div>
-
                             </div>
                         </div>
                         <!--end services-->
@@ -184,16 +181,16 @@
                         <div class="tiny-slide">
                             <div class="rounded service-two shadow m-2">
                                 <div class="p-4">
-                                    <h5 class="serv-head">Nombre de curso 1</h5>
+                                    <h5 class="serv-head">Curso: Tuning de motos</h5>
                                     <p class="text-muted mb-1"> Vizualizacion curso </p>
                                 </div>
-                                <img src="{% static 'images/service/03.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                                <img style="height: 181px; width: 236px; border-radius: 8px;" src="{% static 'images/4.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
 
                                 <p></p>
                                 <div  class="centrar">
-                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
     
-                                    <a href="#" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                                    <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
                                 </div>
                             </div>
                         </div>
