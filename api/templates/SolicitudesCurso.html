@@ -7,8 +7,13 @@
 <head>
     <title>HUINIC | Solicitudes Curso</title>
 
+    
+    <!-- Luego incluye DataTables -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
     <!-- DataTables CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
 
 </head>
 
@@ -23,7 +28,6 @@
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
                 </span>
-                <img src="{% static 'images/logo-light.png'%}" class="logo-dark-mode" alt="">
             </a>
             <!-- End Logo container-->
             <div class="menu-extras">
@@ -126,8 +130,8 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="service-detail">
-                                <div class="img">
-                                    <img src="{% static 'images/service/01.jpg'%}" class="img-fluid mx-auto rounded d-block" alt="">
+                                <div class="img" >
+                                    <img style="height:254px; width: 380px;" src="{% static 'images/img1.jpg'%}" class="img-fluid mx-auto rounded d-block" alt="">
                                 </div>
                                 <div class="content mt-4">
                                     <h5 class="title pb-3 border-bottom">Acerca de:</h5>
@@ -144,13 +148,19 @@
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                    <div class="sidebar p-4 rounded  ms-lg-3">
+                    <div class="sidebar  rounded  ">
                         <!-- RELATED SERVICES -->
                         <div class="widget mb-4">
                             <h5 class="pb-2 widget-title border-bottom">Solicitudes</h5>
 
-                            <table id="" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
-                                
+                            <table id="TablaCheck" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                                <thead class="border-top border-bottom bg-light-subtle border-light">
+                                    <tr>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Contactar</th>
+                                        <th scope="col">check</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
                                     <tr>
                                         <td>
@@ -221,7 +231,7 @@
             </div>
 
             <div class="row" style="margin-top: 30px;">
-                <table id="TablaEquipoAsignado" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                <table id="TablaEncuentas" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
                             <th scope="col">Nombre</th>
@@ -275,24 +285,24 @@
     {% include  'includeFooter.html' %}
     <!-- Footer End -->
 
-
+    
     <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    {% comment %} <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> {% endcomment %}
 
 
 
     <script>
         $(document).ready(function () {
-        $('#TablaEquipoAsignado').DataTable({
-            lengthMenu: [5, 10, 15, 20, 50, 100],
+        $('#TablaEncuentas').DataTable({
+            lengthMenu: [5, 10, 15],
             pageLength: 5,
             destroy:true,
             "language": {
                 lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningún empleado encontrado",
-                info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ empleados",
-                infoEmpty: "Ningún empleado encontrado",
-                infoFiltered: "(filtrados desde _MAX_ empleados totales)",
+                zeroRecords: "Ningún vacante encontrado",
+                info: "Mostrando _END_ de _MAX_ vacantes",
+                infoEmpty: "Ningún vacante encontrado",
+                infoFiltered: "",
                 search: "Buscar:",
                 loadingRecords: "Cargando... ",
                 paginate: {
@@ -301,7 +311,34 @@
                     next: "Siguiente",
                     previous: "Anterior"
                 }
+            }
+            // Otras opciones y configuraciones de DataTables que puedas tener...
+        });
+        });
 
+    </script>
+
+    <script>
+        $(document).ready(function () {
+        $('#TablaCheck').DataTable({
+            //lengthMenu: [5, 10, 15, 20, 50, 100],
+            pageLength: 5,
+            lengthChange: false, // Oculta el menú de selección de cantidad de registros
+            destroy:true,
+            "language": {
+                //lengthMenu: "Mostrar _MENU_ registros por página",
+                zeroRecords: "Ningún vacante encontrado",
+                info: "Mostrando _END_ de _MAX_ vacantes",
+                infoEmpty: "Ningún vacante encontrado",
+                infoFiltered: "",
+                search: "Buscar:",
+                loadingRecords: "Cargando... ",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
             }
             // Otras opciones y configuraciones de DataTables que puedas tener...
         });
