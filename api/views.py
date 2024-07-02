@@ -53,6 +53,11 @@ class habilidadesLista(APIView):
     def get(self,request):
         return render(request,self.template_name)
 
+class postulaciones(APIView):
+    template_name= "postulaciones.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
 class registroCapacitador(APIView):
     template_name= "registroCapacitador.html"
     def get(self,request):
@@ -101,6 +106,12 @@ class registroEmpresa(APIView):
     
 class solicitudEmpresa(APIView):
     template_name= "solicitudEmpresa.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+
+class pruebaBusqueda(APIView):
+    template_name= "pruebaBusqueda.html"
     def get(self,request):
         return render(request,self.template_name)
     

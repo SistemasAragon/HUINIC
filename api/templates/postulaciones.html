@@ -5,7 +5,7 @@
 
 
 <head>
-    <title>HUINIC | Solicitudes Curso</title>
+    <title>HUINIC | Mis Postulaciones</title>
 
     
     <!-- Luego incluye DataTables -->
@@ -23,7 +23,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeCapacitador' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeCandidato' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -79,7 +79,7 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
-                        <a href="{% url 'homeCapacitador' %}">Inicio</a><span class="menu-arrow"></span>
+                        <a href="{% url 'homeCandidato' %}">Inicio</a><span class="menu-arrow"></span>
                         
                     </li>
                 </ul>
@@ -100,7 +100,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">Habilidades Vacantes</h3>
+                                <h3 class="title-pager mb-0">Mis postulaciones </h3>
                             </div>
                         </div>
                         <!--end col-->
@@ -121,62 +121,112 @@
 
             
             <div class="row" >
-                <table id="TablaHabilidades" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                <table id="TablaPostulaciones" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
-                            <th scope="col">Habilidad</th>
+                            <th scope="col">Puesto</th>
+                            <th scope="col">Edad</th>
+                            <th scope="col">Estado Civil</th>
+                            <th scope="col">Area</th>
+                            <th scope="col">Area especifica</th>
+                            <th scope="col">Salario</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                Empatia
+                                Gerente de taller
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Editar</a>
+                                18 - 20
+                            </td>
+                            <td>
+                                Soltero
+                            </td>
+                            <td>
+                                Automotriz
+                            </td>
+                            <td>
+                                Motor
+                            </td>
+                            <td>
+                                8000
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Ver Vacante</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Trabajo en Equipo
+                                Administrador de inventario 
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Editar</a>
+                                18 - 25
+                            </td>
+                            <td>
+                                Soltero
+                            </td>
+                            <td>
+                                Automotriz
+                            </td>
+                            <td>
+                                Pintura
+                            </td>
+                            <td>
+                                9000
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Ver Vacante</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Trabajo bajo presión
+                                Mecanico motocicleta
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Editar</a>
+                                30 - 40
+                            </td>
+                            <td>
+                                Casado
+                            </td>
+                            <td>
+                                Motocicleta
+                            </td>
+                            <td>
+                                Electrico
+                            </td>
+                            <td>
+                                10000
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Ver Vacante</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Liderazgo
+                                Gerente de taller
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Editar</a>
+                                25 - 40
+                            </td>
+                            <td>
+                                Casado
+                            </td>
+                            <td>
+                                Automotriz
+                            </td>
+                            <td>
+                                Electrico
+                            </td>
+                            <td>
+                                15000
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Ver Vacante</a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                Ventas
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Editar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Compromiso
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Editar</a>
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -197,15 +247,15 @@
 
     <script>
         $(document).ready(function () {
-        $('#TablaHabilidades').DataTable({
+        $('#TablaPostulaciones').DataTable({
             lengthMenu: [5, 10, 15],
             pageLength: 5,
             destroy:true,
             "language": {
                 lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningúna habilidad encontrada",
-                info: "Mostrando _END_ de _MAX_ habilidades",
-                infoEmpty: "Ningúna habilidad encontrada",
+                zeroRecords: "Ningúna postulación encontrada",
+                info: "Mostrando _END_ de _MAX_ postulaciones",
+                infoEmpty: "Ningúna postulación encontrada",
                 infoFiltered: "",
                 search: "Buscar:",
                 loadingRecords: "Cargando... ",

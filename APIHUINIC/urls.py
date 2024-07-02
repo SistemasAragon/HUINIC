@@ -35,10 +35,14 @@ from api.views import(login,
                     registroCandidato,
                     registroEmpresa,
                     homeEmpresa,
+                    pruebaBusqueda,
+                    postulaciones,
                     solicitudEmpresa)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('postulaciones/', postulaciones.as_view(), name="postulaciones"),
+    path('pruebaBusqueda/', pruebaBusqueda.as_view(), name="pruebaBusqueda"),
     path('habilidadesLista/', habilidadesLista.as_view(), name="habilidadesLista"),
     path('candidatoRegistro/', candidatoRegistro.as_view(), name="candidatoRegistro"),
     path('habilidadesCandidato/', habilidadesCandidato.as_view(), name="habilidadesCandidato"),
