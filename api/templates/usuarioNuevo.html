@@ -39,24 +39,7 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-right">
                     <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li>
-                                <ul>
-                                    <li>
-                                        <a href="{% url 'homeGeneral' %}" class="sub-menu-item">
-                                            Inicio
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{% url 'login' %}" class="sub-menu-item">
-                                            Ingresar
-                                        </a>
-                                    </li>
-                                    
-                                </ul>
-                            </li>
-                        </ul>
+                        <a href="{% url 'homeGeneral' %}">Inicio</a><span class="menu-arrow"></span>
                     </li>
                 </ul>
                 <!--end navigation menu-->
@@ -103,7 +86,7 @@
                         <a href="{% url 'registroCandidato' %}">
                             <div class="position-relative port-image centrar">
                                 <!-- <img src="{% static 'images/empleado.jpg'%}" class="img-fluid shadow" alt="work-image" style="height: 345px; width: 900px;">-->                                
-                                <img src="{% static 'images/img1.jpg'%}" class="shadow" alt="work-image" style="height: 345px;">
+                                <img src="{% static 'images/img1.jpg'%}" class="shadow" alt="work-image" style="height: 320px;">
                                 <div class="overlay-work"></div>
                             </div>
                         </a>
@@ -120,7 +103,7 @@
                             <div class="position-relative port-image centrar">
                                 <div class="p-0 overflow-hidden">
                                     <div class="overlay-work"></div>
-                                    <img src="{% static 'images/empresa.jpg'%}" class=" shadow" alt="work-image" style="height: 345px; ">
+                                    <img src="{% static 'images/empresa.jpg'%}" class=" shadow" alt="work-image" style="height: 320px; ">
                                 </div>
                             </div>
                         </a>
