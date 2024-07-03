@@ -11,49 +11,6 @@
 
 </head>
 
-<!--CODIGO DE STYLO  -->
-<!-- <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    .container {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        overflow: hidden;
-    }
-    .search-results, .vacantes {
-        overflow-y: auto;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    .search-results {
-        width: 50%;
-        border-right: 1px solid #ddd;
-    }
-    .vacantes {
-        width: 50%;
-    }
-    .vacante-item {
-        cursor: pointer;
-        padding: 15px;
-        border-bottom: 1px solid #ddd;
-    }
-    .vacante-item:hover {
-        background-color: #f0f0f0;
-    }
-    .vacante-descripcion {
-        padding: 20px;
-        border: 1px solid #ddd;
-        margin-top: 20px;
-    }
-</style> -->
-<!-- CODIGO DE STYLO -->
 <body>
     <!-- Navbar STart -->
     <header id="topnav" class="defaultscroll sticky">
@@ -143,7 +100,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">  Registra las habilidades que buscas</h3>
+                                <h3 class="title-pager mb-0">  Busca el empleo que se adecua a tí</h3>
                                 <!-- <h3 class="title-pager mb-0">  Recuerda que esto aparecera en tu perfil</h3> -->
                             </div>
                         </div>
@@ -159,56 +116,117 @@
     <!--end section-->
     <!-- End Home -->
 
+    <!-- Inicio prueba de secciones -->
+    <section class="section">
+        <div class="container">
+
+            <h3 class="text-center">Selecciona las opciones que deseas consultar</h3>
+            
+
+            <div class="custom-search-form mt-4 pt-2 col-lg-11 col-12 mt-4 pt-2 d-flex justify-content-center">
+                <form class="custom-form ms-0 d-flex align-items-center">
+                    <!-- Sección para seleccionar entre Auto y Moto -->
+                     
+                    <div class="custom-form-group mb-0 me-3">
+                        
+                        
+                        <select id="vehiculo" name="vehiculo" class="custom-select rounded-pill">
+                            <option value="auto">Auto</option>
+                            <option value="moto">Moto</option>
+                        </select>
+                    </div>
+                    <!-- Sección para seleccionar la sección (Frenos, etc.) -->
+                    <div class="custom-form-group mb-0 me-3">
+                        <select id="seccion" name="seccion" class="custom-select rounded-pill">
+                            <option value="frenos">Frenos</option>
+                            <option value="motor">Motor</option>
+                            <option value="suspension">Suspensión</option>
+                            <option value="electrico">Eléctrico</option>
+                            <option value="carroceria">Carrocería</option>
+                        </select>
+                    </div>
+                    <!-- Botón de búsqueda -->
+                    <button type="submit" class="custom-btn rounded-pill btn-primary">Buscar</button>
+                </form>
+            </div>
+            
+
+
+
+
+
+            
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- fin prueba de secciones -->
+     <!-- otraprueba -->
+     <section class="section">
+        <div class="container" >
+            <div class="row">
+                <!-- Search Results Section -->
+                <div class="col-lg-6 col-md-6 col-12" >
+                    <div class="search-results">
+                        <h2>Resultados de búsqueda: Área de Frenos</h2>
+                        <div class="vacante-item" onclick="mostrarDescripcion(
+                            'Mecánico de Frenos', 
+                            'Empresa A', 
+                            'Ciudad A', 
+                            '$12,000.00', 
+                            'Somos una empresa que se especializa en el mantenimiento y reparación de sistemas de frenos para vehículos. Buscamos un mecánico experimentado que se una a nuestro equipo. Requisitos: Experiencia previa en sistemas de frenos, capacidad para diagnosticar y reparar problemas de frenos, y conocimientos básicos de mecánica automotriz.'
+                        )">
+                            <h3>Mecánico de Frenos</h3>
+                            <p>Empresa: Empresa A</p>
+                            <p>Ubicación: Ciudad A</p>
+                            <p>Sueldo: $12,000.00</p>
+                        </div>
+                        <div class="vacante-item" onclick="mostrarDescripcion(
+                            'Técnico en Frenos', 
+                            'Empresa B', 
+                            'Ciudad B', 
+                            'No especificado', 
+                            'Buscamos un técnico en frenos con al menos 3 años de experiencia. El candidato ideal deberá ser capaz de realizar mantenimientos preventivos y correctivos en sistemas de frenos, así como manejar herramientas y equipos de diagnóstico.'
+                        )">
+                            <h3>Técnico en Frenos</h3>
+                            <p>Empresa: Empresa B</p>
+                            <p>Ubicación: Ciudad B</p>
+                            <p>Sueldo: No especificado</p>
+                        </div>
+                        <div class="vacante-item" onclick="mostrarDescripcion(
+                            'Especialista en Frenos', 
+                            'Empresa C', 
+                            'Ciudad C', 
+                            '$15,000.00', 
+                            'Estamos en busca de un especialista en frenos para unirse a nuestro equipo. La posición requiere una sólida comprensión de los sistemas de frenos hidráulicos y electrónicos, y la capacidad para realizar diagnósticos y reparaciones complejas.'
+                        )">
+                            <h3>Especialista en Frenos</h3>
+                            <p>Empresa: Empresa C</p>
+                            <p>Ubicación: Ciudad C</p>
+                            <p>Sueldo: $15,000.00</p>
+                        </div>
+                        <!-- Añadir más vacantes aquí -->
+                    </div>
+                </div>
+                <!-- Vacante Description Section -->
+                <div class="col-lg-6 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="sidebar p-4 rounded bg-ligth ms-lg-3">
+                        <div class="vacantes">
+                            <h2>Descripción de la Vacante</h2>
+                            <div id="vacante-descripcion" class="vacante-descripcion">
+                                Selecciona una vacante para ver su descripción completa.
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+    </section>
+     <!-- otraprueba -->
     
 
-    <div class="container">
-        <div class="search-results">
-            <h2>Resultados de búsqueda: Área de Frenos</h2>
-            <div class="vacante-item" onclick="mostrarDescripcion(
-                'Mecánico de Frenos', 
-                'Empresa A', 
-                'Ciudad A', 
-                '$12,000.00', 
-                'Somos una empresa que se especializa en el mantenimiento y reparación de sistemas de frenos para vehículos. Buscamos un mecánico experimentado que se una a nuestro equipo. Requisitos: Experiencia previa en sistemas de frenos, capacidad para diagnosticar y reparar problemas de frenos, y conocimientos básicos de mecánica automotriz.'
-            )">
-                <h3>Mecánico de Frenos</h3>
-                <p>Empresa: Empresa A</p>
-                <p>Ubicación: Ciudad A</p>
-                <p>Sueldo: $12,000.00</p>
-            </div>
-            <div class="vacante-item" onclick="mostrarDescripcion(
-                'Técnico en Frenos', 
-                'Empresa B', 
-                'Ciudad B', 
-                'No especificado', 
-                'Buscamos un técnico en frenos con al menos 3 años de experiencia. El candidato ideal deberá ser capaz de realizar mantenimientos preventivos y correctivos en sistemas de frenos, así como manejar herramientas y equipos de diagnóstico.'
-            )">
-                <h3>Técnico en Frenos</h3>
-                <p>Empresa: Empresa B</p>
-                <p>Ubicación: Ciudad B</p>
-                <p>Sueldo: No especificado</p>
-            </div>
-            <div class="vacante-item" onclick="mostrarDescripcion(
-                'Especialista en Frenos', 
-                'Empresa C', 
-                'Ciudad C', 
-                '$15,000.00', 
-                'Estamos en busca de un especialista en frenos para unirse a nuestro equipo. La posición requiere una sólida comprensión de los sistemas de frenos hidráulicos y electrónicos, y la capacidad para realizar diagnósticos y reparaciones complejas.'
-            )">
-                <h3>Especialista en Frenos</h3>
-                <p>Empresa: Empresa C</p>
-                <p>Ubicación: Ciudad C</p>
-                <p>Sueldo: $15,000.00</p>
-            </div>
-            <!-- Añadir más vacantes aquí -->
-        </div>
-        <div class="vacantes">
-            <h2>Descripción de la Vacante</h2>
-            <div id="vacante-descripcion" class="vacante-descripcion">
-                Selecciona una vacante para ver su descripción completa.
-            </div>
-        </div>
-    </div>
+    
     
     <script>
         function mostrarDescripcion(titulo, empresa, ubicacion, sueldo, descripcion) {

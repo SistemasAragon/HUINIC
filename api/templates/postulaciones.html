@@ -12,6 +12,10 @@
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
 
+    <!-- Ventanas -->
+    <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
+
     <!-- DataTables CSS -->
     {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
 
@@ -154,7 +158,9 @@
                                 8000
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Ver Vacante</a>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver Vacante
+                                </a>
                             </td>
                         </tr>
                         <tr>
@@ -177,7 +183,9 @@
                                 9000
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Ver Vacante</a>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver Vacante
+                                </a>
                             </td>
                         </tr>
                         <tr>
@@ -200,7 +208,9 @@
                                 10000
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Ver Vacante</a>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver Vacante
+                                </a>
                             </td>
                         </tr>
                         <tr>
@@ -223,10 +233,11 @@
                                 15000
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Ver Vacante</a>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver Vacante
+                                </a>
                             </td>
                         </tr>
-                        
                     </tbody>
                 </table>
             </div>
@@ -238,6 +249,9 @@
     <!-- Footer End -->
     {% include  'includeFooter.html' %}
     <!-- Footer End -->
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     
     <!-- DataTables JS -->
@@ -269,8 +283,216 @@
             // Otras opciones y configuraciones de DataTables que puedas tener...
         });
         });
-
     </script>
+
+    <!-- Script de editar datos-->
+    <script>
+        function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
+            Swal.fire({
+                title: 'Información de postulación',
+                html:
+                `<div class="my-swal-label-container">` +
+                        '<div class="row">' +
+                            '<div class="col-6">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Puesto:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="claveEmpleado" name="claveEmpleado" class="swal2-input my-swal-input" value="${claveEmpleado}" disabled>` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' +
+                            '<div class="col-6">' +
+                                '<a href="{% url 'homeCandidato' %}">' + 
+                                    '<span>' + 
+                                        '<img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height:50px; margin-top:20px;" >' + 
+                                    '</span>' + 
+                                '</a>' + 
+                            '</div>' +  
+                        '</div>' +
+                        '<div class="row">' +
+                        '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Edad:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevoApellidoPaterno" name="nuevoApellidoPaterno" class="swal2-input my-swal-input" value="${nuevoApellidoPaterno}">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Estado Civil:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevoApellidoPaterno" name="nuevoApellidoPaterno" class="swal2-input my-swal-input" value="${nuevoApellidoPaterno}">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' +   
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Genero:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevoApellidoMaterno" name="nuevoApellidoMaterno" class="swal2-input my-swal-input" value="${nuevoApellidoMaterno}">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Salario:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevoApellidoPaterno" name="nuevoApellidoPaterno" class="swal2-input my-swal-input" value="${nuevoApellidoPaterno}">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<div class="row">' +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Habilidades:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input type="email" id="nuevoGmail"  name="nuevoGmail"class="swal2-input my-swal-input" value="${nuevoGmail}">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' +   
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input type="email" id="nuevoGmail"  name="nuevoGmail"class="swal2-input my-swal-input" value="${nuevoGmail}">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input type="email" id="nuevoGmail"  name="nuevoGmail"class="swal2-input my-swal-input" value="${nuevoGmail}">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<div class="row">' +
+                            '<div class="col-6">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevoCurp"  name="nuevoCurp" class="swal2-input my-swal-input" maxlength="18" value="${nuevoCurp}">` +
+                                        `</div>` +
+                                `</li>` +
+                                
+                            '</div>' +   
+                            '<div class="col-6">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevoCodigoPostal"  name="nuevoCodigoPostal" class="swal2-input my-swal-input" type="int" maxlength="5" value="${nuevoCodigoPostal}">` +
+                                        `</div>` +
+                                `</li>` +   
+                            '</div>' + 
+                        '</div>' +
+                        '<div class="row">' +
+                            '<div class="col-2">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Vehiculo :</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevoRfc"  name="nuevoRfc" class="swal2-input my-swal-input" maxlength="13" value="${nuevoRfc}">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' +   
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Area :</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevaCuenta"  name="nuevaCuenta" class="swal2-input my-swal-input" value="${nuevaCuenta}" oninput="validarcuenta(event)">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Area especifica:</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevaCuenta"  name="nuevaCuenta" class="swal2-input my-swal-input" value="${nuevaCuenta}" oninput="validarcuenta(event)">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' +
+                            '<div class="col-2">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Nivel :</span>` +
+                                        `<div class="my-swal-input-container">` +
+                                            `<input id="nuevaCuenta"  name="nuevaCuenta" class="swal2-input my-swal-input" value="${nuevaCuenta}" oninput="validarcuenta(event)">` +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                    `</div>`,
+                focusConfirm: false,
+                showCancelButton: true,
+                confirmButtonText: 'Aceptar',
+                cancelButtonText: 'Cancelar',
+                allowOutsideClick: false,
+                customClass: {
+                    container: 'my-swal-container2',
+                    popup: 'my-swal-popup2',
+                    title: 'my-swal-title2',
+                    input: 'my-swal-input2',
+                    cancelButton: 'my-swal-cancel-button2',
+                    confirmButton: 'my-swal-confirm-button2',
+                }, 
+                preConfirm: () => {
+                    const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
+                    const nuevoNombre = Swal.getPopup().querySelector('#nuevoNombre').value;
+                    const nuevoApellidoPaterno = Swal.getPopup().querySelector('#nuevoApellidoPaterno').value;
+                    const nuevoApellidoMaterno = Swal.getPopup().querySelector('#nuevoApellidoMaterno').value;
+                    const nuevoNumeroPersonal = Swal.getPopup().querySelector('#nuevoNumeroPersonal').value;
+                    const nuevoNumeroContacto = Swal.getPopup().querySelector('#nuevoNumeroContacto').value;
+                    const nuevoIdNumeroPersonal = Swal.getPopup().querySelector('#nuevoIdNumeroPersonal').value;
+                    const nuevoIdNumeroContacto = Swal.getPopup().querySelector('#nuevoIdNumeroContacto').value;
+                    const nuevoGmail = Swal.getPopup().querySelector('#nuevoGmail').value;
+                    const nuevaFechaNacimiento = Swal.getPopup().querySelector('#nuevaFechaNacimiento').value;
+                    const nuevoCurp = Swal.getPopup().querySelector('#nuevoCurp').value;
+                    const nuevoCodigoPostal = Swal.getPopup().querySelector('#nuevoCodigoPostal').value;
+                    const nuevoRfc = Swal.getPopup().querySelector('#nuevoRfc').value;
+                    const nuevoStatus = Swal.getPopup().querySelector('#nuevoStatus').value;
+                    const nuevaCuenta = Swal.getPopup().querySelector('#nuevaCuenta').value;
+                    const nuevaClave = Swal.getPopup().querySelector('#nuevaClave').value;
+                    const nuevoCargo = Swal.getPopup().querySelector('#nuevoCargo').value;
+
+                    return fetch('{% url 'postulaciones' %}', {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': getCookie('csrftoken')
+                            },
+                            body: JSON.stringify({
+                                claveEmpleado: claveEmpleado,
+                                nuevoNombre: nuevoNombre,
+                                nuevoApellidoPaterno: nuevoApellidoPaterno,
+                                nuevoApellidoMaterno: nuevoApellidoMaterno,
+                                nuevoNumeroPersonal: nuevoNumeroPersonal,
+                                nuevoNumeroContacto: nuevoNumeroContacto,
+                                nuevoIdNumeroPersonal: nuevoIdNumeroPersonal,
+                                nuevoIdNumeroContacto: nuevoIdNumeroContacto,
+                                nuevoGmail: nuevoGmail,
+                                nuevaFechaNacimiento: nuevaFechaNacimiento,
+                                nuevoCurp: nuevoCurp,
+                                nuevoCodigoPostal: nuevoCodigoPostal,
+                                nuevoRfc: nuevoRfc,
+                                nuevoStatus: nuevoStatus,
+                                nuevaCuenta: nuevaCuenta,
+                                nuevaClave: nuevaClave,
+                                nuevoCargo: nuevoCargo,
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                            if (data.error) {
+                                Swal.showValidationMessage(`Error: ${data.error}`);
+                            } else {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: data.message,
+                                }).then(() => {
+                                        location.reload();
+                                });
+                            }
+                        });
+                }
+            });
+        }
+
+        function getCookie(name) {
+            const cookieValue = document.cookie
+                .split('; ')
+                .find(row => row.startsWith(name + '='))
+                ?.split('=')[1];
+            return cookieValue ? decodeURIComponent(cookieValue) : null;
+        }
+    </script>
+    <!-- Script de editar datos-->
 
 </body>
 

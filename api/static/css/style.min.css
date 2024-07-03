@@ -7,6 +7,87 @@
     }
 }
 
+/* prueba de estilos para area de buscar una vacante */
+.search-results, .vacantes {
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.search-results {
+    height: 500px; /* Ajustar según sea necesario */
+    border-right: 1px solid #ddd;
+}
+.vacantes {
+    height: 500px; /* Ajustar según sea necesario */
+}
+.vacante-item {
+    cursor: pointer;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.vacante-item:hover {
+    background-color: #f0f0f0;
+}
+.vacante-descripcion {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+/* prueba de estilos para area de buscar una vacante */
+
+/* SECCION DE BUSQUEDA */
+
+.custom-search-form {
+    background-color: #fbfdff; /* Color de fondo gris oscuro */
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.custom-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-form-group {
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.custom-select {
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 50px;
+    background-color: #ffffff;
+    color: #495057;
+    outline: none;
+}
+
+.custom-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-btn {
+    height: 45px;
+    font-size: 16px;
+    padding: 0 20px;
+    border: none;
+    color: #ffffff;
+    background-color: #da7b2e;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #da7b2e;
+}
+
+
+/* SECCION DE BUSQUEDA */
+
 .row>* {
     position: relative
 }
@@ -166,6 +247,9 @@ a.text-muted:focus {
 
 .bg-light {
     background-color: #f8f9fa !important
+}
+.bg-viri {
+    background-color: #222076 !important
 }
 
 .bg-soft-light {
