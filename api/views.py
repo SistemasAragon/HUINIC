@@ -12,6 +12,11 @@ class detallesCurso(APIView):
     template_name= "detallesCurso.html"
     def get(self,request):
         return render(request,self.template_name)
+    
+class editarPerfil(APIView):
+    template_name= "editarPerfil.html"
+    def get(self,request):
+        return render(request,self.template_name)
 
 class formularioCurso(APIView):
     template_name= "formularioCurso.html"

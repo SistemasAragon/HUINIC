@@ -18,6 +18,7 @@ from django.urls import path
 
 from api.views import(login,
                     detallesCurso,
+                    editarPerfil,
                     formularioCurso,
                     homeCandidato,
                     homeCapacitador,
@@ -42,6 +43,7 @@ from api.views import(login,
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('postulaciones/', postulaciones.as_view(), name="postulaciones"),
+    path('editarPerfil/', editarPerfil.as_view(), name="editarPerfil"),
     path('pruebaBusqueda/', pruebaBusqueda.as_view(), name="pruebaBusqueda"),
     path('habilidadesLista/', habilidadesLista.as_view(), name="habilidadesLista"),
     path('candidatoRegistro/', candidatoRegistro.as_view(), name="candidatoRegistro"),

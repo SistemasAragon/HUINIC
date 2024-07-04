@@ -35,7 +35,6 @@
         align-items: start;
         text-align: start;
         width: 100%; /* Esto permite que el ancho sea 100% del contenedor */
-
     }
 
     .my-swal-label {
@@ -57,6 +56,10 @@
         /* Otros estilos personalizados según tus necesidades */
     }
     
+    .etiquetaDato{
+        font-size: 18px;
+        font-weight: normal;
+    }
 
     .my-swal-input,
     .my-swal-select, /* Agrega esta clase para el menú desplegable */

@@ -159,7 +159,7 @@
                             </td>
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver Vacante
+                                    Ver 
                                 </a>
                             </td>
                         </tr>
@@ -184,7 +184,7 @@
                             </td>
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver Vacante
+                                    Ver 
                                 </a>
                             </td>
                         </tr>
@@ -209,7 +209,7 @@
                             </td>
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver Vacante
+                                    Ver 
                                 </a>
                             </td>
                         </tr>
@@ -234,7 +234,7 @@
                             </td>
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver Vacante
+                                    Ver 
                                 </a>
                             </td>
                         </tr>
@@ -293,118 +293,128 @@
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
-                            '<div class="col-6">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Puesto:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="claveEmpleado" name="claveEmpleado" class="swal2-input my-swal-input" value="${claveEmpleado}" disabled>` +
-                                        `</div>` +
+                            '<div class="col-6 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Puesto</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Gerente Mecanico de Motores</span>` +
+                                    `</div>` +    
                                 `</li>` +
                             '</div>' +
                             '<div class="col-6">' +
                                 '<a href="{% url 'homeCandidato' %}">' + 
                                     '<span>' + 
-                                        '<img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height:50px; margin-top:20px;" >' + 
+                                        '<img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height:50px; " >' + 
                                     '</span>' + 
                                 '</a>' + 
                             '</div>' +  
                         '</div>' +
+                        '<p></p>' +
                         '<div class="row">' +
-                        '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Edad:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevoApellidoPaterno" name="nuevoApellidoPaterno" class="swal2-input my-swal-input" value="${nuevoApellidoPaterno}">` +
-                                        `</div>` +
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Edad</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">18 - 25</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                             '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Estado Civil:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevoApellidoPaterno" name="nuevoApellidoPaterno" class="swal2-input my-swal-input" value="${nuevoApellidoPaterno}">` +
-                                        `</div>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Estado Civil</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Soltero</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' +   
                             '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Genero:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevoApellidoMaterno" name="nuevoApellidoMaterno" class="swal2-input my-swal-input" value="${nuevoApellidoMaterno}">` +
-                                        `</div>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Genero</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Masculino</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                             '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Salario:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevoApellidoPaterno" name="nuevoApellidoPaterno" class="swal2-input my-swal-input" value="${nuevoApellidoPaterno}">` +
-                                        `</div>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Salario</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">$ 20000</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
+                        
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<span class="my-swal-label centrar">Habilidades</span>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
                         '<div class="row">' +
                             '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Habilidades:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input type="email" id="nuevoGmail"  name="nuevoGmail"class="swal2-input my-swal-input" value="${nuevoGmail}">` +
-                                        `</div>` +
+                                `<li class="my-swal-list-item">` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Empatia</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' +   
                             '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input type="email" id="nuevoGmail"  name="nuevoGmail"class="swal2-input my-swal-input" value="${nuevoGmail}">` +
-                                        `</div>` +
+                                `<li class="my-swal-list-item">` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Trabajo en equipo</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                             '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input type="email" id="nuevoGmail"  name="nuevoGmail"class="swal2-input my-swal-input" value="${nuevoGmail}">` +
-                                        `</div>` +
+                                `<li class="my-swal-list-item">` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Respeto</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
+                        '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-6">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevoCurp"  name="nuevoCurp" class="swal2-input my-swal-input" maxlength="18" value="${nuevoCurp}">` +
-                                        `</div>` +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item">` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Trabajo colaborativo</span>` +
+                                    `</div>` +  
                                 `</li>` +
-                                
                             '</div>' +   
-                            '<div class="col-6">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevoCodigoPostal"  name="nuevoCodigoPostal" class="swal2-input my-swal-input" type="int" maxlength="5" value="${nuevoCodigoPostal}">` +
-                                        `</div>` +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item">` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Liderazgo</span>` +
+                                    `</div>` +  
                                 `</li>` +   
                             '</div>' + 
                         '</div>' +
+                        '<p></p>' +
                         '<div class="row">' +
                             '<div class="col-2">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Vehiculo :</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevoRfc"  name="nuevoRfc" class="swal2-input my-swal-input" maxlength="13" value="${nuevoRfc}">` +
-                                        `</div>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Vehiculo</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Auto</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' +   
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Area :</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevaCuenta"  name="nuevaCuenta" class="swal2-input my-swal-input" value="${nuevaCuenta}" oninput="validarcuenta(event)">` +
-                                        `</div>` +
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Area</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Disel pesado </span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                             '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Area especifica:</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevaCuenta"  name="nuevaCuenta" class="swal2-input my-swal-input" value="${nuevaCuenta}" oninput="validarcuenta(event)">` +
-                                        `</div>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Area especifica</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Sistema de enfriamento </span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' +
-                            '<div class="col-2">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Nivel :</span>` +
-                                        `<div class="my-swal-input-container">` +
-                                            `<input id="nuevaCuenta"  name="nuevaCuenta" class="swal2-input my-swal-input" value="${nuevaCuenta}" oninput="validarcuenta(event)">` +
-                                        `</div>` +
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Nivel</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Desarrollador</span>` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
@@ -412,7 +422,7 @@
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Aceptar',
-                cancelButtonText: 'Cancelar',
+                cancelButtonText: 'Cerrar',
                 allowOutsideClick: false,
                 customClass: {
                     container: 'my-swal-container2',
