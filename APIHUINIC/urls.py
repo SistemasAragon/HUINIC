@@ -37,12 +37,17 @@ from api.views import(login,
                     registroEmpresa,
                     homeEmpresa,
                     pruebaBusqueda,
+                    perfilEmpresaLogo,
                     postulaciones,
-                    solicitudEmpresa)
+                    cursosLIsta,
+                    solicitudEmpresa,
+                    habilidadesCandidatoN2)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cursosLIsta/', cursosLIsta.as_view(), name="cursosLIsta"),
     path('postulaciones/', postulaciones.as_view(), name="postulaciones"),
+    path('perfilEmpresaLogo/', perfilEmpresaLogo.as_view(), name="perfilEmpresaLogo"),
     path('editarPerfil/', editarPerfil.as_view(), name="editarPerfil"),
     path('pruebaBusqueda/', pruebaBusqueda.as_view(), name="pruebaBusqueda"),
     path('habilidadesLista/', habilidadesLista.as_view(), name="habilidadesLista"),
@@ -65,4 +70,5 @@ urlpatterns = [
     path('resultadosVacantes/', resultadosVacantes.as_view(), name="resultadosVacantes"),
     path('solicitudesCurso/', solicitudesCurso.as_view(), name="solicitudesCurso"),
     path('usuarioNuevo/', usuarioNuevo.as_view(), name="usuarioNuevo"),
+    path('habilidadesCandidatoN2/', habilidadesCandidatoN2.as_view(), name="habilidadesCandidatoN2"),
 ]

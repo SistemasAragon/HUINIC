@@ -1287,6 +1287,18 @@ p {
     position: relative
 }
 
+.section-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative
+}
+
+.section-25 {
+    padding-top: 25px;
+    padding-bottom: 0px;
+    position: relative
+}
+
 .section-two {
     padding: 5px 0;
     position: relative

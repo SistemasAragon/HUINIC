@@ -5,16 +5,18 @@
 
 
 <head>
-    <title>HUINIC | Inicio Capacitador</title>
+    <title>HUINIC | Cursos</title>
+    
+    
+
 </head>
 
 <body>
-
     <!-- Navbar STart -->
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeCapacitador' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeEmpresa' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -34,18 +36,18 @@
                     <!-- End mobile menu toggle-->
                 </div>
             </div>
+            
 
 
 
-
-            <ul class="buy-button list-inline mb-0" style="margin-top: 15px;">
+            <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
                 <li class="list-inline-item search-icon mb-0">
                     <!--INICIO DE USUARIO-->
                     <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <div style="display: flex; align-items: center;">
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
-                                <h6 class="my-0">Nombre Usuario</h6>
+                                <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
                                 <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
                             </div>
                         </div>
@@ -69,11 +71,14 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
-
-                    <li><a href="{% url 'formularioCurso' %}" class="sub-menu-item">Nuevo curso</a></li>
-                    
+                    <li class="has-submenu parent-parent-menu-item ">
+                        <a href="{% url 'homeEmpresa' %}">Inicio</a><span class="menu-arrow"></span>
+                       
+                    </li>
+                    <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
                     <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Graficos Cursos</a><span class="menu-arrow"></span>
+                        <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
+                        
                     </li>
 
                 </ul>
@@ -87,40 +92,70 @@
     <!--end header-->
     <!-- Navbar End -->
 
-
-    <!-- Hero Start -->
-    <section class="bg-home zoom-image d-flex align-items-center position-relative" id="home">
-        <div class="bg-overlay image-wrap" id="hero-images"></div>
-        <div class="bg-overlay bg-gradient"></div>
-        <div class="container">
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-6 col-12">
-                    <div class="title-heading text-center">
-                        <h1 class="heading text-white mb-4">Bienvenido capacitador
-                        </h1>
-                        <p class="text-white-50 mx-auto para-desc">Mejora y ayuda a seguir con el conocimiento
-                        </p>
+    <!-- Start Home -->
+    <section class="bg-default page-next-level" style="background: url({% static 'images/bg/bg-page.png'%}) center no-repeat;">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 mt-4">
+                            <div class="text-center">
+                                <h3 class="title-pager mb-0">  Busca el curso perfecto</h3>
+                                <!-- <h3 class="title-pager mb-0">  Recuerda que esto aparecera en tu perfil</h3> -->
+                            </div>
+                        </div>
+                        <!--end col-->
                     </div>
+                    <!--end row-->
                 </div>
-                <!-- end col -->
+                <!--end container-->
             </div>
-            <!-- end row -->
+        </div>
+    </section>
+    <!--end section-->
+    <!-- End Home -->
+
+    <!-- Inicio prueba de secciones -->
+    <section class="section-25">
+        <div class="container">
+
+            <h3 class="text-center">Selecciona el tipo de curso que deseas consultar</h3>
+            
+            <div class="custom-search-form mt-4 pt-2 col-lg-11 col-12 mt-4 pt-2 d-flex justify-content-center">
+                <form class="custom-form ms-0 d-flex align-items-center">
+                    <!-- Sección para seleccionar entre Auto y Moto -->
+                    
+                    <div class="custom-form-group mb-0 me-3">
+                        <select id="vehiculo" name="vehiculo" class="custom-select rounded-pill">
+                            <option value="auto">Auto</option>
+                            <option value="moto">Moto</option>
+                        </select>
+                    </div>
+                    <!-- Sección para seleccionar la sección (Frenos, etc.) -->
+                    <div class="custom-form-group mb-0 me-3">
+                        <select id="seccion" name="seccion" class="custom-select rounded-pill">
+                            <option value="frenos">Frenos</option>
+                            <option value="motor">Motor</option>
+                            <option value="suspension">Suspensión</option>
+                            <option value="electrico">Eléctrico</option>
+                            <option value="carroceria">Carrocería</option>
+                        </select>
+                    </div>
+                    <!-- Botón de búsqueda -->
+                    <button type="submit" class="custom-btn rounded-pill btn-primary">Buscar</button>
+                </form>
+            </div>
         </div>
         <!-- end container -->
     </section>
-    <!--end section--> <!--Desplazador y flecha para bajo-->
+    <!-- fin prueba de secciones -->
 
-    
-    <!-- Feature End -->
-
-    <!-- Service START -->
-    <section class="section">
-        <div class="container">
-
+    <!-- otraprueba -->
+    <section class="section-50">
+        <div class="container" >
             <div class="row">
-                <div class="col-12 py-4 g-0" style="margin-top: -60px;">
+                <div class="col-12 py-4 g-0" >
                     <div class="tiny-three-item">
-
                         <div class="tiny-slide">
                             <div class="rounded service-two shadow m-2">
                                 <div class="p-4">
@@ -140,25 +175,6 @@
                             </div>
                         </div>
                         <!--end services -->
-
-                        {% comment %} <div class="tiny-slide">
-                            <div class="rounded service-two shadow m-2">
-                                <div class="p-4">
-                                    <h5 class="serv-head">Curso: Llantas vehiculares</h5>
-                                    <p class="text-muted mb-1"> Vizualizacion curso </p>
-                                </div>
-                                <img style="height: 181px; width: 236px; border-radius: 8px;" src="{% static 'images/2.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
-
-                                <p></p>
-                                <div  class="centrar">
-                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
-    
-                                    <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
-                                </div>
-
-                            </div>
-                        </div> {% endcomment %}
-                        <!--end services-->
 
                         <div class="tiny-slide">
                             <div class="rounded service-two shadow m-2">
@@ -201,30 +217,13 @@
                 </div>
                 <!--end col-->
             </div>
-            <!--end row-->
         </div>
-        <!--end container-->
+        <!-- end container -->
     </section>
-    <!--end section-->
-    <!-- Service END -->
-
+     <!-- otraprueba -->
     <!-- Footer End -->
     {% include  'includeFooter.html' %}
     <!-- Footer End -->
-
-    
-    <!-- play-btn -->
-    <script src="{% static 'js/tobii.min.js'%}"></script>
-    <!-- PARALLAX -->
-    <script src="{% static 'js/parallax.js'%}"></script>
-    <!-- BACKGROUND -->
-    <script src="{% static 'js/easy_background.js'%}"></script>
-    <script>
-        easy_background("#hero-images", {
-            slide: ["{% static 'images/img8.jpg'%}", "{% static 'images/img7.jpg'%}", "{% static 'images/img3.jpg'%}"],
-            delay: [5000, 5000, 5000]
-        });
-    </script>
 
 </body>
 

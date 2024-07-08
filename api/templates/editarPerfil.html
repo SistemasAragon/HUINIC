@@ -171,21 +171,21 @@
                                                                 </a><!--end nav link-->
                                                             </li><!--end nav item-->
                                                             
-                                                            <li class="nav-item mt-3">
+                                                            <!-- <li class="nav-item mt-3">
                                                                 <a class="nav-link rounded shadow" id="pills-payment-tab" data-bs-toggle="pill" href="#pills-payment" role="tab" aria-controls="pills-payment" aria-selected="false">
                                                                     <div class="text-start py-1 px-3">
                                                                         <h6 class="mb-0">Payment Questions</h6>
                                                                     </div>
-                                                                </a><!--end nav link-->
-                                                            </li><!--end nav item-->
+                                                                </a>
+                                                            </li>
                                 
                                                             <li class="nav-item mt-3">
                                                                 <a class="nav-link rounded shadow" id="pills-support-tab" data-bs-toggle="pill" href="#pills-support" role="tab" aria-controls="pills-support" aria-selected="false">
                                                                     <div class="text-start py-1 px-3">
                                                                         <h6 class="mb-0">Support Questions</h6>
                                                                     </div>
-                                                                </a><!--end nav link-->
-                                                            </li><!--end nav item-->
+                                                                </a>
+                                                            </li> -->
                                                         </ul><!--end nav pills-->
                                                     </div>
                                                 </div>
@@ -210,9 +210,9 @@
                                                                     <div id="collapseOne" class="accordion-collapse border-0 collapse show" aria-labelledby="collapseOne" data-bs-parent="#buyingquestion">
                                                                         <div class="accordion-body text-muted">
                                                                             <div class="row">
-                                                                                <div class="section-title" id="tech">
+                                                                                <!-- <div class="section-title  " id="tech">
                                                                                     <h5>Nombre completo </h5>
-                                                                                </div>
+                                                                                </div> -->
                                                                                 <div class="col-md-4">
                                                                                     <label class="form-label fs-6">Nombre (s) <span class="text-danger">*</span></label>
                                                                                     <div class="form-icon position-relative">
@@ -235,9 +235,9 @@
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div class="section-title" id="tech">
+                                                                            <!-- <div class="section-title" id="tech">
                                                                                 <h5>Fecha de Nacimiento </h5>
-                                                                            </div>
+                                                                            </div> -->
 
                                                                             <div class="row">
                                                                                 <div class="col-md-5">
@@ -245,14 +245,65 @@
                                                                                     <div class="form-icon position-relative">
                                                                                         <input name="fecha_nacimiento" id="fecha_nacimiento" type="date" class="form-control ps-5 fs-6">
                                                                                     </div>
+                                                                                    <br>
                                                                                 </div>
                                                                             </div>
+                                                                            <!-- <div class="section-title" id="tech">
+                                                                                <h5>Adicionales </h5>
+                                                                            </div> -->
+                                                                            
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <label class="form-label fs-6">Estado Civil <span class="text-danger">*</span></label>
+                                                                                    <div class="form-icon position-relative">
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input" type="radio" name="estado_civil" id="soltero" value="soltero">
+                                                                                            <label class="form-check-label" for="soltero">Soltero</label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input" type="radio" name="estado_civil" id="casado" value="casado">
+                                                                                            <label class="form-check-label" for="casado">Casado</label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input" type="radio" name="estado_civil" id="otro" value="otro">
+                                                                                            <label class="form-check-label" for="otro">Otro</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <label class="form-label fs-6">Disponibilidad de viajar <span class="text-danger">*</span></label>
+                                                                                    <div class="form-icon position-relative">
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="viajar_si" value="si">
+                                                                                            <label class="form-check-label" for="viajar_si">Sí</label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input" type="radio" name="disponibilidad_viajar" id="viajar_no" value="no">
+                                                                                            <label class="form-check-label" for="viajar_no">No</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <label class="form-label fs-6">Disponibilidad de cambio de residencia <span class="text-danger">*</span></label>
+                                                                                    <div class="form-icon position-relative">
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input" type="radio" name="cambio_residencia" id="residencia_si" value="si">
+                                                                                            <label class="form-check-label" for="residencia_si">Sí</label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input" type="radio" name="cambio_residencia" id="residencia_no" value="no">
+                                                                                            <label class="form-check-label" for="residencia_no">No</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>
 
                                                                 <!-- sección de fecha de nacimiento -->
-                                                                <div class="accordion-item rounded mt-2">
+                                                                <!-- <div class="accordion-item rounded mt-2">
                                                                     <h2 class="accordion-header" id="headingTwo">
                                                                         <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                                             Fecha de nacimiento
@@ -271,7 +322,7 @@
                                                                             
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div> -->
                                                                 <!-- fin de sección de fecha de nacimiento -->
                                                                 
                                                                 <!-- Sección de dirección -->
@@ -402,7 +453,7 @@
                                                         
                                                         <div class="tab-pane fade" id="pills-general" role="tabpanel" aria-labelledby="pills-general-tab">
                                                             <div class="section-title" id="general">
-                                                                <h5>Accounts</h5>
+                                                                <h5>Mi Curriculum</h5>
                                                             </div>
                                     
                                                             <div class="accordion mt-4 pt-2" id="generalquestion">
@@ -411,17 +462,102 @@
                                                                         <button class="accordion-button border-0 bg-light" type="button"
                                                                             data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                                                             aria-expanded="true" aria-controls="collapseOne">
-                                                                            How does it work ?
+                                                                            Habilidades
                                                                         </button>
                                                                     </h2>
                                                                     <div id="collapseOne" class="accordion-collapse border-0 collapse show"
                                                                         aria-labelledby="headingOne" data-bs-parent="#generalquestion">
                                                                         <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
+                                                                            <label class="form-label fs-5 text-center">HABILIDADES <span class="text-danger"></span></label>
+                                                                            <div class="col-md-12 mt-3">
+                                                                                <label class="form-label fs-5">Selecciona hasta 5 habilidades <span class="text-danger">*</span></label>
+                                                                                <div class="form-icon position-relative">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad1" name="habilidad" value="Trabajo en equipo">
+                                                                                            <label for="habilidad1">Trabajo en equipo</label>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad2" name="habilidad" value="Comunicación efectiva">
+                                                                                            <label for="habilidad2">Comunicación efectiva</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad3" name="habilidad" value="Resolución de problemas">
+                                                                                            <label for="habilidad3">Resolución de problemas</label>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad4" name="habilidad" value="Liderazgo">
+                                                                                            <label for="habilidad4">Liderazgo</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad5" name="habilidad" value="Adaptabilidad">
+                                                                                            <label for="habilidad5">Adaptabilidad</label>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad6" name="habilidad" value="Creatividad">
+                                                                                            <label for="habilidad6">Creatividad</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad7" name="habilidad" value="Pensamiento crítico">
+                                                                                            <label for="habilidad7">Pensamiento crítico</label>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad8" name="habilidad" value="Gestión del tiempo">
+                                                                                            <label for="habilidad8">Gestión del tiempo</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad9" name="habilidad" value="Empatía">
+                                                                                            <label for="habilidad9">Empatía</label>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad10" name="habilidad" value="Capacidad de aprendizaje">
+                                                                                            <label for="habilidad10">Capacidad de aprendizaje</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad11" name="habilidad" value="Negociación">
+                                                                                            <label for="habilidad11">Negociación</label>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad12" name="habilidad" value="Toma de decisiones">
+                                                                                            <label for="habilidad12">Toma de decisiones</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad13" name="habilidad" value="Pensamiento analítico">
+                                                                                            <label for="habilidad13">Pensamiento analítico</label>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad14" name="habilidad" value="Autoconfianza">
+                                                                                            <label for="habilidad14">Autoconfianza</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-md-6">
+                                                                                            <input type="checkbox" id="habilidad15" name="habilidad" value="Resiliencia">
+                                                                                            <label for="habilidad15">Resiliencia</label>
+                                                                                        </div>
+                                                                                        <!-- Aquí puedes agregar más habilidades si lo deseas -->
+                                                                                    </div>
+                                                                                    <div id="mensaje-habilidades" class="mt-2" style="display: none;">
+                                                                                        <p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                
                                 
                                                                 <div class="accordion-item rounded mt-2">
                                                                     <h2 class="accordion-header" id="headingTwo">
@@ -429,7 +565,7 @@
                                                                             type="button" data-bs-toggle="collapse"
                                                                             data-bs-target="#collapseTwo" aria-expanded="false"
                                                                             aria-controls="collapseTwo">
-                                                                            Do I need a designer to use Bizcell ?
+                                                                            Conocimientos
                                                                         </button>
                                                                     </h2>
                                                                     <div id="collapseTwo" class="accordion-collapse border-0 collapse"
@@ -459,183 +595,11 @@
                                                                     </div>
                                                                 </div>
                                 
-                                                                <div class="accordion-item rounded mt-2">
-                                                                    <h2 class="accordion-header" id="headingFour">
-                                                                        <button class="accordion-button border-0 bg-light collapsed"
-                                                                            type="button" data-bs-toggle="collapse"
-                                                                            data-bs-target="#collapseFour" aria-expanded="false"
-                                                                            aria-controls="collapseFour">
-                                                                            What happens when I receive an order ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseThree" class="accordion-collapse border-0 collapse"
-                                                                        aria-labelledby="headingThree" data-bs-parent="#generalquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                
                                                             </div>
                                                         </div><!--end teb pane-->
                                 
-                                                        <div class="tab-pane fade" id="pills-payment" role="tabpanel" aria-labelledby="pills-payment-tab">
-                                                            <div class="section-title" id="payment">
-                                                                <h5>Transactions</h5>
-                                                            </div>
-                                    
-                                                            <div class="accordion mt-4 pt-2" id="paymentquestion">
-                                                                <div class="accordion-item rounded">
-                                                                    <h2 class="accordion-header" id="headingOne">
-                                                                        <button class="accordion-button border-0 bg-light" type="button"
-                                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                                            aria-expanded="true" aria-controls="collapseOne">
-                                                                            How does it work ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOne" class="accordion-collapse border-0 collapse show"
-                                                                        aria-labelledby="headingOne" data-bs-parent="#paymentquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                
-                                                                <div class="accordion-item rounded mt-2">
-                                                                    <h2 class="accordion-header" id="headingTwo">
-                                                                        <button class="accordion-button border-0 bg-light collapsed"
-                                                                            type="button" data-bs-toggle="collapse"
-                                                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                                                            aria-controls="collapseTwo">
-                                                                            Do I need a designer to use Bizcell ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseTwo" class="accordion-collapse border-0 collapse"
-                                                                        aria-labelledby="headingTwo" data-bs-parent="#paymentquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                
-                                                                <div class="accordion-item rounded mt-2">
-                                                                    <h2 class="accordion-header" id="headingThree">
-                                                                        <button class="accordion-button border-0 bg-light collapsed"
-                                                                            type="button" data-bs-toggle="collapse"
-                                                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                                                            aria-controls="collapseThree">
-                                                                            What do I need to do to start selling ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseThree" class="accordion-collapse border-0 collapse"
-                                                                        aria-labelledby="headingThree" data-bs-parent="#paymentquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                
-                                                                <div class="accordion-item rounded mt-2">
-                                                                    <h2 class="accordion-header" id="headingFour">
-                                                                        <button class="accordion-button border-0 bg-light collapsed"
-                                                                            type="button" data-bs-toggle="collapse"
-                                                                            data-bs-target="#collapseFour" aria-expanded="false"
-                                                                            aria-controls="collapseFour">
-                                                                            What happens when I receive an order ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseThree" class="accordion-collapse border-0 collapse"
-                                                                        aria-labelledby="headingThree" data-bs-parent="#paymentquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div><!--end teb pane-->
-                                
-                                                        <div class="tab-pane fade" id="pills-support" role="tabpanel" aria-labelledby="pills-support-tab">
-                                                            <div class="section-title" id="support">
-                                                                <h5>Cryptocurrency Withdrawals</h5>
-                                                            </div>
-                                    
-                                                            <div class="accordion mt-4 pt-2" id="supportquestion">
-                                                                <div class="accordion-item rounded">
-                                                                    <h2 class="accordion-header" id="headingOne">
-                                                                        <button class="accordion-button border-0 bg-light" type="button"
-                                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                                            aria-expanded="true" aria-controls="collapseOne">
-                                                                            How does it work ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOne" class="accordion-collapse border-0 collapse show"
-                                                                        aria-labelledby="headingOne" data-bs-parent="#supportquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                
-                                                                <div class="accordion-item rounded mt-2">
-                                                                    <h2 class="accordion-header" id="headingTwo">
-                                                                        <button class="accordion-button border-0 bg-light collapsed"
-                                                                            type="button" data-bs-toggle="collapse"
-                                                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                                                            aria-controls="collapseTwo">
-                                                                            Do I need a designer to use Bizcell ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseTwo" class="accordion-collapse border-0 collapse"
-                                                                        aria-labelledby="headingTwo" data-bs-parent="#supportquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                
-                                                                <div class="accordion-item rounded mt-2">
-                                                                    <h2 class="accordion-header" id="headingThree">
-                                                                        <button class="accordion-button border-0 bg-light collapsed"
-                                                                            type="button" data-bs-toggle="collapse"
-                                                                            data-bs-target="#collapseThree" aria-expanded="false"
-                                                                            aria-controls="collapseThree">
-                                                                            What do I need to do to start selling ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseThree" class="accordion-collapse border-0 collapse"
-                                                                        aria-labelledby="headingThree" data-bs-parent="#supportquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                
-                                                                <div class="accordion-item rounded mt-2">
-                                                                    <h2 class="accordion-header" id="headingFour">
-                                                                        <button class="accordion-button border-0 bg-light collapsed"
-                                                                            type="button" data-bs-toggle="collapse"
-                                                                            data-bs-target="#collapseFour" aria-expanded="false"
-                                                                            aria-controls="collapseFour">
-                                                                            What happens when I receive an order ?
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseThree" class="accordion-collapse border-0 collapse"
-                                                                        aria-labelledby="headingThree" data-bs-parent="#supportquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            There are many variations of passages of Lorem Ipsum available,
-                                                                            but the majority have suffered alteration in some form.
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div><!--end teb pane-->
+                                                        
                                                     </div><!--end tab content-->
                                                 </div><!--end col-->
                                             </form>
@@ -676,59 +640,90 @@
         <!--end container-->
     </section>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.select2').select2();
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
 
-        // Datos simulados de municipios y colonias por estado
-        var municipios = {
-            estado_mexico: ["Chimalhuacán", "Chicoloapan", "Texcoco", "Nezahualcóyotl", "Ecatepec"],
-            cdmx: ["Iztapalapa", "Coyoacán", "Gustavo A. Madero", "Tlalpan", "Álvaro Obregón"],
-            jalisco: ["Guadalajara", "Zapopan", "Tlaquepaque", "Tonalá", "Puerto Vallarta"],
-            nuevo_leon: ["Monterrey", "San Nicolás de los Garza", "Guadalupe", "Santa Catarina", "Apodaca"],
-            queretaro: ["Querétaro", "El Marqués", "Corregidora", "San Juan del Río", "Tequisquiapan"]
-        };
 
-        var colonias = {
-            chimalhuacan: ["La Perla", "Santo Domingo", "Jardines de Chimalhuacán", "La Loma", "Bosques de Chimalhuacán"],
-            chicoloapan: ["Revolución", "San Sebastián", "El Oro", "Santa Cecilia", "El Mirador"],
-            texcoco: ["Centro", "Santa Úrsula", "La Purificación", "San Miguel Tlaixpan", "Huexotla"],
-            nezahualcoyotl: ["Agua Azul", "Campestre Guadalupana", "Benito Juárez", "Estado de México", "Ejidos de San Agustín"],
-            ecatepec: ["Las Américas", "San Cristóbal", "San Agustín", "Guadalupe Victoria", "Villas de Ecatepec"]
-            // Agrega más colonias según sea necesario
-        };
+        document.addEventListener("DOMContentLoaded", function() {
+            var checkboxes = document.querySelectorAll('input[name="habilidad"]');
+            var maxHabilidades = 5;
+            var mensajeHabilidades = document.getElementById('mensaje-habilidades');
 
-        // Función para actualizar los municipios al cambiar el estado
-        $('#estado').on('change', function() {
-            var estadoSeleccionado = $(this).val();
-            var municipiosOptions = '<option value="">Selecciona un municipio</option>';
-
-            if (estadoSeleccionado) {
-                $.each(municipios[estadoSeleccionado], function(index, municipio) {
-                    municipiosOptions += '<option value="' + municipio.toLowerCase().replace(/\s+/g, '_') + '">' + municipio + '</option>';
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    var checkedCheckboxes = document.querySelectorAll('input[name="habilidad"]:checked');
+                    if (checkedCheckboxes.length > maxHabilidades) {
+                        this.checked = false; // Desmarca la casilla si se intenta seleccionar una habilidad adicional después del límite
+                        mostrarMensajeHabilidades();
+                    } else {
+                        ocultarMensajeHabilidades();
+                    }
                 });
+            });
+
+            function mostrarMensajeHabilidades() {
+                mensajeHabilidades.style.display = 'block';
             }
 
-            $('#municipio').html(municipiosOptions).change();
-            $('#colonia').html('<option value="">Selecciona una colonia</option>').change(); // Limpiar colonias al cambiar estado
-        });
-
-        // Función para actualizar las colonias al cambiar el municipio
-        $('#municipio').on('change', function() {
-            var municipioSeleccionado = $(this).val();
-            var coloniasOptions = '<option value="">Selecciona una colonia</option>';
-
-            if (municipioSeleccionado) {
-                $.each(colonias[municipioSeleccionado], function(index, colonia) {
-                    coloniasOptions += '<option value="' + colonia.toLowerCase().replace(/\s+/g, '_') + '">' + colonia + '</option>';
-                });
+            function ocultarMensajeHabilidades() {
+                mensajeHabilidades.style.display = 'none';
             }
-
-            $('#colonia').html(coloniasOptions).change();
         });
-    });
-</script>
+        
+
+
+        
+        $(document).ready(function() {
+            $('.select2').select2();
+
+            // Datos simulados de municipios y colonias por estado
+            var municipios = {
+                estado_mexico: ["Chimalhuacán", "Chicoloapan", "Texcoco", "Nezahualcóyotl", "Ecatepec"],
+                cdmx: ["Iztapalapa", "Coyoacán", "Gustavo A. Madero", "Tlalpan", "Álvaro Obregón"],
+                jalisco: ["Guadalajara", "Zapopan", "Tlaquepaque", "Tonalá", "Puerto Vallarta"],
+                nuevo_leon: ["Monterrey", "San Nicolás de los Garza", "Guadalupe", "Santa Catarina", "Apodaca"],
+                queretaro: ["Querétaro", "El Marqués", "Corregidora", "San Juan del Río", "Tequisquiapan"]
+            };
+
+            var colonias = {
+                chimalhuacan: ["La Perla", "Santo Domingo", "Jardines de Chimalhuacán", "La Loma", "Bosques de Chimalhuacán"],
+                chicoloapan: ["Revolución", "San Sebastián", "El Oro", "Santa Cecilia", "El Mirador"],
+                texcoco: ["Centro", "Santa Úrsula", "La Purificación", "San Miguel Tlaixpan", "Huexotla"],
+                nezahualcoyotl: ["Agua Azul", "Campestre Guadalupana", "Benito Juárez", "Estado de México", "Ejidos de San Agustín"],
+                ecatepec: ["Las Américas", "San Cristóbal", "San Agustín", "Guadalupe Victoria", "Villas de Ecatepec"]
+                // Agrega más colonias según sea necesario
+            };
+
+            // Función para actualizar los municipios al cambiar el estado
+            $('#estado').on('change', function() {
+                var estadoSeleccionado = $(this).val();
+                var municipiosOptions = '<option value="">Selecciona un municipio</option>';
+
+                if (estadoSeleccionado) {
+                    $.each(municipios[estadoSeleccionado], function(index, municipio) {
+                        municipiosOptions += '<option value="' + municipio.toLowerCase().replace(/\s+/g, '_') + '">' + municipio + '</option>';
+                    });
+                }
+
+                $('#municipio').html(municipiosOptions).change();
+                $('#colonia').html('<option value="">Selecciona una colonia</option>').change(); // Limpiar colonias al cambiar estado
+            });
+
+            // Función para actualizar las colonias al cambiar el municipio
+            $('#municipio').on('change', function() {
+                var municipioSeleccionado = $(this).val();
+                var coloniasOptions = '<option value="">Selecciona una colonia</option>';
+
+                if (municipioSeleccionado) {
+                    $.each(colonias[municipioSeleccionado], function(index, colonia) {
+                        coloniasOptions += '<option value="' + colonia.toLowerCase().replace(/\s+/g, '_') + '">' + colonia + '</option>';
+                    });
+                }
+
+                $('#colonia').html(coloniasOptions).change();
+            });
+        });
+    </script>
     
     <!--end section-->
     <!-- End Section -->
