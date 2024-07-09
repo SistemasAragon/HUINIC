@@ -263,30 +263,30 @@
                                                         <label class="form-label fs-5">Área específica para Automovil <span class="text-danger">*</span></label>
                                                     </div>
                                                     <div class="row">
-                                                        <label class="form-label fs-5">Seleccione 1 área, después de agregar podrá seleccionar otra área <span class="text-danger"></span></label>
+                                                        <label class="form-label fs-5">Selecciona el tipo de automovil del cual deseas consultar sus manuales <span class="text-danger"></span></label>
                                                     </div>
                                                     
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-check d-flex align-items-center">
-                                                                <input class="form-check-input" type="radio" name="area_especifica" id="motorCarro" value="motorCarro">
-                                                                <label class="form-check-label" for="motorCarro">Motor</label>
+                                                                <input class="form-check-input" type="radio" name="tipo_auto" id="gasolina" value="gasolina">
+                                                                <label class="form-check-label" for="gasolina">Vehículo a gasolina</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-check d-flex align-items-center">
-                                                                <input class="form-check-input" type="radio" name="area_especifica" id="frenosCarro" value="frenosCarro">
-                                                                <label class="form-check-label" for="frenosCarro">Frenos</label>
+                                                                <input class="form-check-input" type="radio" name="tipo_auto" id="diesel" value="diesel">
+                                                                <label class="form-check-label" for="diesel">Vehículo a diésel</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-check d-flex align-items-center">
-                                                                <input class="form-check-input" type="radio" name="area_especifica" id="llantasCarro" value="llantasCarro">
-                                                                <label class="form-check-label" for="llantasCarro">Llantas</label>
+                                                                <input class="form-check-input" type="radio" name="tipo_auto" id="hibrido" value="hibrido">
+                                                                <label class="form-check-label" for="hibrido">Vehículo híbrido y eléctricos</label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row mt-3">
+                                                    <!-- <div class="row mt-3">
                                                         <div class="col-md-4">
                                                             <div class="form-check d-flex align-items-center">
                                                                 <input class="form-check-input" type="radio" name="area_especifica" id="pinturaCarro" value="pinturaCarro">
@@ -299,7 +299,7 @@
                                                                 <label class="form-check-label" for="electricoCarro">Eléctrico</label>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
 
@@ -555,11 +555,11 @@
         //segundo formulario
 
         //carro
-        var motorCarroRadioButton = document.getElementById("motorCarro");
-        var frenosCarroRadioButton = document.getElementById("frenosCarro");
-        var llantasCarroRadioButton = document.getElementById("llantasCarro");
-        var pinturaCarroRadioButton = document.getElementById("pinturaCarro");
-        var electricoCarroRadioButton = document.getElementById("electricoCarro");
+        var gasolinaCarroRadioButton = document.getElementById("gasolina");
+        var dieselCarroRadioButton = document.getElementById("diesel");
+        var hibridoCarroRadioButton = document.getElementById("hidraulico");
+        //var pinturaCarroRadioButton = document.getElementById("pinturaCarro");
+        //var electricoCarroRadioButton = document.getElementById("electricoCarro");
 
         // motocicleta
         var lucesMotoRadioButton = document.getElementById("lucesMoto");
@@ -574,7 +574,7 @@
         var areasCarroDiv = document.getElementById("areas_carro");
         var areasMotoDiv = document.getElementById("areas_moto");
 
-        //TERCER FORMULARIO
+        //TERCER FORMULARIO seccion del nivel
         var nivel_perfil_carroDiv = document.getElementById("nivel_area_carro");
         var nivel_perfil_motoDiv = document.getElementById("nivel_area_moto");
 
@@ -626,8 +626,8 @@
         });
 
         //sección para carros
-        motorCarroRadioButton.addEventListener("change", function(){
-            if (motorCarroRadioButton.checked) {
+        gasolinaCarroRadioButton.addEventListener("change", function(){
+            if (gasolinaCarroRadioButton.checked) {
                 //especialistaMotoRadios.style.display = "none";
                 nivel_perfil_carroDiv.style.display = "block";
                 nivel_perfil_motoDiv.style.display = "none";
@@ -641,8 +641,8 @@
         });
 
 
-        frenosCarroRadioButton.addEventListener("change", function(){
-            if (frenosCarroRadioButton.checked) {
+        dieselCarroRadioButton.addEventListener("change", function(){
+            if (dieselCarroRadioButton.checked) {
                 //especialistaMotoRadios.style.display = "none";
                 nivel_perfil_carroDiv.style.display = "block";
                 nivel_perfil_motoDiv.style.display = "none";
@@ -654,34 +654,9 @@
                 radio.checked = false;
             });
         });
-        llantasCarroRadioButton.addEventListener("change", function(){
-            if (llantasCarroRadioButton.checked) {
+        hibridoCarroRadioButton.addEventListener("change", function(){
+            if (hibridoCarroRadioButton.checked) {
                 //especialistaMotoRadios.style.display = "none";
-                nivel_perfil_motoDiv.style.display = "none";
-            }else {
-                nivel_perfil_carroDiv.style.display = "none";
-            }
-            // Desmarca todas las opciones del especialista del automóvil
-            especialistaCarroRadios.forEach(function(radio) {
-                radio.checked = false;
-            });
-        });
-        pinturaCarroRadioButton.addEventListener("change", function(){
-            if (pinturaCarroRadioButton.checked) {
-                //especialistaMotoRadios.style.display = "none";
-                nivel_perfil_motoDiv.style.display = "none";
-            }else {
-                nivel_perfil_carroDiv.style.display = "none";
-            }
-            // Desmarca todas las opciones del especialista del automóvil
-            especialistaCarroRadios.forEach(function(radio) {
-                radio.checked = false;
-            });
-        });
-        electricoCarroRadioButton.addEventListener("change", function(){
-            if (electricoCarroRadioButton.checked) {
-                //especialistaMotoRadios.style.display = "none";
-                nivel_perfil_carroDiv.style.display = "block";
                 nivel_perfil_motoDiv.style.display = "none";
             }else {
                 nivel_perfil_carroDiv.style.display = "none";
