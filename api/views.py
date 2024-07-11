@@ -52,6 +52,11 @@ class recuperacionPass(APIView):
     def get(self,request):
         return render(request,self.template_name)
 
+class postulacionesEmpresa(APIView):
+    template_name= "postulacionesEmpresa.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
 class cursosLIsta(APIView):
     template_name= "cursosLIsta.html"
     def get(self,request):
