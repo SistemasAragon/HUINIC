@@ -360,7 +360,7 @@
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' + 
-                            '<div class="col-6">' +
+                            '<div class="col-4">' +
                                 `<li class="my-swal-list-item"><span class="my-swal-label">Area</span>` +
                                     `<div class="my-swal-text" style="font-size: 12px;" disabled>Disel pesado</div></li >` +
                                         `<div class="my-swal-input-container">` +
@@ -371,7 +371,7 @@
                                         `</div>` +
                                 `</li>` +        
                             '</div>' +
-                            '<div class="col-6">' +
+                            '<div class="col-4">' +
                                 `<li class="my-swal-list-item"><span class="my-swal-label">Area especifica</span>` +
                                     `<div class="my-swal-text" style="font-size: 12px;" disabled>Sistemas de enfriamento</div></li >` +
                                         `<div class="my-swal-input-container">` +
@@ -382,17 +382,98 @@
                                         `</div>` +
                                 `</li>` +        
                             '</div>' +
-                        '</div>' +
-                        '<div class="row">' +
-                            '<div class="col-6">' +
+                            '<div class="col-4">' +
                                 `<li class="my-swal-list-item"><span class="my-swal-label">Nivel</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="Desarrollador " >` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
+                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Sistemas de enfriamento</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
+                                                '<option value="" disabled selected>Selecciona un nivel</option>' +
+                                                '<option value="Femenino">Desarrollador</option>' +
+                                            '</select>' +
+                                        `</div>` +
+                                `</li>` +        
+                            '</div>' +
                         '</div>' +
                         '<p></p>' +
+                        '<label class="form-label fs-5 text-center">HABILIDADES <span class="text-danger"></span></label>' +
+                            '<div class="col-md-12 mt-3">' +
+                                '<label class="form-label fs-5">Selecciona hasta 5 habilidades <span class="text-danger">*</span></label>' +
+                                '<div class="form-icon position-relative">' +
+                                    '<div class="row">' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad1" name="habilidad" value="Trabajo en equipo">' +
+                                            '<label for="habilidad1">Trabajo en equipo</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad2" name="habilidad" value="Comunicación efectiva">' +
+                                            '<label for="habilidad2">Comunicación efectiva</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad3" name="habilidad" value="Resolución de problemas">' +
+                                            '<label for="habilidad3">Resolución de problemas</label>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div class="row mt-2">' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad4" name="habilidad" value="Liderazgo">' +
+                                            '<label for="habilidad4">Liderazgo</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad5" name="habilidad" value="Adaptabilidad">' +
+                                            '<label for="habilidad5">Adaptabilidad</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad6" name="habilidad" value="Creatividad">' +
+                                            '<label for="habilidad6">Creatividad</label>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div class="row mt-2">' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad7" name="habilidad" value="Pensamiento crítico">' +
+                                            '<label for="habilidad7">Pensamiento crítico</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad8" name="habilidad" value="Gestión del tiempo">' +
+                                            '<label for="habilidad8">Gestión del tiempo</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad9" name="habilidad" value="Empatía">' +
+                                            '<label for="habilidad9">Empatía</label>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div class="row mt-2">' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad10" name="habilidad" value="Capacidad de aprendizaje">' +
+                                            '<label for="habilidad10">Capacidad de aprendizaje</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad11" name="habilidad" value="Negociación">' +
+                                            '<label for="habilidad11">Negociación</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad12" name="habilidad" value="Toma de decisiones">' +
+                                            '<label for="habilidad12">Toma de decisiones</label>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div class="row mt-2">' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad13" name="habilidad" value="Pensamiento analítico">' +
+                                            '<label for="habilidad13">Pensamiento analítico</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad14" name="habilidad" value="Autoconfianza">' +
+                                            '<label for="habilidad14">Autoconfianza</label>' +
+                                        '</div>' +
+                                        '<div class="col-md-4">' +
+                                            '<input type="checkbox" id="habilidad15" name="habilidad" value="Resiliencia">' +
+                                            '<label for="habilidad15">Resiliencia</label>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div id="mensaje-habilidades" class="mt-2" style="display: none;">' +
+                                        '<p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>' +
+                                    '</div>' +
+                                '</div>' +
+                                '</div>' +
                         '<div class="row">' +
                             '<div class="col-12">' +
                                 `<span class="my-swal-label centrar">Habilidades</span>` +
@@ -524,6 +605,36 @@
         }
     </script>
     <!-- Script de editar datos-->
+
+    <script>
+        //HABILIDADES
+        document.addEventListener("DOMContentLoaded", function() {
+            var checkboxes = document.querySelectorAll('input[name="habilidad"]');
+            var maxHabilidades = 5;
+            var mensajeHabilidades = document.getElementById('mensaje-habilidades');
+    
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    var checkedCheckboxes = document.querySelectorAll('input[name="habilidad"]:checked');
+                    if (checkedCheckboxes.length > maxHabilidades) {
+                        this.checked = false; // Desmarca la casilla si se intenta seleccionar una habilidad adicional después del límite
+                        mostrarMensajeHabilidades();
+                    } else {
+                        ocultarMensajeHabilidades();
+                    }
+                });
+            });
+    
+            function mostrarMensajeHabilidades() {
+                mensajeHabilidades.style.display = 'block';
+            }
+    
+            function ocultarMensajeHabilidades() {
+                mensajeHabilidades.style.display = 'none';
+            }
+        });
+        //FIN HABILIDADES 
+    </script>
 
 </body>
 

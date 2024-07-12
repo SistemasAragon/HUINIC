@@ -303,6 +303,210 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Area resultado de gasolina -->
+                                             <!-- modifique el display, quitarlo y poner none en vez de block -->
+                                             <div id="opcionesGasolina" style="display: none;">
+                                                <h5 class="text-md-start mt-3">Selecciona el tipo de sistema</h5>
+
+                                                    <div class="row" style="margin-bottom: 15px;">
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="combustionInterna" value="combustionInterna">
+                                                                <label class="form-check-label" for="combustionInterna">Combustión interna</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="sistemaFrenos" value="sistemaFrenos">
+                                                                <label class="form-check-label" for="sistemaFrenos">Sistema de Frenos</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="sistemaSuspencion" value="sistemaSuspencion">
+                                                                <label class="form-check-label" for="sistemaSuspencion">Sistema de suspensión y dirección</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="margin-bottom: 15px;">
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="sistemaTren" value="sistemaTren">
+                                                                <label class="form-check-label" for="sistemaTren">Sistema de tren motriz</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="transmisionAutomatica" value="transmisionAutomatica">
+                                                                <label class="form-check-label" for="transmisionAutomatica">Transmisión automática</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="sistemaInyeccion" value="sistemaInyeccion">
+                                                                <label class="form-check-label" for="sistemaInyeccion">Sistema de inyección electrónica</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="margin-bottom: 15px;">
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="sistemaSeguridad" value="sistemaSeguridad">
+                                                                <label class="form-check-label" for="sistemaSeguridad">Sistema de seguridad</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="sistemaAire" value="sistemaAire">
+                                                                <label class="form-check-label" for="sistemaAire">Sistema de aire acondicionado</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fallaGasolina" id="sistemaEnfriamiento" value="sistemaEnfriamiento">
+                                                                <label class="form-check-label" for="sistemaEnfriamiento">Sistema de enfriamiento</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <!-- Fin Area resultado de gasolina -->
+
+                                            <!-- opciones de disel p1 -->
+                                            <div id="opcionesTipoServicioDiesel" style="display: none;">
+                                                <div class="col-md-12">
+                                                    <h5 class="text-md-start mt-3">Selecciona el tipo de servicio</h5>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="d-flex justify-content-center">
+                                                                <input class="form-check-input" type="radio" name="servicio" id="servicioLigero" value="servicioLigero">
+                                                                <label class="form-check-label" for="servicioLigero">Servicio ligero</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="servicio" id="servicioPesado" value="servicioPesado">
+                                                                <label class="form-check-label" for="servicioPesado">Servicio medio/pesado</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  fin opciones de disel p1 -->
+
+
+                                            <!-- opciones de disel p2 -->
+                                            <!-- Inicio de opciones del disel 2 form -->
+
+                                            <!-- Subsistemas de servicio ligero -->
+                                            <div id="areasLigero" style="display: none;">
+                                                <h5 class="text-md-start mt-3">Selecciona el tipo de área</h5>
+                                                
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccion" id="sistemaCom" value="sistemaCom">
+                                                        <label class="form-check-label" for="sistemaCom">Sección Common rail</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccion" id="sistemaTren" value="sistemaTren">
+                                                        <label class="form-check-label" for="sistemaTren">Sistema de tren motriz</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccion" id="sistemaFrenos" value="sistemaFrenos">
+                                                        <label class="form-check-label" for="sistemaFrenos">Sistema de frenos</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccion" id="suspensiónDir" value="suspensiónDir">
+                                                        <label class="form-check-label" for="suspensiónDir">Suspensión y dirección</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccion" id="transmisionMan" value="transmisionMan">
+                                                        <label class="form-check-label" for="transmisionMan">Transmisión manual</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccion" id="sistemaSeguri" value="sistemaSeguri">
+                                                        <label class="form-check-label" for="sistemaSeguri">Sistema de seguridad</label>
+                                                    </div>
+                                            </div>
+
+                                            <!-- Subsistemas de servicio pesado -->
+                                            <div id="areasPesado" style="display: none;">
+                                                <h5 class="text-md-start mt-3">Selecciona el tipo de área</h5>
+                                            
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccionPe" id="motorDie" value="motorDie">
+                                                        <label class="form-check-label" for="motorDie">Motores diésel</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccionPe" id="inyeccionCom" value="inyeccionCom">
+                                                        <label class="form-check-label" for="inyeccionCom">Inyección de combustible</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccionPe" id="FrenosAir" value="FrenosAir">
+                                                        <label class="form-check-label" for="FrenosAir">Frenos de aire</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccionPe" id="sistemaTM" value="sistemaTM">
+                                                        <label class="form-check-label" for="sistemaTM">Sistema de tren motriz</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccionPe" id="cajaVe" value="cajaVe">
+                                                        <label class="form-check-label" for="cajaVe">Caja de velocidades</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="seccionPe" id="susDi" value="susDi">
+                                                        <label class="form-check-label" for="susDi">Suspensión y dirección</label>
+                                                    </div>
+                                            </div>
+
+                                            <!-- fin de opciones del disel 2 form -->
+
+                                            <!-- opciones de disel p2 -->
+
+
+
+
+                                            <!--  opciones de hidraulico  -->
+                                            <div id="opcionesHibrido" style="display: none;">
+                                                <h5 class="text-md-start mt-3">Selecciona el tipo de falla que puede tener</h5>
+
+                                                    <div class="row" style="margin-bottom: 15px;">
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fHidraulico" id="seguridadPersonal" value="seguridadPersonal">
+                                                                <label class="form-check-label" for="seguridadPersonal">Seguridad Personal</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fHidraulico" id="ecmHv" value="ecmHv">
+                                                                <label class="form-check-label" for="ecmHv">ECM HV</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-check d-flex align-items-center">
+                                                                <input class="form-check-input" type="radio" name="fHidraulico" id="bateriaAltoVoltaje" value="bateriaAltoVoltaje">
+                                                                <label class="form-check-label" for="bateriaAltoVoltaje">Batería de alto voltaje</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="margin-bottom: 15px;">
+                                                        <div class="col-md-6">
+                                                            <div class="d-flex justify-content-center">
+                                                                <input class="form-check-input" type="radio" name="fHidraulico" id="sistemaTren" value="sistemaTren">
+                                                                <label class="form-check-label" for="sistemaTren">Inversor</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="d-flex justify-content-center">
+                                                                <input class="form-check-input" type="radio" name="fHidraulico" id="transeje" value="transeje">
+                                                                <label class="form-check-label" for="transeje">Transeje</label>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                            </div>
+
+                                            <!--  FIN opciones de hidraulico  -->
+
                                             <!-- AREAS DE MOTOCICLETA -->
                                             <div id="areas_moto" style="display: none;">
                                                 <div class="col-md-12">
@@ -557,7 +761,7 @@
         //carro
         var gasolinaCarroRadioButton = document.getElementById("gasolina");
         var dieselCarroRadioButton = document.getElementById("diesel");
-        var hibridoCarroRadioButton = document.getElementById("hidraulico");
+        var hibridoCarroRadioButton = document.getElementById("hibrido");
         //var pinturaCarroRadioButton = document.getElementById("pinturaCarro");
         //var electricoCarroRadioButton = document.getElementById("electricoCarro");
 
@@ -573,6 +777,52 @@
         //SEGUNDO FORMULARIO
         var areasCarroDiv = document.getElementById("areas_carro");
         var areasMotoDiv = document.getElementById("areas_moto");
+
+        //tercer formulario extra 
+        var opcionesGasolina = document.getElementById("opcionesGasolina")
+        var opcionesTipoServicioDiesel = document.getElementById("opcionesTipoServicioDiesel")
+        var opcionesHibrido = document.getElementById("opcionesHibrido")
+        
+
+
+        //opciones gasolina
+        var gasolina1RadioButton = document.getElementById("combustionInterna");
+        var gasolina2RadioButton = document.getElementById("sistemaFrenos");
+        var gasolina3RadioButton = document.getElementById("sistemaSuspencion");
+        var gasolina4RadioButton = document.getElementById("sistemaTren");
+        var gasolina5RadioButton = document.getElementById("transmisionAutomatica");
+        var gasolina6RadioButton = document.getElementById("sistemaInyeccion");
+        var gasolina7RadioButton = document.getElementById("sistemaSeguridad");
+        var gasolina8RadioButton = document.getElementById("sistemaAire");
+        var gasolina9RadioButton = document.getElementById("sistemaEnfriamiento");
+
+        //opciones disel P1
+        var opcionLigera = document.getElementById("servicioLigero")
+        var opcionPesado = document.getElementById("servicioPesado")
+
+        //ID
+        var diselP11RadioButton = document.getElementById("areasLigero");
+        var diselP12RadioButton = document.getElementById("areasPesado");
+
+        //Opciones disel P2
+        //ligero
+        var DAL1RadioButton = document.getElementById("sistemaCom");
+        var DAL2RadioButton = document.getElementById("sistemaTren");
+        var DAL3RadioButton = document.getElementById("sistemaFrenos");
+        //pesado
+        var DAP1RadioButton = document.getElementById("motorDie");
+        var DAP2RadioButton = document.getElementById("inyeccionCom");
+        var DAP3RadioButton = document.getElementById("FrenosAir");
+
+
+
+        //opciones de hibrido
+        var Hibrido1RadioButton = document.getElementById("seguridadPersonal");
+        var Hibrido2RadioButton = document.getElementById("ecmHv");
+        var Hibrido3RadioButton = document.getElementById("bateriaAltoVoltaje");
+        var Hibrido4RadioButton = document.getElementById("sistemaTren");
+        var Hibrido5RadioButton = document.getElementById("transeje");
+
 
         //TERCER FORMULARIO seccion del nivel
         var nivel_perfil_carroDiv = document.getElementById("nivel_area_carro");
@@ -597,12 +847,16 @@
             } else {
                 areasCarroDiv.style.display = "none";
                 nivel_perfil_carroDiv.style.display = "none";
+                opcionesGasolina.style.display = "none";
             }
             // Desmarca todas las opciones del área específica del automóvil
             areaEspecificaAutomovilRadios.forEach(function(radio) {
                 radio.checked = false;
             });
             especialistaCarroRadios.forEach(function(radio) {
+                radio.checked = false;
+            });
+            opcionesGasolina.forEach(function(radio) {
                 radio.checked = false;
             });
         });
@@ -612,6 +866,7 @@
                 areasCarroDiv.style.display = "none";
                 areasMotoDiv.style.display = "block";
                 nivel_perfil_carroDiv.style.display = "none";
+                opcionesGasolina.style.display = "none";
             } else {
                 areasCarroDiv.style.display = "none";
                 nivel_perfil_motoDiv.style.display = "none";
@@ -626,24 +881,91 @@
         });
 
         //sección para carros
+
+
+        //Opcion gasolina
         gasolinaCarroRadioButton.addEventListener("change", function(){
             if (gasolinaCarroRadioButton.checked) {
                 //especialistaMotoRadios.style.display = "none";
-                nivel_perfil_carroDiv.style.display = "block";
+                opcionesGasolina.style.display = "block";
+                //nivel_perfil_carroDiv.style.display = "block";
                 nivel_perfil_motoDiv.style.display = "none";
             }else {
-                nivel_perfil_carroDiv.style.display = "none";
+                opcionesGasolina.style.display = "none";
             }
             // Desmarca todas las opciones del especialista del automóvil
-            especialistaCarroRadios.forEach(function(radio) {
+            opcionesGasolina.forEach(function(radio) {
                 radio.checked = false;
             });
         });
-
-
+        //opcion de disel P1
         dieselCarroRadioButton.addEventListener("change", function(){
             if (dieselCarroRadioButton.checked) {
                 //especialistaMotoRadios.style.display = "none";
+                opcionesTipoServicioDiesel.style.display = "block";
+                //nivel_perfil_carroDiv.style.display = "block";
+                nivel_perfil_motoDiv.style.display = "none";
+            }else {
+                opcionesTipoServicioDiesel.style.display = "none";
+            }
+            // Desmarca todas las opciones del especialista del automóvil
+            opcionesTipoServicioDiesel.forEach(function(radio) {
+                radio.checked = false;
+            });
+        });
+        //opcion de Hibrido
+        hibridoCarroRadioButton.addEventListener("change", function(){
+            if (hibridoCarroRadioButton.checked) {
+                //especialistaMotoRadios.style.display = "none";
+                opcionesHibrido.style.display = "block";
+                //nivel_perfil_carroDiv.style.display = "block";
+                nivel_perfil_motoDiv.style.display = "none";
+            }else {
+                opcionesHibrido.style.display = "none";
+            }
+            // Desmarca todas las opciones del especialista del automóvil
+            opcionesHibrido.forEach(function(radio) {
+                radio.checked = false;
+            });
+        });
+
+
+        //opcion de disel P2
+        opcionLigera.addEventListener("change", function(){
+            if (opcionLigera.checked) {
+                //especialistaMotoRadios.style.display = "none";
+                diselP11RadioButton.style.display = "block";
+                //nivel_perfil_carroDiv.style.display = "block";
+                nivel_perfil_motoDiv.style.display = "none";
+            }else {
+                diselP11RadioButton.style.display = "none";
+            }
+            // Desmarca todas las opciones del especialista del automóvil
+            diselP11RadioButton.forEach(function(radio) {
+                radio.checked = false;
+            });
+        });
+        opcionPesado.addEventListener("change", function(){
+            if (opcionPesado.checked) {
+                //especialistaMotoRadios.style.display = "none";
+                diselP12RadioButton.style.display = "block";
+                //nivel_perfil_carroDiv.style.display = "block";
+                nivel_perfil_motoDiv.style.display = "none";
+            }else {
+                diselP12RadioButton.style.display = "none";
+            }
+            // Desmarca todas las opciones del especialista del automóvil
+            diselP12RadioButton.forEach(function(radio) {
+                radio.checked = false;
+            });
+        });
+
+
+        //PRIMERA OPCION DE GASOLINA
+        gasolina1RadioButton.addEventListener("change", function(){
+            if (gasolina1RadioButton.checked) {
+                //especialistaMotoRadios.style.display = "none";
+                //opcionesGasolina.style.display = "block";
                 nivel_perfil_carroDiv.style.display = "block";
                 nivel_perfil_motoDiv.style.display = "none";
             }else {
@@ -654,9 +976,12 @@
                 radio.checked = false;
             });
         });
-        hibridoCarroRadioButton.addEventListener("change", function(){
-            if (hibridoCarroRadioButton.checked) {
+        //PRIMERA OPCION DE DISEL LIGERO
+        DAL1RadioButton.addEventListener("change", function(){
+            if (DAL1RadioButton.checked) {
                 //especialistaMotoRadios.style.display = "none";
+                //opcionesGasolina.style.display = "block";
+                nivel_perfil_carroDiv.style.display = "block";
                 nivel_perfil_motoDiv.style.display = "none";
             }else {
                 nivel_perfil_carroDiv.style.display = "none";
@@ -666,6 +991,60 @@
                 radio.checked = false;
             });
         });
+        //PRIMERA OPCION DE DISEL PESADO
+        DAP1RadioButton.addEventListener("change", function(){
+            if (DAP1RadioButton.checked) {
+                //especialistaMotoRadios.style.display = "none";
+                //opcionesGasolina.style.display = "block";
+                nivel_perfil_carroDiv.style.display = "block";
+                nivel_perfil_motoDiv.style.display = "none";
+            }else {
+                nivel_perfil_carroDiv.style.display = "none";
+            }
+            // Desmarca todas las opciones del especialista del automóvil
+            especialistaCarroRadios.forEach(function(radio) {
+                radio.checked = false;
+            });
+        });
+        //PRIMERA OPCION DE Hibrido
+        Hibrido1RadioButton.addEventListener("change", function(){
+            if (Hibrido1RadioButton.checked) {
+                //especialistaMotoRadios.style.display = "none";
+                //opcionesGasolina.style.display = "block";
+                nivel_perfil_carroDiv.style.display = "block";
+                nivel_perfil_motoDiv.style.display = "none";
+            }else {
+                nivel_perfil_carroDiv.style.display = "none";
+            }
+            // Desmarca todas las opciones del especialista del automóvil
+            especialistaCarroRadios.forEach(function(radio) {
+                radio.checked = false;
+            });
+        });
+
+
+        //OPCION LIGERA
+        gasolina1RadioButton.addEventListener("change", function(){
+            if (gasolina1RadioButton.checked) {
+                //especialistaMotoRadios.style.display = "none";
+                //opcionesGasolina.style.display = "block";
+                nivel_perfil_carroDiv.style.display = "block";
+                nivel_perfil_motoDiv.style.display = "none";
+            }else {
+                nivel_perfil_carroDiv.style.display = "none";
+            }
+            // Desmarca todas las opciones del especialista del automóvil
+            especialistaCarroRadios.forEach(function(radio) {
+                radio.checked = false;
+            });
+        });
+
+
+        
+
+
+
+        
         
         //sección para motos
         lucesMotoRadioButton.addEventListener("change", function(){
