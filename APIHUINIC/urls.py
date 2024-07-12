@@ -18,7 +18,10 @@ from django.urls import path
 
 from api.views import(login,
                     detallesCurso,
+                    cursosListaCandidato,
+                    cursosListaEmpresa,
                     editarPerfil,
+                    editarPerfilCapacitador,
                     formularioCurso,
                     homeCandidato,
                     homeCapacitador,
@@ -39,15 +42,19 @@ from api.views import(login,
                     pruebaBusqueda,
                     perfilEmpresaLogo,
                     postulaciones,
-                    cursosLIsta,
+                    cursosListaCapacitador,
                     postulacionesEmpresa,
+                    editarFormularioCurso,
                     solicitudEmpresa,
                     habilidadesCandidatoN2)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('postulacionesEmpresa/', postulacionesEmpresa.as_view(), name="postulacionesEmpresa"),
-    path('cursosLIsta/', cursosLIsta.as_view(), name="cursosLIsta"),
+    path('cursosListaCandidato/', cursosListaCandidato.as_view(), name="cursosListaCandidato"),
+    path('editarFormularioCurso/', editarFormularioCurso.as_view(), name="editarFormularioCurso"),
+    path('cursosListaEmpresa/', cursosListaEmpresa.as_view(), name="cursosListaEmpresa"),
+    path('cursosListaCapacitador/', cursosListaCapacitador.as_view(), name="cursosListaCapacitador"),
     path('postulaciones/', postulaciones.as_view(), name="postulaciones"),
     path('perfilEmpresaLogo/', perfilEmpresaLogo.as_view(), name="perfilEmpresaLogo"),
     path('editarPerfil/', editarPerfil.as_view(), name="editarPerfil"),
@@ -73,4 +80,5 @@ urlpatterns = [
     path('solicitudesCurso/', solicitudesCurso.as_view(), name="solicitudesCurso"),
     path('usuarioNuevo/', usuarioNuevo.as_view(), name="usuarioNuevo"),
     path('habilidadesCandidatoN2/', habilidadesCandidatoN2.as_view(), name="habilidadesCandidatoN2"),
+    path('editarPerfilCapacitador/', editarPerfilCapacitador.as_view(), name="editarPerfilCapacitador"),
 ]

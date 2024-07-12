@@ -12,9 +12,36 @@ class detallesCurso(APIView):
     template_name= "detallesCurso.html"
     def get(self,request):
         return render(request,self.template_name)
+
+class editarFormularioCurso(APIView):
+    template_name= "editarFormularioCurso.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class cursosListaEmpresa(APIView):
+    template_name= "cursosListaEmpresa.html"
+    def get(self,request):
+        return render(request,self.template_name)
+
+class cursosListaCandidato(APIView):
+    template_name= "cursosListaCandidato.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+
+class cursosListaCapacitador(APIView):
+    template_name= "cursosListaCapacitador.html"
+    def get(self,request):
+        return render(request,self.template_name)
     
 class editarPerfil(APIView):
     template_name= "editarPerfil.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+
+class editarPerfilCapacitador(APIView):
+    template_name= "editarPerfilCapacitador.html"
     def get(self,request):
         return render(request,self.template_name)
 
@@ -57,10 +84,7 @@ class postulacionesEmpresa(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
-class cursosLIsta(APIView):
-    template_name= "cursosLIsta.html"
-    def get(self,request):
-        return render(request,self.template_name)
+
     
 class perfilEmpresaLogo(APIView):
     template_name= "perfilEmpresaLogo.html"

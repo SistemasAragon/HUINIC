@@ -46,7 +46,7 @@
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
                                 <h6 class="my-0">Nombre Usuario</h6>
-                                <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
+                                <h6 class="my-0 fw-normal menu-arrow">Capacitador</h6>
                             </div>
                         </div>
                     </a>
@@ -56,7 +56,11 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <a href="#" class="dropdown-item">
+                        <a href="{% url 'editarPerfilCapacitador' %}" class="dropdown-item">
+                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
+                            <span>Mi Perfil</span>
+                        </a>
+                        <a href="{% url 'homeGeneral' %}" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
                         </a>
@@ -132,7 +136,7 @@
 
                                 <p></p>
                                 <div  class="centrar">
-                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+                                    <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
     
                                     <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
                                 </div>
@@ -151,7 +155,7 @@
 
                                 <p></p>
                                 <div  class="centrar">
-                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+                                    <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
     
                                     <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
                                 </div>
@@ -170,7 +174,7 @@
 
                                 <p></p>
                                 <div  class="centrar">
-                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+                                    <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
     
                                     <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
                                 </div>
@@ -188,7 +192,7 @@
 
                                 <p></p>
                                 <div  class="centrar">
-                                    <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+                                    <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
     
                                     <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
                                 </div>

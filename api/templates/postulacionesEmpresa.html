@@ -27,7 +27,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeCandidato' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeEmpresa' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -69,7 +69,7 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <a href="#" class="dropdown-item">
+                        <a href="{% url 'homeGeneral' %}" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
                         </a>
@@ -83,7 +83,9 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
-                        <a href="{% url 'homeCandidato' %}">Inicio</a><span class="menu-arrow"></span>
+                        <a href="{% url 'homeEmpresa' %}">Inicio</a><span class="menu-arrow"></span>
+                        <li><a href="{% url 'solicitudEmpresa' %}" class="sub-menu-item">Nueva Vacante</a></li>
+                        <li><a href="{% url 'cursosListaEmpresa' %}" class="sub-menu-item">Cursos</a></li>
                         
                     </li>
                 </ul>
@@ -395,130 +397,83 @@
                             '</div>' +
                         '</div>' +
                         '<p></p>' +
-                        '<label class="form-label fs-5 text-center">HABILIDADES <span class="text-danger"></span></label>' +
-                            '<div class="col-md-12 mt-3">' +
-                                '<label class="form-label fs-5">Selecciona hasta 5 habilidades <span class="text-danger">*</span></label>' +
-                                '<div class="form-icon position-relative">' +
-                                    '<div class="row">' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad1" name="habilidad" value="Trabajo en equipo">' +
-                                            '<label for="habilidad1">Trabajo en equipo</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad2" name="habilidad" value="Comunicación efectiva">' +
-                                            '<label for="habilidad2">Comunicación efectiva</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad3" name="habilidad" value="Resolución de problemas">' +
-                                            '<label for="habilidad3">Resolución de problemas</label>' +
-                                        '</div>' +
+                        '<label class="form-label fs-5 text-center"><span class="my-swal-label">Habilidades (5 Maximo)<span class="text-danger">*</span></span></label>' +
+                        '<div class="col-md-12 mt-3">' +
+                            '<div class="form-icon position-relative">' +
+                                '<div class="row izquierda letraChida">' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad1" name="habilidad" value="Trabajo en equipo">' +
+                                        '<label for="habilidad1"> Trabajo en equipo</label>' +
                                     '</div>' +
-                                    '<div class="row mt-2">' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad4" name="habilidad" value="Liderazgo">' +
-                                            '<label for="habilidad4">Liderazgo</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad5" name="habilidad" value="Adaptabilidad">' +
-                                            '<label for="habilidad5">Adaptabilidad</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad6" name="habilidad" value="Creatividad">' +
-                                            '<label for="habilidad6">Creatividad</label>' +
-                                        '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad2" name="habilidad" value="Comunicación efectiva">' +
+                                        '<label for="habilidad2">Comunicación efectiva</label>' +
                                     '</div>' +
-                                    '<div class="row mt-2">' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad7" name="habilidad" value="Pensamiento crítico">' +
-                                            '<label for="habilidad7">Pensamiento crítico</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad8" name="habilidad" value="Gestión del tiempo">' +
-                                            '<label for="habilidad8">Gestión del tiempo</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad9" name="habilidad" value="Empatía">' +
-                                            '<label for="habilidad9">Empatía</label>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div class="row mt-2">' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad10" name="habilidad" value="Capacidad de aprendizaje">' +
-                                            '<label for="habilidad10">Capacidad de aprendizaje</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad11" name="habilidad" value="Negociación">' +
-                                            '<label for="habilidad11">Negociación</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad12" name="habilidad" value="Toma de decisiones">' +
-                                            '<label for="habilidad12">Toma de decisiones</label>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div class="row mt-2">' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad13" name="habilidad" value="Pensamiento analítico">' +
-                                            '<label for="habilidad13">Pensamiento analítico</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad14" name="habilidad" value="Autoconfianza">' +
-                                            '<label for="habilidad14">Autoconfianza</label>' +
-                                        '</div>' +
-                                        '<div class="col-md-4">' +
-                                            '<input type="checkbox" id="habilidad15" name="habilidad" value="Resiliencia">' +
-                                            '<label for="habilidad15">Resiliencia</label>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div id="mensaje-habilidades" class="mt-2" style="display: none;">' +
-                                        '<p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad3" name="habilidad" value="Resolución de problemas">' +
+                                        '<label for="habilidad3">Resolución de problemas</label>' +
                                     '</div>' +
                                 '</div>' +
+                                '<div class="row mt-2 izquierda letraChida">' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad4" name="habilidad" value="Liderazgo">' +
+                                        '<label for="habilidad4">Liderazgo</label>' +
+                                    '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad5" name="habilidad" value="Adaptabilidad">' +
+                                        '<label for="habilidad5">Adaptabilidad</label>' +
+                                    '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad6" name="habilidad" value="Creatividad">' +
+                                        '<label for="habilidad6">Creatividad</label>' +
+                                    '</div>' +
                                 '</div>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<span class="my-swal-label centrar">Habilidades</span>` +
-                            '</div>' + 
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Empatia</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Trabajo en equipo</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Respeto</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Trabajo colaborativo</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Liderazgo</span>` +
-                                    `</div>` +  
-                                `</li>` +   
-                            '</div>' + 
+                                '<div class="row mt-2 izquierda letraChida">' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad7" name="habilidad" value="Pensamiento crítico">' +
+                                        '<label for="habilidad7">Pensamiento crítico</label>' +
+                                    '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad8" name="habilidad" value="Gestión del tiempo">' +
+                                        '<label for="habilidad8">Gestión del tiempo</label>' +
+                                    '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad9" name="habilidad" value="Empatía">' +
+                                        '<label for="habilidad9">Empatía</label>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="row mt-2 izquierda letraChida">' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad10" name="habilidad" value="Capacidad de aprendizaje">' +
+                                        '<label for="habilidad10">Capacidad de aprendizaje</label>' +
+                                    '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad11" name="habilidad" value="Negociación">' +
+                                        '<label for="habilidad11">Negociación</label>' +
+                                    '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad12" name="habilidad" value="Toma de decisiones">' +
+                                        '<label for="habilidad12">Toma de decisiones</label>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="row mt-2 izquierda letraChida">' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad13" name="habilidad" value="Pensamiento analítico">' +
+                                        '<label for="habilidad13">Pensamiento analítico</label>' +
+                                    '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad14" name="habilidad" value="Autoconfianza">' +
+                                        '<label for="habilidad14">Autoconfianza</label>' +
+                                    '</div>' +
+                                    '<div class="col-md-4">' +
+                                        '<input type="checkbox" id="habilidad15" name="habilidad" value="Resiliencia">' +
+                                        '<label for="habilidad15">Resiliencia</label>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div id="mensaje-habilidades" class="mt-2" style="display: none;">' +
+                                '<p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>' +
+                                '</div>' +
+                            '</div>' +
                         '</div>' +
                     `</div>`,
                 focusConfirm: false,

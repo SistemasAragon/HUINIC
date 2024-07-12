@@ -16,7 +16,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeEmpresa' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeCandidato' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -58,7 +58,11 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <a href="#" class="dropdown-item">
+                        <a href="{% url 'editarPerfil' %}" class="dropdown-item">
+                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
+                            <span>Mi Perfil</span>
+                        </a>
+                        <a href="{% url 'homeGeneral' %}" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
                         </a>
@@ -72,14 +76,11 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
-                        <a href="{% url 'homeEmpresa' %}">Inicio</a><span class="menu-arrow"></span>
+                        <a href="{% url 'homeCandidato' %}">Inicio</a><span class="menu-arrow"></span>
                        
                     </li>
-                    <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
-                    <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
-                        
-                    </li>
+                    <li><a href="{% url 'postulaciones' %}" class="sub-menu-item">Mis postulaciones</a></li>
+                    <li><a href="{% url 'pruebaBusqueda' %}" class="sub-menu-item">Nuevas Vacantes</a></li>
 
                 </ul>
                 <!--end navigation menu-->
@@ -163,8 +164,8 @@
                         <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/1.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
                         <p></p>
                         <div class="centrar">
-                            <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
-                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>
+                            <a href="{% url 'detallesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
+                            <!-- <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a> -->
                         </div>
                     </div>
                 </div>
@@ -178,8 +179,7 @@
                         <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/3.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
                         <p></p>
                         <div class="centrar">
-                            <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
-                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>
+                            <a href="{% url 'detallesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
                         </div>
                     </div>
                 </div>
@@ -193,8 +193,7 @@
                         <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/1.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
                         <p></p>
                         <div class="centrar">
-                            <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
-                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>
+                            <a href="{% url 'detallesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
                         </div>
                     </div>
                 </div>
@@ -208,8 +207,7 @@
                         <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/4.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
                         <p></p>
                         <div class="centrar">
-                            <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
-                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>
+                            <a href="{% url 'detallesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
                         </div>
                     </div>
                 </div>
@@ -223,8 +221,7 @@
                         <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/1.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
                         <p></p>
                         <div class="centrar">
-                            <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
-                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>
+                            <a href="{% url 'detallesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
                         </div>
                     </div>
                 </div>
@@ -238,8 +235,7 @@
                         <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/3.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
                         <p></p>
                         <div class="centrar">
-                            <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
-                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>
+                            <a href="{% url 'detallesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
                         </div>
                     </div>
                 </div>
@@ -253,8 +249,7 @@
                         <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/4.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
                         <p></p>
                         <div class="centrar">
-                            <a href="{% url 'formularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
-                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>
+                            <a href="{% url 'detallesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
                         </div>
                     </div>
                 </div>

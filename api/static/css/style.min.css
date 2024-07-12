@@ -2896,6 +2896,15 @@ p {
     align-items: center;
 }
 
+.izquierda {
+    text-align: left;
+    align-items: left;
+}
+
+.letraChida {
+    font-size: 16px;
+}
+
 .tiny-slide .testi-content {
     cursor: w-resize
 }

@@ -14,7 +14,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeCandidato' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeCapacitador' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -57,11 +57,7 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <a href="{% url 'editarPerfil' %}" class="dropdown-item">
-                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
-                            <span>Mi Perfil</span>
-                        </a>
-                        <a href="{% url 'homeGeneral' %}" class="dropdown-item">
+                        <a href="#" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
                         </a>
@@ -75,13 +71,12 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
-                        <a href="{% url 'homeCandidato' %}">Inicio</a><span class="menu-arrow"></span>
+                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
                        
                     </li>
-                    <li><a href="{% url 'postulaciones' %}" class="sub-menu-item">Mis postulaciones</a></li>
-                    <li><a href="{% url 'pruebaBusqueda' %}" class="sub-menu-item">Nuevas Vacantes</a></li>
+                    <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
                     <li class="has-submenu parent-parent-menu-item">
-                        <a href="{% url 'cursosListaCandidato' %}">Cursos</a><span class="menu-arrow"></span>
+                        <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
                         
                     </li>
 
