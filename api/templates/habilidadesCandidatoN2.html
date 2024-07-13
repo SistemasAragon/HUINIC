@@ -69,14 +69,14 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
-                    <li class="has-submenu parent-parent-menu-item ">
+                    <!-- <li class="has-submenu parent-parent-menu-item ">
                         <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
                             <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
                         </ul>
-                    </li>
-                    <li><a href="page-about.html" class="sub-menu-item">Info</a></li>
+                    </li> -->
+                    <!-- <li><a href="page-about.html" class="sub-menu-item">Info</a></li>
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
                         <ul class="submenu">
@@ -91,7 +91,7 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
 
                 </ul>
                 <!--end navigation menu-->
@@ -466,7 +466,7 @@
 
                                             <!--  opciones de hidraulico  -->
                                             <div id="opcionesHibrido" style="display: none;">
-                                                <h5 class="text-md-start mt-3">Selecciona el tipo de falla que puede tener</h5>
+                                                <h5 class="text-md-start mt-3">Selecciona el tipo área</h5>
 
                                                     <div class="row" style="margin-bottom: 15px;">
                                                         <div class="col-md-4">
@@ -699,7 +699,7 @@
                                         <!-- end row -->
                                         <div class="row">
                                             <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Guardar </button>
+                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="location.href='{% url 'candidatoRegistro' %}'">Guardar </button>
                                             </div>
                                             <!-- end col -->
                                         </div>

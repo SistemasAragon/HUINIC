@@ -14,7 +14,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeCapacitador' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeEmpresa' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -47,7 +47,7 @@
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
                                 <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
-                                <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
+                                <h6 class="my-0 fw-normal menu-arrow">Empresa</h6>
                             </div>
                         </div>
                     </a>
@@ -71,14 +71,14 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
-                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
+                        <a href="{% url 'homeEmpresa' %}">Inicio</a><span class="menu-arrow"></span>
                        
                     </li>
-                    <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
+                    <!-- <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
                         
-                    </li>
+                    </li> -->
 
                 </ul>
                 <!--end navigation menu-->

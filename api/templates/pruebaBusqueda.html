@@ -118,7 +118,7 @@
     <!-- End Home -->
 
     <!-- Inicio prueba de secciones -->
-    <section class="section">
+    <section class="section-25">
         <div class="container">
 
             <h3 class="text-center">Selecciona las opciones que deseas consultar</h3>
@@ -150,23 +150,18 @@
                     <button type="submit" class="custom-btn rounded-pill btn-primary">Buscar</button>
                 </form>
             </div>
-            
-
-
-
-
-
-            
         </div>
         <!-- end container -->
     </section>
     <!-- fin prueba de secciones -->
-     <!-- otraprueba -->
-     <section class="section">
-        <div class="container" >
+
+
+    <!-- otraprueba -->
+    <section class="section-50">
+        <div class="container">
             <div class="row">
                 <!-- Search Results Section -->
-                <div class="col-lg-6 col-md-6 col-12" >
+                <div class="col-lg-6 col-md-6 col-12">
                     <div class="search-results">
                         <h2>Resultados de búsqueda: Área de Frenos</h2>
                         <div class="vacante-item" onclick="mostrarDescripcion(
@@ -174,7 +169,8 @@
                             'Empresa A', 
                             'Ciudad A', 
                             '$12,000.00', 
-                            'Somos una empresa que se especializa en el mantenimiento y reparación de sistemas de frenos para vehículos. Buscamos un mecánico experimentado que se una a nuestro equipo. Requisitos: Experiencia previa en sistemas de frenos, capacidad para diagnosticar y reparar problemas de frenos, y conocimientos básicos de mecánica automotriz.'
+                            'Somos una empresa que se especializa en el mantenimiento y reparación de sistemas de frenos para vehículos. Buscamos un mecánico experimentado que se una a nuestro equipo. Requisitos: Experiencia previa en sistemas de frenos, capacidad para diagnosticar y reparar problemas de frenos, y conocimientos básicos de mecánica automotriz.',
+                            '{% static "images/testi/mazda.png" %}'
                         )">
                             <h3>Mecánico de Frenos</h3>
                             <p>Empresa: Empresa A</p>
@@ -186,7 +182,8 @@
                             'Empresa B', 
                             'Ciudad B', 
                             'No especificado', 
-                            'Buscamos un técnico en frenos con al menos 3 años de experiencia. El candidato ideal deberá ser capaz de realizar mantenimientos preventivos y correctivos en sistemas de frenos, así como manejar herramientas y equipos de diagnóstico.'
+                            'Buscamos un técnico en frenos con al menos 3 años de experiencia. El candidato ideal deberá ser capaz de realizar mantenimientos preventivos y correctivos en sistemas de frenos, así como manejar herramientas y equipos de diagnóstico.',
+                            '{% static "images/testi/honda.png" %}'
                         )">
                             <h3>Técnico en Frenos</h3>
                             <p>Empresa: Empresa B</p>
@@ -198,7 +195,8 @@
                             'Empresa C', 
                             'Ciudad C', 
                             '$15,000.00', 
-                            'Estamos en busca de un especialista en frenos para unirse a nuestro equipo. La posición requiere una sólida comprensión de los sistemas de frenos hidráulicos y electrónicos, y la capacidad para realizar diagnósticos y reparaciones complejas.'
+                            'Estamos en busca de un especialista en frenos para unirse a nuestro equipo. La posición requiere una sólida comprensión de los sistemas de frenos hidráulicos y electrónicos, y la capacidad para realizar diagnósticos y reparaciones complejas.',
+                            '{% static "images/testi/chevrolet.png" %}'
                         )">
                             <h3>Especialista en Frenos</h3>
                             <p>Empresa: Empresa C</p>
@@ -210,7 +208,7 @@
                 </div>
                 <!-- Vacante Description Section -->
                 <div class="col-lg-6 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                    <div class="sidebar p-4 rounded bg-ligth ms-lg-3">
+                    <div class="sidebar p-4 rounded bg-light ms-lg-3">
                         <div class="vacantes">
                             <h2>Descripción de la Vacante</h2>
                             <div id="vacante-descripcion" class="vacante-descripcion">
@@ -218,28 +216,41 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
         <!-- end container -->
     </section>
+    <!-- otraprueba -->
      <!-- otraprueba -->
-    
+<!-- otraprueba -->
+
+<script>
+    function mostrarDescripcion(titulo, empresa, ubicacion, sueldo, descripcion, logo) {
+        document.getElementById('vacante-descripcion').innerHTML = `
+            <div class="text-center">
+                <img src="${logo}" alt="Logo de ${empresa}" style="max-width: 100px; max-height: 100px;">
+            </div>
+            <h2>${titulo} / ${ubicacion}</h2>
+            <p><strong>${empresa}</strong></p>
+            <p>${ubicacion}</p>
+            <p><strong>Sueldo:</strong> ${sueldo}</p>
+            <div>${descripcion}</div>
+            <div class="row">
+                <div class="col-12 fs-6 mt-3 text-center">
+                    <button type="button" id="submit" name="send" class="btn btn-primary" onclick="enviarCurriculum('${titulo}', '${empresa}')">Postularme</button>
+                </div>
+            </div>
+        `;
+    }
+
+    function enviarCurriculum(titulo, empresa) {
+        alert('Se ha enviado tu currículum para la vacante de ' + titulo + ' en ' + empresa + '.');
+        // Aquí podrías agregar más lógica para enviar el currículum, como una petición AJAX
+    }
+</script>
 
     
-    
-    <script>
-        function mostrarDescripcion(titulo, empresa, ubicacion, sueldo, descripcion) {
-            document.getElementById('vacante-descripcion').innerHTML = `
-                <h2>${titulo}/${ubicacion}</h2>
-                <p><strong>${empresa}</strong></p>
-                <p>${ubicacion}</p>
-                <p><strong>Sueldo:</strong> ${sueldo}</p>
-                <div>${descripcion}</div>
-            `;
-        }
-    </script>
         
     <!-- Footer End -->
     {% include  'includeFooter.html' %}

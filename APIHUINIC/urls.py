@@ -18,7 +18,8 @@ from django.urls import path
 
 from api.views import(login,
                     detallesCurso,
-                    cursosListaCandidato,
+                    cursosListaCandidato, 
+                    detallesCursoEmpresa, 
                     cursosListaEmpresa,
                     editarPerfil,
                     editarPerfilCapacitador,
@@ -45,12 +46,15 @@ from api.views import(login,
                     cursosListaCapacitador,
                     postulacionesEmpresa,
                     editarFormularioCurso,
+                    cursosInscritoEmpresa,
                     solicitudEmpresa,
                     habilidadesCandidatoN2)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('postulacionesEmpresa/', postulacionesEmpresa.as_view(), name="postulacionesEmpresa"),
+    path('detallesCursoEmpresa/', detallesCursoEmpresa.as_view(), name="detallesCursoEmpresa"),
+    path('cursosInscritoEmpresa/', cursosInscritoEmpresa.as_view(), name="cursosInscritoEmpresa"),
     path('cursosListaCandidato/', cursosListaCandidato.as_view(), name="cursosListaCandidato"),
     path('editarFormularioCurso/', editarFormularioCurso.as_view(), name="editarFormularioCurso"),
     path('cursosListaEmpresa/', cursosListaEmpresa.as_view(), name="cursosListaEmpresa"),
