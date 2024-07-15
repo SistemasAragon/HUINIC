@@ -46,12 +46,14 @@ from api.views import(login,
                     cursosListaCapacitador,
                     postulacionesEmpresa,
                     editarFormularioCurso,
+                    cursosInscritoCandidato,
                     cursosInscritoEmpresa,
                     solicitudEmpresa,
                     habilidadesCandidatoN2)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cursosInscritoCandidato/', cursosInscritoCandidato.as_view(), name="cursosInscritoCandidato"),
     path('postulacionesEmpresa/', postulacionesEmpresa.as_view(), name="postulacionesEmpresa"),
     path('detallesCursoEmpresa/', detallesCursoEmpresa.as_view(), name="detallesCursoEmpresa"),
     path('cursosInscritoEmpresa/', cursosInscritoEmpresa.as_view(), name="cursosInscritoEmpresa"),

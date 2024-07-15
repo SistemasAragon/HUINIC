@@ -12,6 +12,22 @@
 <body>
     <!-- Navbar STart -->
     <header id="topnav" class="defaultscroll sticky">
+        <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    
+        <!-- SweetAlert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link href="{% static 'css/sweetalert2.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/sweetalert2Tres.css' %}" rel="stylesheet" type="text/css">
+    
+        <style>
+            .my-swal-confirm-button2 {
+                background-color: #ff5722 !important;
+                color: white !important;
+            }
+        </style>
+
+
         <div class="container">
             <!-- Logo container-->
             <a class="logo" href="{% url 'homeCandidato' %}"><!-- Logooooo-->
@@ -182,7 +198,7 @@
                             <div class="widget">
                                 <div class="newsletter-spacingbox mt-4 mb-0">
                                     <form>
-                                        <a href="#" class="btn btn-primary w-100 mt-2">Solicitar</a>
+                                        <a href="#" class="btn btn-primary w-100 mt-2" id="solicitar-btn">Solicitar</a>
                                     </form>
                                 </div>
                             </div>
@@ -253,6 +269,23 @@
         <!-- end container -->
     </section>
     <!-- END -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('solicitar-btn').addEventListener('click', function(event) {
+                event.preventDefault();
+                Swal.fire({
+                    title: 'Excelente',
+                    text: 'Hemos enviado tus datos para que se contacten contigo',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    customClass: {
+                        confirmButton: 'my-swal-confirm-button2'
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- Footer End -->
     {% include  'includeFooter.html' %}
