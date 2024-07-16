@@ -423,83 +423,59 @@
     <script>
         function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
             Swal.fire({
-                title: 'Información de postulación',
+                title: 'Información de curso',
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
-                            '<div class="col-6 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Puesto</span>` +
+                            '<div class="col-8 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Curso</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Gerente Mecanico de Motores</span>` +
+                                        `<span class=etiquetaDato "> Mecanico de Motores en autos de disel</span>` +
                                     `</div>` +    
                                 `</li>` +
                             '</div>' +
-                            '<div class="col-6">' +
-                                '<a href="{% url 'perfilEmpresaLogo' %}">' + 
-                                    '<span>' + 
-                                        '<img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height:50px; " >' + 
-                                    '</span>' + 
-                                '</a>' + 
-                            '</div>' +  
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label ">Edad</span>` +
+                            '<div class="col-2 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Area</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">18 - 25</span>` +
-                                    `</div>` +  
+                                        `<span class=etiquetaDato "> Mecanica </span>` +
+                                    `</div>` +    
                                 `</li>` +
                             '</div>' + 
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Estado Civil</span>` +
+                            '<div class="col-2 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Formato</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Soltero</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Genero</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Masculino</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Salario</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">$ 20000</span>` +
-                                    `</div>` +  
+                                        `<span class=etiquetaDato "> Online </span>` +
+                                    `</div>` +    
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-2">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Vehiculo</span>` +
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Horas</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Auto</span>` +
+                                        `<span class=etiquetaDato ">500 horas</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">300 pesos</span>` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' +   
                             '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Area</span>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Descuento</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Disel pesado </span>` +
+                                        `<span class=etiquetaDato ">100 pesos</span>` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' + 
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Area especifica</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Sistema de enfriamento </span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +
                             '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Nivel</span>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio final</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Desarrollador</span>` +
+                                        `<span class=etiquetaDato ">56 pesos</span>` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' + 
@@ -507,48 +483,42 @@
                         '<p></p>' +
                         '<div class="row">' +
                             '<div class="col-12">' +
-                                `<span class="my-swal-label centrar">Habilidades</span>` +
-                            '</div>' + 
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 1</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Empatia</span>` +
+                                        `<span class=etiquetaDato ">Dar a conocer los diferentes medios de comunicación</span>` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' +   
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Trabajo en equipo</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Respeto</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item">` +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 2</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Trabajo colaborativo</span>` +
+                                        `<span class=etiquetaDato ">Enseñar a usar herramientas de informatica</span>` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' +   
-                            '<div class="col-4">' +
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 3</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Implementar conocimientos de informatica en la vida</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<span class="my-swal-label centrar">Acerca del curso</span>` +
                                 `<li class="my-swal-list-item">` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Liderazgo</span>` +
+                                        `<span class=etiquetaDato ">Curso de marketing digital en sistemas de informacion con el proposito de crear medios que ayuden a la actualizacion informactica en la meta de innovación</span>` +
                                     `</div>` +  
-                                `</li>` +   
+                                `</li>` +
                             '</div>' + 
                         '</div>' +
                         '<p></p>' +
