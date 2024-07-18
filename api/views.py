@@ -28,12 +28,22 @@ class editarFormularioCurso(APIView):
     def get(self,request):
         return render(request,self.template_name)
 
-  
+
 class cursosInscritoCandidato(APIView):
     template_name= "cursosInscritoCandidato.html"
     def get(self,request):
         return render(request,self.template_name)
-      
+
+class conocimientosLista(APIView):
+    template_name= "conocimientosLista.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class empresasLista(APIView):
+    template_name= "empresasLista.html"
+    def get(self,request):
+        return render(request,self.template_name)
+        
 class cursosListaEmpresa(APIView):
     template_name= "cursosListaEmpresa.html"
     def get(self,request):
