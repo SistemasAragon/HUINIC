@@ -2901,6 +2901,11 @@ p {
     align-items: left;
 }
 
+.derecha {
+    text-align: right;
+    align-items: right;
+}
+
 .letraChida {
     font-size: 16px;
 }

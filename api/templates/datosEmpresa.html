@@ -1,0 +1,211 @@
+{% include  'includeHead.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>HUINIC | Datos Empresa</title>
+</head>
+
+<body>
+    <!-- Navbar STart -->
+    <header id="topnav" class="defaultscroll sticky">
+        <div class="container">
+            <!-- Logo container-->
+            <a class="logo" href="{% url 'homeGeneral' %}"><!-- Logooooo-->
+                <span class="logo-light-mode">
+                    <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
+                    <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
+                </span>
+            </a>
+            <!-- End Logo container-->
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+            
+
+            <div id="navigation">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu nav-right">
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="{% url 'homeGeneral' %}">Inicio</a><span class="menu-arrow"></span>
+                    </li>
+                </ul>
+                <!--end navigation menu-->
+            </div>
+            <!--end navigation-->
+
+        </div>
+        <!--end container-->
+    </header>
+    <!--end header-->
+    <!-- Navbar End -->
+
+    <!-- Start Home -->
+    <section class="bg-default page-next-level" style="background: url({% static 'images/bg/bg-page.png'%}) center no-repeat;">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 mt-4">
+                            <div class="text-center">
+                                <h3 class="title-pager mb-0">  Realiza el registro de manera rápida </h3>
+                                <h3 class="title-pager mb-0">  Llena los campos con los datos de la empresa</h3>
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </div>
+        </div>
+    </section>
+    <!--end section-->
+    <!-- End Home -->
+
+    <!-- Start Section -->
+    <!-- <section class="section" style="overflow:hidden; height: 450px;"> -->
+    <section class="section" style="overflow:hidden; height: auto;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-12 mb-4">
+                    <div class="rounded p-4 shadow border">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="primary-form mt-3">
+                                    <form method="post" id="companyDetailsForm" name="companyDetailsForm" onsubmit="return validateDetailsForm()">
+                                        <p class="mb-0" id="error-msg"></p>
+                                        <div id="simple-msg"></div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Ciudad <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <select name="city" id="city" class="form-control ps-5 fs-6">
+                                                        <option value="">Selecciona una ciudad</option>
+                                                        <option value="Ciudad de México">Ciudad de México</option>
+                                                        <option value="Guadalajara">Guadalajara</option>
+                                                        <option value="Monterrey">Monterrey</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Estado <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <select name="state" id="state" class="form-control ps-5 fs-6">
+                                                        <option value="">Selecciona un estado</option>
+                                                        <option value="CDMX">CDMX</option>
+                                                        <option value="Jalisco">Jalisco</option>
+                                                        <option value="Nuevo León">Nuevo León</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Calle <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="street" id="street" type="text" class="form-control ps-5 fs-6" placeholder="Calle :">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Código Postal <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="zip_code" id="zip_code" type="text" class="form-control ps-5 fs-6" placeholder="Código Postal :">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Teléfono de la Empresa <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="company_phone" id="company_phone" type="text" class="form-control ps-5 fs-6" placeholder="Teléfono de la Empresa :">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Sector de la Empresa <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <select name="industry" id="industry" class="form-control ps-5 fs-6">
+                                                        <option value="">Selecciona un sector</option>
+                                                        <option value="Tecnología">Tecnología</option>
+                                                        <option value="Salud">Salud</option>
+                                                        <option value="Educación">Educación</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">página web de la empresa <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="employees" id="employees" type="number" class="form-control ps-5 fs-6" placeholder="páginaEmpresa@gmail.com :">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Logo de la empresa <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="logoEmpresa" id="logoEmpresa" type="file" class="form-control ps-5 fs-6">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="form-label fs-6">Descripción de la Empresa <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <textarea name="company_description" id="company_description" class="form-control ps-5 fs-6" placeholder="Descripción de la Empresa :"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Convenio <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="logoEmpresa" id="logoEmpresa" type="file" class="form-control ps-5 fs-6">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+                                        <div class="row">
+                                            <div class="col-12 fs-6 mt-3 text-center">
+                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Registrar</button>
+                                            </div>
+                                        </div>
+                                        <!--end row-->
+                                    </form>
+                                    
+                                    
+                                    <!-- end form -->
+    
+                                </div>
+                                <!--end primary-form-->
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+
+        <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- End Section -->
+
+    <!-- Footer End -->
+    {% include  'includeFooter.html' %}
+    <!-- Footer End -->
+
+</body>
+
+
+</html>

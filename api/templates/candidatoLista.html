@@ -5,9 +5,8 @@
 
 
 <head>
-    <title>HUINIC | Empresas</title>
+    <title>HUINIC | Candidatos</title>
 
-    
     <!-- Luego incluye DataTables -->
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
@@ -49,6 +48,8 @@
             </div>
             
 
+
+
             <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
                 <li class="list-inline-item search-icon mb-0">
                     <!--INICIO DE USUARIO-->
@@ -87,7 +88,6 @@
                     <li class="has-submenu parent-parent-menu-item ">
                         <a href="{% url 'homeCandidato' %}">Inicio</a><span class="menu-arrow"></span>
                         <li><a href="{% url 'pruebaBusqueda' %}" class="sub-menu-item">Nueva Vacantes</a></li>
-                        <li><a href="{% url 'pruebaBusqueda' %}" class="sub-menu-item">Nueva Empresa</a></li>
                         <li><a href="{% url 'cursosListaCandidato' %}" class="sub-menu-item">Cursos</a></li>
                         
                     </li>
@@ -109,7 +109,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">Empresas inscritas</h3>
+                                <h3 class="title-pager mb-0">Candidatos inscritos</h3>
                             </div>
                         </div>
                         <!--end col-->
@@ -123,32 +123,19 @@
     <!--end section-->
     <!-- End Home -->
 
-    <!-- Inicio prueba de secciones -->
-    <section class="section-25">
-        <div class="container derecha">
-
-            <a href="#" class="btn btn-primary  mt-2">
-                Nueva empresa 
-            </a>
-
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- fin prueba de secciones -->
-
     <!-- START -->
     <section class="section-50">
         <div class="container">
+                        
             <div class="row" >
                 <table id="TablaCursos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
-                            <th scope="col">Empresa</th>
+                            <th scope="col">Candidato</th>
+                            <th scope="col">CURP</th>
                             <th scope="col">RFC</th>
                             <th scope="col">Correo</th>
-                            <th scope="col">Director</th>
-                            <th scope="col">Direccion</th>
-                            <th scope="col">Num Personal</th>
+                            <th scope="col">Telefono</th>
                             <th scope="col">Estado</th>
                             <th scope="col">Acciones</th>
                         </tr>
@@ -156,22 +143,19 @@
                     <tbody>
                         <tr>
                             <td class="centrar">
-                                CUDE
+                                Victor Patiño Mejia
                             </td>
                             <td class="centrar">
-                                FNECNEICNRDVFV 
+                                PAMV0108274JS 
                             </td>
                             <td class="centrar">
-                                cude@gmail.com
+                                PAMV0108274JS
                             </td>
                             <td class="centrar">
-                                colbert juan de dios 
+                                victor@gmail.com
                             </td>
                             <td class="centrar">
-                                Calle 21 de marzo 
-                            </td>
-                            <td class="centrar">
-                                56 personas 
+                                55563536748 
                             </td>
                             <td class="centrar">
                                 Activa 
@@ -184,22 +168,19 @@
                         </tr>
                         <tr>
                             <td class="centrar">
-                                CEDVA
+                                Victor Huego Mejia
                             </td>
                             <td class="centrar">
-                                FNECEDCCEC 
+                                PAMV0108274JS 
                             </td>
                             <td class="centrar">
-                                cedva@gmail.com
+                                PAMV0108274JS
                             </td>
                             <td class="centrar">
-                                jesus de cedva
+                                victorh@gmail.com
                             </td>
                             <td class="centrar">
-                                Calle 231 de marzo 
-                            </td>
-                            <td class="centrar">
-                                5006 personas 
+                                55563536748 
                             </td>
                             <td class="centrar">
                                 Activa 
@@ -212,22 +193,19 @@
                         </tr>
                         <tr>
                             <td class="centrar">
-                                VPER 
+                                Victor Manuel Patiño 
                             </td>
                             <td class="centrar">
-                                VEPERJCMMDVFVF 
+                                PAMV0108274JS 
                             </td>
                             <td class="centrar">
-                                vper@gmail.com
+                                PAMV0108274JS
                             </td>
                             <td class="centrar">
-                                victor patiño mejia
+                                victorm@gmail.com
                             </td>
                             <td class="centrar">
-                                Calle 23 de marzo 
-                            </td>
-                            <td class="centrar">
-                                20 personas 
+                                55563536748 
                             </td>
                             <td class="centrar">
                                 Activa 
@@ -315,70 +293,106 @@
     <script>
         function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
             Swal.fire({
-                title: 'Información Empresa',
+                title: 'Información de curso',
                 html:
                 `<div class="my-swal-label-container">` +
-                    '<div class="row">' +
-                        '<div class="col-4 ">' +
-                            `<li class="my-swal-list-item"><span class="my-swal-label ">Empresa</span>` +
-                                `<div class="my-swal-input-container">` +
-                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="CEDVA" >` +
-                                `</div>` + 
-                            `</li>` +
-                        '</div>' +
-                        '<div class="col-4 ">' +
-                            `<li class="my-swal-list-item"><span class="my-swal-label ">RFC</span>` +
-                                `<div class="my-swal-input-container">` +
-                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="COCNJCNJCJNV" >` +
-                                `</div>` + 
-                            `</li>` +
-                        '</div>' + 
-                        '<div class="col-4 ">' +
-                            `<li class="my-swal-list-item"><span class="my-swal-label ">Correo</span>` +
-                                `<div class="my-swal-input-container">` +
-                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="cedva@gmail.com" >` +
-                                `</div>` + 
-                            `</li>` +
-                        '</div>' + 
-                    '</div>' +
-                    '<p></p>' +
-                    '<div class="row">' +
-                        '<div class="col-4 ">' +
-                            `<li class="my-swal-list-item"><span class="my-swal-label ">Director</span>` +
-                                `<div class="my-swal-input-container">` +
-                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="juan de cedva de carrera" >` +
-                                `</div>` + 
-                            `</li>` +
-                        '</div>' +
-                        '<div class="col-4 ">' +
-                            `<li class="my-swal-list-item"><span class="my-swal-label ">Direccion</span>` +
-                                `<div class="my-swal-input-container">` +
-                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="21 de marzo del 23" >` +
-                                `</div>` + 
-                            `</li>` +
-                        '</div>' + 
-                        '<div class="col-4 ">' +
-                            `<li class="my-swal-list-item"><span class="my-swal-label ">Num Personal</span>` +
-                                `<div class="my-swal-input-container">` +
-                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="54" >` +
-                                `</div>` + 
-                            `</li>` +
-                        '</div>' + 
-                    '</div>' +   
-                    '<div class="row">' +
-                        '<div class="col-4">' +
-                            `<li class="my-swal-list-item"><span class="my-swal-label">Estado </span>` +
-                                `<div class="my-swal-text" style="font-size: 12px;" disabled>Activa</div></li >` +
+                        '<div class="row">' +
+                            '<div class="col-8 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Curso</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
-                                            '<option value="" disabled selected>Selecciona un estado</option>' +
-                                            '<option value="Activa">Activa</option>' +
-                                        '</select>' +
-                                    `</div>` +
-                            `</li>` +        
-                        '</div>' +  
-                    '</div>' +
-                '</div>',
+                                        `<span class=etiquetaDato "> Mecanico de Motores en autos de disel</span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' +
+                            '<div class="col-2 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Area</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato "> Mecanica </span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-2 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Formato</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato "> Online </span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Horas</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">500 horas</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">300 pesos</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Descuento</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">100 pesos</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio final</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">56 pesos</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 1</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Dar a conocer los diferentes medios de comunicación</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 2</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Enseñar a usar herramientas de informatica</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 3</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Implementar conocimientos de informatica en la vida</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<span class="my-swal-label centrar">Acerca del curso</span>` +
+                                `<li class="my-swal-list-item">` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Curso de marketing digital en sistemas de informacion con el proposito de crear medios que ayuden a la actualizacion informactica en la meta de innovación</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                    `</div>`,
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Aceptar',
@@ -464,7 +478,13 @@
     </script>
     <!-- Script de editar datos-->
 
-    
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Debe cumplir cierta acción para que el botón se active.');
+        });
+    </script>
+
 </body>
 
 

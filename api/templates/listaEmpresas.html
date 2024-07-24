@@ -1,0 +1,528 @@
+{% include  'includeHead.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>HUINIC | Lista de Empresas</title>
+
+    
+    <!-- Luego incluye DataTables -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
+    <!-- Ventanas -->
+    <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
+
+    <!-- DataTables CSS -->
+    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
+
+</head>
+
+<body>
+
+    
+    <!-- Navbar STart -->
+    <header id="topnav" class="defaultscroll sticky">
+        <div class="container">
+            <!-- Logo container-->
+            <a class="logo" href="{% url 'homeCapacitador' %}"><!-- Logooooo-->
+                <span class="logo-light-mode">
+                    <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
+                    <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
+                </span>
+            </a>
+            <!-- End Logo container-->
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+            
+
+
+
+            <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
+                <li class="list-inline-item search-icon mb-0">
+                    <!--INICIO DE USUARIO-->
+                    <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <div style="display: flex; align-items: center;">
+                            <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
+                            <div>
+                                <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
+                                <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">¡Bienvenido!</h6>
+                        </div>
+                        <!-- item-->
+                        <a href="{% url 'editarPerfilCapacitador' %}" class="dropdown-item">
+                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
+                            <span>Mi Perfil</span>
+                        </a>
+                        <a href="{% url 'homeGeneral' %}" class="dropdown-item">
+                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
+                            <span>Salir</span>
+                        </a>
+                    </div>
+                    <!--FIN DE USUARIO-->
+                </li>
+            </ul>
+
+
+            <div id="navigation">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu nav-light nav-right">
+                    <li class="has-submenu parent-parent-menu-item ">
+                        <a href="{% url 'homeCapacitador' %}">Inicio</a><span class="menu-arrow"></span>
+                        
+                    </li>
+                    <li><a href="{% url 'formularioCurso' %}" class="sub-menu-item">Nuevo Curso</a></li>
+                    
+
+                </ul>
+                <!--end navigation menu-->
+            </div>
+
+            <!--end navigation-->
+        </div>
+        <!--end container-->
+    </header>
+    <!--end header-->
+    <!-- Navbar End -->
+
+    <!-- Start Home -->
+    <section class="bg-default page-next-level" style="background: url({% static 'images/bg/bg-page.png'%}) center no-repeat;">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 mt-4">
+                            <div class="text-center">
+                                <h3 class="title-pager mb-0">Lista de Empresas</h3>
+                            </div>
+                        </div>
+                        <!--end col-->
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </div>
+        </div>
+    </section>
+    <!--end section-->
+    <!-- End Home -->
+
+
+    <!-- START -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-lg-6 col-md-6 col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="service-detail">
+                                <div class="img" >
+                                    <img style="height:254px; width: 380px;" src="{% static 'images/1.jpg'%}" class="img-fluid mx-auto rounded d-block" alt="">
+                                </div>
+                                <div class="content mt-4">
+                                    <h5 class="title pb-3 border-bottom">Acerca de:</h5>
+                                    <p class="text-muted">Curso de marketing digital en sistemas de informacion con el 
+                                        proposito de crear medios que ayuden a la actualizacion informactica en la 
+                                        meta de innovación 
+                                    </p>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col-lg-12 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="sidebar  rounded  ">
+                        <!-- RELATED SERVICES -->
+                        <div class="widget mb-4">
+                            <h5 class="pb-2 widget-title border-bottom">Solicitudes</h5>
+
+                            <table id="TablaCheck" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                                <thead class="border-top border-bottom bg-light-subtle border-light">
+                                    <tr>
+                                        <th scope="col">Nombre de la empresa</th>
+                                        <th scope="col">Info</th>
+                                        <th scope="col">Inscripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Victor Patiño Mejia
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                                Ver 
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Litzy Viridiana Bravo Aldana
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                                Ver 
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Alberto Jeronimo Hernandez Hernandez
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                                Ver 
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Fidelmar Patiño Mejia
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                                Ver 
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Alberto Esequiel Betancurd Jimenez
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                                Ver 
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                        <!-- RELATED SERVICES -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 30px;">
+                <h5 class="pb-2 widget-title border-bottom">Empresas existentes</h5>
+
+                <table id="TablaEncuentas" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                    <thead class="border-top border-bottom bg-light-subtle border-light">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Info</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Documento </th>
+                            <th scope="col">Documento </th>
+                            <th scope="col">Encuesta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Victor Patiño Mejia
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                            <td>
+                                Inscrito
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Enviar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Fidelmar Patiño Mejia
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                            <td>
+                                Inscrito
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Enviar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Octavio Patiño Martinez
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                            <td>
+                                Inscrito
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2">Enviar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- END -->
+
+    <!-- Footer End -->
+    {% include  'includeFooter.html' %}
+    <!-- Footer End -->
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
+    <!-- DataTables JS -->
+    {% comment %} <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> {% endcomment %}
+
+
+
+    <script>
+        $(document).ready(function () {
+        $('#TablaEncuentas').DataTable({
+            lengthMenu: [5, 10, 15],
+            pageLength: 5,
+            destroy:true,
+            "language": {
+                lengthMenu: "Mostrar _MENU_ registros por página",
+                zeroRecords: "Ningún vacante encontrado",
+                info: "Mostrando _END_ de _MAX_ vacantes",
+                infoEmpty: "Ningún vacante encontrado",
+                infoFiltered: "",
+                search: "Buscar:",
+                loadingRecords: "Cargando... ",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
+            }
+            // Otras opciones y configuraciones de DataTables que puedas tener...
+        });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+        $('#TablaCheck').DataTable({
+            //lengthMenu: [5, 10, 15, 20, 50, 100],
+            pageLength: 5,
+            lengthChange: false, // Oculta el menú de selección de cantidad de registros
+            destroy:true,
+            "language": {
+                //lengthMenu: "Mostrar _MENU_ registros por página",
+                zeroRecords: "Ningún vacante encontrado",
+                info: "Mostrando _END_ de _MAX_ vacantes",
+                infoEmpty: "Ningún vacante encontrado",
+                infoFiltered: "",
+                search: "Buscar:",
+                loadingRecords: "Cargando... ",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
+            }
+            // Otras opciones y configuraciones de DataTables que puedas tener...
+        });
+        });
+
+    </script>
+
+    <!-- Script de editar datos-->
+    <script>
+        function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
+            Swal.fire({
+                title: 'Información de Soliciante',
+                html:
+                `<div class="my-swal-label-container">` +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Soliciante</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Fidelmar internacional becerra de la cruz</span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Telefono</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">5536542927</span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' +  
+                            '<div class="col-8">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Correo</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">victorpatiñomejiaprueba@gmail.com</span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' +  
+                        '</div>' +
+                    `</div>`,
+                focusConfirm: false,
+                showCancelButton: true,
+                confirmButtonText: 'Aceptar',
+                cancelButtonText: 'Cerrar',
+                allowOutsideClick: false,
+                customClass: {
+                    container: 'my-swal-container2',
+                    popup: 'my-swal-popup3',
+                    title: 'my-swal-title2',
+                    input: 'my-swal-input2',
+                    cancelButton: 'my-swal-cancel-button2',
+                    confirmButton: 'my-swal-confirm-button2',
+                }, 
+                preConfirm: () => {
+                    const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
+                    const nuevoNombre = Swal.getPopup().querySelector('#nuevoNombre').value;
+                    const nuevoApellidoPaterno = Swal.getPopup().querySelector('#nuevoApellidoPaterno').value;
+                    const nuevoApellidoMaterno = Swal.getPopup().querySelector('#nuevoApellidoMaterno').value;
+                    const nuevoNumeroPersonal = Swal.getPopup().querySelector('#nuevoNumeroPersonal').value;
+                    const nuevoNumeroContacto = Swal.getPopup().querySelector('#nuevoNumeroContacto').value;
+                    const nuevoIdNumeroPersonal = Swal.getPopup().querySelector('#nuevoIdNumeroPersonal').value;
+                    const nuevoIdNumeroContacto = Swal.getPopup().querySelector('#nuevoIdNumeroContacto').value;
+                    const nuevoGmail = Swal.getPopup().querySelector('#nuevoGmail').value;
+                    const nuevaFechaNacimiento = Swal.getPopup().querySelector('#nuevaFechaNacimiento').value;
+                    const nuevoCurp = Swal.getPopup().querySelector('#nuevoCurp').value;
+                    const nuevoCodigoPostal = Swal.getPopup().querySelector('#nuevoCodigoPostal').value;
+                    const nuevoRfc = Swal.getPopup().querySelector('#nuevoRfc').value;
+                    const nuevoStatus = Swal.getPopup().querySelector('#nuevoStatus').value;
+                    const nuevaCuenta = Swal.getPopup().querySelector('#nuevaCuenta').value;
+                    const nuevaClave = Swal.getPopup().querySelector('#nuevaClave').value;
+                    const nuevoCargo = Swal.getPopup().querySelector('#nuevoCargo').value;
+
+                    return fetch('{% url 'postulaciones' %}', {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': getCookie('csrftoken')
+                            },
+                            body: JSON.stringify({
+                                claveEmpleado: claveEmpleado,
+                                nuevoNombre: nuevoNombre,
+                                nuevoApellidoPaterno: nuevoApellidoPaterno,
+                                nuevoApellidoMaterno: nuevoApellidoMaterno,
+                                nuevoNumeroPersonal: nuevoNumeroPersonal,
+                                nuevoNumeroContacto: nuevoNumeroContacto,
+                                nuevoIdNumeroPersonal: nuevoIdNumeroPersonal,
+                                nuevoIdNumeroContacto: nuevoIdNumeroContacto,
+                                nuevoGmail: nuevoGmail,
+                                nuevaFechaNacimiento: nuevaFechaNacimiento,
+                                nuevoCurp: nuevoCurp,
+                                nuevoCodigoPostal: nuevoCodigoPostal,
+                                nuevoRfc: nuevoRfc,
+                                nuevoStatus: nuevoStatus,
+                                nuevaCuenta: nuevaCuenta,
+                                nuevaClave: nuevaClave,
+                                nuevoCargo: nuevoCargo,
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                            if (data.error) {
+                                Swal.showValidationMessage(`Error: ${data.error}`);
+                            } else {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: data.message,
+                                }).then(() => {
+                                        location.reload();
+                                });
+                            }
+                        });
+                }
+            });
+        }
+
+        function getCookie(name) {
+            const cookieValue = document.cookie
+                .split('; ')
+                .find(row => row.startsWith(name + '='))
+                ?.split('=')[1];
+            return cookieValue ? decodeURIComponent(cookieValue) : null;
+        }
+    </script>
+    <!-- Script de editar datos-->
+
+    
+
+
+</body>
+
+
+</html>

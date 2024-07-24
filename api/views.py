@@ -7,9 +7,20 @@ class login(APIView):
     template_name= "login.html"
     def get(self,request):
         return render(request,self.template_name)
+    
+
+class listaEmpresas(APIView):
+    template_name= "listaEmpresas.html"
+    def get(self,request):
+        return render(request,self.template_name)
 
 class detallesCurso(APIView):
     template_name= "detallesCurso.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class datosEmpresa(APIView):
+    template_name= "datosEmpresa.html"
     def get(self,request):
         return render(request,self.template_name)
     
@@ -38,6 +49,11 @@ class conocimientosLista(APIView):
     template_name= "conocimientosLista.html"
     def get(self,request):
         return render(request,self.template_name)
+        
+class candidatoLista(APIView):
+    template_name= "candidatoLista.html"
+    def get(self,request):
+        return render(request,self.template_name)
     
 class empresasLista(APIView):
     template_name= "empresasLista.html"
@@ -46,6 +62,11 @@ class empresasLista(APIView):
         
 class cursosListaEmpresa(APIView):
     template_name= "cursosListaEmpresa.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class capacitadoresLista(APIView):
+    template_name= "capacitadoresLista.html"
     def get(self,request):
         return render(request,self.template_name)
 
