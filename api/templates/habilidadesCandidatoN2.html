@@ -227,14 +227,52 @@
                                                         <div class="col-md-4">
                                                             <input type="checkbox" id="habilidad15" name="habilidad" value="Resiliencia">
                                                             <label for="habilidad15">Resiliencia</label>
+                                                            
                                                         </div>
                                                         <!-- Aquí puedes agregar más habilidades si lo deseas -->
                                                     </div>
                                                     <div id="mensaje-habilidades" class="mt-2" style="display: none;">
                                                         <p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>
                                                     </div>
+                                                    <br>
                                                 </div>
                                             </div>
+
+
+                                            <!-- INICIO DE IDIOMAS -->
+                                            <label class="form-label fs-5 text-center">IDIOMAS <span class="text-danger"></span></label>
+                                            <div class="col-md-12 mt-4">
+                                                
+                                                <div id="idiomas-container">
+                                                    <div class="row mb-2 idioma-row">
+                                                        <div class="col-md-6">
+                                                            <select class="form-control idioma-select">
+                                                                <option value="" disabled selected>Selecciona un idioma</option>
+                                                                <option value="Inglés">Inglés</option>
+                                                                <option value="Español">Español</option>
+                                                                <option value="Francés">Francés</option>
+                                                                <option value="Alemán">Alemán</option>
+                                                                <option value="Chino">Chino</option>
+                                                                <option value="Japonés">Japonés</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <select class="form-control nivel-select">
+                                                                <option value="" disabled selected>Selecciona un nivel</option>
+                                                                <option value="Básico">Básico</option>
+                                                                <option value="Intermedio">Intermedio</option>
+                                                                <option value="Avanzado">Avanzado</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 fs-6 mt-3 text-center">
+                                                    <button type="button" class="btn btn-secondary mt-2" style="background-color: #ff9034; border-color: #ff9034;" onclick="agregarIdioma()">Agregar otro idioma</button>
+                                                </div>
+                                                <br>
+                                      
+                                            </div>
+                                            <!-- FIN DE IDIOMAS -->
                                             
                                             <!-- FIN HABILIDADES -->
                                             
@@ -723,6 +761,53 @@
         
         <!--end container-->
     </section>
+
+    <!-- INICIO IDIOMAS -->
+    <script>
+        function agregarIdioma() {
+            const container = document.getElementById('idiomas-container');
+            const idiomaRow = document.createElement('div');
+            idiomaRow.className = 'row mb-2 idioma-row';
+    
+            const idiomas = document.querySelectorAll('.idioma-select');
+            const idiomaSet = new Set();
+            idiomas.forEach(idioma => idiomaSet.add(idioma.value));
+    
+            const idiomaDiv = document.createElement('div');
+            idiomaDiv.className = 'col-md-6';
+            const idiomaSelect = document.createElement('select');
+            idiomaSelect.className = 'form-control idioma-select';
+            idiomaSelect.innerHTML = `
+                <option value="" disabled selected>Selecciona un idioma</option>
+                ${!idiomaSet.has('Inglés') ? '<option value="Inglés">Inglés</option>' : ''}
+                ${!idiomaSet.has('Español') ? '<option value="Español">Español</option>' : ''}
+                ${!idiomaSet.has('Francés') ? '<option value="Francés">Francés</option>' : ''}
+                ${!idiomaSet.has('Alemán') ? '<option value="Alemán">Alemán</option>' : ''}
+                ${!idiomaSet.has('Chino') ? '<option value="Chino">Chino</option>' : ''}
+                ${!idiomaSet.has('Japonés') ? '<option value="Japonés">Japonés</option>' : ''}
+            `;
+            idiomaDiv.appendChild(idiomaSelect);
+    
+            const nivelDiv = document.createElement('div');
+            nivelDiv.className = 'col-md-6';
+            const nivelSelect = document.createElement('select');
+            nivelSelect.className = 'form-control nivel-select';
+            nivelSelect.innerHTML = `
+                <option value="" disabled selected>Selecciona un nivel</option>
+                <option value="Básico">Básico</option>
+                <option value="Intermedio">Intermedio</option>
+                <option value="Avanzado">Avanzado</option>
+            `;
+            nivelDiv.appendChild(nivelSelect);
+    
+            idiomaRow.appendChild(idiomaDiv);
+            idiomaRow.appendChild(nivelDiv);
+    
+            container.appendChild(idiomaRow);
+        }
+    </script>
+    <!-- FIN IDIOMAS -->
+
     <script>
         //HABILIDADES
         document.addEventListener("DOMContentLoaded", function() {

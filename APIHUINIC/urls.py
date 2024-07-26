@@ -52,10 +52,10 @@ from api.views import(login,
                     cursosInscritoCandidato,
                     cursosInscritoEmpresa,
                     capacitadoresLista,
-                    empresasLista,
                     solicitudEmpresa,
                     candidatoLista,
                     habilidadesCandidatoN2)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -63,7 +63,6 @@ urlpatterns = [
     path('listaEmpresas/', listaEmpresas.as_view(), name="listaEmpresas"),
     path('capacitadoresLista/', capacitadoresLista.as_view(), name="capacitadoresLista"),
     path('datosEmpresa/', datosEmpresa.as_view(), name="datosEmpresa"),
-    path('empresasLista/', empresasLista.as_view(), name="empresasLista"),
     path('cursosInscritoCandidato/', cursosInscritoCandidato.as_view(), name="cursosInscritoCandidato"),
     path('conocimientosLista/', conocimientosLista.as_view(), name="conocimientosLista"),
     path('postulacionesEmpresa/', postulacionesEmpresa.as_view(), name="postulacionesEmpresa"),

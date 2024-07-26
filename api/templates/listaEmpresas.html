@@ -28,7 +28,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeCapacitador' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeSistemas' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -60,7 +60,7 @@
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
                                 <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
-                                <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
+                                <h6 class="my-0 fw-normal menu-arrow">Sistemas</h6>
                             </div>
                         </div>
                     </a>
@@ -70,10 +70,10 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <a href="{% url 'editarPerfilCapacitador' %}" class="dropdown-item">
+                        <!-- <a href="{% url 'editarPerfilCapacitador' %}" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Mi Perfil</span>
-                        </a>
+                        </a> -->
                         <a href="{% url 'homeGeneral' %}" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
@@ -88,10 +88,10 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
-                        <a href="{% url 'homeCapacitador' %}">Inicio</a><span class="menu-arrow"></span>
+                        <a href="{% url 'homeSistemas' %}">Inicio</a><span class="menu-arrow"></span>
                         
                     </li>
-                    <li><a href="{% url 'formularioCurso' %}" class="sub-menu-item">Nuevo Curso</a></li>
+                    
                     
 
                 </ul>
@@ -129,111 +129,104 @@
 
 
     <!-- START -->
-    <section class="section">
+    <section class="section-25">
         <div class="container">
+            <div class="text-center">
+                <h4 class="pb-2 widget-title border-bottom">Solicitudes de empresa</h4>
+            </div>
             <div class="row">
-                <!-- <div class="col-lg-6 col-md-6 col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="service-detail">
-                                <div class="img" >
-                                    <img style="height:254px; width: 380px;" src="{% static 'images/1.jpg'%}" class="img-fluid mx-auto rounded d-block" alt="">
-                                </div>
-                                <div class="content mt-4">
-                                    <h5 class="title pb-3 border-bottom">Acerca de:</h5>
-                                    <p class="text-muted">Curso de marketing digital en sistemas de informacion con el 
-                                        proposito de crear medios que ayuden a la actualizacion informactica en la 
-                                        meta de innovación 
-                                    </p>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
                 <div class="col-lg-12 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                     <div class="sidebar  rounded  ">
                         <!-- RELATED SERVICES -->
                         <div class="widget mb-4">
-                            <h5 class="pb-2 widget-title border-bottom">Solicitudes</h5>
 
                             <table id="TablaCheck" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                                 <thead class="border-top border-bottom bg-light-subtle border-light">
                                     <tr>
                                         <th scope="col">Nombre de la empresa</th>
+                                        <th scope="col">RFC</th>
+                                        <th scope="col">Función</th>
                                         <th scope="col">Info</th>
-                                        <th scope="col">Inscripción</th>
+                                        <th scope="col">Registrar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>
-                                            Victor Patiño Mejia
+                                            Taanil
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                            JTYYHFTBHTYB
+                                        </td>
+                                        <td>
+                                            Capacitador
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="verSolicitud('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
                                                 Ver 
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                            <a href="{% url 'datosEmpresa' %}" class="btn btn-primary  mt-2">Registrar</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            Litzy Viridiana Bravo Aldana
+                                            Mazda
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                            JFJGHYTHTBTF
+                                        </td>
+                                        <td>
+                                            Capacitador
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="verSolicitud('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
                                                 Ver 
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                            <a href="{% url 'datosEmpresa' %}" class="btn btn-primary  mt-2">Registrar</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            Alberto Jeronimo Hernandez Hernandez
+                                           CUDE
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                            DTBTBTGTHJDTJ
+                                        </td>
+                                        <td>
+                                            Vacantes
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="verSolicitud('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
                                                 Ver 
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                            <a href="{% url 'datosEmpresa' %}" class="btn btn-primary  mt-2">Registrar</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            Fidelmar Patiño Mejia
+                                            Ford
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                            BTNTDBTBTBT
+                                        </td>
+                                        <td>
+                                            Vacantes
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary  mt-2" onclick="verSolicitud('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
                                                 Ver 
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                                            <a href="{% url 'datosEmpresa' %}" class="btn btn-primary  mt-2">Registrar</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            Alberto Esequiel Betancurd Jimenez
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                                Ver 
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
-                                        </td>
-                                    </tr>
-                                    
                                 </tbody>
 
                             </table>
@@ -243,86 +236,114 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- END -->
 
-            <div class="row" style="margin-top: 30px;">
-                <h5 class="pb-2 widget-title border-bottom">Empresas existentes</h5>
-
-                <table id="TablaEncuentas" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+    <!-- START -->
+    <section class="section-50">
+        <div class="container">
+            <div class="text-center">
+                <h4 class="pb-2 widget-title border-bottom">Empresas registradas</h4>
+            </div>
+            <div class="row" >
+                <table id="TablaCursos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Info</th>
+                            <th scope="col">Empresa</th>
+                            <th scope="col">RFC</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Director</th>
+                            <th scope="col">Direccion</th>
+                            <th scope="col">Num Personal</th>
                             <th scope="col">Estado</th>
-                            <th scope="col">Documento </th>
-                            <th scope="col">Documento </th>
-                            <th scope="col">Encuesta</th>
+                            <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
-                                Victor Patiño Mejia
+                            <td class="centrar">
+                                CUDE
                             </td>
-                            <td>
+                            <td class="centrar">
+                                FNECNEICNRDVFV 
+                            </td>
+                            <td class="centrar">
+                                cude@gmail.com
+                            </td>
+                            <td class="centrar">
+                                colbert juan de dios 
+                            </td>
+                            <td class="centrar">
+                                Calle 21 de marzo 
+                            </td>
+                            <td class="centrar">
+                                56 personas 
+                            </td>
+                            <td class="centrar">
+                                Activa 
+                            </td>
+                            <td class="centrar">
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver 
+                                    Editar 
                                 </a>
-                            </td>
-                            <td>
-                                Inscrito
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Enviar</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                Fidelmar Patiño Mejia
+                            <td class="centrar">
+                                CEDVA
                             </td>
-                            <td>
+                            <td class="centrar">
+                                FNECEDCCEC 
+                            </td>
+                            <td class="centrar">
+                                cedva@gmail.com
+                            </td>
+                            <td class="centrar">
+                                jesus de cedva
+                            </td>
+                            <td class="centrar">
+                                Calle 231 de marzo 
+                            </td>
+                            <td class="centrar">
+                                5006 personas 
+                            </td>
+                            <td class="centrar">
+                                Activa 
+                            </td>
+                            <td class="centrar">
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver 
+                                    Editar 
                                 </a>
-                            </td>
-                            <td>
-                                Inscrito
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Enviar</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                Octavio Patiño Martinez
+                            <td class="centrar">
+                                VPER 
                             </td>
-                            <td>
+                            <td class="centrar">
+                                VEPERJCMMDVFVF 
+                            </td>
+                            <td class="centrar">
+                                vper@gmail.com
+                            </td>
+                            <td class="centrar">
+                                victor patiño mejia
+                            </td>
+                            <td class="centrar">
+                                Calle 23 de marzo 
+                            </td>
+                            <td class="centrar">
+                                20 personas 
+                            </td>
+                            <td class="centrar">
+                                Activa 
+                            </td>
+                            <td class="centrar">
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver 
+                                    Editar 
                                 </a>
-                            </td>
-                            <td>
-                                Inscrito
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Enviar</a>
                             </td>
                         </tr>
                     </tbody>
@@ -343,34 +364,6 @@
     <!-- DataTables JS -->
     {% comment %} <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> {% endcomment %}
 
-
-
-    <script>
-        $(document).ready(function () {
-        $('#TablaEncuentas').DataTable({
-            lengthMenu: [5, 10, 15],
-            pageLength: 5,
-            destroy:true,
-            "language": {
-                lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningún vacante encontrado",
-                info: "Mostrando _END_ de _MAX_ vacantes",
-                infoEmpty: "Ningún vacante encontrado",
-                infoFiltered: "",
-                search: "Buscar:",
-                loadingRecords: "Cargando... ",
-                paginate: {
-                    first: "Primero",
-                    last: "Último",
-                    next: "Siguiente",
-                    previous: "Anterior"
-                }
-            }
-            // Otras opciones y configuraciones de DataTables que puedas tener...
-        });
-        });
-
-    </script>
 
     <script>
         $(document).ready(function () {
@@ -400,40 +393,100 @@
 
     </script>
 
+    <script>
+        $(document).ready(function () {
+        $('#TablaCursos').DataTable({
+            lengthMenu: [5, 10, 15],
+            pageLength: 5,
+            destroy:true,
+            "language": {
+                lengthMenu: "Mostrar _MENU_ registros por página",
+                zeroRecords: "Ningúna postulación encontrada",
+                info: "Mostrando _END_ de _MAX_ postulaciones",
+                infoEmpty: "Ningúna postulación encontrada",
+                infoFiltered: "",
+                search: "Buscar:",
+                loadingRecords: "Cargando... ",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
+            }
+            // Otras opciones y configuraciones de DataTables que puedas tener...
+        });
+        });
+    </script>
+
     <!-- Script de editar datos-->
     <script>
         function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
             Swal.fire({
-                title: 'Información de Soliciante',
+                title: 'Información Empresa',
                 html:
                 `<div class="my-swal-label-container">` +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Soliciante</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Fidelmar internacional becerra de la cruz</span>` +
-                                    `</div>` +    
-                                `</li>` +
-                            '</div>' + 
+                    '<div class="row">' +
+                        '<div class="col-6 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Empresa</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="Centro Universitario de Especialidades" >` +
+                                `</div>` + 
+                            `</li>` +
                         '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Telefono</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">5536542927</span>` +
-                                    `</div>` +    
-                                `</li>` +
-                            '</div>' +  
-                            '<div class="col-8">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Correo</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">victorpatiñomejiaprueba@gmail.com</span>` +
-                                    `</div>` +    
-                                `</li>` +
-                            '</div>' +  
+                        '<div class="col-3 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">RFC</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="COCNJCNJCJNV" >` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' + 
+                        '<div class="col-3 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Num Personal</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="54 personas" >` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' + 
+                    '</div>' +
+                    '<p></p>' +
+                    '<div class="row">' +
+                        '<div class="col-4 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Director</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="juan de cedva de carrera" >` +
+                                `</div>` + 
+                            `</li>` +
                         '</div>' +
-                    `</div>`,
+                        '<div class="col-4 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Direccion</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="21 de marzo del 23" >` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' + 
+                        '<div class="col-4 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Correo</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="cedva@gmail.com" >` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' + 
+                    '</div>' +   
+                    '<div class="row">' +
+                        '<div class="col-4">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label">Estado </span>` +
+                                `<div class="my-swal-text" style="font-size: 12px;" disabled>Activa</div></li >` +
+                                    `<div class="my-swal-input-container">` +
+                                        '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
+                                            '<option value="" disabled selected>Selecciona un estado</option>' +
+                                            '<option value="Activa">Activa</option>' +
+                                        '</select>' +
+                                    `</div>` +
+                            `</li>` +        
+                        '</div>' +  
+                    '</div>' +
+                '</div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Aceptar',
@@ -441,7 +494,7 @@
                 allowOutsideClick: false,
                 customClass: {
                     container: 'my-swal-container2',
-                    popup: 'my-swal-popup3',
+                    popup: 'my-swal-popup2',
                     title: 'my-swal-title2',
                     input: 'my-swal-input2',
                     cancelButton: 'my-swal-cancel-button2',
@@ -519,6 +572,158 @@
     </script>
     <!-- Script de editar datos-->
 
+    <!-- Script de editar datos-->
+    <script>
+        function verSolicitud(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
+            Swal.fire({
+                title: 'Información solicitud',
+                html:
+                `<div class="my-swal-label-container">` +
+                    '<div class="row">' +
+                        '<div class="col-6 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Empresa</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<span class=etiquetaDato ">Centro Universitario de Especialidades</span>` +
+                                `</div>` +  
+                            `</li>` +
+                        '</div>' +
+                        '<div class="col-3 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">RFC</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<span class=etiquetaDato ">HSJ2F1V5FFVR215</span>` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' + 
+                        '<div class="col-3 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Num Personal</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<span class=etiquetaDato "> 20 personas</span>` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' + 
+                    '</div>' +
+                    '<p></p>' +
+                    '<div class="row">' +
+                        '<div class="col-4 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Director</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="juan de cedva de carrera" >` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' +
+                        '<div class="col-4 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Direccion</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="21 de marzo del 23" >` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' + 
+                        '<div class="col-4 ">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label ">Correo</span>` +
+                                `<div class="my-swal-input-container">` +
+                                    `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="cedva@gmail.com" >` +
+                                `</div>` + 
+                            `</li>` +
+                        '</div>' + 
+                    '</div>' +   
+                    '<div class="row">' +
+                        '<div class="col-4">' +
+                            `<li class="my-swal-list-item"><span class="my-swal-label">Estado </span>` +
+                                `<div class="my-swal-text" style="font-size: 12px;" disabled>Activa</div></li >` +
+                                    `<div class="my-swal-input-container">` +
+                                        '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
+                                            '<option value="" disabled selected>Selecciona un estado</option>' +
+                                            '<option value="Activa">Activa</option>' +
+                                        '</select>' +
+                                    `</div>` +
+                            `</li>` +        
+                        '</div>' +  
+                    '</div>' +
+                '</div>',
+                focusConfirm: false,
+                showCancelButton: true,
+                confirmButtonText: 'Aceptar',
+                cancelButtonText: 'Cerrar',
+                allowOutsideClick: false,
+                customClass: {
+                    container: 'my-swal-container2',
+                    popup: 'my-swal-popup2',
+                    title: 'my-swal-title2',
+                    input: 'my-swal-input2',
+                    cancelButton: 'my-swal-cancel-button2',
+                    confirmButton: 'my-swal-confirm-button2',
+                }, 
+                preConfirm: () => {
+                    const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
+                    const nuevoNombre = Swal.getPopup().querySelector('#nuevoNombre').value;
+                    const nuevoApellidoPaterno = Swal.getPopup().querySelector('#nuevoApellidoPaterno').value;
+                    const nuevoApellidoMaterno = Swal.getPopup().querySelector('#nuevoApellidoMaterno').value;
+                    const nuevoNumeroPersonal = Swal.getPopup().querySelector('#nuevoNumeroPersonal').value;
+                    const nuevoNumeroContacto = Swal.getPopup().querySelector('#nuevoNumeroContacto').value;
+                    const nuevoIdNumeroPersonal = Swal.getPopup().querySelector('#nuevoIdNumeroPersonal').value;
+                    const nuevoIdNumeroContacto = Swal.getPopup().querySelector('#nuevoIdNumeroContacto').value;
+                    const nuevoGmail = Swal.getPopup().querySelector('#nuevoGmail').value;
+                    const nuevaFechaNacimiento = Swal.getPopup().querySelector('#nuevaFechaNacimiento').value;
+                    const nuevoCurp = Swal.getPopup().querySelector('#nuevoCurp').value;
+                    const nuevoCodigoPostal = Swal.getPopup().querySelector('#nuevoCodigoPostal').value;
+                    const nuevoRfc = Swal.getPopup().querySelector('#nuevoRfc').value;
+                    const nuevoStatus = Swal.getPopup().querySelector('#nuevoStatus').value;
+                    const nuevaCuenta = Swal.getPopup().querySelector('#nuevaCuenta').value;
+                    const nuevaClave = Swal.getPopup().querySelector('#nuevaClave').value;
+                    const nuevoCargo = Swal.getPopup().querySelector('#nuevoCargo').value;
+
+                    return fetch('{% url 'postulaciones' %}', {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': getCookie('csrftoken')
+                            },
+                            body: JSON.stringify({
+                                claveEmpleado: claveEmpleado,
+                                nuevoNombre: nuevoNombre,
+                                nuevoApellidoPaterno: nuevoApellidoPaterno,
+                                nuevoApellidoMaterno: nuevoApellidoMaterno,
+                                nuevoNumeroPersonal: nuevoNumeroPersonal,
+                                nuevoNumeroContacto: nuevoNumeroContacto,
+                                nuevoIdNumeroPersonal: nuevoIdNumeroPersonal,
+                                nuevoIdNumeroContacto: nuevoIdNumeroContacto,
+                                nuevoGmail: nuevoGmail,
+                                nuevaFechaNacimiento: nuevaFechaNacimiento,
+                                nuevoCurp: nuevoCurp,
+                                nuevoCodigoPostal: nuevoCodigoPostal,
+                                nuevoRfc: nuevoRfc,
+                                nuevoStatus: nuevoStatus,
+                                nuevaCuenta: nuevaCuenta,
+                                nuevaClave: nuevaClave,
+                                nuevoCargo: nuevoCargo,
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                            if (data.error) {
+                                Swal.showValidationMessage(`Error: ${data.error}`);
+                            } else {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: data.message,
+                                }).then(() => {
+                                        location.reload();
+                                });
+                            }
+                        });
+                }
+            });
+        }
+
+        function getCookie(name) {
+            const cookieValue = document.cookie
+                .split('; ')
+                .find(row => row.startsWith(name + '='))
+                ?.split('=')[1];
+            return cookieValue ? decodeURIComponent(cookieValue) : null;
+        }
+    </script>
+    <!-- Script de editar datos-->
     
 
 

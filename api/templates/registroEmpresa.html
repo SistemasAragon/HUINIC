@@ -40,7 +40,7 @@
             <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
                 <li class="list-inline-item search-icon mb-0">
                     <!--INICIO DE USUARIO-->
-                    <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <!-- <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <div style="display: flex; align-items: center;">
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
@@ -48,7 +48,7 @@
                                 <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
                         <!-- item-->
                         <div class="dropdown-header noti-title">
@@ -72,11 +72,11 @@
                         <a href="{% url 'homeGeneral' %}">Inicio</a><span class="menu-arrow"></span>
                         
                     </li>
-                    <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
+                    <!-- <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
                         
-                    </li>
+                    </li> -->
 
                 </ul>
                 <!--end navigation menu-->
@@ -114,7 +114,7 @@
     <!-- End Home -->
 
     <!-- Start Section -->
-    <section class="section" style="overflow:hidden; height: 450px;">
+    <section class="section" style="overflow:hidden; height: 650px;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-12 mb-4">
@@ -136,16 +136,20 @@
                                             </div>
     
                                             <div class="col-md-6">
-    
-                                                <label class="form-label fs-6">Número de personas que conforman la empresa <span
-                                                        class="text-danger">*</span></label>
+                                                <label class="form-label fs-6">Número de personas que conforman la empresa <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    
-                                                    <input name="apellidoP" id="apellidoP" type="numer"
-                                                        class="form-control ps-5 fs-6" placeholder="10 :">
+                                                    <select name="num_empleados" id="num_empleados" class="form-control ps-5 fs-6">
+                                                        <option value="" disabled selected>Seleccione un rango</option>
+                                                        <option value="1-10">1 - 10</option>
+                                                        <option value="11-50">11 - 50</option>
+                                                        <option value="51-100">51 - 100</option>
+                                                        <option value="101-500">101 - 500</option>
+                                                        <option value="501-1000">501 - 1000</option>
+                                                        <option value="1000+">Más de 1000</option>
+                                                    </select>
                                                 </div>
-    
                                             </div>
+                                            
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">RFC de la empresa <span
                                                         class="text-danger">*</span></label>
@@ -168,6 +172,28 @@
     
                                             </div>
                                             <div class="col-md-6">
+                                                <label class="form-label fs-6">Número de telefono <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
+                                                    <input name="apellidoM" id="apellidoM" type="number" class="form-control ps-5 fs-6"
+                                                        placeholder="123456789 :">
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">¿Qué rol buscas tener en HUNIC? <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <select name="rol" id="rol" class="form-control ps-5 fs-6">
+                                                        <option value="">Selecciona un rol</option>
+                                                        <option value="capacitar">Capacitar</option>
+                                                        <option value="vacantes">Vacantes</option>
+                                                        <option value="ambos">Ambos</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
                                                 <label class="form-label fs-6">Contraseña <span
                                                         class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
@@ -185,18 +211,26 @@
                                                     <!-- <i class="mdi mdi-exit icon-sm icons"></i> -->
                                                     <input name="password2" id="password2" type="password"
                                                         class="form-control ps-5 fs-6" placeholder="Confirmación de contraseña :">
+                                                        <br>
                                                 </div>
+                                                
     
                                             </div>
-                                            <!--end col-->
-                                        <!-- end row -->
-                                        <div class="row">
-                                            <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="location.href='{% url 'login' %}'">Registrarse</button>
+                                            
+
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <div class="form-check" style="display: inline-block;">
+                                                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos" onclick="toggleSubmitButton()">
+                                                    <label class="form-check-label" for="terminos">
+                                                        Acepto los <a href="#" target="_blank">términos y condiciones</a>
+                                                    </label>
+                                                </div>
                                             </div>
                                             
-                                            <!--end col-->
-                                        </div>
+                                        
+                                            <div class="col-12 fs-6 mt-3 text-center">
+                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="location.href='{% url 'login' %}'" disabled>Registrarse</button>
+                                            </div>
                                         <!--end row-->
                                     </form>
                                     <!-- end form -->
@@ -217,6 +251,14 @@
 
         <!--end container-->
     </section>
+
+    <script>
+        function toggleSubmitButton() {
+            const submitBtn = document.getElementById('submit');
+            const terminos = document.getElementById('terminos');
+            submitBtn.disabled = !terminos.checked;
+        }
+    </script>
     <!--end section-->
     <!-- End Section -->
 

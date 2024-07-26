@@ -55,11 +55,6 @@ class candidatoLista(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
-class empresasLista(APIView):
-    template_name= "empresasLista.html"
-    def get(self,request):
-        return render(request,self.template_name)
-        
 class cursosListaEmpresa(APIView):
     template_name= "cursosListaEmpresa.html"
     def get(self,request):
