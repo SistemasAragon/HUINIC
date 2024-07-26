@@ -175,13 +175,14 @@
                             'Ciudad A', 
                             '$12,000.00', 
                             'Somos una empresa que se especializa en el mantenimiento y reparación de sistemas de frenos para vehículos. Buscamos un mecánico experimentado que se una a nuestro equipo. Requisitos: Experiencia previa en sistemas de frenos, capacidad para diagnosticar y reparar problemas de frenos, y conocimientos básicos de mecánica automotriz.',
-                            '{% static "images/testi/mazda.png" %}'
+                            '{% static "images/testi/mazda.png" %} '
                         )">
                             <h3>Mecánico de Frenos</h3>
                             <p>Empresa: Empresa A</p>
                             <p>Ubicación: Ciudad A</p>
                             <p>Sueldo: $12,000.00</p>
                         </div>
+                            {% comment %} El evento y los valores a mandar  {% endcomment %}
                         <div class="vacante-item" onclick="mostrarDescripcion(
                             'Técnico en Frenos', 
                             'Empresa B', 
@@ -190,6 +191,7 @@
                             'Buscamos un técnico en frenos con al menos 3 años de experiencia. El candidato ideal deberá ser capaz de realizar mantenimientos preventivos y correctivos en sistemas de frenos, así como manejar herramientas y equipos de diagnóstico.',
                             '{% static "images/testi/honda.png" %}'
                         )">
+                            {% comment %} Lo siempre visible para seleccionar {% endcomment %}
                             <h3>Técnico en Frenos</h3>
                             <p>Empresa: Empresa B</p>
                             <p>Ubicación: Ciudad B</p>
@@ -227,14 +229,16 @@
         <!-- end container -->
     </section>
     <!-- otraprueba -->
-     <!-- otraprueba -->
-<!-- otraprueba -->
 
+
+{% comment %}Evento con variables y orden {% endcomment %}
 <script>
     function mostrarDescripcion(titulo, empresa, ubicacion, sueldo, descripcion, logo) {
         document.getElementById('vacante-descripcion').innerHTML = `
             <div class="text-center">
-                <img src="${logo}" alt="Logo de ${empresa}" style="max-width: 100px; max-height: 100px;">
+                <a href="{% url 'perfilEmpresaLogo' %}">
+                    <img src="${logo}" alt="Logo de ${empresa}" style="max-width: 100px; max-height: 100px;">
+                </a>
             </div>
             <h2>${titulo} / ${ubicacion}</h2>
             <p><strong>${empresa}</strong></p>
