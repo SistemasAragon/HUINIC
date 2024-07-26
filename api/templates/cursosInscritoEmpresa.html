@@ -122,121 +122,224 @@
 
 
     <!-- START -->
-    <section class="section">
+    <section class="section-25">
         <div class="container">
 
+            <h4 class="text-center">Cursos en proceso </h4>
             
             <div class="row" >
-                <table id="TablaPostulaciones" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                <table id="TablaCursos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
                             <th scope="col">Curso</th>
-                            <!-- <th scope="col">Edad</th> -->
-                            <!-- <th scope="col">Estado Civil</th> -->
-                            <th scope="col">Area</th>
-                            <!-- <th scope="col">Area especifica</th>
-                            <th scope="col">Salario</th> -->
+                            <th scope="col">Formato</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Estado</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                Gerente de taller
+                                Automatización de procesos en mecanica basica
                             </td>
-                            <!-- <td>
-                                18 - 20
-                            </td> -->
-                           <!--  <td>
-                                Soltero
-                            </td> -->
-                            <td>
-                                Automotriz
+                            <td class="centrar">
+                                Presencial
                             </td>
-                            <!-- <td>
-                                Motor
+                            <td class="centrar">
+                                4 semanas
                             </td>
-                            <td>
-                                8000
-                            </td> -->
-                            <td>
+                            <td class="centrar">
+                                1000
+                            </td>
+                            <td class="centrar">
+                                En solicitud
+                            </td>
+                            <td class="centrar">
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Editar 
+                                    Ver 
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Administrador de inventario 
+                                Actualización de mecanica
                             </td>
-                            <!-- <td>
-                                18 - 25
+                            <td class="centrar">
+                                En linea
                             </td>
-                            <td>
-                                Soltero
+                            <td class="centrar">
+                                5 semanas
                             </td>
-                            <td>
-                                Automotriz
-                            </td> -->
-                            <td>
-                                Pintura
+                            <td class="centrar">
+                                400
                             </td>
-                           <!--  <td>
-                                9000
-                            </td> -->
-                            <td>
+                            <td class="centrar">
+                                En curso
+                            </td>
+                            <td class="centrar">
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Editar 
+                                    Ver 
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Mecanico motocicleta
+                                Elimacion de procesos en mecanica basica
                             </td>
-                            <!-- <td>
-                                30 - 40
+                            <td class="centrar">
+                                Presencial
                             </td>
-                            <td>
-                                Casado
-                            </td>  -->
-                            <td>
-                                Motocicleta
+                            <td class="centrar">
+                                7 semanas
                             </td>
-                            <!-- <td>
-                                Electrico
+                            <td class="centrar">
+                                6789
                             </td>
-                            <td>
-                                10000
-                            </td> -->
-                            <td>
+                            <td class="centrar">
+                                En curso
+                            </td>
+                            <td class="centrar">
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Editar 
+                                    Ver 
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Gerente de taller
+                                Automatización de mecanica basica
                             </td>
-                            <!-- <td>
-                                25 - 40
+                            <td class="centrar">
+                                Presencial
                             </td>
-                            <td>
-                                Casado
-                            </td> -->
-                            <td>
-                                Automotriz
+                            <td class="centrar">
+                                7 semanas
                             </td>
-                            <!-- <td>
-                                Electrico
+                            <td class="centrar">
+                                6543
                             </td>
-                            <td>
-                                15000
-                            </td> -->
-                            <td>
+                            <td class="centrar">
+                                En evaluación
+                            </td>
+                            <td class="centrar">
                                 <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Editar 
+                                    Ver 
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- END -->
+
+    <!-- START -->
+    <section class="section-50">
+        <div class="container">
+
+            <h4 class="text-center">Cursos concluidos</h4>
+            
+            <div class="row" >
+                <table id="TablaCursosConcluidos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                    <thead class="border-top border-bottom bg-light-subtle border-light">
+                        <tr>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Formato</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Certificado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Automatización de procesos en mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                4 semanas
+                            </td>
+                            <td class="centrar">
+                                1000
+                            </td >
+                            <td class="centrar">
+                                Concluido
+                            </td>
+                            <td class="centrar">
+                                <button id="downloadBtn" class="btn btn-primary mt-2" disabled>
+                                    Descargar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actualización de mecanica
+                            </td>
+                            <td class="centrar">
+                                En linea
+                            </td>
+                            <td class="centrar">
+                                5 semanas
+                            </td>
+                            <td class="centrar">
+                                400
+                            </td>
+                            <td class="centrar">
+                                Concluido
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Descargar 
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Elimacion de procesos en mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                7 semanas
+                            </td>
+                            <td class="centrar">
+                                6789
+                            </td>
+                            <td class="centrar">
+                                Concluido
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Descargar 
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Automatización de mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                7 semanas
+                            </td>
+                            <td class="centrar">
+                                6543
+                            </td>
+                            <td class="centrar">
+                                Concluido
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Descargar 
                                 </a>
                             </td>
                         </tr>
@@ -263,7 +366,33 @@
 
     <script>
         $(document).ready(function () {
-        $('#TablaPostulaciones').DataTable({
+        $('#TablaCursos').DataTable({
+            lengthMenu: [5, 10, 15],
+            pageLength: 5,
+            destroy:true,
+            "language": {
+                lengthMenu: "Mostrar _MENU_ registros por página",
+                zeroRecords: "Ningúna postulación encontrada",
+                info: "Mostrando _END_ de _MAX_ postulaciones",
+                infoEmpty: "Ningúna postulación encontrada",
+                infoFiltered: "",
+                search: "Buscar:",
+                loadingRecords: "Cargando... ",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
+            }
+            // Otras opciones y configuraciones de DataTables que puedas tener...
+        });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+        $('#TablaCursosConcluidos').DataTable({
             lengthMenu: [5, 10, 15],
             pageLength: 5,
             destroy:true,
@@ -291,190 +420,105 @@
     <script>
         function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
             Swal.fire({
-                title: 'Información de postulación',
+                title: 'Información de curso',
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
-                            '<div class="col-6">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Puesto</span>` +
+                            '<div class="col-8 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Curso</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="25" value="Prueba" >` +
-                                    `</div>` +
+                                        `<span class=etiquetaDato "> Mecanico de Motores en autos de disel</span>` +
+                                    `</div>` +    
                                 `</li>` +
                             '</div>' +
-                            '<div class="col-2">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Edad inicial</span>` +
+                            '<div class="col-2 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Area</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="18" >` +
-                                    `</div>` +
+                                        `<span class=etiquetaDato "> Mecanica </span>` +
+                                    `</div>` +    
                                 `</li>` +
-                            '</div>' +
-                            '<div class="col-2">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label ">Edad final</span>` +
+                            '</div>' + 
+                            '<div class="col-2 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Formato</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="25" >` +
-                                    `</div>` + 
+                                        `<span class=etiquetaDato "> Online </span>` +
+                                    `</div>` +    
                                 `</li>` +
-                            '</div>' +  
-                            '<div class="col-2">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Salario</span>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Horas</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="2000" >` +
+                                        `<span class=etiquetaDato ">500 horas</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">300 pesos</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Descuento</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">100 pesos</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio final</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">56 pesos</span>` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Estado Civil</span>` +
-                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Soltero</div></li >` +
-                                        `<div class="my-swal-input-container">` +
-                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
-                                                '<option value="" disabled selected>Selecciona un cargo</option>' +
-                                                '<option value="Casado">Casado</option>' +
-                                            '</select>' +
-                                        `</div>` +
-                                `</li>` +        
-                            '</div>' +  
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Genero</span>` +
-                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Masculino</div></li >` +
-                                        `<div class="my-swal-input-container">` +
-                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
-                                                '<option value="" disabled selected>Selecciona un genero</option>' +
-                                                '<option value="Femenino">Femenino</option>' +
-                                            '</select>' +
-                                        `</div>` +
-                                `</li>` +        
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 1</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Dar a conocer los diferentes medios de comunicación</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 2</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Enseñar a usar herramientas de informatica</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 3</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Implementar conocimientos de informatica en la vida</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<span class="my-swal-label centrar">Acerca del curso</span>` +
+                                `<li class="my-swal-list-item">` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Curso de marketing digital en sistemas de informacion con el proposito de crear medios que ayuden a la actualizacion informactica en la meta de innovación</span>` +
+                                    `</div>` +  
+                                `</li>` +
                             '</div>' + 
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Vehiculo</span>` +
-                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Auto</div></li >` +
-                                        `<div class="my-swal-input-container">` +
-                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
-                                                '<option value="" disabled selected>Selecciona un vehiculo</option>' +
-                                                '<option value="Femenino">Moto</option>' +
-                                            '</select>' +
-                                        `</div>` +
-                                `</li>` +        
-                            '</div>' +
                         '</div>' +
                         '<p></p>' +
-                        '<div class="row">' + 
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Area</span>` +
-                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Disel pesado</div></li >` +
-                                        `<div class="my-swal-input-container">` +
-                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
-                                                '<option value="" disabled selected>Selecciona una area</option>' +
-                                                '<option value="Femenino">Disel ligero</option>' +
-                                            '</select>' +
-                                        `</div>` +
-                                `</li>` +        
-                            '</div>' +
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Area especifica</span>` +
-                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Sistemas de enfriamento</div></li >` +
-                                        `<div class="my-swal-input-container">` +
-                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
-                                                '<option value="" disabled selected>Selecciona un area especifica</option>' +
-                                                '<option value="Femenino">Sistemas de frenado</option>' +
-                                            '</select>' +
-                                        `</div>` +
-                                `</li>` +        
-                            '</div>' +
-                            '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Nivel</span>` +
-                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Sistemas de enfriamento</div></li >` +
-                                        `<div class="my-swal-input-container">` +
-                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
-                                                '<option value="" disabled selected>Selecciona un nivel</option>' +
-                                                '<option value="Femenino">Desarrollador</option>' +
-                                            '</select>' +
-                                        `</div>` +
-                                `</li>` +        
-                            '</div>' +
-                        '</div>' +
-                        '<p></p>' +
-                        '<label class="form-label fs-5 text-center"><span class="my-swal-label">Habilidades (5 Maximo)<span class="text-danger">*</span></span></label>' +
-                        '<div class="col-md-12 mt-3">' +
-                            '<div class="form-icon position-relative">' +
-                                '<div class="row izquierda letraChida">' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad1" name="habilidad" value="Trabajo en equipo">' +
-                                        '<label for="habilidad1"> Trabajo en equipo</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad2" name="habilidad" value="Comunicación efectiva">' +
-                                        '<label for="habilidad2">Comunicación efectiva</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad3" name="habilidad" value="Resolución de problemas">' +
-                                        '<label for="habilidad3">Resolución de problemas</label>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div class="row mt-2 izquierda letraChida">' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad4" name="habilidad" value="Liderazgo">' +
-                                        '<label for="habilidad4">Liderazgo</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad5" name="habilidad" value="Adaptabilidad">' +
-                                        '<label for="habilidad5">Adaptabilidad</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad6" name="habilidad" value="Creatividad">' +
-                                        '<label for="habilidad6">Creatividad</label>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div class="row mt-2 izquierda letraChida">' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad7" name="habilidad" value="Pensamiento crítico">' +
-                                        '<label for="habilidad7">Pensamiento crítico</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad8" name="habilidad" value="Gestión del tiempo">' +
-                                        '<label for="habilidad8">Gestión del tiempo</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad9" name="habilidad" value="Empatía">' +
-                                        '<label for="habilidad9">Empatía</label>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div class="row mt-2 izquierda letraChida">' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad10" name="habilidad" value="Capacidad de aprendizaje">' +
-                                        '<label for="habilidad10">Capacidad de aprendizaje</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad11" name="habilidad" value="Negociación">' +
-                                        '<label for="habilidad11">Negociación</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad12" name="habilidad" value="Toma de decisiones">' +
-                                        '<label for="habilidad12">Toma de decisiones</label>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div class="row mt-2 izquierda letraChida">' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad13" name="habilidad" value="Pensamiento analítico">' +
-                                        '<label for="habilidad13">Pensamiento analítico</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad14" name="habilidad" value="Autoconfianza">' +
-                                        '<label for="habilidad14">Autoconfianza</label>' +
-                                    '</div>' +
-                                    '<div class="col-md-4">' +
-                                        '<input type="checkbox" id="habilidad15" name="habilidad" value="Resiliencia">' +
-                                        '<label for="habilidad15">Resiliencia</label>' +
-                                    '</div>' +
-                                '</div>' +
-                                '<div id="mensaje-habilidades" class="mt-2" style="display: none;">' +
-                                '<p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
                     `</div>`,
                 focusConfirm: false,
                 showCancelButton: true,

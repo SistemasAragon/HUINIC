@@ -27,7 +27,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeCandidato' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeSistemas' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -47,19 +47,19 @@
                     <!-- End mobile menu toggle-->
                 </div>
             </div>
-            
 
 
 
-            <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
+
+            <ul class="buy-button list-inline mb-0" style="margin-top: 15px;">
                 <li class="list-inline-item search-icon mb-0">
                     <!--INICIO DE USUARIO-->
                     <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <div style="display: flex; align-items: center;">
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
-                                <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
-                                <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
+                                <h6 class="my-0">Nombre Usuario</h6>
+                                <h6 class="my-0 fw-normal menu-arrow">Sistemas</h6>
                             </div>
                         </div>
                     </a>
@@ -69,11 +69,7 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <a href="{% url 'editarPerfil' %}" class="dropdown-item">
-                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
-                            <span>Mi Perfil</span>
-                        </a>
-                        <a href="{% url 'homeGeneral' %}" class="dropdown-item">
+                        <a href="#" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
                         </a>
@@ -86,15 +82,35 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
-                    <li class="has-submenu parent-parent-menu-item ">
-                        <a href="{% url 'homeCandidato' %}">Inicio</a><span class="menu-arrow"></span>
-                        <li><a href="{% url 'pruebaBusqueda' %}" class="sub-menu-item">Nueva Vacantes</a></li>
-                        <li><a href="{% url 'cursosListaCandidato' %}" class="sub-menu-item">Cursos</a></li>
-                        
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="{% url 'homeSistemas' %}">Inicio</a><span class="menu-arrow"></span>
                     </li>
+
+                    
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Usuarios</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Registrar usuario</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Todos los usuarios</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'listaEmpresas' %}">Lista de Empresas</a> </li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Formularios</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Formulario empleado</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Formulario empresa</a></li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Formulario aptitudes</a></li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Formulario habilidades</a></li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Formulario conocimientos</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
                 <!--end navigation menu-->
             </div>
+
             <!--end navigation-->
         </div>
         <!--end container-->
@@ -383,101 +399,58 @@
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
-                            '<div class="col-8 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Curso</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Mecanico de Motores en autos de disel</span>` +
-                                    `</div>` +    
-                                `</li>` +
-                            '</div>' +
-                            '<div class="col-2 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Area</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Mecanica </span>` +
-                                    `</div>` +    
+                            '<div class="col-6">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Vehiculo </span>` +
+                                        `<div class="my-swal-text" style="font-size: 10px;" disabled>Automovil</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
+                                                '<option value="" disabled selected>Selecciona un vehiculo</option>' +
+                                                '<option value="Femenino">Automovil</option>' +
+                                                '<option value="Femenino">Motocicleta</option>' +
+                                                '</select>' +
+                                        `</div>` +
                                 `</li>` +
                             '</div>' + 
-                            '<div class="col-2 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Formato</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Online </span>` +
-                                    `</div>` +    
-                                `</li>` +
-                            '</div>' + 
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label ">Horas</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">500 horas</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">300 pesos</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Descuento</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">100 pesos</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio final</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">56 pesos</span>` +
-                                    `</div>` +  
+                            '<div class="col-6">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Area </span>` +
+                                        `<div class="my-swal-text" style="font-size: 10px;" disabled>Disel ligero</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
+                                                '<option value="" disabled selected>Selecciona una area</option>' +
+                                                '<option value="Femenino">Disel pesado</option>' +
+                                                '<option value="Femenino">Disel ligero</option>' +
+                                                '</select>' +
+                                        `</div>` +
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 1</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Dar a conocer los diferentes medios de comunicación</span>` +
-                                    `</div>` +  
+                            '<div class="col-6">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Sistema </span>` +
+                                        `<div class="my-swal-text" style="font-size: 10px;" disabled>Transmisión</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
+                                                '<option value="" disabled selected>Selecciona un sistema</option>' +
+                                                '<option value="Femenino">Frenos</option>' +
+                                                '<option value="Femenino">Electrico</option>' +
+                                                '</select>' +
+                                        `</div>` +
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-6">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Nivel </span>` +
+                                        `<div class="my-swal-text" style="font-size: 10px;" disabled>Basico</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
+                                                '<option value="" disabled selected>Selecciona un nivel</option>' +
+                                                '<option value="Femenino">Desarrollador</option>' +
+                                                '<option value="Femenino">Medio</option>' +
+                                                '</select>' +
+                                        `</div>` +
                                 `</li>` +
                             '</div>' +   
                         '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 2</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Enseñar a usar herramientas de informatica</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 3</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Implementar conocimientos de informatica en la vida</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<span class="my-swal-label centrar">Acerca del curso</span>` +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Curso de marketing digital en sistemas de informacion con el proposito de crear medios que ayuden a la actualizacion informactica en la meta de innovación</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                        '</div>' +
-                        '<p></p>' +
                     `</div>`,
                 focusConfirm: false,
                 showCancelButton: true,
@@ -486,7 +459,7 @@
                 allowOutsideClick: false,
                 customClass: {
                     container: 'my-swal-container2',
-                    popup: 'my-swal-popup2',
+                    popup: 'my-swal-popup3',
                     title: 'my-swal-title2',
                     input: 'my-swal-input2',
                     cancelButton: 'my-swal-cancel-button2',
