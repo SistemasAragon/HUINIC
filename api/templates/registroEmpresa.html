@@ -229,7 +229,7 @@
                                             
                                         
                                             <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="location.href='{% url 'login' %}'" disabled>Registrarse</button>
+                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="registerUser()" disabled>Registrarse</button>
                                             </div>
                                         <!--end row-->
                                     </form>
@@ -252,6 +252,12 @@
         <!--end container-->
     </section>
 
+     <!-- SweetAlert2 CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+     <!-- SweetAlert2 JS -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
     <script>
         function toggleSubmitButton() {
             const submitBtn = document.getElementById('submit');
@@ -259,6 +265,34 @@
             submitBtn.disabled = !terminos.checked;
         }
     </script>
+
+<script>
+    function registerUser() {
+        // Mostrar la alerta
+        Swal.fire({
+            title: '¡Excelente!',
+            text: 'Hemos hecho llegar tus datos a Hunic, un promotor se contactará contigo.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'btn-custom-color'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirigir al usuario después de que confirme la alerta
+                window.location.href = '{% url 'login' %}';
+            }
+        });
+    }
+</script>
+
+<style>
+    .btn-custom-color {
+        background-color: #ff9034 !important;
+        color: white !important;
+    }
+</style>
+
     <!--end section-->
     <!-- End Section -->
 

@@ -52,14 +52,14 @@
 
 
 
-            <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
+            <ul class="buy-button list-inline mb-0" style="margin-top: 15px;">
                 <li class="list-inline-item search-icon mb-0">
                     <!--INICIO DE USUARIO-->
                     <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <div style="display: flex; align-items: center;">
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
-                                <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
+                                <h6 class="my-0">Nombre Usuario</h6>
                                 <h6 class="my-0 fw-normal menu-arrow">Sistemas</h6>
                             </div>
                         </div>
@@ -70,11 +70,7 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <!-- <a href="{% url 'editarPerfilCapacitador' %}" class="dropdown-item">
-                            <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
-                            <span>Mi Perfil</span>
-                        </a> -->
-                        <a href="{% url 'homeGeneral' %}" class="dropdown-item">
+                        <a href="#" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
                         </a>
@@ -87,12 +83,27 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
-                    <li class="has-submenu parent-parent-menu-item ">
+                    <li class="has-submenu parent-parent-menu-item">
                         <a href="{% url 'homeSistemas' %}">Inicio</a><span class="menu-arrow"></span>
-                        
                     </li>
+
                     
-                    
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Usuarios</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'listaEmpresas' %}">Empresas</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'capacitadoresLista' %}">Capacitadores</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'candidatoLista' %}">Candidatos</a> </li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Tablas</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'conocimientosLista' %}">Conocimientos</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'habilidadesLista' %}">Habilidades</a></li>
+                        </ul>
+                    </li>
 
                 </ul>
                 <!--end navigation menu-->

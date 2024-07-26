@@ -70,29 +70,11 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu nav-light nav-right">
                     <li class="has-submenu parent-parent-menu-item ">
-                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
-                        </ul>
+                        <a href="{% url 'homeCandidato' %}">Inicio</a><span class="menu-arrow"></span>
+                        <li><a href="{% url 'pruebaBusqueda' %}" class="sub-menu-item">Nueva Vacantes</a></li>
+                        <li><a href="{% url 'cursosListaCandidato' %}" class="sub-menu-item">Cursos</a></li>
+                        
                     </li>
-                    <li><a href="page-about.html" class="sub-menu-item">Info</a></li>
-                    <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Info 2</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a><span
-                                    class="submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="page-team.html" class="sub-menu-item">Team One</a></li>
-                                    <li><a href="page-team-two.html" class="sub-menu-item">Team Two</a></li>
-                                    <li><a href="page-team-three.html" class="sub-menu-item">Team Three</a></li>
-                                    <li><a href="page-team-detail.html" class="sub-menu-item">Team Detail </a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-
                 </ul>
                 <!--end navigation menu-->
             </div>
@@ -622,9 +604,8 @@
                                         
                                         <div class="row">
                                             <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Guardar </button>
+                                                <button type="submit" id="submit" name="send" class="btn btn-primary" onclick="guardarDatos()">Guardar</button>
                                             </div>
-                                            <!-- end col -->
                                         </div>
                                         <!-- end row -->
                                     </form>
@@ -648,6 +629,35 @@
     </section>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function guardarDatos() {
+            // Aquí iría la lógica para guardar los datos
+            // Simular que los datos se han guardado correctamente
+            Swal.fire({
+                title: '¡Datos guardados con éxito!',
+                text: 'Tus datos se han guardado correctamente.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                customClass: {
+                    confirmButton: 'btn-custom-color'
+                }
+            });
+        }
+    </script>
+    
+    <style>
+        .btn-custom-color {
+            background-color: #ff9034 !important;
+            color: white !important;
+        }
+    </style>
+
+    
     <script>
 
 

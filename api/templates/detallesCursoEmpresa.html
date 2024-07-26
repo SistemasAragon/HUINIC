@@ -46,7 +46,7 @@
                         <div style="display: flex; align-items: center;">
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
-                                <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
+                                <h7 class="my-0">Nombre Empresa </h7>
                                 <h6 class="my-0 fw-normal menu-arrow">Empresa</h6>
                             </div>
                         </div>
@@ -177,10 +177,11 @@
                             <div class="widget">
                                 <div class="newsletter-spacingbox mt-4 mb-0">
                                     <form>
-                                        <a href="#" class="btn btn-primary w-100 mt-2">Solicitar</a>
+                                        <a href="#" class="btn btn-primary w-100 mt-2" onclick="mostrarAlerta()">Solicitar</a>
                                     </form>
                                 </div>
                             </div>
+                            
                             <!-- NEWSLETTER -->
                         </div>
                     </div>
@@ -247,6 +248,20 @@
         </div>
         <!-- end container -->
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function mostrarAlerta() {
+        Swal.fire({
+            title: '¡Gracias!',
+            text: 'Hemos enviado tu solicitud.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#ff9034'
+        });
+    }
+</script>
+
     <!-- END -->
 
     <!-- Footer End -->

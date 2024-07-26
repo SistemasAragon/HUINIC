@@ -156,6 +156,11 @@
     <!-- fin prueba de secciones -->
 
 
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <!-- otraprueba -->
     <section class="section-50">
         <div class="container">
@@ -245,10 +250,26 @@
     }
 
     function enviarCurriculum(titulo, empresa) {
-        alert('Se ha enviado tu currículum para la vacante de ' + titulo + ' en ' + empresa + '.');
-        // Aquí podrías agregar más lógica para enviar el currículum, como una petición AJAX
+        Swal.fire({
+            title: '¡Currículum enviado!',
+            text: 'Se ha enviado tu currículum para la vacante de ' + titulo + ' en ' + empresa + '.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'btn-custom-color'
+            }
+        });
     }
 </script>
+
+<style>
+    .btn-custom-color {
+        background-color: #ff9034 !important;
+        color: white !important;
+    }
+</style>
+
+
 
     
         

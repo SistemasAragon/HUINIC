@@ -8,9 +8,51 @@ class login(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
+class homeEmpresaVC(APIView):
+    template_name= "homeEmpresaVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class capacitadorRegistroVC(APIView):
+    template_name= "capacitadorRegistroVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class listaCandidatosVacante(APIView):
+    template_name= "listaCandidatosVacante.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class perfilCandidatoLista(APIView):
+    template_name= "perfilCandidatoLista.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class listaCapacitadoresVC(APIView):
+    template_name= "listaCapacitadoresVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
 
 class listaEmpresas(APIView):
     template_name= "listaEmpresas.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class listaCapacitadores(APIView):
+    template_name= "listaCapacitadores.html"
+    def get(self,request):
+        return render(request,self.template_name)
+
+
+class capacitadorRegistro(APIView):
+    template_name= "capacitadorRegistro.html"
+    def get(self,request):
+        return render(request,self.template_name)
+
+
+class homeEmpresaCursos(APIView):
+    template_name= "homeEmpresaCursos.html"
     def get(self,request):
         return render(request,self.template_name)
 

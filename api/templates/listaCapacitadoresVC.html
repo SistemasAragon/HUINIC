@@ -5,7 +5,7 @@
 
  
 <head>
-    <title>HUINIC | Cursos inscrito empresa</title>
+    <title>HUINIC | Lista de Capacitadores VC</title>
 
     
     <!-- Luego incluye DataTables -->
@@ -27,7 +27,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeEmpresa' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeEmpresaVC' %}"><!-- Logooooo-->
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -51,15 +51,15 @@
 
 
 
-            <ul class="buy-button list-inline mb-0" style="margin-top: 10px;">
+            <ul class="buy-button list-inline mb-0" style="margin-top: 15px;">
                 <li class="list-inline-item search-icon mb-0">
                     <!--INICIO DE USUARIO-->
                     <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <div style="display: flex; align-items: center;">
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
-                                <h7 class="my-0">Nombre Empresa </h7>
-                                <h6 class="my-0 fw-normal menu-arrow">Empresa</h6>
+                                <h6 class="my-0">Nombre Empresa</h6>
+                                <h6 class="my-0 fw-normal menu-arrow">Empresa Vacante/Cursos</h6>
                             </div>
                         </div>
                     </a>
@@ -69,7 +69,7 @@
                             <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                         </div>
                         <!-- item-->
-                        <a href="{% url 'homeGeneral' %}" class="dropdown-item">
+                        <a href="{% url 'homeEmpresaVC' %}" class="dropdown-item">
                             <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
                             <span>Salir</span>
                         </a>
@@ -81,13 +81,29 @@
 
             <div id="navigation">
                 <!-- Navigation Menu-->
+
                 <ul class="navigation-menu nav-light nav-right">
-                    <li class="has-submenu parent-parent-menu-item ">
-                        <a href="{% url 'homeEmpresa' %}">Inicio</a><span class="menu-arrow"></span>
-                        <li><a href="{% url 'solicitudEmpresa' %}" class="sub-menu-item">Nueva Vacante</a></li>
-                        <li><a href="{% url 'cursosListaEmpresa' %}" class="sub-menu-item">Cursos</a></li>
-                        
-                    </li>
+
+                    <li><a href="{% url 'homeEmpresaVC' %}" class="sub-menu-item">Inicio</a></li>
+                    <li><a href="{% url 'capacitadorRegistro' %}" class="sub-menu-item">Nuevo capacitador</a></li>
+                    
+                    <!-- <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Graficos Cursos</a><span class="menu-arrow"></span>
+                    </li> -->
+
+                </ul>
+
+                <ul class="navigation-menu nav-light nav-right">
+                    <!-- <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
+                    <li><a href="javascript:void(0)" class="sub-menu-item">Info 2</a></li> -->
+                    
                 </ul>
                 <!--end navigation menu-->
             </div>
@@ -106,7 +122,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">Cursos inscrito @CUDE </h3>
+                                <h3 class="title-pager mb-0">Capacitadores </h3>
                             </div>
                         </div>
                         <!--end col-->
@@ -120,228 +136,82 @@
     <!--end section-->
     <!-- End Home -->
 
-
-    <!-- START -->
+    <!-- Inicio prueba de secciones -->
     <section class="section-25">
-        <div class="container">
+        <div class="container derecha">
 
-            <h4 class="text-center">Cursos en proceso </h4>
-            
-            <div class="row" >
-                <table id="TablaCursos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
-                    <thead class="border-top border-bottom bg-light-subtle border-light">
-                        <tr>
-                            <th scope="col">Curso</th>
-                            <th scope="col">Formato</th>
-                            <th scope="col">Duración</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                Automatización de procesos en mecanica basica
-                            </td>
-                            <td class="centrar">
-                                Presencial
-                            </td>
-                            <td class="centrar">
-                                4 semanas
-                            </td>
-                            <td class="centrar">
-                                1000
-                            </td>
-                            <td class="centrar">
-                                En solicitud
-                            </td>
-                            <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver 
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Actualización de mecanica
-                            </td>
-                            <td class="centrar">
-                                En linea
-                            </td>
-                            <td class="centrar">
-                                5 semanas
-                            </td>
-                            <td class="centrar">
-                                400
-                            </td>
-                            <td class="centrar">
-                                En curso
-                            </td>
-                            <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver 
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Elimacion de procesos en mecanica basica
-                            </td>
-                            <td class="centrar">
-                                Presencial
-                            </td>
-                            <td class="centrar">
-                                7 semanas
-                            </td>
-                            <td class="centrar">
-                                6789
-                            </td>
-                            <td class="centrar">
-                                En curso
-                            </td>
-                            <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver 
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Automatización de mecanica basica
-                            </td>
-                            <td class="centrar">
-                                Presencial
-                            </td>
-                            <td class="centrar">
-                                7 semanas
-                            </td>
-                            <td class="centrar">
-                                6543
-                            </td>
-                            <td class="centrar">
-                                En evaluación
-                            </td>
-                            <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                    Ver 
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <a href="{% url 'capacitadorRegistroVC' %}" class="btn btn-primary  mt-2">
+                Nuevo capacitador 
+            </a>
+
         </div>
         <!-- end container -->
     </section>
+    <!-- fin prueba de secciones -->
+
+
+    <!-- START -->
+    
     <!-- END -->
 
     <!-- START -->
     <section class="section-50">
         <div class="container">
 
-            <h4 class="text-center">Cursos concluidos</h4>
+            <!-- <h4 class="text-center">Cursos concluidos</h4> -->
             
             <div class="row" >
                 <table id="TablaCursosConcluidos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
-                            <th scope="col">Curso</th>
-                            <th scope="col">Formato</th>
-                            <th scope="col">Duración</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Certificado</th>
+                            <th scope="col">Nombre Completo</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Número de Teléfono</th>
+                            <th scope="col">Fecha de Nacimiento</th>
+                            <th scope="col">Estatus</th>
+                            <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
-                                Automatización de procesos en mecanica basica
-                            </td>
-                            <td class="centrar">
-                                Presencial
-                            </td>
-                            <td class="centrar">
-                                4 semanas
-                            </td>
-                            <td class="centrar">
-                                1000
-                            </td >
-                            <td class="centrar">
-                                Concluido
-                            </td>
-                            <td class="centrar">
-                                <button id="downloadBtn" class="btn btn-primary mt-2" disabled>
-                                    Descargar
-                                </button>
-                            </td>
+                            <td>Juan Pérez González</td>
+                            <td>juan.perez@example.com</td>
+                            <td>1122334455</td>
+                            <td>1985-05-20</td>
+                            <td>Activo</td>
+                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
                         </tr>
                         <tr>
-                            <td>
-                                Actualización de mecanica
-                            </td>
-                            <td class="centrar">
-                                En linea
-                            </td>
-                            <td class="centrar">
-                                5 semanas
-                            </td>
-                            <td class="centrar">
-                                400
-                            </td>
-                            <td class="centrar">
-                                Concluido
-                            </td>
-                            <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" >
-                                    Descargar 
-                                </a>
-                            </td>
+                            <td>María López Hernández</td>
+                            <td>maria.lopez@example.com</td>
+                            <td>2233445566</td>
+                            <td>1990-07-15</td>
+                            <td>Activo</td>
+                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
                         </tr>
                         <tr>
-                            <td>
-                                Elimacion de procesos en mecanica basica
-                            </td>
-                            <td class="centrar">
-                                Presencial
-                            </td>
-                            <td class="centrar">
-                                7 semanas
-                            </td>
-                            <td class="centrar">
-                                6789
-                            </td>
-                            <td class="centrar">
-                                Concluido
-                            </td>
-                            <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" >
-                                    Descargar 
-                                </a>
-                            </td>
+                            <td>Pedro Martínez Ramírez</td>
+                            <td>pedro.martinez@example.com</td>
+                            <td>3344556677</td>
+                            <td>1988-03-30</td>
+                            <td>Activo</td>
+                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
                         </tr>
                         <tr>
-                            <td>
-                                Automatización de mecanica basica
-                            </td>
-                            <td class="centrar">
-                                Presencial
-                            </td>
-                            <td class="centrar">
-                                7 semanas
-                            </td>
-                            <td class="centrar">
-                                6543
-                            </td>
-                            <td class="centrar">
-                                Concluido
-                            </td>
-                            <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" >
-                                    Descargar 
-                                </a>
-                            </td>
+                            <td>Ana García Fernández</td>
+                            <td>ana.garcia@example.com</td>
+                            <td>4455667788</td>
+                            <td>1995-12-10</td>
+                            <td>Activo</td>
+                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Luís Rodríguez Sánchez</td>
+                            <td>luis.rodriguez@example.com</td>
+                            <td>5566778899</td>
+                            <td>1982-11-25</td>
+                            <td>Activo</td>
+                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
                         </tr>
                     </tbody>
                 </table>

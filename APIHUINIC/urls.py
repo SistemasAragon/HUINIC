@@ -54,12 +54,27 @@ from api.views import(login,
                     capacitadoresLista,
                     solicitudEmpresa,
                     candidatoLista,
+                    homeEmpresaCursos,
+                    capacitadorRegistro,
+                    listaCapacitadores,
+                    homeEmpresaVC,
+                    capacitadorRegistroVC,
+                    listaCapacitadoresVC,
+                    listaCandidatosVacante,
+                    perfilCandidatoLista,
                     habilidadesCandidatoN2)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('candidatoLista/', candidatoLista.as_view(), name="candidatoLista"),
+    path('homeEmpresaVC/', homeEmpresaVC.as_view(), name="homeEmpresaVC"),
+    path('listaCandidatosVacante/', listaCandidatosVacante.as_view(), name="listaCandidatosVacante"),
+    path('listaCapacitadoresVC/', listaCapacitadoresVC.as_view(), name="listaCapacitadoresVC"),
+    path('capacitadorRegistroVC/', capacitadorRegistroVC.as_view(), name="capacitadorRegistroVC"),
+    path('homeEmpresaCursos/', homeEmpresaCursos.as_view(), name="homeEmpresaCursos"),
+    path('listaCapacitadores/', listaCapacitadores.as_view(), name="listaCapacitadores"),
+    path('capacitadorRegistro/', capacitadorRegistro.as_view(), name="capacitadorRegistro"),
     path('listaEmpresas/', listaEmpresas.as_view(), name="listaEmpresas"),
     path('capacitadoresLista/', capacitadoresLista.as_view(), name="capacitadoresLista"),
     path('datosEmpresa/', datosEmpresa.as_view(), name="datosEmpresa"),
@@ -98,4 +113,5 @@ urlpatterns = [
     path('usuarioNuevo/', usuarioNuevo.as_view(), name="usuarioNuevo"),
     path('habilidadesCandidatoN2/', habilidadesCandidatoN2.as_view(), name="habilidadesCandidatoN2"),
     path('editarPerfilCapacitador/', editarPerfilCapacitador.as_view(), name="editarPerfilCapacitador"),
+    path('perfilCandidatoLista/', perfilCandidatoLista.as_view(), name="perfilCandidatoLista"),
 ]

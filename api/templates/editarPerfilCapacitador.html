@@ -450,9 +450,8 @@
                                         
                                         <div class="row">
                                             <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Guardar </button>
+                                                <button type="submit" id="submit" name="send" class="btn btn-primary" onclick="guardarDatos()">Guardar</button>
                                             </div>
-                                            <!-- end col -->
                                         </div>
                                         <!-- end row -->
                                     </form>
@@ -474,8 +473,38 @@
         
         <!--end container-->
     </section>
+
+    
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function guardarDatos() {
+            // Aquí iría la lógica para guardar los datos
+            // Simular que los datos se han guardado correctamente
+            Swal.fire({
+                title: '¡Datos guardados con éxito!',
+                text: 'Tus datos se han guardado correctamente.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                customClass: {
+                    confirmButton: 'btn-custom-color'
+                }
+            });
+        }
+    </script>
+    
+    <style>
+        .btn-custom-color {
+            background-color: #ff9034 !important;
+            color: white !important;
+        }
+    </style>
     <script>
 
 

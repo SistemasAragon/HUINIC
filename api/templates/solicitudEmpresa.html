@@ -44,8 +44,8 @@
                         <div style="display: flex; align-items: center;">
                             <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                             <div>
-                                <h7 class="my-0">Victor Alejandro Patiño Mejia </h7>
-                                <h6 class="my-0 fw-normal menu-arrow">Candidato</h6>
+                                <h7 class="my-0">Nombre de Empresa </h7>
+                                <h6 class="my-0 fw-normal menu-arrow">Empresa</h6>
                             </div>
                         </div>
                     </a>
@@ -240,7 +240,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 fs-6 mt-3 text-center">
-                                                    <button type="button" class="btn btn-secondary mt-2" style="background-color: #ff9034; border-color: #ff9034;" onclick="agregarIdioma()">Agregar otro idioma</button>
+                                                    <button type="button" class="btn btn-secondary mt-2" style="background-color: #ff9034; border-color: #ff9034;" onclick="agregarIdioma()">Agregar
+                                                        
+                                                    </button>
                                                 </div>
                                                 <br>
                                       
@@ -709,11 +711,11 @@
                                         <!-- end row -->
                                         <div class="row">
                                             <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="location.href='{% url 'homeEmpresa' %}'">Guardar</button>
+                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="mostrarAlerta()">Publicar</button>
                                             </div>
-                                            
                                             <!-- end col -->
                                         </div>
+                                        
                                         <!-- end row -->
                                     </form>
 
@@ -737,6 +739,24 @@
        
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function mostrarAlerta() {
+            Swal.fire({
+                title: '¡Excelente!',
+                text: 'Se ha publicado la vacante.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#ff9034'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirige a la página de inicio de la empresa después de confirmar la alerta
+                    window.location.href = '{% url 'homeEmpresa' %}';
+                }
+            });
+        }
+    </script>   
 
     <!-- INICIO IDIOMAS -->
     <script>
