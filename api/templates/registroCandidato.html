@@ -89,75 +89,60 @@
                                     <form method="post" id="myForm" name="myForm" onsubmit="return validateForm()">
                                         <p class="mb-0" id="error-msg"></p>
                                         <div id="simple-msg"></div>
+                                        
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label class="form-label fs-6">Nombre(s) <span
-                                                        class="text-danger">*</span></label>
+                                                <label class="form-label fs-6">Nombre(s) <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="nombre" id="nombre" type="text" class="form-control ps-5 fs-6"
-                                                        placeholder="Nombres (s) :">
+                                                    <input name="nombre" id="nombre" type="text" class="form-control ps-5 fs-6" placeholder="Nombres (s) :" required>
                                                 </div>
                                             </div>
-    
+                                        
                                             <div class="col-md-6">
-    
-                                                <label class="form-label fs-6">Apellido Paterno <span
-                                                        class="text-danger">*</span></label>
+                                                <label class="form-label fs-6">Apellido Paterno <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    
-                                                    <input name="apellidoP" id="apellidoP" type="text"
-                                                        class="form-control ps-5 fs-6" placeholder="Apellido Paterno :">
+                                                    <input name="apellidoP" id="apellidoP" type="text" class="form-control ps-5 fs-6" placeholder="Apellido Paterno :" required>
                                                 </div>
-    
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label class="form-label fs-6">Apellido Materno <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="apellidoM" id="apellidoM" type="text" class="form-control ps-5 fs-6"
-                                                        placeholder="Apellido Materno :">
-                                                </div>
-                                            </div>
-    
-                                            <div class="col-md-6">
-    
-                                                <label class="form-label fs-6">Correo electronico <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-email-outline icon-sm icons"></i> -->
-                                                    <input name="correo" id="correo" type="email"
-                                                        class="form-control ps-5 fs-6" placeholder="Correo electronico :">
-                                                </div>
-    
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label class="form-label fs-6">Contraseña <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="password" id="password" type="password" class="form-control ps-5 fs-6"
-                                                        placeholder="Contraseña :">
-                                                </div>
-                                            </div>
-    
-                                            <div class="col-md-6">
-    
-                                                <label class="form-label fs-6">Confirma la contraseña <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-exit icon-sm icons"></i> -->
-                                                    <input name="password2" id="password2" type="password"
-                                                        class="form-control ps-5 fs-6" placeholder="Confirmación de contraseña :">
-                                                        <br>
-                                                </div>
-    
                                             </div>
                                             
-                                            <!--end col-->
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Apellido Materno <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="apellidoM" id="apellidoM" type="text" class="form-control ps-5 fs-6" placeholder="Apellido Materno :" required>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Correo electrónico <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="correo" id="correo" type="email" class="form-control ps-5 fs-6" placeholder="Correo electrónico :" required>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Confirmar correo electrónico <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="confirmar_correo" id="confirmar_correo" type="email" class="form-control ps-5 fs-6" placeholder="Confirmar correo electrónico :" required>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Contraseña <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="password" id="password" type="password" class="form-control ps-5 fs-6" placeholder="Contraseña :" required>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="col-md-6">
+                                                <label class="form-label fs-6">Confirmar contraseña <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input name="password2" id="password2" type="password" class="form-control ps-5 fs-6" placeholder="Confirmación de contraseña :" required>
+                                                </div>
+                                            </div>
+                                        
                                             <div class="col-md-12" style="text-align: center;">
                                                 <div class="form-check" style="display: inline-block;">
-                                                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos" onclick="toggleSubmitButton()">
+                                                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
                                                     <label class="form-check-label" for="terminos">
                                                         Acepto los <a href="#" target="_blank">términos y condiciones</a>
                                                     </label>
@@ -165,17 +150,11 @@
                                             </div>
                                         
                                             <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="location.href='{% url 'habilidadesCandidatoN2' %}'" disabled>Registrarse</button>
+                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="validateForm()">Registrarse</button>
                                             </div>
-
+                                        </div>
                                         <!-- end row -->
-                                        <!-- <div class="row">
-                                            <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="location.href='{% url 'habilidadesCandidatoN2' %}'">Registrarse</button>
-                                            </div>
-                                            
-                                           
-                                        </div> -->
+                                        
                                         <!--end row-->
                                     </form>
                                     <!-- end form -->
@@ -198,10 +177,39 @@
     </section>
 
     <script>
-        function toggleSubmitButton() {
-            const submitBtn = document.getElementById('submit');
-            const terminos = document.getElementById('terminos');
-            submitBtn.disabled = !terminos.checked;
+        function validateForm() {
+            const nombre = document.getElementById('nombre').value;
+            const apellidoP = document.getElementById('apellidoP').value;
+            const apellidoM = document.getElementById('apellidoM').value;
+            const correo = document.getElementById('correo').value;
+            const confirmar_correo = document.getElementById('confirmar_correo').value;
+            const password = document.getElementById('password').value;
+            const password2 = document.getElementById('password2').value;
+            const terminos = document.getElementById('terminos').checked;
+    
+            let errorMessage = '';
+    
+            if (!nombre || !apellidoP || !apellidoM || !correo || !confirmar_correo || !password || !password2) {
+                errorMessage += 'Todos los campos son obligatorios.\n';
+            }
+    
+            if (correo !== confirmar_correo) {
+                errorMessage += 'Los correos electrónicos no coinciden.\n';
+            }
+    
+            if (password !== password2) {
+                errorMessage += 'Las contraseñas no coinciden.\n';
+            }
+    
+            if (!terminos) {
+                errorMessage += 'Debe aceptar los términos y condiciones.\n';
+            }
+    
+            if (errorMessage) {
+                alert(errorMessage);
+            } else {
+                document.getElementById('submit').type = 'submit';
+            }
         }
     </script>
     <!--end section-->

@@ -16,9 +16,6 @@
     <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
 
-    <!-- DataTables CSS -->
-    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
-
 </head>
 
 <body>
@@ -92,19 +89,6 @@
                     </li> -->
 
                 </ul>
-
-                <ul class="navigation-menu nav-light nav-right">
-                    <!-- <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Inicio</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Services</a> </li>
-                            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Team</a></li>
-                        </ul>
-                    </li> -->
-                    <!-- <li><a href="javascript:void(0)" class="sub-menu-item">Info</a></li>
-                    <li><a href="javascript:void(0)" class="sub-menu-item">Info 2</a></li> -->
-                    
-                </ul>
                 <!--end navigation menu-->
             </div>
             <!--end navigation-->
@@ -157,7 +141,7 @@
             <!-- <h4 class="text-center">Cursos concluidos</h4> -->
             
             <div class="row" >
-                <table id="TablaCursosConcluidos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                <table id="TablaCapacitadores" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
                             <th scope="col">Nombre Completo</th>
@@ -175,7 +159,11 @@
                             <td>1122334455</td>
                             <td>1985-05-20</td>
                             <td>Activo</td>
-                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCapacitador()">
+                                    Editar 
+                                </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>María López Hernández</td>
@@ -183,7 +171,11 @@
                             <td>2233445566</td>
                             <td>1990-07-15</td>
                             <td>Activo</td>
-                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCapacitador()">
+                                    Editar 
+                                </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>Pedro Martínez Ramírez</td>
@@ -191,7 +183,11 @@
                             <td>3344556677</td>
                             <td>1988-03-30</td>
                             <td>Activo</td>
-                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCapacitador()">
+                                    Editar 
+                                </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>Ana García Fernández</td>
@@ -199,7 +195,11 @@
                             <td>4455667788</td>
                             <td>1995-12-10</td>
                             <td>Activo</td>
-                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCapacitador()">
+                                    Editar 
+                                </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>Luís Rodríguez Sánchez</td>
@@ -207,7 +207,11 @@
                             <td>5566778899</td>
                             <td>1982-11-25</td>
                             <td>Activo</td>
-                            <td><a href="#" class="btn btn-primary mt-2">Editar</a></td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCapacitador()">
+                                    Editar 
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -225,40 +229,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     
-    <!-- DataTables JS -->
-    {% comment %} <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> {% endcomment %}
-
-
 
     <script>
         $(document).ready(function () {
-        $('#TablaCursos').DataTable({
-            lengthMenu: [5, 10, 15],
-            pageLength: 5,
-            destroy:true,
-            "language": {
-                lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningúna postulación encontrada",
-                info: "Mostrando _END_ de _MAX_ postulaciones",
-                infoEmpty: "Ningúna postulación encontrada",
-                infoFiltered: "",
-                search: "Buscar:",
-                loadingRecords: "Cargando... ",
-                paginate: {
-                    first: "Primero",
-                    last: "Último",
-                    next: "Siguiente",
-                    previous: "Anterior"
-                }
-            }
-            // Otras opciones y configuraciones de DataTables que puedas tener...
-        });
-        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-        $('#TablaCursosConcluidos').DataTable({
+        $('#TablaCapacitadores').DataTable({
             lengthMenu: [5, 10, 15],
             pageLength: 5,
             destroy:true,
@@ -284,7 +258,7 @@
 
     <!-- Script de editar datos-->
     <script>
-        function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
+        function editarCapacitador() {
             Swal.fire({
                 title: 'Información de curso',
                 html:
@@ -401,24 +375,8 @@
                 }, 
                 preConfirm: () => {
                     const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
-                    const nuevoNombre = Swal.getPopup().querySelector('#nuevoNombre').value;
-                    const nuevoApellidoPaterno = Swal.getPopup().querySelector('#nuevoApellidoPaterno').value;
-                    const nuevoApellidoMaterno = Swal.getPopup().querySelector('#nuevoApellidoMaterno').value;
-                    const nuevoNumeroPersonal = Swal.getPopup().querySelector('#nuevoNumeroPersonal').value;
-                    const nuevoNumeroContacto = Swal.getPopup().querySelector('#nuevoNumeroContacto').value;
-                    const nuevoIdNumeroPersonal = Swal.getPopup().querySelector('#nuevoIdNumeroPersonal').value;
-                    const nuevoIdNumeroContacto = Swal.getPopup().querySelector('#nuevoIdNumeroContacto').value;
-                    const nuevoGmail = Swal.getPopup().querySelector('#nuevoGmail').value;
-                    const nuevaFechaNacimiento = Swal.getPopup().querySelector('#nuevaFechaNacimiento').value;
-                    const nuevoCurp = Swal.getPopup().querySelector('#nuevoCurp').value;
-                    const nuevoCodigoPostal = Swal.getPopup().querySelector('#nuevoCodigoPostal').value;
-                    const nuevoRfc = Swal.getPopup().querySelector('#nuevoRfc').value;
-                    const nuevoStatus = Swal.getPopup().querySelector('#nuevoStatus').value;
-                    const nuevaCuenta = Swal.getPopup().querySelector('#nuevaCuenta').value;
-                    const nuevaClave = Swal.getPopup().querySelector('#nuevaClave').value;
-                    const nuevoCargo = Swal.getPopup().querySelector('#nuevoCargo').value;
 
-                    return fetch('{% url 'postulaciones' %}', {
+                    return fetch('{% url 'listaCapacitadores' %}', {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -426,22 +384,6 @@
                             },
                             body: JSON.stringify({
                                 claveEmpleado: claveEmpleado,
-                                nuevoNombre: nuevoNombre,
-                                nuevoApellidoPaterno: nuevoApellidoPaterno,
-                                nuevoApellidoMaterno: nuevoApellidoMaterno,
-                                nuevoNumeroPersonal: nuevoNumeroPersonal,
-                                nuevoNumeroContacto: nuevoNumeroContacto,
-                                nuevoIdNumeroPersonal: nuevoIdNumeroPersonal,
-                                nuevoIdNumeroContacto: nuevoIdNumeroContacto,
-                                nuevoGmail: nuevoGmail,
-                                nuevaFechaNacimiento: nuevaFechaNacimiento,
-                                nuevoCurp: nuevoCurp,
-                                nuevoCodigoPostal: nuevoCodigoPostal,
-                                nuevoRfc: nuevoRfc,
-                                nuevoStatus: nuevoStatus,
-                                nuevaCuenta: nuevaCuenta,
-                                nuevaClave: nuevaClave,
-                                nuevoCargo: nuevoCargo,
                         }),
                     })
                     .then(response => response.json())
@@ -470,36 +412,6 @@
         }
     </script>
     <!-- Script de editar datos-->
-
-    <script>
-        //HABILIDADES
-        document.addEventListener("DOMContentLoaded", function() {
-            var checkboxes = document.querySelectorAll('input[name="habilidad"]');
-            var maxHabilidades = 5;
-            var mensajeHabilidades = document.getElementById('mensaje-habilidades');
-    
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    var checkedCheckboxes = document.querySelectorAll('input[name="habilidad"]:checked');
-                    if (checkedCheckboxes.length > maxHabilidades) {
-                        this.checked = false; // Desmarca la casilla si se intenta seleccionar una habilidad adicional después del límite
-                        mostrarMensajeHabilidades();
-                    } else {
-                        ocultarMensajeHabilidades();
-                    }
-                });
-            });
-    
-            function mostrarMensajeHabilidades() {
-                mensajeHabilidades.style.display = 'block';
-            }
-    
-            function ocultarMensajeHabilidades() {
-                mensajeHabilidades.style.display = 'none';
-            }
-        });
-        //FIN HABILIDADES 
-    </script>
 
 </body>
 

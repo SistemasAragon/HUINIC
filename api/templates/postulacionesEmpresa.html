@@ -16,9 +16,7 @@
     <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
 
-    <!-- DataTables CSS -->
-    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
-
+    
 </head>
 
 <body>
@@ -146,7 +144,7 @@
                             <td>Motor</td>
                             <td>8000</td>
                             <td>
-                                <a href="#" class="btn btn-primary mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary mt-2" onclick="editarPostulacion()">
                                     Editar 
                                 </a>
                                 <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
@@ -165,7 +163,7 @@
                             <td>Pintura</td>
                             <td>9000</td>
                             <td>
-                                <a href="#" class="btn btn-primary mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary mt-2" onclick="editarPostulacion()">
                                     Editar 
                                 </a>
                                 <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
@@ -184,7 +182,7 @@
                             <td>Eléctrico</td>
                             <td>10000</td>
                             <td>
-                                <a href="#" class="btn btn-primary mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary mt-2" onclick="editarPostulacion()">
                                     Editar 
                                 </a>
                                 <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
@@ -203,7 +201,7 @@
                             <td>Eléctrico</td>
                             <td>15000</td>
                             <td>
-                                <a href="#" class="btn btn-primary mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary mt-2" onclick="editarPostulacion()">
                                     Editar 
                                 </a>
                                 <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
@@ -231,10 +229,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     
-    <!-- DataTables JS -->
-    {% comment %} <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> {% endcomment %}
-
-
 
     <script>
         $(document).ready(function () {
@@ -264,7 +258,7 @@
 
     <!-- Script de editar datos-->
     <script>
-        function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
+        function editarPostulacion() {
             Swal.fire({
                 title: 'Información de postulación',
                 html:
@@ -466,24 +460,8 @@
                 }, 
                 preConfirm: () => {
                     const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
-                    const nuevoNombre = Swal.getPopup().querySelector('#nuevoNombre').value;
-                    const nuevoApellidoPaterno = Swal.getPopup().querySelector('#nuevoApellidoPaterno').value;
-                    const nuevoApellidoMaterno = Swal.getPopup().querySelector('#nuevoApellidoMaterno').value;
-                    const nuevoNumeroPersonal = Swal.getPopup().querySelector('#nuevoNumeroPersonal').value;
-                    const nuevoNumeroContacto = Swal.getPopup().querySelector('#nuevoNumeroContacto').value;
-                    const nuevoIdNumeroPersonal = Swal.getPopup().querySelector('#nuevoIdNumeroPersonal').value;
-                    const nuevoIdNumeroContacto = Swal.getPopup().querySelector('#nuevoIdNumeroContacto').value;
-                    const nuevoGmail = Swal.getPopup().querySelector('#nuevoGmail').value;
-                    const nuevaFechaNacimiento = Swal.getPopup().querySelector('#nuevaFechaNacimiento').value;
-                    const nuevoCurp = Swal.getPopup().querySelector('#nuevoCurp').value;
-                    const nuevoCodigoPostal = Swal.getPopup().querySelector('#nuevoCodigoPostal').value;
-                    const nuevoRfc = Swal.getPopup().querySelector('#nuevoRfc').value;
-                    const nuevoStatus = Swal.getPopup().querySelector('#nuevoStatus').value;
-                    const nuevaCuenta = Swal.getPopup().querySelector('#nuevaCuenta').value;
-                    const nuevaClave = Swal.getPopup().querySelector('#nuevaClave').value;
-                    const nuevoCargo = Swal.getPopup().querySelector('#nuevoCargo').value;
 
-                    return fetch('{% url 'postulaciones' %}', {
+                    return fetch('{% url 'postulacionesEmpresa' %}', {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -491,22 +469,7 @@
                             },
                             body: JSON.stringify({
                                 claveEmpleado: claveEmpleado,
-                                nuevoNombre: nuevoNombre,
-                                nuevoApellidoPaterno: nuevoApellidoPaterno,
-                                nuevoApellidoMaterno: nuevoApellidoMaterno,
-                                nuevoNumeroPersonal: nuevoNumeroPersonal,
-                                nuevoNumeroContacto: nuevoNumeroContacto,
-                                nuevoIdNumeroPersonal: nuevoIdNumeroPersonal,
-                                nuevoIdNumeroContacto: nuevoIdNumeroContacto,
-                                nuevoGmail: nuevoGmail,
-                                nuevaFechaNacimiento: nuevaFechaNacimiento,
-                                nuevoCurp: nuevoCurp,
-                                nuevoCodigoPostal: nuevoCodigoPostal,
-                                nuevoRfc: nuevoRfc,
-                                nuevoStatus: nuevoStatus,
-                                nuevaCuenta: nuevaCuenta,
-                                nuevaClave: nuevaClave,
-                                nuevoCargo: nuevoCargo,
+
                         }),
                     })
                     .then(response => response.json())
@@ -536,35 +499,6 @@
     </script>
     <!-- Script de editar datos-->
 
-    <script>
-        //HABILIDADES
-        document.addEventListener("DOMContentLoaded", function() {
-            var checkboxes = document.querySelectorAll('input[name="habilidad"]');
-            var maxHabilidades = 5;
-            var mensajeHabilidades = document.getElementById('mensaje-habilidades');
-    
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    var checkedCheckboxes = document.querySelectorAll('input[name="habilidad"]:checked');
-                    if (checkedCheckboxes.length > maxHabilidades) {
-                        this.checked = false; // Desmarca la casilla si se intenta seleccionar una habilidad adicional después del límite
-                        mostrarMensajeHabilidades();
-                    } else {
-                        ocultarMensajeHabilidades();
-                    }
-                });
-            });
-    
-            function mostrarMensajeHabilidades() {
-                mensajeHabilidades.style.display = 'block';
-            }
-    
-            function ocultarMensajeHabilidades() {
-                mensajeHabilidades.style.display = 'none';
-            }
-        });
-        //FIN HABILIDADES 
-    </script>
 
 </body>
 

@@ -76,10 +76,6 @@
 
                     <li><a href="{% url 'formularioCurso' %}" class="sub-menu-item">Nuevo curso</a></li>
                     
-                    <!-- <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)">Graficos Cursos</a><span class="menu-arrow"></span>
-                    </li> -->
-
                 </ul>
                 <!--end navigation menu-->
             </div>
@@ -145,13 +141,13 @@
                         </div>
                         <!--end services -->
 
-                        {% comment %} <div class="tiny-slide">
+                        <div class="tiny-slide">
                             <div class="rounded service-two shadow m-2">
                                 <div class="p-4">
-                                    <h5 class="serv-head">Curso: Llantas vehiculares</h5>
+                                    <h5 class="serv-head">Curso: Motos general</h5>
                                     <p class="text-muted mb-1"> Vizualizacion curso </p>
                                 </div>
-                                <img style="height: 181px; width: 236px; border-radius: 8px;" src="{% static 'images/2.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                                <img style="height: 181px; width: 236px; border-radius: 8px;" src="{% static 'images/3.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
 
                                 <p></p>
                                 <div  class="centrar">
@@ -159,9 +155,8 @@
     
                                     <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
                                 </div>
-
                             </div>
-                        </div> {% endcomment %}
+                        </div>
                         <!--end services-->
 
                         <div class="tiny-slide">
@@ -223,6 +218,7 @@
     <script src="{% static 'js/parallax.js'%}"></script>
     <!-- BACKGROUND -->
     <script src="{% static 'js/easy_background.js'%}"></script>
+
     <script>
         easy_background("#hero-images", {
             slide: ["{% static 'images/img8.jpg'%}", "{% static 'images/img7.jpg'%}", "{% static 'images/img3.jpg'%}"],

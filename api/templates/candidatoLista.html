@@ -15,9 +15,6 @@
     <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
 
-    <!-- DataTables CSS -->
-    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
-
 </head>
 
 <body>
@@ -46,9 +43,6 @@
                     <!-- End mobile menu toggle-->
                 </div>
             </div>
-
-
-
 
             <ul class="buy-button list-inline mb-0" style="margin-top: 15px;">
                 <li class="list-inline-item search-icon mb-0">
@@ -106,8 +100,6 @@
                 </ul>
                 <!--end navigation menu-->
             </div>
-
-
             <!--end navigation-->
         </div>
         <!--end container-->
@@ -142,7 +134,7 @@
         <div class="container">
                         
             <div class="row" >
-                <table id="TablaCursos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                <table id="TablaCandidatosInscritos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
                             <th scope="col">Candidato</th>
@@ -175,7 +167,7 @@
                                 Activa 
                             </td>
                             <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCandidato()">
                                     Editar 
                                 </a>
                             </td>
@@ -200,7 +192,7 @@
                                 Activa 
                             </td>
                             <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCandidato()">
                                     Editar 
                                 </a>
                             </td>
@@ -225,7 +217,7 @@
                                 Activa 
                             </td>
                             <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCandidato()">
                                     Editar 
                                 </a>
                             </td>
@@ -247,47 +239,17 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     
-    <!-- DataTables JS -->
-    {% comment %} <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> {% endcomment %}
-
-
-
     <script>
         $(document).ready(function () {
-        $('#TablaCursosConcluidos').DataTable({
+        $('#TablaCandidatosInscritos').DataTable({
             lengthMenu: [5, 10, 15],
             pageLength: 5,
             destroy:true,
             "language": {
                 lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningúna postulación encontrada",
-                info: "Mostrando _END_ de _MAX_ postulaciones",
-                infoEmpty: "Ningúna postulación encontrada",
-                infoFiltered: "",
-                search: "Buscar:",
-                loadingRecords: "Cargando... ",
-                paginate: {
-                    first: "Primero",
-                    last: "Último",
-                    next: "Siguiente",
-                    previous: "Anterior"
-                }
-            }
-            // Otras opciones y configuraciones de DataTables que puedas tener...
-        });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-        $('#TablaCursos').DataTable({
-            lengthMenu: [5, 10, 15],
-            pageLength: 5,
-            destroy:true,
-            "language": {
-                lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningúna postulación encontrada",
-                info: "Mostrando _END_ de _MAX_ postulaciones",
-                infoEmpty: "Ningúna postulación encontrada",
+                zeroRecords: "Ningún candidato encontrado",
+                info: "Mostrando _END_ de _MAX_ candidatos",
+                infoEmpty: "Ningún candidato encontrado",
                 infoFiltered: "",
                 search: "Buscar:",
                 loadingRecords: "Cargando... ",
@@ -305,7 +267,7 @@
 
     <!-- Script de editar datos-->
     <script>
-        function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
+        function editarCandidato() {
             Swal.fire({
                 title: 'Información de candidato',
                 html:
@@ -377,25 +339,7 @@
                     confirmButton: 'my-swal-confirm-button2',
                 }, 
                 preConfirm: () => {
-                    const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
-                    const nuevoNombre = Swal.getPopup().querySelector('#nuevoNombre').value;
-                    const nuevoApellidoPaterno = Swal.getPopup().querySelector('#nuevoApellidoPaterno').value;
-                    const nuevoApellidoMaterno = Swal.getPopup().querySelector('#nuevoApellidoMaterno').value;
-                    const nuevoNumeroPersonal = Swal.getPopup().querySelector('#nuevoNumeroPersonal').value;
-                    const nuevoNumeroContacto = Swal.getPopup().querySelector('#nuevoNumeroContacto').value;
-                    const nuevoIdNumeroPersonal = Swal.getPopup().querySelector('#nuevoIdNumeroPersonal').value;
-                    const nuevoIdNumeroContacto = Swal.getPopup().querySelector('#nuevoIdNumeroContacto').value;
-                    const nuevoGmail = Swal.getPopup().querySelector('#nuevoGmail').value;
-                    const nuevaFechaNacimiento = Swal.getPopup().querySelector('#nuevaFechaNacimiento').value;
-                    const nuevoCurp = Swal.getPopup().querySelector('#nuevoCurp').value;
-                    const nuevoCodigoPostal = Swal.getPopup().querySelector('#nuevoCodigoPostal').value;
-                    const nuevoRfc = Swal.getPopup().querySelector('#nuevoRfc').value;
-                    const nuevoStatus = Swal.getPopup().querySelector('#nuevoStatus').value;
-                    const nuevaCuenta = Swal.getPopup().querySelector('#nuevaCuenta').value;
-                    const nuevaClave = Swal.getPopup().querySelector('#nuevaClave').value;
-                    const nuevoCargo = Swal.getPopup().querySelector('#nuevoCargo').value;
-
-                    return fetch('{% url 'postulaciones' %}', {
+                    return fetch('{% url 'candidatoLista' %}', {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -403,22 +347,6 @@
                             },
                             body: JSON.stringify({
                                 claveEmpleado: claveEmpleado,
-                                nuevoNombre: nuevoNombre,
-                                nuevoApellidoPaterno: nuevoApellidoPaterno,
-                                nuevoApellidoMaterno: nuevoApellidoMaterno,
-                                nuevoNumeroPersonal: nuevoNumeroPersonal,
-                                nuevoNumeroContacto: nuevoNumeroContacto,
-                                nuevoIdNumeroPersonal: nuevoIdNumeroPersonal,
-                                nuevoIdNumeroContacto: nuevoIdNumeroContacto,
-                                nuevoGmail: nuevoGmail,
-                                nuevaFechaNacimiento: nuevaFechaNacimiento,
-                                nuevoCurp: nuevoCurp,
-                                nuevoCodigoPostal: nuevoCodigoPostal,
-                                nuevoRfc: nuevoRfc,
-                                nuevoStatus: nuevoStatus,
-                                nuevaCuenta: nuevaCuenta,
-                                nuevaClave: nuevaClave,
-                                nuevoCargo: nuevoCargo,
                         }),
                     })
                     .then(response => response.json())
@@ -448,12 +376,6 @@
     </script>
     <!-- Script de editar datos-->
 
-    <script>
-        document.getElementById('downloadBtn').addEventListener('click', function(event) {
-            event.preventDefault();
-            alert('Debe cumplir cierta acción para que el botón se active.');
-        });
-    </script>
 
 </body>
 

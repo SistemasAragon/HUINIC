@@ -16,9 +16,6 @@
     <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
 
-    <!-- DataTables CSS -->
-    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
-
 </head>
 
 <body>
@@ -141,7 +138,6 @@
     <section class="section">
         <div class="container">
 
-            
             <div class="row" >
                 <table id="TablaHabilidades" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
@@ -156,7 +152,7 @@
                                 Empatia
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
                                     Editar 
                                 </a>
                             </td>
@@ -166,7 +162,7 @@
                                 Trabajo en Equipo
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
                                     Editar 
                                 </a>
                             </td>
@@ -176,7 +172,7 @@
                                 Trabajo bajo presión
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
                                     Editar 
                                 </a>
                             </td>
@@ -186,7 +182,7 @@
                                 Liderazgo
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
                                     Editar 
                                 </a>
                             </td>
@@ -196,7 +192,7 @@
                                 Ventas
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
                                     Editar 
                                 </a>
                             </td>
@@ -206,7 +202,7 @@
                                 Compromiso
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
                                     Editar 
                                 </a>
                             </td>
@@ -227,11 +223,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     
-    <!-- DataTables JS -->
-    {% comment %} <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> {% endcomment %}
-
-
-
     <script>
         $(document).ready(function () {
         $('#TablaHabilidades').DataTable({
@@ -261,7 +252,7 @@
 
     <!-- Script de editar datos-->
     <script>
-        function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
+        function editarHabilidad() {
             Swal.fire({
                 title: 'Habilidad de vacante',
                 html:
@@ -291,24 +282,8 @@
                 }, 
                 preConfirm: () => {
                     const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
-                    const nuevoNombre = Swal.getPopup().querySelector('#nuevoNombre').value;
-                    const nuevoApellidoPaterno = Swal.getPopup().querySelector('#nuevoApellidoPaterno').value;
-                    const nuevoApellidoMaterno = Swal.getPopup().querySelector('#nuevoApellidoMaterno').value;
-                    const nuevoNumeroPersonal = Swal.getPopup().querySelector('#nuevoNumeroPersonal').value;
-                    const nuevoNumeroContacto = Swal.getPopup().querySelector('#nuevoNumeroContacto').value;
-                    const nuevoIdNumeroPersonal = Swal.getPopup().querySelector('#nuevoIdNumeroPersonal').value;
-                    const nuevoIdNumeroContacto = Swal.getPopup().querySelector('#nuevoIdNumeroContacto').value;
-                    const nuevoGmail = Swal.getPopup().querySelector('#nuevoGmail').value;
-                    const nuevaFechaNacimiento = Swal.getPopup().querySelector('#nuevaFechaNacimiento').value;
-                    const nuevoCurp = Swal.getPopup().querySelector('#nuevoCurp').value;
-                    const nuevoCodigoPostal = Swal.getPopup().querySelector('#nuevoCodigoPostal').value;
-                    const nuevoRfc = Swal.getPopup().querySelector('#nuevoRfc').value;
-                    const nuevoStatus = Swal.getPopup().querySelector('#nuevoStatus').value;
-                    const nuevaCuenta = Swal.getPopup().querySelector('#nuevaCuenta').value;
-                    const nuevaClave = Swal.getPopup().querySelector('#nuevaClave').value;
-                    const nuevoCargo = Swal.getPopup().querySelector('#nuevoCargo').value;
-
-                    return fetch('{% url 'postulaciones' %}', {
+                    
+                    return fetch('{% url 'habilidadesLista' %}', {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -316,22 +291,7 @@
                             },
                             body: JSON.stringify({
                                 claveEmpleado: claveEmpleado,
-                                nuevoNombre: nuevoNombre,
-                                nuevoApellidoPaterno: nuevoApellidoPaterno,
-                                nuevoApellidoMaterno: nuevoApellidoMaterno,
-                                nuevoNumeroPersonal: nuevoNumeroPersonal,
-                                nuevoNumeroContacto: nuevoNumeroContacto,
-                                nuevoIdNumeroPersonal: nuevoIdNumeroPersonal,
-                                nuevoIdNumeroContacto: nuevoIdNumeroContacto,
-                                nuevoGmail: nuevoGmail,
-                                nuevaFechaNacimiento: nuevaFechaNacimiento,
-                                nuevoCurp: nuevoCurp,
-                                nuevoCodigoPostal: nuevoCodigoPostal,
-                                nuevoRfc: nuevoRfc,
-                                nuevoStatus: nuevoStatus,
-                                nuevaCuenta: nuevaCuenta,
-                                nuevaClave: nuevaClave,
-                                nuevoCargo: nuevoCargo,
+                                
                         }),
                     })
                     .then(response => response.json())
