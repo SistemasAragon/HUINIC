@@ -16,9 +16,6 @@
     <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
 
-    <!-- DataTables CSS -->
-    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
-
 </head>
 
 <body>
@@ -129,122 +126,180 @@
 
 
     <!-- START -->
-    <section class="section">
+    <section class="section-25">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="service-detail">
-                                <div class="img" >
-                                    <img style="height:254px; width: 380px;" src="{% static 'images/1.jpg'%}" class="img-fluid mx-auto rounded d-block" alt="">
-                                </div>
-                                <div class="content mt-4">
-                                    <h5 class="title pb-3 border-bottom">Acerca de:</h5>
-                                    <p class="text-muted">Curso de marketing digital en sistemas de informacion con el 
-                                        proposito de crear medios que ayuden a la actualizacion informactica en la 
-                                        meta de innovación 
-                                    </p>
-                                </div>
+                <div class="col-6">
 
-                                <!--end row-->
-                            </div>
-                        </div>
+                    <div class="img" >
+                        <img style="height:200px; width: 350px;" src="{% static 'images/1.jpg'%}" class="img-fluid mx-auto rounded d-block" alt="">
                     </div>
+
+                    <p></p>
+
+                    <div class="centrar" >
+                        <a href="{% url 'capacitadorRegistroVC' %}" class="btn btn-primary centrar mt-2 ">
+                            Editar
+                        </a>                    
+                    </div>
+                                        
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                    <div class="sidebar  rounded  ">
-                        <!-- RELATED SERVICES -->
-                        <div class="widget mb-4">
-                            <h5 class="pb-2 widget-title border-bottom">Solicitudes</h5>
-
-                            <table id="TablaCheck" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
-                                <thead class="border-top border-bottom bg-light-subtle border-light">
-                                    <tr>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Info</th>
-                                        <th scope="col">Inscripción</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            Victor Patiño Mejia
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                                Ver 
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Litzy Viridiana Bravo Aldana
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                                Ver 
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Alberto Jeronimo Hernandez Hernandez
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                                Ver 
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Fidelmar Patiño Mejia
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                                Ver 
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Alberto Esequiel Betancurd Jimenez
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
-                                                Ver 
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
-                                        </td>
-                                    </tr>
-                                    
-                                </tbody>
-
-                            </table>
-
-                        </div>
-                        <!-- RELATED SERVICES -->
+                <div class="col-6">
+                    <div class="content mt-4">
+                        <h5 class="title pb-3 border-bottom">Acerca de:</h5>
+                        <p class="text-muted">Curso de marketing digital en sistemas de informacion con el 
+                            proposito de crear medios que ayuden a la actualizacion informactica en la 
+                            meta de innovación 
+                        </p>
                     </div>
+
+                    <div class="tiny-single-item">
+                        <div class="tiny-slide text-center testimonial mt-2">
+                            <h6>Muy bueno</h6>
+                            <ul class="list-unstyled mb-0 mt-2">
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
+                            </ul>
+                        </div>
+                        <!--end content-->
+
+                    </div>       
+                    
+                    
                 </div>
             </div>
 
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- END -->
+
+    <!-- START -->
+    <section class="section-50">
+        <div class="container">
+            <div class="row">
+                <h4 class="pb-2 widget-title border-bottom">Solicitudes</h4>
+
+                <table id="TablaCheck" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                    <thead class="border-top border-bottom bg-light-subtle border-light">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Unidades</th>
+                            <th scope="col">Info</th>
+                            <th scope="col">Inscripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Victor Patiño Mejia
+                            </td>
+                            <td>
+                                Empresa
+                            </td>
+                            <td class="centrar">
+                                10
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Litzy Viridiana Bravo Aldana
+                            </td>
+                            <td>
+                                Empresa
+                            </td>
+                            <td class="centrar">
+                                10
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Alberto Jeronimo Hernandez Hernandez
+                            </td>
+                            <td>
+                                Candidato
+                            </td>
+                            <td class="centrar">
+                                1
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Fidelmar Patiño Mejia
+                            </td>
+                            <td>
+                                Empresa
+                            </td>
+                            <td class="centrar">
+                                10
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Alberto Esequiel Betancurd Jimenez
+                            </td>
+                            <td>
+                                Candidato
+                            </td>
+                            <td class="centrar">
+                                1
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2">Inscribir</a>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+
+                </table>
+                            
+            </div>
+
             <div class="row" style="margin-top: 30px;">
+                <h4 class="pb-2 widget-title border-bottom">Cursados</h4>
+
                 <table id="TablaEncuentas" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
@@ -373,12 +428,12 @@
     <script>
         $(document).ready(function () {
         $('#TablaCheck').DataTable({
-            //lengthMenu: [5, 10, 15, 20, 50, 100],
+            lengthMenu: [5, 10, 15, 20, 50, 100],
             pageLength: 5,
-            lengthChange: false, // Oculta el menú de selección de cantidad de registros
+            //lengthChange: false,  Oculta el menú de selección de cantidad de registros
             destroy:true,
             "language": {
-                //lengthMenu: "Mostrar _MENU_ registros por página",
+                lengthMenu: "Mostrar _MENU_ registros por página",
                 zeroRecords: "Ningún vacante encontrado",
                 info: "Mostrando _END_ de _MAX_ vacantes",
                 infoEmpty: "Ningún vacante encontrado",

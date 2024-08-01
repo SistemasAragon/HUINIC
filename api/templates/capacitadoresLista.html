@@ -136,19 +136,6 @@
     <!--end section-->
     <!-- End Home -->
 
-    <!-- Inicio prueba de secciones -->
-    <section class="section-25">
-        <div class="container derecha">
-
-            <a href="#" class="btn btn-primary  mt-2">
-                Nuevo capacitador 
-            </a>
-
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- fin prueba de secciones -->
-
 
     <!-- START -->
     <section class="section-50">
@@ -267,40 +254,15 @@
 
     <script>
         $(document).ready(function () {
-        $('#TablaCursosConcluidos').DataTable({
+        $('#TablaCapacitadores').DataTable({
             lengthMenu: [5, 10, 15],
             pageLength: 5,
             destroy:true,
             "language": {
                 lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningúna postulación encontrada",
-                info: "Mostrando _END_ de _MAX_ postulaciones",
-                infoEmpty: "Ningúna postulación encontrada",
-                infoFiltered: "",
-                search: "Buscar:",
-                loadingRecords: "Cargando... ",
-                paginate: {
-                    first: "Primero",
-                    last: "Último",
-                    next: "Siguiente",
-                    previous: "Anterior"
-                }
-            }
-            // Otras opciones y configuraciones de DataTables que puedas tener...
-        });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-        $('#TablaCursos').DataTable({
-            lengthMenu: [5, 10, 15],
-            pageLength: 5,
-            destroy:true,
-            "language": {
-                lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningúna postulación encontrada",
-                info: "Mostrando _END_ de _MAX_ postulaciones",
-                infoEmpty: "Ningúna postulación encontrada",
+                zeroRecords: "Ningún capacitador encontrado",
+                info: "Mostrando _END_ de _MAX_ capacitadores",
+                infoEmpty: "Ningún capacitador encontrado",
                 infoFiltered: "",
                 search: "Buscar:",
                 loadingRecords: "Cargando... ",

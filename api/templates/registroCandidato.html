@@ -1,8 +1,7 @@
 {% include  'includeHead.html' %}
 {% load static%}
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 
 <head>
     <title>HUINIC | Registro Candidato</title>
@@ -13,7 +12,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <!-- Logo container-->
-            <a class="logo" href="{% url 'homeGeneral' %}"><!-- Logooooo-->
+            <a class="logo" href="{% url 'homeGeneral' %}">
                 <span class="logo-light-mode">
                     <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
                     <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
@@ -33,7 +32,6 @@
                     <!-- End mobile menu toggle-->
                 </div>
             </div>
-            
 
             <div id="navigation">
                 <!-- Navigation Menu-->
@@ -45,7 +43,6 @@
                 <!--end navigation menu-->
             </div>
             <!--end navigation-->
-
         </div>
         <!--end container-->
     </header>
@@ -60,12 +57,11 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">  Realiza el registro de manera rápida </h3>
-                                <h3 class="title-pager mb-0">  Llena los campos con tu datos </h3>
+                                <h3 class="title-pager mb-0">Realiza el registro de manera rápida</h3>
+                                <h3 class="title-pager mb-0">Llena los campos con tu datos</h3>
                             </div>
                         </div>
                         <!--end col-->
-
                     </div>
                     <!--end row-->
                 </div>
@@ -77,8 +73,7 @@
     <!-- End Home -->
 
     <!-- Start Section -->
-    <!-- <section class="section" style="overflow:hidden; height: 450px;"> -->
-    <section class="section" style="overflow:hidden; height: auto;">
+    <section class="section-50">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-12 mb-4">
@@ -91,55 +86,49 @@
                                         <div id="simple-msg"></div>
                                         
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <label class="form-label fs-6">Nombre(s) <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="nombre" id="nombre" type="text" class="form-control ps-5 fs-6" placeholder="Nombres (s) :" required>
+                                                    <input name="nombre" id="nombre" type="text" class="form-control ps-5 fs-6" placeholder="Nombre(s):" required>
                                                 </div>
                                             </div>
-                                        
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <label class="form-label fs-6">Apellido Paterno <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="apellidoP" id="apellidoP" type="text" class="form-control ps-5 fs-6" placeholder="Apellido Paterno :" required>
+                                                    <input name="apellidoP" id="apellidoP" type="text" class="form-control ps-5 fs-6" placeholder="Apellido Paterno:" required>
                                                 </div>
                                             </div>
-                                            
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <label class="form-label fs-6">Apellido Materno <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="apellidoM" id="apellidoM" type="text" class="form-control ps-5 fs-6" placeholder="Apellido Materno :" required>
+                                                    <input name="apellidoM" id="apellidoM" type="text" class="form-control ps-5 fs-6" placeholder="Apellido Materno:" required>
                                                 </div>
                                             </div>
-                                        
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">Correo electrónico <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="correo" id="correo" type="email" class="form-control ps-5 fs-6" placeholder="Correo electrónico :" required>
+                                                    <input name="correo" id="correo" type="email" class="form-control ps-5 fs-6" placeholder="Correo electrónico:" required>
                                                 </div>
                                             </div>
-                                        
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">Confirmar correo electrónico <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="confirmar_correo" id="confirmar_correo" type="email" class="form-control ps-5 fs-6" placeholder="Confirmar correo electrónico :" required>
+                                                    <input name="confirmar_correo" id="confirmar_correo" type="email" class="form-control ps-5 fs-6" placeholder="Confirmar correo electrónico:" required>
                                                 </div>
                                             </div>
-                                        
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">Contraseña <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="password" id="password" type="password" class="form-control ps-5 fs-6" placeholder="Contraseña :" required>
+                                                    <input name="password" id="password" type="password" class="form-control ps-5 fs-6" placeholder="Contraseña:" required>
                                                 </div>
                                             </div>
-                                        
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">Confirmar contraseña <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="password2" id="password2" type="password" class="form-control ps-5 fs-6" placeholder="Confirmación de contraseña :" required>
+                                                    <input name="password2" id="password2" type="password" class="form-control ps-5 fs-6" placeholder="Confirmar contraseña:" required>
                                                 </div>
                                             </div>
-                                        
+                                            <p></p>
                                             <div class="col-md-12" style="text-align: center;">
                                                 <div class="form-check" style="display: inline-block;">
                                                     <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
@@ -148,17 +137,13 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        
                                             <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="validateForm()">Registrarse</button>
+                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Registrarse</button>
                                             </div>
                                         </div>
                                         <!-- end row -->
-                                        
-                                        <!--end row-->
                                     </form>
                                     <!-- end form -->
-    
                                 </div>
                                 <!--end primary-form-->
                             </div>
@@ -172,46 +157,7 @@
             <!--end row-->
         </div>
         <!--end container-->
-
-        <!--end container-->
     </section>
-
-    <script>
-        function validateForm() {
-            const nombre = document.getElementById('nombre').value;
-            const apellidoP = document.getElementById('apellidoP').value;
-            const apellidoM = document.getElementById('apellidoM').value;
-            const correo = document.getElementById('correo').value;
-            const confirmar_correo = document.getElementById('confirmar_correo').value;
-            const password = document.getElementById('password').value;
-            const password2 = document.getElementById('password2').value;
-            const terminos = document.getElementById('terminos').checked;
-    
-            let errorMessage = '';
-    
-            if (!nombre || !apellidoP || !apellidoM || !correo || !confirmar_correo || !password || !password2) {
-                errorMessage += 'Todos los campos son obligatorios.\n';
-            }
-    
-            if (correo !== confirmar_correo) {
-                errorMessage += 'Los correos electrónicos no coinciden.\n';
-            }
-    
-            if (password !== password2) {
-                errorMessage += 'Las contraseñas no coinciden.\n';
-            }
-    
-            if (!terminos) {
-                errorMessage += 'Debe aceptar los términos y condiciones.\n';
-            }
-    
-            if (errorMessage) {
-                alert(errorMessage);
-            } else {
-                document.getElementById('submit').type = 'submit';
-            }
-        }
-    </script>
     <!--end section-->
     <!-- End Section -->
 
@@ -219,7 +165,57 @@
     {% include  'includeFooter.html' %}
     <!-- Footer End -->
 
+    <script>
+        function validateForm() {
+            const nombre = document.getElementById('nombre').value.trim();
+            const apellidoP = document.getElementById('apellidoP').value.trim();
+            const apellidoM = document.getElementById('apellidoM').value.trim();
+            const correo = document.getElementById('correo').value.trim();
+            const confirmar_correo = document.getElementById('confirmar_correo').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const password2 = document.getElementById('password2').value.trim();
+            const terminos = document.getElementById('terminos').checked;
+
+            let errorMessage = '';
+
+            if (!nombre) {
+                errorMessage += 'El campo Nombre(s) es obligatorio.\n';
+            }
+            if (!apellidoP) {
+                errorMessage += 'El campo Apellido Paterno es obligatorio.\n';
+            }
+            if (!apellidoM) {
+                errorMessage += 'El campo Apellido Materno es obligatorio.\n';
+            }
+            if (!correo) {
+                errorMessage += 'El campo Correo electrónico es obligatorio.\n';
+            }
+            if (!confirmar_correo) {
+                errorMessage += 'El campo Confirmar correo electrónico es obligatorio.\n';
+            }
+            if (correo && confirmar_correo && correo !== confirmar_correo) {
+                errorMessage += 'Los correos electrónicos no coinciden.\n';
+            }
+            if (!password) {
+                errorMessage += 'El campo Contraseña es obligatorio.\n';
+            }
+            if (!password2) {
+                errorMessage += 'El campo Confirmar contraseña es obligatorio.\n';
+            }
+            if (password && password2 && password !== password2) {
+                errorMessage += 'Las contraseñas no coinciden.\n';
+            }
+            if (!terminos) {
+                errorMessage += 'Debe aceptar los términos y condiciones.\n';
+            }
+
+            if (errorMessage) {
+                alert(errorMessage);
+                return false;
+            }
+            return true;
+        }
+    </script>
+
 </body>
-
-
 </html>
