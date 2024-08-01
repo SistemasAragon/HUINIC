@@ -260,105 +260,70 @@
     <script>
         function editarCapacitador() {
             Swal.fire({
-                title: 'Información de curso',
+                title: 'Información de capacitador',
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
-                            '<div class="col-8 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Curso</span>` +
+                            '<div class="col-6 ">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Capacitador</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Mecanico de Motores en autos de disel</span>` +
-                                    `</div>` +    
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input"  value="Victor Patiño Mejia" >` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' +
-                            '<div class="col-2 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Area</span>` +
+                            '<div class="col-3 ">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">CURP</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Mecanica </span>` +
-                                    `</div>` +    
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="16" value="HDHFSBMCJDHF" >` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
-                            '<div class="col-2 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Formato</span>` +
+                            '<div class="col-3 ">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">RFC</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Online </span>` +
-                                    `</div>` +    
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="13" value="HDHHBDJKBHK" >` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label ">Horas</span>` +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Fecha de nacimiento</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">500 horas</span>` +
+                                        `<input type="date" id="" name="" class="swal2-input my-swal-input" >` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' + 
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio</span>` +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Correo</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">300 pesos</span>` +
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input"  value="victor@gmail.com" >` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' +   
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Descuento</span>` +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Telefono</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">100 pesos</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio final</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">56 pesos</span>` +
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="5511516850" >` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 1</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Dar a conocer los diferentes medios de comunicación</span>` +
-                                    `</div>` +  
-                                `</li>` +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Estado</span>` +
+                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Activo</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="" name="" required>' +
+                                                '<option value="" disabled selected>Selecciona un estado</option>' +
+                                                '<option value="Activo">Activo</option>' +
+                                            '</select>' +
+                                        `</div>` +
+                                `</li>` + 
                             '</div>' +   
                         '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 2</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Enseñar a usar herramientas de informatica</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 3</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Implementar conocimientos de informatica en la vida</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<span class="my-swal-label centrar">Acerca del curso</span>` +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Curso de marketing digital en sistemas de informacion con el proposito de crear medios que ayuden a la actualizacion informactica en la meta de innovación</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                        '</div>' +
-                        '<p></p>' +
                     `</div>`,
                 focusConfirm: false,
                 showCancelButton: true,
@@ -375,8 +340,8 @@
                 }, 
                 preConfirm: () => {
                     const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
-
-                    return fetch('{% url 'listaCapacitadores' %}', {
+                
+                    return fetch('{% url 'capacitadoresLista' %}', {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',

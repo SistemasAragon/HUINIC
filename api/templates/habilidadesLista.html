@@ -133,9 +133,54 @@
     <!--end section-->
     <!-- End Home -->
 
+    <!-- START -->
+    <section class="section-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="post"  id="FormConocimientos">
+                                {% comment %} <form method="post" action="{% url '' %}" id=""> {% endcomment %}
+        
+                                {% csrf_token %}
+                                <div class="row">
+                                    
+                                    <div class="col-lg-3">
+
+                                    </div> <!-- end col -->
+
+                                    <div class="col-lg-3">
+
+                                        <div class="mb-3">
+                                            <label for="curp" class="form-label">Habilidad</label>
+                                            <input type="text" id="" name="" class="form-control" placeholder="Empatia" maxlength="18" required>
+                                        </div>
+
+                                    </div> <!-- end col -->
+                
+                                    <div class="col-lg-6" >
+        
+                                        <div class="text-center" style="margin-top: 30px;">
+                                            <button type="submit" class="btn btn-primary" id="btnGuardar" name="btnGuardar">Guardar</button>
+                                        </div> <!-- end col -->
+        
+                                    </div> <!-- end col -->
+
+                                </div>    
+                                
+                            </form>
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- END -->
 
     <!-- START -->
-    <section class="section">
+    <section class="section-50">
         <div class="container">
 
             <div class="row" >

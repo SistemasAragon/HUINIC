@@ -16,9 +16,7 @@
     <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
 
-    <!-- DataTables CSS -->
-    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"> {% endcomment %}
-
+  
 </head>
 
 <body>
@@ -175,7 +173,7 @@
                                 Activa 
                             </td>
                             <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCapacitador()">
                                     Editar 
                                 </a>
                             </td>
@@ -200,7 +198,7 @@
                                 Activa 
                             </td>
                             <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCapacitador()">
                                     Editar 
                                 </a>
                             </td>
@@ -225,7 +223,7 @@
                                 Activa 
                             </td>
                             <td class="centrar">
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarEmpleado('{{ empleado.fkUsuario.idUsuario }}', '{{ empleado.nombre }}', '{{ empleado.apellidoPaterno }}', '{{ empleado.apellidoMaterno }}', '{{ empleado.numeroPersonal }}', '{{ empleado.numeroContacto }}', '{{ empleado.correo }}', '{{ empleado.fechaNacimiento }}', '{{ empleado.curp }}', '{{ empleado.codigoPostal }}', '{{ empleado.rfc }}', '{{ empleado.cuenta }}', '{{ empleado.clave }}', '{{ empleado.status }}', '{{ empleado.cargo }}')">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarCapacitador()">
                                     Editar 
                                 </a>
                             </td>
@@ -247,10 +245,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     
-    <!-- DataTables JS -->
-    {% comment %} <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script> {% endcomment %}
-
-
 
     <script>
         $(document).ready(function () {
@@ -280,107 +274,72 @@
 
     <!-- Script de editar datos-->
     <script>
-        function editarEmpleado(claveEmpleado, nuevoNombre, nuevoApellidoPaterno, nuevoApellidoMaterno, nuevoIdNumeroPersonal, nuevoIdNumeroContacto, nuevoNumeroPersonal, nuevoNumeroContacto, nuevoGmail, nuevaFechaNacimiento, nuevoCurp, nuevoCodigoPostal, nuevoRfc, nuevaCuenta, nuevaClave , nuevoCargo, nuevoStatus) {
+        function editarCapacitador() {
             Swal.fire({
-                title: 'Información de curso',
+                title: 'Información de capacitador',
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
-                            '<div class="col-8 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Curso</span>` +
+                            '<div class="col-6 ">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Capacitador</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Mecanico de Motores en autos de disel</span>` +
-                                    `</div>` +    
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input"  value="Victor Patiño Mejia" >` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' +
-                            '<div class="col-2 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Area</span>` +
+                            '<div class="col-3 ">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">CURP</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Mecanica </span>` +
-                                    `</div>` +    
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="16" value="HDHFSBMCJDHF" >` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
-                            '<div class="col-2 ">' +
-                                `<li class="my-swal-list-item "><span class="my-swal-label ">Formato</span>` +
+                            '<div class="col-3 ">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">RFC</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato "> Online </span>` +
-                                    `</div>` +    
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="13" value="HDHHBDJKBHK" >` +
+                                    `</div>` +  
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label ">Horas</span>` +
+                            '<div class="col-6">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Empresa</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">500 horas</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">300 pesos</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                            '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Descuento</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">100 pesos</span>` +
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input"  value="Centro Universitario de especialidades" >` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' + 
                             '<div class="col-3">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio final</span>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Correo</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">56 pesos</span>` +
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input"  value="victor@gmail.com" >` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Telefono</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="5511516850" >` +
                                     `</div>` +  
                                 `</li>` +
                             '</div>' + 
                         '</div>' +
                         '<p></p>' +
                         '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 1</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Dar a conocer los diferentes medios de comunicación</span>` +
-                                    `</div>` +  
-                                `</li>` +
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Estado</span>` +
+                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Activo</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="" name="" required>' +
+                                                '<option value="" disabled selected>Selecciona un estado</option>' +
+                                                '<option value="Activo">Activo</option>' +
+                                            '</select>' +
+                                        `</div>` +
+                                `</li>` + 
                             '</div>' +   
                         '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 2</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Enseñar a usar herramientas de informatica</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Objetivo 3</span>` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Implementar conocimientos de informatica en la vida</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' +   
-                        '</div>' +
-                        '<p></p>' +
-                        '<div class="row">' +
-                            '<div class="col-12">' +
-                                `<span class="my-swal-label centrar">Acerca del curso</span>` +
-                                `<li class="my-swal-list-item">` +
-                                    `<div class="my-swal-input-container">` +
-                                        `<span class=etiquetaDato ">Curso de marketing digital en sistemas de informacion con el proposito de crear medios que ayuden a la actualizacion informactica en la meta de innovación</span>` +
-                                    `</div>` +  
-                                `</li>` +
-                            '</div>' + 
-                        '</div>' +
-                        '<p></p>' +
                     `</div>`,
                 focusConfirm: false,
                 showCancelButton: true,
@@ -397,24 +356,8 @@
                 }, 
                 preConfirm: () => {
                     const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
-                    const nuevoNombre = Swal.getPopup().querySelector('#nuevoNombre').value;
-                    const nuevoApellidoPaterno = Swal.getPopup().querySelector('#nuevoApellidoPaterno').value;
-                    const nuevoApellidoMaterno = Swal.getPopup().querySelector('#nuevoApellidoMaterno').value;
-                    const nuevoNumeroPersonal = Swal.getPopup().querySelector('#nuevoNumeroPersonal').value;
-                    const nuevoNumeroContacto = Swal.getPopup().querySelector('#nuevoNumeroContacto').value;
-                    const nuevoIdNumeroPersonal = Swal.getPopup().querySelector('#nuevoIdNumeroPersonal').value;
-                    const nuevoIdNumeroContacto = Swal.getPopup().querySelector('#nuevoIdNumeroContacto').value;
-                    const nuevoGmail = Swal.getPopup().querySelector('#nuevoGmail').value;
-                    const nuevaFechaNacimiento = Swal.getPopup().querySelector('#nuevaFechaNacimiento').value;
-                    const nuevoCurp = Swal.getPopup().querySelector('#nuevoCurp').value;
-                    const nuevoCodigoPostal = Swal.getPopup().querySelector('#nuevoCodigoPostal').value;
-                    const nuevoRfc = Swal.getPopup().querySelector('#nuevoRfc').value;
-                    const nuevoStatus = Swal.getPopup().querySelector('#nuevoStatus').value;
-                    const nuevaCuenta = Swal.getPopup().querySelector('#nuevaCuenta').value;
-                    const nuevaClave = Swal.getPopup().querySelector('#nuevaClave').value;
-                    const nuevoCargo = Swal.getPopup().querySelector('#nuevoCargo').value;
-
-                    return fetch('{% url 'postulaciones' %}', {
+                
+                    return fetch('{% url 'capacitadoresLista' %}', {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -422,22 +365,6 @@
                             },
                             body: JSON.stringify({
                                 claveEmpleado: claveEmpleado,
-                                nuevoNombre: nuevoNombre,
-                                nuevoApellidoPaterno: nuevoApellidoPaterno,
-                                nuevoApellidoMaterno: nuevoApellidoMaterno,
-                                nuevoNumeroPersonal: nuevoNumeroPersonal,
-                                nuevoNumeroContacto: nuevoNumeroContacto,
-                                nuevoIdNumeroPersonal: nuevoIdNumeroPersonal,
-                                nuevoIdNumeroContacto: nuevoIdNumeroContacto,
-                                nuevoGmail: nuevoGmail,
-                                nuevaFechaNacimiento: nuevaFechaNacimiento,
-                                nuevoCurp: nuevoCurp,
-                                nuevoCodigoPostal: nuevoCodigoPostal,
-                                nuevoRfc: nuevoRfc,
-                                nuevoStatus: nuevoStatus,
-                                nuevaCuenta: nuevaCuenta,
-                                nuevaClave: nuevaClave,
-                                nuevoCargo: nuevoCargo,
                         }),
                     })
                     .then(response => response.json())
@@ -466,13 +393,6 @@
         }
     </script>
     <!-- Script de editar datos-->
-
-    <script>
-        document.getElementById('downloadBtn').addEventListener('click', function(event) {
-            event.preventDefault();
-            alert('Debe cumplir cierta acción para que el botón se active.');
-        });
-    </script>
 
 </body>
 

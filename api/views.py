@@ -101,7 +101,8 @@ class capacitadoresLista(APIView):
     template_name= "capacitadoresLista.html"
     def get(self,request):
         return render(request,self.template_name)
-
+    
+    
 class cursosListaCandidato(APIView):
     template_name= "cursosListaCandidato.html"
     def get(self,request):

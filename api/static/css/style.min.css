@@ -244,6 +244,10 @@ a.text-danger:focus {
     background-color: #D0C9E5 !important
 }
 
+.bg-white {
+    background-color: #ffffff !important
+}
+
 .bg-soft-dark {
     background-color: rgba(22, 28, 45, 0.05) !important
 }
