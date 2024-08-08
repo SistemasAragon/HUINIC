@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-u6zyh=s7=4cnatt_(0acau(2n(41ouszp&1y(wtlsg#q5ia#6g
 # SECURITY WARNING: don't run with debug turned on in production!
 
 #DEBUG = True
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -128,14 +128,6 @@ LOGIN_URL = '/login/'
 
 
 
-if not DEBUG:
-    # Tell Django to copy statics to the `staticfiles` directory
-    # in your application directory on Render.
-    #STATIC_ROOT = BASE_DIR / 'api/static'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'api', 'static')
-    
-    
-    
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
