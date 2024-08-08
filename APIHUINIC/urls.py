@@ -71,8 +71,7 @@ urlpatterns = [
     path('candidatoLista/', candidatoLista.as_view(), name="candidatoLista"),
     path('homeEmpresaVC/', homeEmpresaVC.as_view(), name="homeEmpresaVC"),
     path('cursosListaCandidato/', cursosListaCandidato.as_view(), name="cursosListaCandidato"),
-    path('listaCandidatosVacante/', listaCandidatosVacante.as_view(), name="listaCandidatosVacante"),
-    
+    path('listaCandidatosVacante/', listaCandidatosVacante.as_view(), name="listaCandidatosVacante"),    
     path('capacitadorRegistroVC/', capacitadorRegistroVC.as_view(), name="capacitadorRegistroVC"),
     path('homeEmpresaCursos/', homeEmpresaCursos.as_view(), name="homeEmpresaCursos"),
     path('listaCapacitadores/', listaCapacitadores.as_view(), name="listaCapacitadores"),
@@ -115,4 +114,4 @@ urlpatterns = [
     path('editarPerfilCapacitador/', editarPerfilCapacitador.as_view(), name="editarPerfilCapacitador"),
     path('perfilCandidatoLista/', perfilCandidatoLista.as_view(), name="perfilCandidatoLista"),
     
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

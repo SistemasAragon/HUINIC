@@ -166,8 +166,7 @@ class postulacionesEmpresa(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
-
-    
+        
 class perfilEmpresaLogo(APIView):
     template_name= "perfilEmpresaLogo.html"
     def get(self,request):
