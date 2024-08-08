@@ -106,8 +106,6 @@ urlpatterns = [
     path('homeCapacitador/', homeCapacitador.as_view(), name="homeCapacitador"),
     path('homeEmpresa/', homeEmpresa.as_view(), name="homeEmpresa"),
     path('homeGeneral/', homeGeneral.as_view(), name="homeGeneral"),
-    
-    path('', homeGeneral.as_view(), name="homeGeneral"),
     path('homeSistemas/', homeSistemas.as_view(), name="homeSistemas"),
     path('recuperacionPass/', recuperacionPass.as_view(), name="recuperacionPass"),
     path('resultadosVacantes/', resultadosVacantes.as_view(), name="resultadosVacantes"),
