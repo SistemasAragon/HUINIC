@@ -14,10 +14,11 @@ from pathlib import Path
 
 import os
 
+# Directorios para archivos estáticos
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -80,10 +81,11 @@ WSGI_APPLICATION = 'APIHUINIC.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# Configuración de la base de datos
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -127,11 +129,8 @@ USE_TZ = True
 # La URL para acceder a los archivos estáticos
 STATIC_URL = '/static/'
 
-# La ubicación en el sistema de archivos donde se recogen los archivos estáticos para servirlos en producción
+# Esto le dice a Django dónde recoger los archivos estáticos para la producción
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-
 
 
 # Default primary key field type
