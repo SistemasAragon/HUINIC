@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -123,8 +124,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 #AUTH_USER_MODEL = 'api.Usuario'
+# La URL para acceder a los archivos estáticos
 STATIC_URL = '/static/'
-LOGIN_URL = '/login/'
+
+# La ubicación en el sistema de archivos donde se recogen los archivos estáticos para servirlos en producción
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 
