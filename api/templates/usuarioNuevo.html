@@ -1,4 +1,4 @@
-{% include  'includeHead.html' %}
+{% include  'includeGeneral.html' %}
 {% load static%}
 <!DOCTYPE html>
 <html lang="en">
@@ -9,48 +9,6 @@
 </head>
 
 <body>
-    <!-- Navbar STart -->
-    <header id="topnav" class="defaultscroll sticky">
-        <div class="container">
-            <!-- Logo container-->
-            <a class="logo" href="{% url 'homeGeneral' %}"><!-- Logooooo-->
-                <span class="logo-light-mode">
-                    <img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height: 40px;">
-                    <img src="{% static 'images/Logo.png'%}" class="l-light" alt="" style="height: 40px;">
-                </span>
-            </a>
-            <!-- End Logo container-->
-            <div class="menu-extras">
-                <div class="menu-item">
-                    <!-- Mobile menu toggle-->
-                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
-                        <div class="lines">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </a>
-                    <!-- End mobile menu toggle-->
-                </div>
-            </div>
-
-
-            <div id="navigation">
-                <!-- Navigation Menu-->
-                <ul class="navigation-menu nav-right">
-                    <li class="has-submenu parent-parent-menu-item">
-                        <a href="{% url 'homeGeneral' %}">Inicio</a><span class="menu-arrow"></span>
-                    </li>
-                </ul>
-                <!--end navigation menu-->
-            </div>
-            <!--end navigation-->
-        </div>
-        <!--end container-->
-    </header>
-    <!--end header-->
-    <!-- Navbar End -->
-
     <!-- Start Home -->
     <section class="bg-default page-next-level" style="background: url({% static 'images/bg/bg-page.png'%}) center no-repeat;">
         <div class="home-center">
