@@ -115,6 +115,4 @@ urlpatterns = [
     path('editarPerfilCapacitador/', editarPerfilCapacitador.as_view(), name="editarPerfilCapacitador"),
     path('perfilCandidatoLista/', perfilCandidatoLista.as_view(), name="perfilCandidatoLista"),
     
-]
-
-+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
