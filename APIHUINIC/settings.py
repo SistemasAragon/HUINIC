@@ -130,7 +130,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Esto le dice a Django dónde recoger los archivos estáticos para la producción
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'api/static')
 
 
 # Default primary key field type
