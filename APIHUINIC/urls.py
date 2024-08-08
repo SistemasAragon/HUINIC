@@ -110,6 +110,7 @@ urlpatterns = [
     path('resultadosVacantes/', resultadosVacantes.as_view(), name="resultadosVacantes"),
     path('solicitudesCurso/', solicitudesCurso.as_view(), name="solicitudesCurso"),
     path('usuarioNuevo/', usuarioNuevo.as_view(), name="usuarioNuevo"),
+    
     path('habilidadesCandidatoN2/', habilidadesCandidatoN2.as_view(), name="habilidadesCandidatoN2"),
     path('editarPerfilCapacitador/', editarPerfilCapacitador.as_view(), name="editarPerfilCapacitador"),
     path('perfilCandidatoLista/', perfilCandidatoLista.as_view(), name="perfilCandidatoLista"),
