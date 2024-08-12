@@ -1,0 +1,134 @@
+{% include  'includeCandidato.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>HUINIC | Inicio Candidato</title>
+</head>
+
+<body>
+
+    
+    <!-- Hero Start -->
+    <section class="bg-home zoom-image d-flex align-items-center position-relative" id="home">
+        <div class="bg-overlay image-wrap" id="hero-images"></div>
+        <div class="bg-overlay bg-gradient"></div>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-6 col-12">
+                    <div class="title-heading text-center">
+                        <h1 class="heading text-white mb-4">Bienvenido Candidato
+                        </h1>
+                        <p class="text-white-50 mx-auto para-desc">Sistema de emparejamiento para 
+                            candidatos y empresas
+                        </p>
+                        <p class="text-white-50 mx-auto para-desc">La mejor opción al alcance de tus manos.
+                        </p>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+
+    <!-- Service START -->
+    <section class="section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 py-4 g-0" style="margin-top: -60px;">
+                    <div class="tiny-three-item">
+                        <div class="tiny-slide" >
+                            <div class="rounded service-two shadow m-2"  style="height: 350px;">
+                                <div class="p-3 centrar">
+                                    <h5 class="serv-head ">Mis postulaciones</h5>
+                                    <p class="text-muted mb-1"> Vizualizacion de postulaciones </p>
+                                    <!-- <a href="{% url 'homeGeneral' %}" class="text-dark fs-6"> Ir</a> -->
+                                </div>
+                                <div class=" centrar">
+                                    <img style="height: 180px; border-radius: 8px;" src="{% static 'images/img1.jpg'%}"  class="img-fluid rounded-bottom mx-auto d-block"
+                                    alt="service-image">
+                                </div>
+                                <p></p>
+                                <div class="centrar">
+                                    <a href="{% url 'postulaciones' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end services-->
+
+                        <div class="tiny-slide">
+                            <div class="rounded service-two shadow m-2" style="height: 350px;">
+                                <div class="p-3 centrar">
+                                    <h5 class="serv-head ">Nuevas Vacantes</h5>
+                                    <p class="text-muted mb-1"> Vizualizacion de vacantes actuales</p>
+                                </div>
+                                <div class=" centrar">
+                                    <img style="height: 180px; border-radius: 8px;" src="{% static 'images/img14.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block"
+                                    alt="service-image">
+                                </div>
+                                <p></p>
+                                <div class="centrar">
+                                    <a href="{% url 'pruebaBusqueda' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Ver</a>
+                                </div>
+                            </div>
+                        </div>    
+                        <!--end services-->
+
+                        <div class="tiny-slide">
+                            <div class="rounded service-two shadow m-2" style="height: 350px;">
+                                <div class="p-3 centrar">
+                                    <h5 class="serv-head">Cursos</h5>
+                                    <p class="text-muted mb-1 "> Vizualizacionde cursos existentes</p>
+                                </div>
+                                <div class=" centrar">
+                                    <img style="height: 180px; border-radius: 8px;" src="{% static 'images/img12.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block"
+                                    alt="service-image">
+                                </div>
+                                <p></p>
+                                <div class="centrar">
+                                    <a href="{% url 'cursosListaCandidato' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Nuevo</a>
+                                    <a href="{% url 'cursosInscritoCandidato' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Inscrito</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end services-->
+
+                    </div>
+                    <!--end slide -->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- Service END -->
+
+    <!-- Footer End -->
+    {% include  'includeFooter.html' %}
+    <!-- Footer End -->
+
+    <!-- play-btn -->
+    <script src="{% static 'js/tobii.min.js'%}"></script>
+    <!-- PARALLAX -->
+    <script src="{% static 'js/parallax.js'%}"></script>
+    <!-- BACKGROUND -->
+    <script src="{% static 'js/easy_background.js'%}"></script>
+    
+    <script>
+        easy_background("#hero-images", {
+            slide: ["{% static 'images/img8.jpg'%}", "{% static 'images/img7.jpg'%}", "{% static 'images/img3.jpg'%}"],
+            delay: [5000, 5000, 5000]
+        });
+    </script>
+
+</body>
+
+
+</html>
