@@ -136,6 +136,11 @@ class homeCandidato(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
+class vehiculosLista(APIView):
+    template_name= "vehiculosLista.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
 class homeEmpresa(APIView):
     template_name= "homeEmpresa.html"
     def get(self,request):

@@ -5,7 +5,7 @@
 
 
 <head>
-    <title>HUINIC | Habilidades Lista</title>
+    <title>HUINIC | Vehiculos Lista</title>
 
     
     <!-- Luego incluye DataTables -->
@@ -29,7 +29,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">Habilidades de vacantes</h3>
+                                <h3 class="title-pager mb-0">Vehiculos</h3>
                             </div>
                         </div>
                         <!--end col-->
@@ -51,20 +51,30 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <form method="post"  id="FormConocimientos">
+                            <form method="post"  id="FormArea">
                                 {% comment %} <form method="post" action="{% url '' %}" id=""> {% endcomment %}
         
                                 {% csrf_token %}
                                 <div class="row centrar">
                                     
                                     <div class="col-lg-4">
-                                        <label for="curp" class="form-label">Habilidad a registrar:</label>
+
+                                        <label for="curp" class="form-label">Area a registrar:</label>
+                                        <input type="text" id="" name="" class="form-control" placeholder="Gasolina"  maxlength="18" required>
+
                                     </div> <!-- end col -->
 
                                     <div class="col-lg-4">
 
-                                        <input type="text" id="" name="" class="form-control" placeholder="Empatia" maxlength="18" required>
-
+                                        <label  class="form-label">Vehiculo:</label>
+                                        <div class=" position-relative">
+                                            <select name="vehiculo" id="vehiculo" class="form-control ps-5 fs-6">
+                                                <option value="" selected disabled>Selecciona el vehiculo</option>
+                                                <option value="Motocicleta">Motocicleta</option>
+                                                <option value="Automovil">Automovil</option>
+                                                <!-- Agrega más opciones según sea necesario -->
+                                            </select>
+                                        </div>
                                     </div> <!-- end col -->
                 
                                     <div class="col-lg-4" >
@@ -93,70 +103,50 @@
         <div class="container">
 
             <div class="row" >
-                <table id="TablaHabilidades" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                <table id="TablaArea" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
-                            <th scope="col">Habilidad</th>
+                            <th scope="col">Area</th>
+                            <th scope="col">Vehiculo</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                Empatia
+                                Gasolina 
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
+                                Automovil
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarArea()">
                                     Editar 
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Trabajo en Equipo
+                                Disel servicio ligero
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
+                                Automovil
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarArea()">
                                     Editar 
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Trabajo bajo presión
+                                Hibridos y electricos
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
-                                    Editar 
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Liderazgo
+                                Automovil
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
-                                    Editar 
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Ventas
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
-                                    Editar 
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Compromiso
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarHabilidad()">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarArea()">
                                     Editar 
                                 </a>
                             </td>
@@ -177,20 +167,29 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <form method="post"  id="FormNiveles">
+                            <form method="post"  id="FormSistema">
                                 {% comment %} <form method="post" action="{% url '' %}" id=""> {% endcomment %}
         
                                 {% csrf_token %}
                                 <div class="row centrar">
                                     
                                     <div class="col-lg-4">
-                                        <label for="curp" class="form-label">Nivel de desarrollo</label>
+                                        <label class="form-label">Sistema a registrar:</label>
+                                        <input type="text" id="" name="" class="form-control" placeholder="Transmision electrica" maxlength="18" required>
+
                                     </div> <!-- end col -->
 
                                     <div class="col-lg-4">
 
-                                        <input type="text" id="" name="" class="form-control" placeholder="innovador" maxlength="18" required>
-
+                                        <label  class="form-label">Area:</label>
+                                        <div class=" position-relative">
+                                            <select name="vehiculo" id="vehiculo" class="form-control ps-5 fs-6">
+                                                <option value="" selected disabled>Selecciona el Area</option>
+                                                <option value="Motocicleta">Gasolina</option>
+                                                <option value="Automovil">Disel ligero</option>
+                                                <!-- Agrega más opciones según sea necesario -->
+                                            </select>
+                                        </div>
                                     </div> <!-- end col -->
                 
                                     <div class="col-lg-4" >
@@ -219,50 +218,50 @@
         <div class="container">
 
             <div class="row" >
-                <table id="TablaNiveles" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                <table id="TablaSistemas" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
                     <thead class="border-top border-bottom bg-light-subtle border-light">
                         <tr>
-                            <th scope="col">Nivel de desarrollo</th>
+                            <th scope="col">Sistema</th>
+                            <th scope="col">Area</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                Principiante
+                                Combustion interna
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarNivel()">
+                                Gasolina
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarSistema()">
                                     Editar 
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Intermedio
+                                Sistema de frenos
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarNivel()">
+                                Gasolina
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarSistema()">
                                     Editar 
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Creativo
+                                Transmision automatica
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarNivel()">
-                                    Editar 
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Desarrollador
+                                Gasolina
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2" onclick="editarNivel()">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="editarSistema()">
                                     Editar 
                                 </a>
                             </td>
@@ -285,15 +284,15 @@
     
     <script>
         $(document).ready(function () {
-        $('#TablaHabilidades').DataTable({
+        $('#TablaArea').DataTable({
             lengthMenu: [5, 10, 15],
             pageLength: 5,
             destroy:true,
             "language": {
                 lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningúna habilidad encontrada",
-                info: "Mostrando _END_ de _MAX_ habilidades",
-                infoEmpty: "Ningúna habilidad encontrada",
+                zeroRecords: "Ningúna area encontrada",
+                info: "Mostrando _END_ de _MAX_ areas",
+                infoEmpty: "Ningúna area encontrada",
                 infoFiltered: "",
                 search: "Buscar:",
                 loadingRecords: "Cargando... ",
@@ -312,15 +311,15 @@
 
     <script>
         $(document).ready(function () {
-        $('#TablaNiveles').DataTable({
+        $('#TablaSistemas').DataTable({
             lengthMenu: [5, 10, 15],
             pageLength: 5,
             destroy:true,
             "language": {
                 lengthMenu: "Mostrar _MENU_ registros por página",
-                zeroRecords: "Ningún nivel encontrado",
-                info: "Mostrando _END_ de _MAX_ niveles",
-                infoEmpty: "Ningún nivel encontrado",
+                zeroRecords: "Ningún sistema encontrado",
+                info: "Mostrando _END_ de _MAX_ sistemas",
+                infoEmpty: "Ningún sistema encontrado",
                 infoFiltered: "",
                 search: "Buscar:",
                 loadingRecords: "Cargando... ",
@@ -339,19 +338,34 @@
 
     <!-- Script de editar datos-->
     <script>
-        function editarHabilidad() {
+        function editarArea() {
             Swal.fire({
-                title: 'Habilidad de vacante',
+                title: 'Area de vacante',
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
                             '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label ">Habilidad</span>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Area</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="Crompomiso" >` +
+                                        `<input id="" name="" class="swal2-input my-swal-input" maxlength="30" value="Disel servicio ligero" >` +
                                     `</div>` + 
                                 `</li>` +
                             '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Vehiculo</span>` +
+                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Automovil</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="" name="" required>' +
+                                                '<option value="" disabled selected>Selecciona un vehiculo</option>' +
+                                                '<option value="Activo">Automovil</option>' +
+                                                '<option value="Activo">Motocicleta</option>' +
+                                            '</select>' +
+                                        `</div>` +
+                                `</li>` + 
+                            '</div>' +   
                         '</div>' +
                     `</div>`,
                 focusConfirm: false,
@@ -410,19 +424,35 @@
 
     <!-- Script de editar datos-->
     <script>
-        function editarNivel() {
+        function editarSistema() {
             Swal.fire({
-                title: 'Nivel de desarrollo ',
+                title: 'Sistema de area vehicular',
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
                             '<div class="col-12">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label ">Nivel  </span>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Sistema  </span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="10" value="Desarrollador" >` +
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="20" value="Combustion interna" >` +
                                     `</div>` + 
                                 `</li>` +
                             '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Area</span>` +
+                                    `<div class="my-swal-text" style="font-size: 12px;" disabled>Gasolina</div></li >` +
+                                        `<div class="my-swal-input-container">` +
+                                            '<select class="form-select" id="" name="" required>' +
+                                                '<option value="" disabled selected>Selecciona una area</option>' +
+                                                '<option value="Activo">Gasolina</option>' +
+                                                '<option value="Activo">Disel servicio ligero</option>' +
+                                                '<option value="Activo">Hibridos y electricos</option>' +
+                                            '</select>' +
+                                        `</div>` +
+                                `</li>` + 
+                            '</div>' +   
                         '</div>' +
                     `</div>`,
                 focusConfirm: false,
