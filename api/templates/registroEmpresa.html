@@ -17,8 +17,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">  Realiza el registro de manera rápida </h3>
-                                <h3 class="title-pager mb-0">  Llena los campos con los datos solicitados </h3>
+                                <h3 class="title-pager mb-0">  Solicitud de inscripcion empresa</h3>
                             </div>
                         </div>
                         <!--end col-->
@@ -41,7 +40,7 @@
                     <div class="rounded p-4 shadow border">
                         <div class="row">
                             <div class="col-12">
-                                <div class="primary-form mt-3">
+                                <div class="primary-form ">
                                     <form method="post" id="myForm" name="myForm" onsubmit="return validateForm()">
                                         <p class="mb-0" id="error-msg"></p>
                                         <div id="simple-msg"></div>
@@ -50,7 +49,7 @@
                                                 <label class="form-label fs-6">Nombre de la empresa <span
                                                         class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <input name="nombre" id="nombre" type="text" class="form-control ps-5 fs-6"
+                                                    <input name="nombre" id="nombre" type="text" class="form-control  fs-6"
                                                         placeholder="Nombre de la empresa :">
                                                 </div>
                                             </div>
@@ -58,7 +57,7 @@
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">Número de personas que conforman la empresa <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <select name="num_empleados" id="num_empleados" class="form-control ps-5 fs-6">
+                                                    <select name="num_empleados" id="num_empleados" class="form-control fs-6">
                                                         <option value="" disabled selected>Seleccione un rango</option>
                                                         <option value="1-10">1 - 10</option>
                                                         <option value="11-50">11 - 50</option>
@@ -70,12 +69,13 @@
                                                 </div>
                                             </div>
                                             
+                                            <p></p>
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">RFC de la empresa <span
                                                         class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="apellidoM" id="apellidoM" type="text" class="form-control ps-5 fs-6"
+                                                    <input name="apellidoM" id="apellidoM" type="text" class="form-control fs-6"
                                                         placeholder="ABCD123ACD1 :">
                                                 </div>
                                             </div>
@@ -87,16 +87,18 @@
                                                 <div class="form-icon position-relative">
                                                     <!-- <i class="mdi mdi-email-outline icon-sm icons"></i> -->
                                                     <input name="correo" id="correo" type="email"
-                                                        class="form-control ps-5 fs-6" placeholder="Correo electronico :">
+                                                        class="form-control fs-6" placeholder="Correo electronico :">
                                                 </div>
     
                                             </div>
+
+                                            <p></p>
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">Número de telefono <span
                                                         class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="apellidoM" id="apellidoM" type="number" class="form-control ps-5 fs-6"
+                                                    <input name="apellidoM" id="apellidoM" type="number" class="form-control fs-6"
                                                         placeholder="123456789 :">
                                                 </div>
                                             </div>
@@ -104,40 +106,16 @@
                                             <div class="col-md-6">
                                                 <label class="form-label fs-6">¿Qué rol buscas tener en HUNIC? <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
-                                                    <select name="rol" id="rol" class="form-control ps-5 fs-6">
+                                                    <select name="rol" id="rol" class="form-control fs-6">
                                                         <option value="">Selecciona un rol</option>
                                                         <option value="capacitar">Capacitar</option>
                                                         <option value="vacantes">Vacantes</option>
                                                         <option value="ambos">Ambos</option>
-                                                        <!-- Agrega más opciones según sea necesario -->
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <label class="form-label fs-6">Contraseña <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="password" id="password" type="password" class="form-control ps-5 fs-6"
-                                                        placeholder="Contraseña :">
-                                                </div>
-                                            </div>
-    
-                                            <div class="col-md-6">
-    
-                                                <label class="form-label fs-6">Confirma la contraseña <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <!-- <i class="mdi mdi-exit icon-sm icons"></i> -->
-                                                    <input name="password2" id="password2" type="password"
-                                                        class="form-control ps-5 fs-6" placeholder="Confirmación de contraseña :">
-                                                        <br>
-                                                </div>
-                                                
-    
-                                            </div>
-                                            
 
+                                            <p></p>
                                             <div class="col-md-12" style="text-align: center;">
                                                 <div class="form-check" style="display: inline-block;">
                                                     <input class="form-check-input" type="checkbox" id="terminos" name="terminos" onclick="toggleSubmitButton()">
@@ -149,7 +127,7 @@
                                             
                                         
                                             <div class="col-12 fs-6 mt-3 text-center">
-                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="registerUser()" disabled>Registrarse</button>
+                                                <button type="button" id="submit" name="send" class="btn btn-primary" onclick="registerUser()" disabled>Enviar solicitud</button>
                                             </div>
                                         <!--end row-->
                                     </form>
@@ -188,7 +166,6 @@
 
 <script>
     function registerUser() {
-        // Mostrar la alerta
         Swal.fire({
             title: '¡Excelente!',
             text: 'Hemos hecho llegar tus datos a Hunic, un promotor se contactará contigo.',
@@ -199,7 +176,6 @@
             }
         }).then((result) => {
             if (result.isConfirmed) {
-                // Redirigir al usuario después de que confirme la alerta
                 window.location.href = '{% url 'login' %}';
             }
         });

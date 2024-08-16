@@ -65,33 +65,37 @@
                 </div>
 
                 <div class="col-6">
-                    <div class="content mt-4">
-                        <h5 class="title pb-3 border-bottom">Acerca de:</h5>
-                        <p class="text-muted">Curso de marketing digital en sistemas de informacion con el 
-                            proposito de crear medios que ayuden a la actualizacion informactica en la 
-                            meta de innovación 
-                        </p>
-                    </div>
-
-                    <div class="tiny-single-item">
-                        <div class="tiny-slide text-center testimonial mt-2">
-                            <h6>Muy bueno</h6>
-                            <ul class="list-unstyled mb-0 mt-2">
-                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star text-warning fs-4"></i></li>
-                            </ul>
+                    <div class="sidebar p-4 rounded bg-light ms-lg-3">
+                        <div class="row">
+                            <h5 class="pb-2 widget-title border-bottom">Caracteristicas</h5>
                         </div>
-                        <!--end content-->
 
-                    </div>       
-                    
-                    
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- RELATED SERVICES -->
+                                <div class="widget mb-4">
+                                    <ul class="list-unstyled mt-2 mb-0 catagories">
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Duracion: 34 horas</i></li>
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Nivel: Desarrollador</i></li>
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Modalidad: En linea</i></li>
+                                    </ul>
+                                </div>
+                                <!-- RELATED SERVICES -->
+                            </div>
+                            <div class="col-6">
+                                <!-- RELATED SERVICES -->
+                                <div class="widget mb-4">
+                                    <ul class="list-unstyled mt-2 mb-0 catagories">
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Costo: $450 MXN</i></li>
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Capacitador: Victor Patiño Mejia</i></li>
+                                    </ul>
+                                </div>
+                                <!-- RELATED SERVICES -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
         <!-- end container -->
     </section>
@@ -225,8 +229,7 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Info</th>
                             <th scope="col">Estado</th>
-                            <th scope="col">Documento </th>
-                            <th scope="col">Documento </th>
+                            <th scope="col">Certificado </th>
                             <th scope="col">Encuesta</th>
                         </tr>
                     </thead>
@@ -241,13 +244,10 @@
                                 </a>
                             </td>
                             <td>
-                                Inscrito
+                                Inscrito <a onclick="showMenu()">⋮</a>
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
+                                <a href="#" class="btn btn-primary  mt-2">Generar </a>
                             </td>
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2">Enviar</a>
@@ -263,13 +263,10 @@
                                 </a>
                             </td>
                             <td>
-                                Inscrito
+                                Inscrito <a onclick="showMenu()">⋮</a>
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
+                                <a href="#" class="btn btn-primary  mt-2">Generar</a>
                             </td>
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2">Enviar</a>
@@ -285,13 +282,10 @@
                                 </a>
                             </td>
                             <td>
-                                Inscrito
+                                Inscrito <a onclick="showMenu()">⋮</a>
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary  mt-2">Subir</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary  mt-2">Descargar</a>
+                                <a href="#" class="btn btn-primary  mt-2">Generar</a>
                             </td>
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2">Enviar</a>
@@ -338,18 +332,56 @@
                     previous: "Anterior"
                 }
             }
-            // Otras opciones y configuraciones de DataTables que puedas tener...
         });
         });
 
     </script>
+
+
+    <!-- Incluye tu script de JavaScript -->
+    <script>
+        function showMenu() {
+            Swal.fire({
+                title: 'Cambiar Estado',
+                input: 'select',
+                inputOptions: {
+                    'Inscrito': 'Inscrito',
+                    'Pendiente': 'Pendiente',
+                    'Reprobado': 'Reprobado'
+                },
+                inputPlaceholder: 'Selecciona un estado',
+                showCancelButton: true,
+                confirmButtonText: 'Guardar',
+                cancelButtonText: 'Cancelar',
+                customClass: {
+                    container: 'my-swal-container2',
+                    popup: 'my-swal-popup',
+                    title: 'my-swal-title2',
+                    input: 'my-swal-input2',
+                    cancelButton: 'my-swal-cancel-button2',
+                    confirmButton: 'my-swal-confirm-button2',
+                }, 
+                inputValidator: (value) => {
+                    if (!value) {
+                        return 'Debes seleccionar un estado';
+                    }
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Aquí puedes actualizar el estado en tu base de datos o en el DOM
+                    console.log('Nuevo estado seleccionado:', result.value);
+                    Swal.fire('Estado actualizado', `El estado se ha cambiado a: ${result.value}`, 'success');
+                }
+            });
+        }
+    </script>
+
 
     <script>
         $(document).ready(function () {
         $('#TablaCheck').DataTable({
             lengthMenu: [5, 10, 15, 20, 50, 100],
             pageLength: 5,
-            //lengthChange: false,  Oculta el menú de selección de cantidad de registros
             destroy:true,
             "language": {
                 lengthMenu: "Mostrar _MENU_ registros por página",
@@ -366,7 +398,6 @@
                     previous: "Anterior"
                 }
             }
-            // Otras opciones y configuraciones de DataTables que puedas tener...
         });
         });
 

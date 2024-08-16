@@ -7,18 +7,7 @@
         /* overflow: hidden; Elimina o ajusta esta línea según sea necesario */
     }
     
-    /* Estilo para el contenido de la modal */
-    .my-swal-popup {
-    border: 2px solid #821111;
-    border-radius: 10px;
-    align-items: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ajusta según sea necesario */
-    width: 530px;
-    }
-
+    
     .my-swal-confirm-button2 {
         background-color: #ff9034  !important;
         color: white !important;

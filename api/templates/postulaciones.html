@@ -86,6 +86,9 @@
                                 <a href="#" class="btn btn-primary  mt-2" onclick="verPostulacion()">
                                     Ver 
                                 </a>
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Eli..
+                                </a>
                             </td>
                             <td>
                                 <span data-toggle="tooltip" data-placement="top" title="Solicitud Recibida">SR</span>
@@ -113,6 +116,9 @@
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2" onclick="verPostulacion()">
                                     Ver 
+                                </a>
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Eli..
                                 </a>
                             </td>
                             <td>
@@ -142,6 +148,9 @@
                                 <a href="#" class="btn btn-primary  mt-2" onclick="verPostulacion()">
                                     Ver 
                                 </a>
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Eli..
+                                </a>
                             </td>
                             <td>
                                 Aceptación
@@ -170,6 +179,9 @@
                                 <a href="#" class="btn btn-primary  mt-2" onclick="verPostulacion()">
                                     Ver 
                                 </a>
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Eli..
+                                </a>
                             </td>
                             <td>
                                 <span data-toggle="tooltip" data-placement="top" title="No seleccionado">NS</span>
@@ -197,6 +209,9 @@
                             <td>
                                 <a href="#" class="btn btn-primary  mt-2" onclick="verPostulacion()">
                                     Ver 
+                                </a>
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Eli..
                                 </a>
                             </td>
                             <td>
@@ -241,7 +256,6 @@
                     previous: "Anterior"
                 }
             }
-            // Otras opciones y configuraciones de DataTables que puedas tener...
         });
         // Activar los tooltips después de que DataTables haya dibujado la tabla
         /* $('#TablaPostulaciones').on('draw.dt', function() {
@@ -269,9 +283,10 @@
                                 `</li>` +
                             '</div>' +
                             '<div class="col-6">' +
+                                '<span >Centro Universitario de Especialidades</span>' +
                                 '<a href="{% url 'perfilEmpresaLogo' %}">' + 
                                     '<span>' + 
-                                        '<img src="{% static 'images/Logo.png'%}" class="l-dark" alt="" style="height:50px; " >' + 
+                                        '<img src="{% static 'images/cude.png'%}" class="l-dark" alt="" style="height:70px; " >' + 
                                     '</span>' + 
                                 '</a>' + 
                             '</div>' +  
@@ -388,8 +403,9 @@
                         '<p></p>' +
                     `</div>`,
                 focusConfirm: false,
+                showConfirmButton: false,
                 showCancelButton: true,
-                confirmButtonText: 'Aceptar',
+                confirmButtonText: 'Eliminar',
                 cancelButtonText: 'Cerrar',
                 allowOutsideClick: false,
                 customClass: {

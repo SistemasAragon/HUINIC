@@ -129,7 +129,6 @@
                                                         <option value="casado">Casado</option>
                                                         <option value="divorciado">Divorciado</option>
                                                         <option value="viudo">Viudo</option>
-                                                        <!-- Agrega más opciones según sea necesario -->
                                                     </select>
                                                 </div>
                                             </div>
@@ -140,7 +139,6 @@
                                                         <option value="" selected disabled>Selecciona tu género</option>
                                                         <option value="masculino">Masculino</option>
                                                         <option value="femenino">Femenino</option>
-                                                        <!-- Agrega más opciones según sea necesario -->
                                                     </select>
                                                 </div>
                                             </div>
@@ -153,7 +151,6 @@
                                                         <option value="mexico">México</option>
                                                         <option value="argentina">Argentina</option>
                                                         <option value="españa">España</option>
-                                                        <!-- Agrega más opciones según sea necesario -->
                                                     </select>
                                                 </div>
                                             </div>
@@ -250,7 +247,7 @@
                 text: 'Se ha registrado el capacitador exitosamente.',
                 icon: 'success',
                 confirmButtonText: 'Aceptar',
-                confirmButtonColor: '#ff9034' // Color personalizado del botón
+                confirmButtonColor: '#ff9034' 
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = "{% url 'capacitadorRegistro' %}";

@@ -1,5 +1,17 @@
 
     /* Estilo para el contenido de la modal */
+    .my-swal-popup {
+        border: 2px solid #ff6600;
+        border-radius: 10px;
+        align-items: center;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Ajusta según sea necesario */
+        width: 530px;
+    }
+
+    /* Estilo para el contenido de la modal */
     .my-swal-popup2 {
     border: 2px solid #ff6600;
     border-radius: 10px;

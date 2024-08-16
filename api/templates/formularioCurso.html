@@ -1,4 +1,4 @@
-{% include  'includeCapacitador.html' %}
+{% include  'includeEmpresaCurso.html' %}
 {% load static%}
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@
                     <div class="rounded p-4 shadow border">
                         <div class="row">
                             <div class="col-12">
-                                <div class="primary-form mt-3">
+                                <div class="primary-form ">
 
                                     <form method="post" id="myForm" name="myForm" onsubmit="return validateForm()">
                                         <p class="mb-0" id="error-msg"></p>
@@ -55,7 +55,7 @@
                                                         class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
-                                                    <input name="name" id="name" type="text" class="form-control ps-5 fs-6"
+                                                    <input name="name" id="name" type="text" class="form-control  fs-6"
                                                         placeholder="Nombre del curso: ">
                                                 </div>
                                             </div>
@@ -67,46 +67,86 @@
                                                         class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <!-- <i class="mdi mdi-email-outline icon-sm icons"></i> -->
-                                                    <input name="email" id="email" type="email"
-                                                        class="form-control ps-5 fs-6" placeholder="Acerca del curso:">
+                                                    <input name="" id="" type=""
+                                                        class="form-control fs-6" placeholder="Acerca del curso:">
                                                 </div>
     
                                             </div>
                                             <!--end col-->
 
                                             <p></p>
-                                            <div class="centrar">Objetivos del curso</div>
-    
+                                            <div class="col-lg-3">
+                                                <label  class="form-label">Vehiculo:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona el nivel</option>
+                                                        <option value="Principiante">Principiante</option>
+                                                        <option value="Intermedio">Intermedio</option>
+                                                        <option value="Avanzado">Avanzado</option>
+                                                        <option value="Desarrollador">Desarrollador</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                            <div class="col-lg-4">
+                                                <label  class="form-label">Area:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona la modalidad</option>
+                                                        <option value="Presencial">Presencial</option>
+                                                        <option value="linea">En linea</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                            <div class="col-lg-5">
+                                                <label  class="form-label">Sistema:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona al capacitador</option>
+                                                        <option value="Presencial">Victor Patiño Mejia</option>
+                                                        <option value="linea">Fidelmar Jimenez Mendez</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                            <p></p>
+                                            <div class="centrar">Habilidades a obtener</div>    
                                             <div class="col-12">
-                                                <label class="form-label fs-6 mt-3 mb-1">Objetivo 1</label>
+                                                <label class="form-label fs-6  mb-1">Habilidad 1</label>
                                                 <div class="form-icon position-relative">
                                                     <i class="mdi mdi-book-outline icon-sm icons"></i>
                                                     <input name="subject" id="subject" class="form-control ps-5 fs-6"
-                                                        placeholder="Objetivo 1:">
+                                                        placeholder="Habilidad 1:">
                                                 </div>
                                             </div>
                                             <!--end col-->
 
                                             <div class="col-12">
-                                                <label class="form-label fs-6 mt-3 mb-1">Objetivo 2</label>
+                                                <label class="form-label fs-6 mt-3 mb-1">Habilidad 2</label>
                                                 <div class="form-icon position-relative">
                                                     <i class="mdi mdi-book-outline icon-sm icons"></i>
                                                     <input name="subject" id="subject" class="form-control ps-5 fs-6"
-                                                        placeholder="Objetivo 2:">
+                                                        placeholder="Habilidad 2:">
                                                 </div>
                                             </div>
                                             <!--end col-->
 
                                             <div class="col-12">
-                                                <label class="form-label fs-6 mt-3 mb-1">Objetivo 3</label>
+                                                <label class="form-label fs-6 mt-3 mb-1">Habilidad 3</label>
                                                 <div class="form-icon position-relative">
                                                     <i class="mdi mdi-book-outline icon-sm icons"></i>
                                                     <input name="subject" id="subject" class="form-control ps-5 fs-6"
-                                                        placeholder="Objetivo 3:">
+                                                        placeholder="Habilidad 3:">
                                                 </div>
                                             </div>
                                             <!--end col-->
 
+
+                                            
                                             <div class="col-4">
                                                 <label class="form-label fs-6 mt-3 mb-1">Horas de curso</label>
                                                 <div class="form-icon position-relative">
@@ -137,52 +177,51 @@
                                             </div>
                                             <!--end col-->
 
-                                            <div class="col-4">
-                                                <label class="form-label fs-6 mt-3 mb-1">Area</label>
-                                                <p></p>
-                                                <div>
-                                                    <input type="radio" name="area" id="sistemas">
-                                                    <label for="sistemas">Sistemas</label>
+                                            <p></p>
+                                            <div class="col-lg-4">
+                                                <label  class="form-label">Nivel:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona el nivel</option>
+                                                        <option value="Principiante">Principiante</option>
+                                                        <option value="Intermedio">Intermedio</option>
+                                                        <option value="Avanzado">Avanzado</option>
+                                                        <option value="Desarrollador">Desarrollador</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
                                                 </div>
-                                                <div>
-                                                    <input type="radio" name="area" id="motores">
-                                                    <label for="motores">Motores</label>
-                                                </div>
-                                                <div>
-                                                    <input type="radio" name="area" id="electronica">
-                                                    <label for="electronica">Electronica</label>
-                                                </div>
-                                                <div>
-                                                    <input type="radio" name="area" id="llantas">
-                                                    <label for="llantas">Llantas</label>
-                                                </div>
-                                                <div>
-                                                    <input type="radio" name="area" id="frenos">
-                                                    <label for="frenos">Frenos</label>
-                                                </div>
-                                                <div>
-                                                    <input type="radio" name="area" id="hojalateria">
-                                                    <label for="hojalateria">Hojalateria</label>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            
+                                            </div> <!-- end col -->
 
-                                            <div class="col-8">
-                                                <label class="form-label fs-6 mt-3 mb-1">Comentarios <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <i class="mdi mdi-message-outline icon-sm icons"></i>
-                                                    <textarea name="comments" id="comments" rows="4"
-                                                        class="form-control ps-5 fs-6" placeholder="Comentarios :"></textarea>
+                                            <div class="col-lg-4">
+                                                <label  class="form-label">Modalidad:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona la modalidad</option>
+                                                        <option value="Presencial">Presencial</option>
+                                                        <option value="linea">En linea</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
                                                 </div>
-                                            </div>
+                                            </div> <!-- end col -->
+
+                                            <div class="col-lg-4">
+                                                <label  class="form-label">Capacitador:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona al capacitador</option>
+                                                        <option value="Presencial">Victor Patiño Mejia</option>
+                                                        <option value="linea">Fidelmar Jimenez Mendez</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
                                         </div>
                                         <!-- end row -->
 
                                         <div class="row">
                                             <div class="col-12 fs-6 mt-3 centrar">
-                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Guardar</button>
+                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Registrar</button>
                                             </div>
                                             <!--end col-->
                                         </div>

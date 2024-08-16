@@ -133,7 +133,6 @@
                                                             <label for="habilidad15">Resiliencia</label>
                                                             
                                                         </div>
-                                                        <!-- Aquí puedes agregar más habilidades si lo deseas -->
                                                     </div>
                                                     <div id="mensaje-habilidades" class="mt-2" style="display: none;">
                                                         <p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>
@@ -619,7 +618,6 @@
                                             
                                             <!--FIN de nivel de area MOTO-->
                                             
-                                            <!-- Aquí puedes agregar más áreas y niveles si es necesario -->
         
                                         </div>
                                         <!-- end row -->
@@ -707,7 +705,7 @@
                 checkbox.addEventListener('change', function() {
                     var checkedCheckboxes = document.querySelectorAll('input[name="habilidad"]:checked');
                     if (checkedCheckboxes.length > maxHabilidades) {
-                        this.checked = false; // Desmarca la casilla si se intenta seleccionar una habilidad adicional después del límite
+                        this.checked = false; 
                         mostrarMensajeHabilidades();
                     } else {
                         ocultarMensajeHabilidades();

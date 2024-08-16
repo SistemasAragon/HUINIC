@@ -320,8 +320,6 @@
 
     <script>
         function guardarDatos() {
-            // Aquí iría la lógica para guardar los datos
-            // Simular que los datos se han guardado correctamente
             Swal.fire({
                 title: '¡Datos guardados con éxito!',
                 text: 'Tus datos se han guardado correctamente.',
@@ -384,10 +382,10 @@
                 texcoco: ["Centro", "Santa Úrsula", "La Purificación", "San Miguel Tlaixpan", "Huexotla"],
                 nezahualcoyotl: ["Agua Azul", "Campestre Guadalupana", "Benito Juárez", "Estado de México", "Ejidos de San Agustín"],
                 ecatepec: ["Las Américas", "San Cristóbal", "San Agustín", "Guadalupe Victoria", "Villas de Ecatepec"]
-                // Agrega más colonias según sea necesario
+                
             };
 
-            // Función para actualizar los municipios al cambiar el estado
+            
             $('#estado').on('change', function() {
                 var estadoSeleccionado = $(this).val();
                 var municipiosOptions = '<option value="">Selecciona un municipio</option>';
@@ -399,10 +397,10 @@
                 }
 
                 $('#municipio').html(municipiosOptions).change();
-                $('#colonia').html('<option value="">Selecciona una colonia</option>').change(); // Limpiar colonias al cambiar estado
+                $('#colonia').html('<option value="">Selecciona una colonia</option>').change(); 
             });
 
-            // Función para actualizar las colonias al cambiar el municipio
+            
             $('#municipio').on('change', function() {
                 var municipioSeleccionado = $(this).val();
                 var coloniasOptions = '<option value="">Selecciona una colonia</option>';
@@ -547,7 +545,7 @@
             }
         }
     
-        // Agregar un perfil inicial al cargar la página
+       
         window.onload = function() {
             addProfile();
         }

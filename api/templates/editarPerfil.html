@@ -370,7 +370,6 @@
                                                                                             <input type="checkbox" id="habilidad15" name="habilidad" value="Resiliencia">
                                                                                             <label for="habilidad15">Resiliencia</label>
                                                                                         </div>
-                                                                                        <!-- Aquí puedes agregar más habilidades si lo deseas -->
                                                                                     </div>
                                                                                     <div id="mensaje-habilidades" class="mt-2" style="display: none;">
                                                                                         <p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>
@@ -396,7 +395,6 @@
                                                                         <div class="accordion-body text-muted">
                                                                             <form id="profileForm">
                                                                                 <div id="profileContainer">
-                                                                                    <!-- Aquí se añadirán los perfiles dinámicamente -->
                                                                                 </div>
                                                                                 <button type="button" class="btn btn-primary mt-3" onclick="addProfile()">Agregar Perfil</button>
                                                                             </form>
@@ -451,8 +449,6 @@
 
     <script>
         function guardarDatos() {
-            // Aquí iría la lógica para guardar los datos
-            // Simular que los datos se han guardado correctamente
             Swal.fire({
                 title: '¡Datos guardados con éxito!',
                 text: 'Tus datos se han guardado correctamente.',
@@ -484,7 +480,7 @@
                 checkbox.addEventListener('change', function() {
                     var checkedCheckboxes = document.querySelectorAll('input[name="habilidad"]:checked');
                     if (checkedCheckboxes.length > maxHabilidades) {
-                        this.checked = false; // Desmarca la casilla si se intenta seleccionar una habilidad adicional después del límite
+                        this.checked = false;
                         mostrarMensajeHabilidades();
                     } else {
                         ocultarMensajeHabilidades();
@@ -507,7 +503,7 @@
         $(document).ready(function() {
             $('.select2').select2();
 
-            // Datos simulados de municipios y colonias por estado
+            
             var municipios = {
                 estado_mexico: ["Chimalhuacán", "Chicoloapan", "Texcoco", "Nezahualcóyotl", "Ecatepec"],
                 cdmx: ["Iztapalapa", "Coyoacán", "Gustavo A. Madero", "Tlalpan", "Álvaro Obregón"],
@@ -522,10 +518,10 @@
                 texcoco: ["Centro", "Santa Úrsula", "La Purificación", "San Miguel Tlaixpan", "Huexotla"],
                 nezahualcoyotl: ["Agua Azul", "Campestre Guadalupana", "Benito Juárez", "Estado de México", "Ejidos de San Agustín"],
                 ecatepec: ["Las Américas", "San Cristóbal", "San Agustín", "Guadalupe Victoria", "Villas de Ecatepec"]
-                // Agrega más colonias según sea necesario
+               
             };
 
-            // Función para actualizar los municipios al cambiar el estado
+            
             $('#estado').on('change', function() {
                 var estadoSeleccionado = $(this).val();
                 var municipiosOptions = '<option value="">Selecciona un municipio</option>';
@@ -537,10 +533,10 @@
                 }
 
                 $('#municipio').html(municipiosOptions).change();
-                $('#colonia').html('<option value="">Selecciona una colonia</option>').change(); // Limpiar colonias al cambiar estado
+                $('#colonia').html('<option value="">Selecciona una colonia</option>').change(); 
             });
 
-            // Función para actualizar las colonias al cambiar el municipio
+            
             $('#municipio').on('change', function() {
                 var municipioSeleccionado = $(this).val();
                 var coloniasOptions = '<option value="">Selecciona una colonia</option>';
@@ -685,7 +681,7 @@
             }
         }
     
-        // Agregar un perfil inicial al cargar la página
+        
         window.onload = function() {
             addProfile();
         }
