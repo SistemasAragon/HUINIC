@@ -46,7 +46,7 @@
 
 
     <!-- START -->
-    <section class="section">
+    <section class="section-50">
         <div class="container">
             <div class="row">
                 <table id="TablaPostulaciones" class="hover table table-sm table-centered table-hover table-borderless mb-0">
@@ -76,7 +76,7 @@
                                 <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
                                     Soli
                                 </a>
-                                <a href="{% url 'resultadosVacantes' %}" class="btn btn-primary mt-2">
+                                <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
                                 </a>
                             </td>
@@ -95,7 +95,7 @@
                                 <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
                                     Soli 
                                 </a>
-                                <a href="{% url 'resultadosVacantes' %}" class="btn btn-primary mt-2">
+                                <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
                                 </a>
                             </td>
@@ -114,7 +114,7 @@
                                 <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
                                     Soli 
                                 </a>
-                                <a href="{% url 'resultadosVacantes' %}" class="btn btn-primary mt-2">
+                                <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
                                 </a>
                             </td>
@@ -134,7 +134,7 @@
                                 <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
                                     Soli 
                                 </a>
-                                <a href="{% url 'resultadosVacantes' %}" class="btn btn-primary mt-2">
+                                <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
                                 </a>
                             </td>
@@ -270,7 +270,7 @@
                                 `</li>` +        
                             '</div>' +
                             '<div class="col-4">' +
-                                `<li class="my-swal-list-item"><span class="my-swal-label">Area especifica</span>` +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Sistema</span>` +
                                     `<div class="my-swal-text" style="font-size: 12px;" disabled>Sistemas de enfriamento</div></li >` +
                                         `<div class="my-swal-input-container">` +
                                             '<select class="form-select" id="nuevoCargo" name="nuevoCargo" required>' +
@@ -425,6 +425,88 @@
         }
     </script>
     <!-- Script de editar datos-->
+
+    <!-- Script de resultados-->
+    <script>
+        function mostrarResultados() {
+            Swal.fire({
+                title: 'Vacantes de gerente en ingeniería mecatronica',
+                html: `
+                <div class="row ">
+                    <p></p>
+                    <div class="col-lg-4 col-md-4 col-12 ">
+                        <div class="card team-primary text-center border-0 ">
+                            <div
+                                class="card-img team-image position-relative d-inline-block mx-auto rounded-pill avatar avatar-ex-large overflow-hidden shadow">
+                                <img src="{% static 'images/team/1.jpg'%}" class="img-fluid" alt="">
+                                <div class="card-overlay avatar avatar-ex-large rounded-pill"></div>
+
+                                <ul class="list-unstyled social-icons mb-0">
+                                    <li class="list-inline-item"><a href="{% url 'perfilCandidato' %}"><i 
+                                                title="Perfil">Ir</i></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="content mt-2">
+                                <h5 class="member-name mb-1"><a href="page-team-detail.html" class="text-dark">Steve Mathew</a>
+                                </h5>
+                                <h6 class="text-muted mt-2 fw-normal">Ingeniero en Informatica</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 ">
+                        <div class="card team-primary text-center border-0 ">
+                            <div
+                                class="card-img team-image position-relative d-inline-block mx-auto rounded-pill avatar avatar-ex-large overflow-hidden shadow">
+                                <img src="{% static 'images/team/2.jpg'%}" class="img-fluid" alt="">
+                                <div class="card-overlay avatar avatar-ex-large rounded-pill"></div>
+
+                                <ul class="list-unstyled social-icons mb-0">
+                                    <li class="list-inline-item"><a href="{% url 'perfilCandidato' %}"><i class=""
+                                                title="Perfil">Ir</i></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="content mt-2">
+                                <h5 class="member-name mb-1"><a href="page-team-detail.html" class="text-dark">Jonny Ray</a></h5>
+                                <h6 class="text-muted mt-2 fw-normal">Ingeniero en Computacion</h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-4 col-12 ">
+                        <div class="card team-primary text-center border-0 ">
+                            <div
+                                class="card-img team-image position-relative d-inline-block mx-auto rounded-pill avatar avatar-ex-large overflow-hidden shadow">
+                                <img src="{% static 'images/team/3.jpg'%}" class="img-fluid" alt="">
+                                <div class="card-overlay avatar avatar-ex-large rounded-pill"></div>
+
+                                <ul class="list-unstyled social-icons mb-0">
+                                    <li class="list-inline-item"><a href="{% url 'perfilCandidato' %}"><i class=""
+                                                title="Perfil">Ir</i></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="content mt-2">
+                                <h5 class="member-name mb-1"><a href="page-team-detail.html" class="text-dark">JJerry Fisher</a></h5>
+                                <h6 class="text-muted mt-2 fw-normal">Ingeniero en Computacion</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `,
+                showCloseButton: true,
+                showConfirmButton: false,
+                customClass: {
+                    container: 'my-swal-container2',
+                    popup: 'my-swal-popup2',
+                    title: 'my-swal-title2',
+                },
+            });
+        }
+    </script>
 
 
 </body>

@@ -23,12 +23,6 @@ class listaCandidatosVacante(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
-class perfilCandidatoLista(APIView):
-    template_name= "perfilCandidatoLista.html"
-    def get(self,request):
-        return render(request,self.template_name)
-    
-
 class listaEmpresas(APIView):
     template_name= "listaEmpresas.html"
     def get(self,request):
@@ -187,11 +181,6 @@ class postulaciones(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
-
-class resultadosVacantes(APIView):
-    template_name= "resultadosVacantes.html"
-    def get(self,request):
-        return render(request,self.template_name)
 
 class solicitudesCurso(APIView):
     template_name= "solicitudesCurso.html"

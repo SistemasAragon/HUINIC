@@ -35,7 +35,6 @@ from api.views import(login,
                     habilidadesLista,
                     homeSistemas,
                     recuperacionPass,
-                    resultadosVacantes,
                     solicitudesCurso, 
                     usuarioNuevo,
                     candidatoRegistro,
@@ -64,7 +63,6 @@ from api.views import(login,
                     homeEmpresaVC,
                     capacitadorRegistroVC,
                     listaCandidatosVacante,
-                    perfilCandidatoLista,
                     habilidadesCandidatoN2)
 
 
@@ -110,12 +108,10 @@ urlpatterns = [
     path('homeGeneral/', homeGeneral.as_view(), name="homeGeneral"),
     path('homeSistemas/', homeSistemas.as_view(), name="homeSistemas"),
     path('recuperacionPass/', recuperacionPass.as_view(), name="recuperacionPass"),
-    path('resultadosVacantes/', resultadosVacantes.as_view(), name="resultadosVacantes"),
     path('solicitudesCurso/', solicitudesCurso.as_view(), name="solicitudesCurso"),
     path('usuarioNuevo/', usuarioNuevo.as_view(), name="usuarioNuevo"),
     
     path('habilidadesCandidatoN2/', habilidadesCandidatoN2.as_view(), name="habilidadesCandidatoN2"),
     path('editarPerfilCapacitador/', editarPerfilCapacitador.as_view(), name="editarPerfilCapacitador"),
-    path('perfilCandidatoLista/', perfilCandidatoLista.as_view(), name="perfilCandidatoLista"),
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

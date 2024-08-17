@@ -11,6 +11,10 @@
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
 
+    <!-- Ventanas -->
+    <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -24,7 +28,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">Candidatos interesados </h3>
+                                <h3 class="title-pager mb-0">Candidatos interesados en Gerente de taller</h3>
                             </div>
                         </div>
                         <!--end col-->
@@ -62,35 +66,35 @@
                             <td>juan.perez@example.com</td>
                             <td>1122334455</td>
                             <td>Ingeniería de Software</td>
-                            <td><a href="{% url 'perfilCandidatoLista' %}   " class="btn btn-primary mt-2">Ver perfil</a></td>
+                            <td><a onclick="mostrarPerfil()" class="btn btn-primary mt-2">Ver perfil</a></td>
                         </tr>
                         <tr>
                             <td>María López Hernández</td>
                             <td>maria.lopez@example.com</td>
                             <td>2233445566</td>
                             <td>Desarrollo Web</td>
-                            <td><a href="{% url 'perfilCandidatoLista' %}" class="btn btn-primary mt-2">Ver perfil</a></td>
+                            <td><a onclick="mostrarPerfil()"  class="btn btn-primary mt-2">Ver perfil</a></td>
                         </tr>
                         <tr>
                             <td>Pedro Martínez Ramírez</td>
                             <td>pedro.martinez@example.com</td>
                             <td>3344556677</td>
                             <td>Administración de Redes</td>
-                            <td><a href="{% url 'perfilCandidatoLista' %}" class="btn btn-primary mt-2">Ver Perfil</a></td>
+                            <td><a onclick="mostrarPerfil()"  class="btn btn-primary mt-2">Ver Perfil</a></td>
                         </tr>
                         <tr>
                             <td>Ana García Fernández</td>
                             <td>ana.garcia@example.com</td>
                             <td>4455667788</td>
                             <td>Seguridad Informática</td>
-                            <td><a href="{% url 'perfilCandidatoLista' %}" class="btn btn-primary mt-2">Ver Perfil</a></td>
+                            <td><a onclick="mostrarPerfil()"  class="btn btn-primary mt-2">Ver Perfil</a></td>
                         </tr>
                         <tr>
                             <td>Luís Rodríguez Sánchez</td>
                             <td>luis.rodriguez@example.com</td>
                             <td>5566778899</td>
                             <td>Base de Datos</td>
-                            <td><a href="{% url 'perfilCandidatoLista' %}" class="btn btn-primary mt-2">Ver Perfil</a></td>
+                            <td><a onclick="mostrarPerfil()"  class="btn btn-primary mt-2">Ver Perfil</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -105,6 +109,8 @@
     {% include  'includeFooter.html' %}
     <!-- Footer End -->
 
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     
     <script>
@@ -130,6 +136,72 @@
             }
         });
         });
+    </script>
+
+    <!-- Script de resultados-->
+    <script>
+        function mostrarPerfil() {
+            Swal.fire({
+                html: `
+                <div class="row ">
+                    <p></p>
+                    <h4 class="name text-center">Steve Mathew</h4>
+
+                    <div class="row align-items-center">
+                    
+                        <h5 class="feature-head mb-1">Mecanico General</h5>
+                        <div class="col-4">
+                            <div class="team-img  p-4">
+                                <img src="{% static 'images/team/single.jpg'%}"
+                                    class="img-fluid mx-auto d-block position-relative about-tween" alt="aboutpic">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <p class="text-muted2 mb-0">24 años</p>
+                            <p class="text-muted2 mb-0">Masculino</p>
+                            <p class="text-muted2 mb-0">Soltero</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="text-muted2 mb-0">5536542925</p>
+                            <p class="text-muted2 mb-0">correoejemplo@gmail.com</p>
+                            <p class="text-muted2 mb-0">Ciudad de México</p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-6 centrar">
+                            <div class="flex-1 ms-4">
+                                <h5 class="feature-head mb-1">Habilidades</h5>
+                                <p class="text-muted2 mb-0">Tolerancia</p>
+                                <p class="text-muted2 mb-0">Empatia</p>
+                                <p class="text-muted2 mb-0">Honestidad</p>
+                                <p class="text-muted2 mb-0">Respeto</p>
+                                <p class="text-muted2 mb-0">Liderazgo</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 centrar">
+                            <div class="flex-1 ms-4">
+                                <h5 class="feature-head mb-1">Conocimientos</h5>
+                                <p class="text-muted2 mb-0">Automovil - electrico - Básico</p>
+                                <p class="text-muted2 mb-0">Automovil - frenos - Avanzado</p>
+                                <p class="text-muted2 mb-0">Automovil - frenos - Avanzado</p>
+                                <p class="text-muted2 mb-0">Automovil - frenos - Avanzado</p>
+                                <p class="text-muted2 mb-0">Automovil - frenos - Avanzado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `,
+                showCloseButton: true,
+                showConfirmButton: false,
+                customClass: {
+                    container: 'my-swal-container2',
+                    popup: 'my-swal-popup2',
+                    title: 'my-swal-title2',
+                },
+            });
+        }
     </script>
 
 </body>
