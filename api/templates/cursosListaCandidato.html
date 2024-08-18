@@ -35,35 +35,58 @@
     <!--end section-->
     <!-- End Home -->
 
-    <!-- Inicio prueba de secciones -->
-    <section class="section-25">
-        <div class="container  ">
-
-            <h3 class="text-center">Selecciona el tipo de curso que deseas consultar</h3>
+     <!-- Inicio prueba de secciones -->
+     <section class="section-25">
+        <div class="container">
             
-            <div class="custom-search-form mt-4 pt-2 col-lg-11 col-12 mt-4 pt-2 d-flex justify-content-center bg-white">
-                <form class="custom-form ms-0 d-flex align-items-center">
-                    <!-- Sección para seleccionar entre Auto y Moto -->
-                    
-                    <div class="custom-form-group mb-0 me-3">
-                        <select id="vehiculo" name="vehiculo" class="custom-select rounded-pill">
-                            <option value="auto">Auto</option>
-                            <option value="moto">Moto</option>
-                        </select>
+
+            <h4 class="text-center">¿Que curso buscas?</h4>
+            
+
+            <div class="custom-search-form  col-12  pt-2 d-flex justify-content-center bg-white">
+                <div class="row">
+                    {% comment %} <div class="col-4">
+                        <form method="GET">
+                            <input type="text" name="query" placeholder="Buscar puesto..." class="form-control">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </form>
+                    </div> {% endcomment %}
+                    <div class="col-12">
+                        <form class="custom-form ms-0 d-flex align-items-center">
+
+                            <!-- Sección para seleccionar entre Auto y Moto -->
+                            {% comment %} <div class="custom-form-group mb-0 me-3">
+                                <select id="vehiculo" name="vehiculo" class="custom-select rounded-pill">
+                                    <option value="auto">Automovil</option>
+                                    <option value="moto">Motocicleta</option>
+                                </select>
+                            </div> {% endcomment %}
+                            <!-- Sección para seleccionar la sección (Frenos, etc.) -->
+                            {% comment %} <div class="custom-form-group mb-0 me-3">
+                                <select id="seccion" name="seccion" class="custom-select rounded-pill">
+                                    <option value="frenos">Frenos</option>
+                                    <option value="motor">Motor</option>
+                                    <option value="suspension">Suspensión</option>
+                                    <option value="electrico">Eléctrico</option>
+                                    <option value="carroceria">Carrocería</option>
+                                </select>
+                            </div> {% endcomment %}
+                            <!-- Botón de búsqueda -->
+                            <form method="GET">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input style="width: 300px; " type="text" name="query" placeholder="Buscar curso..." class="form-control">
+                                    </div>
+                                    <div class="col-6">
+                                        <button style=" margin-left: 80px;" type="submit" class="custom-btn rounded-pill btn-primary">Buscar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </form>
                     </div>
-                    <!-- Sección para seleccionar la sección (Frenos, etc.) -->
-                    <div class="custom-form-group mb-0 me-3">
-                        <select id="seccion" name="seccion" class="custom-select rounded-pill">
-                            <option value="frenos">Frenos</option>
-                            <option value="motor">Motor</option>
-                            <option value="suspension">Suspensión</option>
-                            <option value="electrico">Eléctrico</option>
-                            <option value="carroceria">Carrocería</option>
-                        </select>
-                    </div>
-                    <!-- Botón de búsqueda -->
-                    <button type="submit" class="custom-btn rounded-pill btn-primary">Buscar</button>
-                </form>
+                </div>
+
+                
             </div>
         </div>
         <!-- end container -->
@@ -71,7 +94,7 @@
     <!-- fin prueba de secciones -->
 
     <!-- otraprueba -->
-    <section class="section-50">
+    <section class="section-25">
         <div class="container" >
             <div class="row">
                 <div class="col-md-4 col-sm-6 py-4 g-0">

@@ -46,7 +46,7 @@
 
 
     <!-- START -->
-    <section class="section-50">
+    <section class="section-25">
         <div class="container">
             <div class="row">
                 <table id="TablaPostulaciones" class="hover table table-sm table-centered table-hover table-borderless mb-0">
@@ -73,9 +73,8 @@
                                 <a href="#" class="btn btn-primary mt-2" onclick="editarPostulacion()">
                                     Editar 
                                 </a>
-                                <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
-                                    Soli
-                                </a>
+                                <a href="javascript:void(0);" onclick="mostrarTablaCandidatos()" class="btn btn-primary mt-2">Soli</a>
+
                                 <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
                                 </a>
@@ -92,9 +91,8 @@
                                 <a href="#" class="btn btn-primary mt-2" onclick="editarPostulacion()">
                                     Editar 
                                 </a>
-                                <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
-                                    Soli 
-                                </a>
+                                <a href="javascript:void(0);" onclick="mostrarTablaCandidatos()" class="btn btn-primary mt-2">Soli</a>
+
                                 <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
                                 </a>
@@ -111,9 +109,8 @@
                                 <a href="#" class="btn btn-primary mt-2" onclick="editarPostulacion()">
                                     Editar 
                                 </a>
-                                <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
-                                    Soli 
-                                </a>
+                                <a href="javascript:void(0);" onclick="mostrarTablaCandidatos()" class="btn btn-primary mt-2">Soli</a>
+
                                 <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
                                 </a>
@@ -131,9 +128,7 @@
                                 <a href="#" class="btn btn-primary mt-2" onclick="editarPostulacion()">
                                     Editar 
                                 </a>
-                                <a href="{% url 'listaCandidatosVacante' %}" class="btn btn-primary mt-2">
-                                    Soli 
-                                </a>
+                                <a href="javascript:void(0);" onclick="mostrarTablaCandidatos()" class="btn btn-primary mt-2">Soli</a>
                                 <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
                                 </a>
@@ -145,9 +140,70 @@
         </div>
         <!-- end container -->
     </section>
-    
     <!-- END -->
      
+     <!-- START -->
+     <section class="section-50" id="tablaCandidatosSection" style="display:none;">
+        <div class="container">
+
+            <h4 class="text-center">Solicitantes a Gerente de taller</h4> 
+            
+            <div class="row">
+                <table id="TablaCandidatos" class="hover table table-sm table-centered table-hover table-borderless mb-0">
+                    <thead class="border-top border-bottom bg-light-subtle border-light">
+                        <tr>
+                            <th scope="col">Nombre Completo</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Número de Teléfono</th>
+                            <th scope="col">Especialidad</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez González</td>
+                            <td>juan.perez@example.com</td>
+                            <td>1122334455</td>
+                            <td>Ingeniería de Software</td>
+                            <td><a onclick="mostrarPerfil()" class="btn btn-primary mt-2">Ver perfil</a></td>
+                        </tr>
+                        <tr>
+                            <td>María López Hernández</td>
+                            <td>maria.lopez@example.com</td>
+                            <td>2233445566</td>
+                            <td>Desarrollo Web</td>
+                            <td><a onclick="mostrarPerfil()"  class="btn btn-primary mt-2">Ver perfil</a></td>
+                        </tr>
+                        <tr>
+                            <td>Pedro Martínez Ramírez</td>
+                            <td>pedro.martinez@example.com</td>
+                            <td>3344556677</td>
+                            <td>Administración de Redes</td>
+                            <td><a onclick="mostrarPerfil()"  class="btn btn-primary mt-2">Ver Perfil</a></td>
+                        </tr>
+                        <tr>
+                            <td>Ana García Fernández</td>
+                            <td>ana.garcia@example.com</td>
+                            <td>4455667788</td>
+                            <td>Seguridad Informática</td>
+                            <td><a onclick="mostrarPerfil()"  class="btn btn-primary mt-2">Ver Perfil</a></td>
+                        </tr>
+                        <tr>
+                            <td>Luís Rodríguez Sánchez</td>
+                            <td>luis.rodriguez@example.com</td>
+                            <td>5566778899</td>
+                            <td>Base de Datos</td>
+                            <td><a onclick="mostrarPerfil()"  class="btn btn-primary mt-2">Ver Perfil</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- END -->
+
 
     <!-- Footer End -->
     {% include  'includeFooter.html' %}
@@ -157,6 +213,32 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     
+
+    <script>
+        $(document).ready(function () {
+        $('#TablaCandidatos').DataTable({
+            lengthMenu: [5, 10, 15],
+            pageLength: 5,
+            destroy:true,
+            "language": {
+                lengthMenu: "Mostrar _MENU_ registros por página",
+                zeroRecords: "Ningún postulación encontrada",
+                info: "Mostrando _END_ de _MAX_ postulaciones",
+                infoEmpty: "Ningúna postulación encontrada",
+                infoFiltered: "",
+                search: "Buscar:",
+                loadingRecords: "Cargando... ",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
+            }
+        });
+        });
+    </script>
+
 
     <script>
         $(document).ready(function () {
@@ -194,7 +276,7 @@
                             '<div class="col-6">' +
                                 `<li class="my-swal-list-item"><span class="my-swal-label">Puesto</span>` +
                                     `<div class="my-swal-input-container">` +
-                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="25" value="Prueba" >` +
+                                        `<input id="clave" name="clave" class="swal2-input my-swal-input" maxlength="25" value="Administrador de inventario" >` +
                                     `</div>` +
                                 `</li>` +
                             '</div>' +
@@ -293,8 +375,8 @@
                             '</div>' +
                         '</div>' +
                         '<p></p>' +
-                        '<label class="form-label fs-5 text-center"><span class="my-swal-label">Habilidades (5 Maximo)<span class="text-danger">*</span></span></label>' +
-                        '<div class="col-md-12 mt-3">' +
+                        '<label class="form-label text-center"><span class="my-swal-label">Habilidades (5 Maximo)<span class="text-danger">*</span></span></label>' +
+                        '<div class="col-md-12 ">' +
                             '<div class="form-icon position-relative">' +
                                 '<div class="row izquierda letraChida">' +
                                     '<div class="col-md-4">' +
@@ -426,6 +508,79 @@
     </script>
     <!-- Script de editar datos-->
 
+    <script>
+        function mostrarTablaCandidatos() {
+            var tablaSection = document.getElementById('tablaCandidatosSection');
+            tablaSection.style.display = 'block';
+        }
+    </script>
+
+    <!-- Script de resultados-->
+    <script>
+        function mostrarPerfil() {
+            Swal.fire({
+                html: `
+                <div class="row ">
+                    <p></p>
+                    <h4 class="name text-center">Steve Mathew</h4>
+
+                    <div class="row align-items-center">
+                    
+                        <h5 class="feature-head mb-1">Mecanico General</h5>
+                        <div class="col-4">
+                            <div class="team-img  p-4">
+                                <img src="{% static 'images/team/single.jpg'%}"
+                                    class="img-fluid mx-auto d-block position-relative about-tween" alt="aboutpic">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <p class="text-muted2 mb-0">24 años</p>
+                            <p class="text-muted2 mb-0">Masculino</p>
+                            <p class="text-muted2 mb-0">Soltero</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="text-muted2 mb-0">5536542925</p>
+                            <p class="text-muted2 mb-0">correoejemplo@gmail.com</p>
+                            <p class="text-muted2 mb-0">Ciudad de México</p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-6 centrar">
+                            <div class="flex-1 ms-4">
+                                <h5 class="feature-head mb-1">Habilidades</h5>
+                                <p class="text-muted2 mb-0">Tolerancia</p>
+                                <p class="text-muted2 mb-0">Empatia</p>
+                                <p class="text-muted2 mb-0">Honestidad</p>
+                                <p class="text-muted2 mb-0">Respeto</p>
+                                <p class="text-muted2 mb-0">Liderazgo</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 centrar">
+                            <div class="flex-1 ms-4">
+                                <h5 class="feature-head mb-1">Conocimientos</h5>
+                                <p class="text-muted2 mb-0">Automovil - electrico - Básico</p>
+                                <p class="text-muted2 mb-0">Automovil - frenos - Avanzado</p>
+                                <p class="text-muted2 mb-0">Automovil - frenos - Avanzado</p>
+                                <p class="text-muted2 mb-0">Automovil - frenos - Avanzado</p>
+                                <p class="text-muted2 mb-0">Automovil - frenos - Avanzado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `,
+                showCloseButton: true,
+                showConfirmButton: false,
+                customClass: {
+                    container: 'my-swal-container2',
+                    popup: 'my-swal-popup2',
+                    title: 'my-swal-title2',
+                },
+            });
+        }
+    </script>
+
     <!-- Script de resultados-->
     <script>
         function mostrarResultados() {
@@ -507,6 +662,7 @@
             });
         }
     </script>
+
 
 
 </body>

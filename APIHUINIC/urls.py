@@ -62,7 +62,6 @@ from api.views import(login,
                     listaCapacitadores,
                     homeEmpresaVC,
                     capacitadorRegistroVC,
-                    listaCandidatosVacante,
                     habilidadesCandidatoN2)
 
 
@@ -71,8 +70,7 @@ urlpatterns = [
     path('candidatoLista/', candidatoLista.as_view(), name="candidatoLista"),
     path('homeEmpresaVC/', homeEmpresaVC.as_view(), name="homeEmpresaVC"),
     path('cursosListaCandidato/', cursosListaCandidato.as_view(), name="cursosListaCandidato"),
-    path('vehiculosLista/', vehiculosLista.as_view(), name="vehiculosLista"),
-    path('listaCandidatosVacante/', listaCandidatosVacante.as_view(), name="listaCandidatosVacante"),    
+    path('vehiculosLista/', vehiculosLista.as_view(), name="vehiculosLista"),  
     path('capacitadorRegistroVC/', capacitadorRegistroVC.as_view(), name="capacitadorRegistroVC"),
     path('homeEmpresaCursos/', homeEmpresaCursos.as_view(), name="homeEmpresaCursos"),
     path('listaCapacitadores/', listaCapacitadores.as_view(), name="listaCapacitadores"),

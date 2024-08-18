@@ -18,10 +18,6 @@ class capacitadorRegistroVC(APIView):
     def get(self,request):
         return render(request,self.template_name)
     
-class listaCandidatosVacante(APIView):
-    template_name= "listaCandidatosVacante.html"
-    def get(self,request):
-        return render(request,self.template_name)
     
 class listaEmpresas(APIView):
     template_name= "listaEmpresas.html"

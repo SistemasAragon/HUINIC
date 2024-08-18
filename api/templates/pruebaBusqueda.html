@@ -7,6 +7,10 @@
 <head>
     <title>HUINIC | RESULTADO BUSQUEDA PUESTOS</title>
     
+    <!-- Ventanas -->
+    <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -37,35 +41,55 @@
     <!-- Inicio prueba de secciones -->
     <section class="section-25">
         <div class="container">
-
-            <h3 class="text-center">Selecciona las opciones que deseas consultar</h3>
             
 
-            <div class="custom-search-form mt-4 pt-2 col-lg-11 col-12 mt-4 pt-2 d-flex justify-content-center bg-white">
-                <form class="custom-form ms-0 d-flex align-items-center">
-                    <!-- Sección para seleccionar entre Auto y Moto -->
-                    
-                    <div class="custom-form-group mb-0 me-3">
-                        
-                        
-                        <select id="vehiculo" name="vehiculo" class="custom-select rounded-pill">
-                            <option value="auto">Automovil</option>
-                            <option value="moto">Motocicleta</option>
-                        </select>
+            <h4 class="text-center">¿Que vacantes buscas?</h4>
+            
+
+            <div class="custom-search-form  col-12  pt-2 d-flex justify-content-center bg-white">
+                <div class="row">
+                    {% comment %} <div class="col-4">
+                        <form method="GET">
+                            <input type="text" name="query" placeholder="Buscar puesto..." class="form-control">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </form>
+                    </div> {% endcomment %}
+                    <div class="col-12">
+                        <form class="custom-form ms-0 d-flex align-items-center">
+
+                            <!-- Sección para seleccionar entre Auto y Moto -->
+                            {% comment %} <div class="custom-form-group mb-0 me-3">
+                                <select id="vehiculo" name="vehiculo" class="custom-select rounded-pill">
+                                    <option value="auto">Automovil</option>
+                                    <option value="moto">Motocicleta</option>
+                                </select>
+                            </div> {% endcomment %}
+                            <!-- Sección para seleccionar la sección (Frenos, etc.) -->
+                            {% comment %} <div class="custom-form-group mb-0 me-3">
+                                <select id="seccion" name="seccion" class="custom-select rounded-pill">
+                                    <option value="frenos">Frenos</option>
+                                    <option value="motor">Motor</option>
+                                    <option value="suspension">Suspensión</option>
+                                    <option value="electrico">Eléctrico</option>
+                                    <option value="carroceria">Carrocería</option>
+                                </select>
+                            </div> {% endcomment %}
+                            <!-- Botón de búsqueda -->
+                            <form method="GET">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input style="width: 300px; " type="text" name="query" placeholder="Buscar puesto..." class="form-control">
+                                    </div>
+                                    <div class="col-6">
+                                        <button style=" margin-left: 80px;" type="submit" class="custom-btn rounded-pill btn-primary">Buscar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </form>
                     </div>
-                    <!-- Sección para seleccionar la sección (Frenos, etc.) -->
-                    <div class="custom-form-group mb-0 me-3">
-                        <select id="seccion" name="seccion" class="custom-select rounded-pill">
-                            <option value="frenos">Frenos</option>
-                            <option value="motor">Motor</option>
-                            <option value="suspension">Suspensión</option>
-                            <option value="electrico">Eléctrico</option>
-                            <option value="carroceria">Carrocería</option>
-                        </select>
-                    </div>
-                    <!-- Botón de búsqueda -->
-                    <button type="submit" class="custom-btn rounded-pill btn-primary">Buscar</button>
-                </form>
+                </div>
+
+                
             </div>
         </div>
         <!-- end container -->
@@ -80,46 +104,46 @@
                 <!-- Search Results Section -->
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="search-results">
-                        <h2>Resultados de búsqueda: Área de Frenos</h2>
+                        <h3>Resultado de vacantes</h3>
                         <div class="vacante-item" onclick="mostrarDescripcion(
-                            'Mecánico de Frenos', 
+                            'Mecánico de Frenos en Automovil', 
                             'Mazda', 
-                            'Ciudad de México', 
+                            'Ciudad de México, Gustavo Madero', 
                             '$12,000.00', 
                             'Somos una empresa que se especializa en el mantenimiento y reparación de sistemas de frenos para vehículos. Buscamos un mecánico experimentado que se una a nuestro equipo. Requisitos: Experiencia previa en sistemas de frenos, capacidad para diagnosticar y reparar problemas de frenos, y conocimientos básicos de mecánica automotriz.',
                             '{% static "images/testi/mazda.png" %} '
                         )">
-                            <h3>Mecánico de Frenos</h3>
+                            <h4>Mecánico de Frenos en Automovil</h4>
                             <p>Empresa: Mazda</p>
-                            <p>Ubicación: Ciudad de México</p>
+                            <p>Ubicación: Ciudad de México, Gustavo Madero</p>
                             <p>Sueldo: $12,000.00</p>
                         </div>
                             {% comment %} El evento y los valores a mandar  {% endcomment %}
                         <div class="vacante-item" onclick="mostrarDescripcion(
-                            'Técnico en Frenos', 
-                            'Empresa B', 
-                            'Ciudad B', 
-                            'No especificado', 
-                            'Buscamos un técnico en frenos con al menos 3 años de experiencia. El candidato ideal deberá ser capaz de realizar mantenimientos preventivos y correctivos en sistemas de frenos, así como manejar herramientas y equipos de diagnóstico.',
+                            'Administrador de Inventario en Refacciones', 
+                            'Honda', 
+                            'EDOMEX, Los reyes', 
+                            '$15,000.00', 
+                            'Buscamos un administrador de inventario con uso de programas. El candidato ideal deberá ser capaz de usar programas informaticos para la administracion.',
                             '{% static "images/testi/honda.png" %}'
                         )">
                             {% comment %} Lo siempre visible para seleccionar {% endcomment %}
-                            <h3>Técnico en Frenos</h3>
-                            <p>Empresa: Empresa B</p>
-                            <p>Ubicación: Ciudad B</p>
-                            <p>Sueldo: No especificado</p>
+                            <h4>Administrador de Inventario en Refacciones</h4>
+                            <p>Empresa: Honda</p>
+                            <p>Ubicación: EDOMEX, Los reyes</p>
+                            <p>Sueldo: $15,000.00</p>
                         </div>
                         <div class="vacante-item" onclick="mostrarDescripcion(
                             'Especialista en Frenos', 
-                            'Empresa C', 
-                            'Ciudad C', 
+                            'Chevrolet ', 
+                            'CDMX, Gustavo Madero', 
                             '$15,000.00', 
                             'Estamos en busca de un especialista en frenos para unirse a nuestro equipo. La posición requiere una sólida comprensión de los sistemas de frenos hidráulicos y electrónicos, y la capacidad para realizar diagnósticos y reparaciones complejas.',
                             '{% static "images/testi/chevrolet.png" %}'
                         )">
-                            <h3>Especialista en Frenos</h3>
-                            <p>Empresa: Empresa C</p>
-                            <p>Ubicación: Ciudad C</p>
+                            <h4>Especialista en Frenos</h4>
+                            <p>Empresa: Chevrolet </p>
+                            <p>Ubicación: CDMX, Gustavo Madero</p>
                             <p>Sueldo: $15,000.00</p>
                         </div>
                         <!-- Añadir más vacantes aquí -->
@@ -127,9 +151,9 @@
                 </div>
                 <!-- Vacante Description Section -->
                 <div class="col-lg-6 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                    <div class="sidebar p-4 rounded bg-light ms-lg-3">
+                    <div class="sidebar rounded bg-light ms-lg-3">
                         <div class="vacantes">
-                            <h2>Descripción de la Vacante</h2>
+                            <h4>Descripción de la Vacante</h4>
                             <div id="vacante-descripcion" class="vacante-descripcion">
                                 Selecciona una vacante para ver su descripción completa.
                             </div>
@@ -152,7 +176,7 @@
                     <img src="${logo}" alt="Logo de ${empresa}" style="max-width: 100px; max-height: 100px;">
                 </a>
             </div>
-            <h2>${titulo} / ${ubicacion}</h2>
+            <h4>${titulo} / ${ubicacion}</h4>
             <p><strong>${empresa}</strong></p>
             <p>${ubicacion}</p>
             <p><strong>Sueldo:</strong> ${sueldo}</p>
@@ -172,7 +196,12 @@
             icon: 'success',
             confirmButtonText: 'Aceptar',
             customClass: {
-                confirmButton: 'btn-custom-color'
+                container: 'my-swal-containe2',
+                popup: 'my-swal-popup4',
+                title: 'my-swal-title2',
+                input: 'my-swal-input2',
+                cancelButton: 'my-swal-cancel-button2',
+                confirmButton: 'my-swal-confirm-button2',
             }
         });
     }
