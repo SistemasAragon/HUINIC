@@ -138,8 +138,7 @@ urlpatterns = [
     path('homeSistemas/', homeSistemas.as_view(), name="homeSistemas"),
     path('recuperacionPass/', recuperacionPass.as_view(), name="recuperacionPass"),
     path('solicitudesCurso/', solicitudesCurso.as_view(), name="solicitudesCurso"),
-    path('usuarioNuevo/', usuarioNuevo.as_view(), name="usuarioNuevo"),
-    
+    path('usuarioNuevo/', usuarioNuevo.as_view(), name="usuarioNuevo"),    
     path('habilidadesCandidatoN2/', habilidadesCandidatoN2.as_view(), name="habilidadesCandidatoN2"),
     path('editarPerfilCapacitador/', editarPerfilCapacitador.as_view(), name="editarPerfilCapacitador"),
     
