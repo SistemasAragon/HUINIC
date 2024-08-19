@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from rest_framework.views import APIView
+from django.http import HttpResponse, JsonResponse
 # Create your views here.
 
 
@@ -7,6 +8,22 @@ class login(APIView):
     template_name= "login.html"
     def get(self,request):
         return render(request,self.template_name)
+    
+    def post(self,request):
+        correo = request.POST.get('correo').strip()
+        password = request.POST.get('password').strip()
+        if correo == 'julian.romero@outlook.com' and password == '5PG1azVR':
+            return redirect('homeCandidato')
+        elif correo == 'noemi.hernandez@gmail.com' and password == 'i4xjkeQ4':
+            return redirect('homeCapacitador')
+        elif correo == 'correo@autotechmanufacturing.com' and password == 'zs0xENQ1':
+            return redirect('homeEmpresa')
+        elif correo == 'rh@partsandmore.com' and password == 'NxDdD4ON':
+            return redirect('homeEmpresaCursos')
+        elif correo == 'careers@autotechsolutions.com' and password == 'nDhchExY':
+            return redirect('homeEmpresaCursos')
+        else: 
+            return JsonResponse({'success': False, 'message': 'Correo y/o contraseña incorrectos.'})
     
 class homeEmpresaVC(APIView):
     template_name= "homeEmpresaVC.html"
