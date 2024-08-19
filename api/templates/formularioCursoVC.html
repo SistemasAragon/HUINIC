@@ -1,0 +1,257 @@
+{% include  'includeEmpresaVC.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>HUINIC | Curso</title>
+</head>
+
+<body>
+
+    <!-- Start Home -->
+    <section class="bg-default page-next-level" style="background: url({% static 'images/bg/bg-page.png'%}) center no-repeat;">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 mt-4">
+                            <div class="text-center">
+                                <h3 class="title-pager mb-0"> Registro de nuevo curso</h3>
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </div>
+        </div>
+    </section>
+    <!--end section-->
+    <!-- End Home -->
+
+    <!-- Start Section -->
+    <section class="section-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-12 mb-4">
+                    <div class="rounded p-4 shadow border">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="primary-form ">
+
+                                    <form method="post" id="myForm" name="myForm" onsubmit="return validateForm()">
+                                        <p class="mb-0" id="error-msg"></p>
+                                        <div class="centrar">
+                                            <h4>Informacion de curso</h4>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="form-label fs-6">Nombre del Curso <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <!-- <i class="mdi mdi-account icon-sm icons"></i> -->
+                                                    <input name="name" id="name" type="text" class="form-control  fs-6"
+                                                        placeholder="Nombre del curso: ">
+                                                </div>
+                                            </div>
+    
+                                            <p></p>
+                                            <div class="col-md-12">
+    
+                                                <label class="form-label fs-6">Acerca del curso<span
+                                                        class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <!-- <i class="mdi mdi-email-outline icon-sm icons"></i> -->
+                                                    <input name="" id="" type=""
+                                                        class="form-control fs-6" placeholder="Acerca del curso:">
+                                                </div>
+    
+                                            </div>
+                                            <!--end col-->
+
+                                            <p></p>
+                                            <div class="col-lg-3">
+                                                <label  class="form-label">Vehiculo:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona el vehiculo</option>
+                                                        <option value="Automovil">Automovil</option>
+                                                        <option value="Motocicleta">Motocicleta</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                            <div class="col-lg-4">
+                                                <label  class="form-label">Area:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona el area</option>
+                                                        <option value="Presencial">Diésel rango medio y servicio pesado</option>
+                                                        <option value="linea">Diésel servicio ligero</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                            <div class="col-lg-5">
+                                                <label  class="form-label">Sistema:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona el sistema</option>
+                                                        <option value="">Sistema common rail</option>
+                                                        <option value="">Sistema de frenos</option>
+                                                        <option value="">Suspensión y dirección</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                            <p></p>
+                                            <div class="centrar">Habilidades a obtener</div>    
+                                            <div class="col-12">
+                                                <label class="form-label fs-6  mb-1">Habilidad 1</label>
+                                                <div class="form-icon position-relative">
+                                                    <i class="mdi mdi-book-outline icon-sm icons"></i>
+                                                    <input name="subject" id="subject" class="form-control ps-5 fs-6"
+                                                        placeholder="Habilidad 1:">
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                            <div class="col-12">
+                                                <label class="form-label fs-6 mt-3 mb-1">Habilidad 2</label>
+                                                <div class="form-icon position-relative">
+                                                    <i class="mdi mdi-book-outline icon-sm icons"></i>
+                                                    <input name="subject" id="subject" class="form-control ps-5 fs-6"
+                                                        placeholder="Habilidad 2:">
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                            <div class="col-12">
+                                                <label class="form-label fs-6 mt-3 mb-1">Habilidad 3</label>
+                                                <div class="form-icon position-relative">
+                                                    <i class="mdi mdi-book-outline icon-sm icons"></i>
+                                                    <input name="subject" id="subject" class="form-control ps-5 fs-6"
+                                                        placeholder="Habilidad 3:">
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+
+                                            
+                                            <div class="col-4">
+                                                <label class="form-label fs-6 mt-3 mb-1">Horas de curso</label>
+                                                <div class="form-icon position-relative">
+                                                    <i class="mdi mdi-book-outline icon-sm icons"></i>
+                                                    <input name="subject" id="subject" class="form-control ps-5 fs-6"
+                                                        placeholder="Horas curso:">
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                            <div class="col-4">
+                                                <label class="form-label fs-6 mt-3 mb-1">Costo de curso:</label>
+                                                <div class="form-icon position-relative">
+                                                    <i class="mdi mdi-book-outline icon-sm icons"></i>
+                                                    <input name="subject" id="subject" class="form-control ps-5 fs-6"
+                                                        placeholder="Costo de curso:">
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                            <div class="col-4">
+                                                <label class="form-label fs-6 mt-3 mb-1">Descuento</label>
+                                                <div class="form-icon position-relative">
+                                                    <i class="mdi mdi-book-outline icon-sm icons"></i>
+                                                    <input name="subject" id="subject" class="form-control ps-5 fs-6"
+                                                        placeholder="Descuento:">
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                            <p></p>
+                                            <div class="col-lg-4">
+                                                <label  class="form-label">Nivel:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona el nivel</option>
+                                                        <option value="Principiante">Principiante</option>
+                                                        <option value="Intermedio">Intermedio</option>
+                                                        <option value="Avanzado">Avanzado</option>
+                                                        <option value="Desarrollador">Desarrollador</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                            <div class="col-lg-4">
+                                                <label  class="form-label">Modalidad:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona la modalidad</option>
+                                                        <option value="Presencial">Presencial</option>
+                                                        <option value="linea">En linea</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                            <div class="col-lg-4">
+                                                <label  class="form-label">Capacitador:</label>
+                                                <div class=" position-relative">
+                                                    <select name="" id="" class="form-control fs-6">
+                                                        <option value="" selected disabled>Selecciona al capacitador</option>
+                                                        <option value="Presencial">Victor Patiño Mejia</option>
+                                                        <option value="linea">Fidelmar Jimenez Mendez</option>
+                                                        <!-- Agrega más opciones según sea necesario -->
+                                                    </select>
+                                                </div>
+                                            </div> <!-- end col -->
+
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row">
+                                            <div class="col-12 fs-6 mt-3 centrar">
+                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Registrar</button>
+                                            </div>
+                                            <!--end col-->
+                                        </div>
+                                        <!--end row-->
+                                    </form>
+                                    <!-- end form -->
+    
+                                </div>
+                                <!--end primary-form-->
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+
+
+    </section>
+    <!--end section-->
+    <!-- End Section -->
+
+    <!-- Footer End -->
+    {% include  'includeFooter.html' %}
+    <!-- Footer End -->
+
+</body>
+
+
+</html>

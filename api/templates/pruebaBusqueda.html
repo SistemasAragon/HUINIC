@@ -133,45 +133,45 @@
     <!-- otraprueba -->
 
 
-{% comment %}Evento con variables y orden {% endcomment %}
-<script>
-    function mostrarDescripcion(titulo, empresa, ubicacion, sueldo, descripcion, logo) {
-        document.getElementById('vacante-descripcion').innerHTML = `
-            <div class="text-center">
-                <a href="{% url 'perfilEmpresaLogo' %}">
-                    <img src="${logo}" alt="Logo de ${empresa}" style="max-width: 100px; max-height: 100px;">
-                </a>
-            </div>
-            <h4>${titulo} / ${ubicacion}</h4>
-            <p><strong>${empresa}</strong></p>
-            <p>${ubicacion}</p>
-            <p><strong>Sueldo:</strong> ${sueldo}</p>
-            <div>${descripcion}</div>
-            <div class="row">
-                <div class="col-12 fs-6 mt-3 text-center">
-                    <button type="button" id="submit" name="send" class="btn btn-primary" onclick="enviarCurriculum('${titulo}', '${empresa}')">Postularme</button>
+    {% comment %}Evento con variables y orden {% endcomment %}
+    <script>
+        function mostrarDescripcion(titulo, empresa, ubicacion, sueldo, descripcion, logo) {
+            document.getElementById('vacante-descripcion').innerHTML = `
+                <div class="text-center">
+                    <a href="{% url 'perfilEmpresaLogo' %}">
+                        <img src="${logo}" alt="Logo de ${empresa}" style="max-width: 100px; max-height: 100px;">
+                    </a>
                 </div>
-            </div>
-        `;
-    }
+                <h4>${titulo} / ${ubicacion}</h4>
+                <p><strong>${empresa}</strong></p>
+                <p>${ubicacion}</p>
+                <p><strong>Sueldo:</strong> ${sueldo}</p>
+                <div>${descripcion}</div>
+                <div class="row">
+                    <div class="col-12 fs-6 mt-3 text-center">
+                        <button type="button" id="submit" name="send" class="btn btn-primary" onclick="enviarCurriculum('${titulo}', '${empresa}')">Postularme</button>
+                    </div>
+                </div>
+            `;
+        }
 
-    function enviarCurriculum(titulo, empresa) {
-        Swal.fire({
-            title: '¡Currículum enviado!',
-            text: 'Se ha enviado tu currículum para la vacante de ' + titulo + ' en ' + empresa + '.',
-            icon: 'success',
-            confirmButtonText: 'Aceptar',
-            customClass: {
-                container: 'my-swal-containe2',
-                popup: 'my-swal-popup4',
-                title: 'my-swal-title2',
-                input: 'my-swal-input2',
-                cancelButton: 'my-swal-cancel-button2',
-                confirmButton: 'my-swal-confirm-button2',
-            }
-        });
-    }
-</script>
+        function enviarCurriculum(titulo, empresa) {
+            Swal.fire({
+                title: '¡Currículum enviado!',
+                text: 'Se ha enviado tu currículum para la vacante de ' + titulo + ' en ' + empresa + '.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                customClass: {
+                    container: 'my-swal-containe2',
+                    popup: 'my-swal-popup4',
+                    title: 'my-swal-title2',
+                    input: 'my-swal-input2',
+                    cancelButton: 'my-swal-cancel-button2',
+                    confirmButton: 'my-swal-confirm-button2',
+                }
+            });
+        }
+    </script>
 
 
         

@@ -1,0 +1,522 @@
+{% include  'includeEmpresaVC.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HUINIC | Cursos inscrito empresa</title>
+
+    
+    <!-- Luego incluye DataTables -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
+    <!-- Ventanas -->
+    <link href="{% static 'css/sweetalert2.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/sweetalert2Tres.css'%}" rel="stylesheet" type="text/css">
+
+    
+</head>
+
+<body>
+
+
+    <!-- Start Home -->
+    <section class="bg-default page-next-level" style="background: url({% static 'images/bg/bg-page.png'%}) center no-repeat;">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 mt-4">
+                            <div class="text-center">
+                                <h3 class="title-pager mb-0">Cursos inscrito @CUDE </h3>
+                            </div>
+                        </div>
+                        <!--end col-->
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </div>
+        </div>
+    </section>
+    <!--end section-->
+    <!-- End Home -->
+
+
+    <!-- START -->
+    <section class="section-25">
+        <div class="container">
+
+            <h4 class="text-center">Cursos en proceso </h4>
+            
+            <div class="row" >
+                <table id="TablaCursos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                    <thead class="border-top border-bottom bg-light-subtle border-light">
+                        <tr>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Formato</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Automatización de procesos en mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                4 semanas
+                            </td>
+                            <td class="centrar">
+                                1000
+                            </td>
+                            <td class="centrar">
+                                En solicitud
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="verCurso('{{ empleado.fkUsuario.idUsuario }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actualización de mecanica
+                            </td>
+                            <td class="centrar">
+                                En linea
+                            </td>
+                            <td class="centrar">
+                                5 semanas
+                            </td>
+                            <td class="centrar">
+                                400
+                            </td>
+                            <td class="centrar">
+                                En curso
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="verCurso('{{ empleado.fkUsuario.idUsuario }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Elimacion de procesos en mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                7 semanas
+                            </td>
+                            <td class="centrar">
+                                6789
+                            </td>
+                            <td class="centrar">
+                                En curso
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="verCurso('{{ empleado.fkUsuario.idUsuario }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Automatización de mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                7 semanas
+                            </td>
+                            <td class="centrar">
+                                6543
+                            </td>
+                            <td class="centrar">
+                                En evaluación
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" onclick="verCurso('{{ empleado.fkUsuario.idUsuario }}')">
+                                    Ver 
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- END -->
+
+    <!-- START -->
+    <section class="section-50">
+        <div class="container">
+
+            <h4 class="text-center">Cursos concluidos</h4>
+            
+            <div class="row" >
+                <table id="TablaCursosConcluidos" class="hover table table-sm table-centered table-hover table-borderless mb-0" >
+                    <thead class="border-top border-bottom bg-light-subtle border-light">
+                        <tr>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Formato</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Certificado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Automatización de procesos en mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                4 semanas
+                            </td>
+                            <td class="centrar">
+                                1000
+                            </td >
+                            <td class="centrar">
+                                Concluido
+                            </td>
+                            <td class="centrar">
+                                <button id="downloadBtn" class="btn btn-primary mt-2" disabled>
+                                    Descargar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actualización de mecanica
+                            </td>
+                            <td class="centrar">
+                                En linea
+                            </td>
+                            <td class="centrar">
+                                5 semanas
+                            </td>
+                            <td class="centrar">
+                                400
+                            </td>
+                            <td class="centrar">
+                                Concluido
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Descargar 
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Elimacion de procesos en mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                7 semanas
+                            </td>
+                            <td class="centrar">
+                                6789
+                            </td>
+                            <td class="centrar">
+                                Concluido
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Descargar 
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Automatización de mecanica basica
+                            </td>
+                            <td class="centrar">
+                                Presencial
+                            </td>
+                            <td class="centrar">
+                                7 semanas
+                            </td>
+                            <td class="centrar">
+                                6543
+                            </td>
+                            <td class="centrar">
+                                Concluido
+                            </td>
+                            <td class="centrar">
+                                <a href="#" class="btn btn-primary  mt-2" >
+                                    Descargar 
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- END -->
+
+    <!-- Footer End -->
+    {% include  'includeFooter.html' %}
+    <!-- Footer End -->
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    
+
+    <script>
+        $(document).ready(function () {
+        $('#TablaCursos').DataTable({
+            lengthMenu: [5, 10, 15],
+            pageLength: 5,
+            destroy:true,
+            "language": {
+                lengthMenu: "Mostrar _MENU_ registros por página",
+                zeroRecords: "Ningúna postulación encontrada",
+                info: "Mostrando _END_ de _MAX_ postulaciones",
+                infoEmpty: "Ningúna postulación encontrada",
+                infoFiltered: "",
+                search: "Buscar:",
+                loadingRecords: "Cargando... ",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
+            }
+        });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+        $('#TablaCursosConcluidos').DataTable({
+            lengthMenu: [5, 10, 15],
+            pageLength: 5,
+            destroy:true,
+            "language": {
+                lengthMenu: "Mostrar _MENU_ registros por página",
+                zeroRecords: "Ningúna postulación encontrada",
+                info: "Mostrando _END_ de _MAX_ postulaciones",
+                infoEmpty: "Ningúna postulación encontrada",
+                infoFiltered: "",
+                search: "Buscar:",
+                loadingRecords: "Cargando... ",
+                paginate: {
+                    first: "Primero",
+                    last: "Último",
+                    next: "Siguiente",
+                    previous: "Anterior"
+                }
+            }
+        });
+        });
+    </script>
+
+    <!-- Script de editar datos-->
+    <script>
+        function verCurso(claveEmpleado) {
+            Swal.fire({
+                title: 'Información de curso',
+                html:
+                `<div class="my-swal-label-container">` +
+                        '<div class="row">' +
+                            '<div class="col-7">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Curso</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato "> Mecanico de Motores en autos de disel</span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' +
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Nivel</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato "> Principiante </span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-2 ">' +
+                                `<li class="my-swal-list-item "><span class="my-swal-label ">Modalidad</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato "> En linea </span>` +
+                                    `</div>` +    
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Horas</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">500 horas</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">$300 MXN</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Descuento</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">$100 MXN</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-3">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Precio final</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">$200 MXN</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-3 ">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Vehiculo</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class="etiquetaDato ">Automovil</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                            '<div class="col-4">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Area</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class="etiquetaDato ">Auto de gasolina</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                            '<div class="col-5">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label ">Sistema</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class="etiquetaDato ">Sistema de frenos</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Habilidad 1</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class="etiquetaDato ">Conocer los diferentes medios de comunicación</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Habilidad 2</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Aprender a usar herramientas de informatica</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<li class="my-swal-list-item"><span class="my-swal-label">Habilidad 3</span>` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Implementar conocimientos de informatica en la vida</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' +   
+                        '</div>' +
+                        '<p></p>' +
+                        '<div class="row">' +
+                            '<div class="col-12">' +
+                                `<span class="my-swal-label centrar">Acerca del curso</span>` +
+                                `<li class="my-swal-list-item">` +
+                                    `<div class="my-swal-input-container">` +
+                                        `<span class=etiquetaDato ">Curso de marketing digital en sistemas de informacion con el proposito de crear medios que ayuden a la actualizacion informactica en la meta de innovación</span>` +
+                                    `</div>` +  
+                                `</li>` +
+                            '</div>' + 
+                        '</div>' +
+                        '<p></p>' +
+                    `</div>`,
+                focusConfirm: false,
+                showCancelButton: false,
+                showConfirmButton: false,
+                showCloseButton: true,
+                allowOutsideClick: false,
+                customClass: {
+                    container: 'my-swal-container2',
+                    popup: 'my-swal-popup2',
+                    title: 'my-swal-title2',
+                    input: 'my-swal-input2',
+                    cancelButton: 'my-swal-cancel-button2',
+                    confirmButton: 'my-swal-confirm-button2',
+                }, 
+                preConfirm: () => {
+                    const claveEmpleado = Swal.getPopup().querySelector('#claveEmpleado').value;
+
+                    return fetch('{% url 'cursosInscritoEmpresa' %}', {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': getCookie('csrftoken')
+                            },
+                            body: JSON.stringify({
+                                claveEmpleado: claveEmpleado,
+
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                            if (data.error) {
+                                Swal.showValidationMessage(`Error: ${data.error}`);
+                            } else {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: data.message,
+                                }).then(() => {
+                                        location.reload();
+                                });
+                            }
+                        });
+                }
+            });
+        }
+
+        function getCookie(name) {
+            const cookieValue = document.cookie
+                .split('; ')
+                .find(row => row.startsWith(name + '='))
+                ?.split('=')[1];
+            return cookieValue ? decodeURIComponent(cookieValue) : null;
+        }
+    </script>
+    <!-- Script de editar datos-->
+
+
+</body>
+
+
+</html>

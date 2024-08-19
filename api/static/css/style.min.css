@@ -43,6 +43,10 @@
     height: 70px;
 }
 
+.colorNombre{
+    color: #ff6443;
+}
+
 .image-container img {
     width: 100%;
     height: 100%;

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
+from django.http import HttpResponse, JsonResponse
+from django.urls import reverse
 # Create your views here.
 from django.core.paginator import Paginator
 
@@ -8,6 +10,32 @@ class login(APIView):
     template_name= "login.html"
     def get(self,request):
         return render(request,self.template_name)
+   
+    def post(self,request):
+        correo = request.POST.get('correo').strip()
+        password = request.POST.get('password').strip()
+        if correo == 'julian.romero@outlook.com' and password == '5PG1azVR':
+            # Generar la URL completa
+            redirect_url = request.build_absolute_uri(reverse('homeCandidato'))
+            return JsonResponse({'success': True, 'redirect_url': redirect_url})
+        elif correo == 'noemi.hernandez@gmail.com' and password == 'i4xjkeQ4':
+            # Generar la URL completa
+            redirect_url = request.build_absolute_uri(reverse('homeCapacitador'))
+            return JsonResponse({'success': True, 'redirect_url': redirect_url})
+        elif correo == 'correo@autotechmanufacturing.com' and password == 'zs0xENQ1':
+            # Generar la URL completa
+            redirect_url = request.build_absolute_uri(reverse('homeEmpresa'))
+            return JsonResponse({'success': True, 'redirect_url': redirect_url})
+        elif correo == 'rh@partsandmore.com' and password == 'NxDdD4ON':
+            # Generar la URL completa
+            redirect_url = request.build_absolute_uri(reverse('homeEmpresaCursos'))
+            return JsonResponse({'success': True, 'redirect_url': redirect_url})
+        elif correo == 'careers@autotechsolutions.com' and password == 'nDhchExY':
+            # Generar la URL completa
+            redirect_url = request.build_absolute_uri(reverse('homeEmpresaVC'))
+            return JsonResponse({'success': True, 'redirect_url': redirect_url})
+        else:
+            return JsonResponse({'success': False, 'message': 'Correo y/o contraseña incorrectos.'})
     
 class homeEmpresaVC(APIView):
     template_name= "homeEmpresaVC.html"
@@ -16,6 +44,87 @@ class homeEmpresaVC(APIView):
     
 class capacitadorRegistroVC(APIView):
     template_name= "capacitadorRegistroVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class perfilEmpresaCurso(APIView):
+    template_name= "perfilEmpresaCurso.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class postulacionesEmpresaVC(APIView):
+    template_name= "postulacionesEmpresaVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class cursosEmpresaVC(APIView):
+    template_name= "cursosEmpresaVC.html"
+    def get(self, request):
+        # Simulación de cursos como una lista de diccionarios
+        cursos = [
+            {'nombre': 'Motores de inyección', 'imagen': 'images/1.jpg'},
+            {'nombre': 'Tuning de motos', 'imagen': 'images/4.jpg'},
+            {'nombre': 'Motos general', 'imagen': 'images/3.jpg'},
+            {'nombre': 'Motores de inyección', 'imagen': 'images/1.jpg'},
+            {'nombre': 'Tuning de motos', 'imagen': 'images/4.jpg'},
+            {'nombre': 'Motos general', 'imagen': 'images/3.jpg'},
+            {'nombre': 'Curso 7', 'imagen': 'images/1.jpg'},
+            {'nombre': 'Curso 8', 'imagen': 'images/4.jpg'},
+            {'nombre': 'Curso 9', 'imagen': 'images/3.jpg'},
+            # Añade más cursos si es necesario
+        ]
+
+        # Paginación: mostrar 6 cursos por página
+        paginator = Paginator(cursos, 6)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
+        # Pasar la página de objetos al template
+        return render(request, self.template_name, {'page_obj': page_obj})
+    
+class listaCapacitadoresVC(APIView):
+    template_name= "listaCapacitadoresVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class solicitudesCursoVC(APIView):
+    template_name= "solicitudesCursoVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+    
+class perfilEmpresaVC(APIView):
+    template_name= "perfilEmpresaVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class formularioCursoVC(APIView):
+    template_name= "formularioCursoVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class editarFormularioCursoVC(APIView):
+    template_name= "editarFormularioCursoVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class cursosListaEmpresaVC(APIView):
+    template_name= "cursosListaEmpresaVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class cursosInscritoEmpresaVC(APIView):
+    template_name= "cursosInscritoEmpresaVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class detallesCursoEmpresaVC(APIView):
+    template_name= "detallesCursoEmpresaVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class solicitudEmpresaVC(APIView):
+    template_name= "solicitudEmpresaVC.html"
     def get(self,request):
         return render(request,self.template_name)
     

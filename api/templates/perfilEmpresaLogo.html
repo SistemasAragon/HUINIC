@@ -63,7 +63,8 @@
             </div>  
         </div>  
     </div>       
-        
+
+
     <!-- otraprueba -->
     <section class="section-50">
         <div class="container">
@@ -71,44 +72,46 @@
                 <!-- Search Results Section -->
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="search-results">
-                        <h2>Resultados de búsqueda: Área de Frenos</h2>
+                        <h3>Resultado de vacantes CUDE</h3>
                         <div class="vacante-item" onclick="mostrarDescripcion(
-                            'Mecánico de Frenos', 
-                            'Empresa A', 
-                            'Ciudad A', 
+                            'Mecánico de Frenos en Automovil', 
+                            'CUDE', 
+                            'Ciudad de México, Gustavo Madero', 
                             '$12,000.00', 
                             'Somos una empresa que se especializa en el mantenimiento y reparación de sistemas de frenos para vehículos. Buscamos un mecánico experimentado que se una a nuestro equipo. Requisitos: Experiencia previa en sistemas de frenos, capacidad para diagnosticar y reparar problemas de frenos, y conocimientos básicos de mecánica automotriz.',
-                            '{% static "images/testi/mazda.png" %}'
+                            '{% static "images/cude.png" %} '
                         )">
-                            <h3>Mecánico de Frenos</h3>
-                            <p>Empresa: Empresa A</p>
-                            <p>Ubicación: Ciudad A</p>
+                            <h4>Mecánico de Frenos en Automovil</h4>
+                            <p>Empresa: CUDE</p>
+                            <p>Ubicación: Ciudad de México, Gustavo Madero</p>
                             <p>Sueldo: $12,000.00</p>
                         </div>
+                            {% comment %} El evento y los valores a mandar  {% endcomment %}
                         <div class="vacante-item" onclick="mostrarDescripcion(
-                            'Técnico en Frenos', 
-                            'Empresa B', 
-                            'Ciudad B', 
-                            'No especificado', 
-                            'Buscamos un técnico en frenos con al menos 3 años de experiencia. El candidato ideal deberá ser capaz de realizar mantenimientos preventivos y correctivos en sistemas de frenos, así como manejar herramientas y equipos de diagnóstico.',
-                            '{% static "images/testi/honda.png" %}'
+                            'Administrador de Inventario en Refacciones', 
+                            'CUDE', 
+                            'EDOMEX, Los reyes', 
+                            '$15,000.00', 
+                            'Buscamos un administrador de inventario con uso de programas. El candidato ideal deberá ser capaz de usar programas informaticos para la administracion.',
+                            '{% static "images/cude.png" %}'
                         )">
-                            <h3>Técnico en Frenos</h3>
-                            <p>Empresa: Empresa B</p>
-                            <p>Ubicación: Ciudad B</p>
-                            <p>Sueldo: No especificado</p>
+                            {% comment %} Lo siempre visible para seleccionar {% endcomment %}
+                            <h4>Administrador de Inventario en Refacciones</h4>
+                            <p>Empresa: CUDE</p>
+                            <p>Ubicación: EDOMEX, Los reyes</p>
+                            <p>Sueldo: $15,000.00</p>
                         </div>
                         <div class="vacante-item" onclick="mostrarDescripcion(
                             'Especialista en Frenos', 
-                            'Empresa C', 
-                            'Ciudad C', 
+                            'CUDE ', 
+                            'CDMX, Gustavo Madero', 
                             '$15,000.00', 
                             'Estamos en busca de un especialista en frenos para unirse a nuestro equipo. La posición requiere una sólida comprensión de los sistemas de frenos hidráulicos y electrónicos, y la capacidad para realizar diagnósticos y reparaciones complejas.',
-                            '{% static "images/testi/chevrolet.png" %}'
+                            '{% static "images/cude.png" %}'
                         )">
-                            <h3>Especialista en Frenos</h3>
-                            <p>Empresa: Empresa C</p>
-                            <p>Ubicación: Ciudad C</p>
+                            <h4>Especialista en Frenos</h4>
+                            <p>Empresa: CUDE </p>
+                            <p>Ubicación: CDMX, Gustavo Madero</p>
                             <p>Sueldo: $15,000.00</p>
                         </div>
                         <!-- Añadir más vacantes aquí -->
@@ -116,9 +119,9 @@
                 </div>
                 <!-- Vacante Description Section -->
                 <div class="col-lg-6 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                    <div class="sidebar p-4 rounded bg-light ms-lg-3">
+                    <div class="sidebar rounded bg-light ms-lg-3">
                         <div class="vacantes">
-                            <h2>Descripción de la Vacante</h2>
+                            <h4>Descripción de la Vacante</h4>
                             <div id="vacante-descripcion" class="vacante-descripcion">
                                 Selecciona una vacante para ver su descripción completa.
                             </div>
@@ -130,31 +133,45 @@
         <!-- end container -->
     </section>
     <!-- otraprueba -->
-<!-- otraprueba -->
 
-<script>
-    function mostrarDescripcion(titulo, empresa, ubicacion, sueldo, descripcion, logo) {
-        document.getElementById('vacante-descripcion').innerHTML = `
-            <div class="text-center">
-                <img src="${logo}" alt="Logo de ${empresa}" style="max-width: 100px; max-height: 100px;">
-            </div>
-            <h2>${titulo} / ${ubicacion}</h2>
-            <p><strong>${empresa}</strong></p>
-            <p>${ubicacion}</p>
-            <p><strong>Sueldo:</strong> ${sueldo}</p>
-            <div>${descripcion}</div>
-            <div class="row">
-                <div class="col-12 fs-6 mt-3 text-center">
-                    <button type="button" id="submit" name="send" class="btn btn-primary" onclick="enviarCurriculum('${titulo}', '${empresa}')">Postularme</button>
+    <script>
+        function mostrarDescripcion(titulo, empresa, ubicacion, sueldo, descripcion, logo) {
+            document.getElementById('vacante-descripcion').innerHTML = `
+                <div class="text-center">
+                    <a href="{% url 'perfilEmpresaLogo' %}">
+                        <img src="${logo}" alt="Logo de ${empresa}" style="max-width: 100px; max-height: 100px;">
+                    </a>
                 </div>
-            </div>
-        `;
-    }
-
-    function enviarCurriculum(titulo, empresa) {
-        alert('Se ha enviado tu currículum para la vacante de ' + titulo + ' en ' + empresa + '.');
-    }
-</script>
+                <h4>${titulo} / ${ubicacion}</h4>
+                <p><strong>${empresa}</strong></p>
+                <p>${ubicacion}</p>
+                <p><strong>Sueldo:</strong> ${sueldo}</p>
+                <div>${descripcion}</div>
+                <div class="row">
+                    <div class="col-12 fs-6 mt-3 text-center">
+                        <button type="button" id="submit" name="send" class="btn btn-primary" onclick="enviarCurriculum('${titulo}', '${empresa}')">Postularme</button>
+                    </div>
+                </div>
+            `;
+        }
+    
+        function enviarCurriculum(titulo, empresa) {
+            Swal.fire({
+                title: '¡Currículum enviado!',
+                text: 'Se ha enviado tu currículum para la vacante de ' + titulo + ' en ' + empresa + '.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                customClass: {
+                    container: 'my-swal-containe2',
+                    popup: 'my-swal-popup4',
+                    title: 'my-swal-title2',
+                    input: 'my-swal-input2',
+                    cancelButton: 'my-swal-cancel-button2',
+                    confirmButton: 'my-swal-confirm-button2',
+                }
+            });
+        }
+    </script>
         
     <!-- Footer End -->
     {% include  'includeFooter.html' %}
