@@ -1,7 +1,7 @@
 
     /* Estilo para el contenido de la modal */
     .my-swal-popup {
-        border: 2px solid #ff6600;
+        border: 2px solid #ced4da;
         border-radius: 10px;
         align-items: center;
         overflow: hidden;
@@ -13,7 +13,7 @@
 
     /* Estilo para el contenido de la modal */
     .my-swal-popup2 {
-    border: 2px solid #ff6600;
+    border: 2px solid #ced4da;
     border-radius: 10px;
     align-items: center;
     overflow: hidden;
@@ -24,7 +24,7 @@
     }
 
     .my-swal-popup3 {
-        border: 2px solid #ff6600;
+        border: 2px solid #ced4da;
         border-radius: 10px;
         align-items: center;
         overflow: hidden;
@@ -35,7 +35,7 @@
     }
 
     .my-swal-popup4 {
-        border: 2px solid #ff6600;
+        border: 2px solid #ced4da;
         border-radius: 10px;
         align-items: center;
         overflow: hidden;

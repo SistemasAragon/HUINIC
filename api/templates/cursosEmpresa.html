@@ -1,0 +1,242 @@
+{% include  'includeEmpresaCurso.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>HUINIC | Curso</title>
+</head>
+
+<body>
+
+    <!-- Start Home -->
+    <section class="bg-default page-next-level" style="background: url({% static 'images/bg/bg-page.png'%}) center no-repeat;">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 mt-4">
+                            <div class="text-center">
+                                <h3 class="title-pager mb-0">Mis cursos</h3>
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </div>
+        </div>
+    </section>
+    <!--end section-->
+    <!-- End Home -->
+
+    <!-- Inicio prueba de secciones -->
+    <section class="section-25">
+        <div class="container">
+            <h4 class="text-center">¿Que curso buscas?</h4>
+            <div class="custom-search-form  col-12  pt-2 d-flex justify-content-center bg-white">
+                <div class="row">
+                    <!-- Botón de búsqueda -->
+                    <form method="GET">
+                        <div class="row">
+                            <div class="col-6">
+                                <input style="width: 300px; " type="text" name="query" placeholder="Buscar curso..." class="form-control">
+                            </div>
+                            <div class="col-6">
+                                <button style=" margin-left: 80px;" type="submit" class="custom-btn rounded-pill btn-primary">Buscar</button>
+                            </div>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- fin prueba de secciones -->
+
+    <!-- otraprueba -->
+    {% comment %} <section class="section-25">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-4 col-sm-6 py-4 g-0">
+                    <div class="rounded service-two shadow m-2">
+                        <div class="p-4">
+                            <h5 class="serv-head">Curso: Motores de inyección</h5>
+                            <p class="text-muted mb-1">Vizualizacion curso</p>
+                        </div>
+                        <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/1.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                        
+                        <p></p>
+                        <div  class="centrar">
+                            <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+
+                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-4 col-sm-6 py-4 g-0">
+                    <div class="rounded service-two shadow m-2">
+                        <div class="p-4">
+                            <h5 class="serv-head">Curso: Tuning de motos</h5>
+                            <p class="text-muted mb-1">Vizualizacion curso</p>
+                        </div>
+                        <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/4.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                        <p></p>
+                        <div  class="centrar">
+                            <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+
+                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6 py-4 g-0">
+                    <div class="rounded service-two shadow m-2">
+                        <div class="p-4">
+                            <h5 class="serv-head">Curso: Motos general</h5>
+                            <p class="text-muted mb-1">Vizualizacion curso</p>
+                        </div>
+                        <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/3.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                        <p></p>
+                        <div  class="centrar">
+                            <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+
+                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 py-4 g-0">
+                    <div class="rounded service-two shadow m-2">
+                        <div class="p-4">
+                            <h5 class="serv-head">Curso: Motores de inyección</h5>
+                            <p class="text-muted mb-1">Vizualizacion curso</p>
+                        </div>
+                        <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/1.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                        <p></p>
+                        <div  class="centrar">
+                            <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+
+                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-4 col-sm-6 py-4 g-0">
+                    <div class="rounded service-two shadow m-2">
+                        <div class="p-4">
+                            <h5 class="serv-head">Curso: Tuning de motos</h5>
+                            <p class="text-muted mb-1">Vizualizacion curso</p>
+                        </div>
+                        <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/4.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                        <p></p>
+                        <div  class="centrar">
+                            <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+
+                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 py-4 g-0">
+                    <div class="rounded service-two shadow m-2">
+                        <div class="p-4">
+                            <h5 class="serv-head">Curso: Motores de inyección</h5>
+                            <p class="text-muted mb-1">Vizualizacion curso</p>
+                        </div>
+                        <img style="height: 181px;  width: 236px; border-radius: 8px;" src="{% static 'images/1.jpg'%}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                        <p></p>
+                        <div  class="centrar">
+                            <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+
+                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+    </section> {% endcomment %}
+    <!-- otraprueba -->
+    <section class="section-25">
+        <div class="container">
+            <div class="row">
+                {% for curso in page_obj %}
+                <div class="col-md-4 col-sm-6 py-4 g-0">
+                    <div class="rounded service-two shadow m-2">
+                        <div class="p-4">
+                            <h5 class="serv-head">Curso: {{ curso.nombre }}</h5>
+                            <p class="text-muted mb-1">Vizualizacion curso</p>
+                        </div>
+                        <img style="height: 181px; width: 236px; border-radius: 8px;" src="{% static curso.imagen %}" class="img-fluid rounded-bottom mx-auto d-block" alt="service-image">
+                        <p></p>
+                        <div  class="centrar">
+                            <a href="{% url 'editarFormularioCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Editar</a>
+
+                            <a href="{% url 'solicitudesCurso' %}" class="btn btn-info rounded-pill mb-3 me-2 align-center">Solicitudes</a>    
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    
+            <!-- Paginación -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a style="width: 70px;" class="page-link px-3 py-2" href="?page=1" aria-label="Primera">
+                                <span aria-hidden="true">&laquo;&laquo;</span>
+                                <span class="sr-only">Primera</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a style="width: 70px;" class="page-link px-3 py-2" href="?page={{ page_obj.previous_page_number }}" aria-label="Anterior">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                        </li>
+                    {% endif %}
+            
+                    
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a style="width: 70px;"  class="page-link px-3 py-2" href="?page={{ page_obj.next_page_number }}" aria-label="Siguiente">
+                                <span class="sr-only">Siguiente</span>
+                                <span aria-hidden="true">&raquo;</span>
+
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a style="width: 70px;" class="page-link px-3 py-2" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Última">
+                                <span class="sr-only">Última</span>
+                                <span aria-hidden="true">&raquo;&raquo;</span>
+
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    <li class="page-item disabled">
+                        <a style="width: 70px;" class="page-link px-3 py-2" href="#">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            
+        </div>
+    </section>
+    
+
+    <!-- Footer End -->
+    {% include  'includeFooter.html' %}
+    <!-- Footer End -->
+
+</body>
+
+
+</html>

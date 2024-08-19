@@ -94,13 +94,39 @@
 
             <div id="navigation">
                 <!-- Navigation Menu-->
-
                 <ul class="navigation-menu nav-light nav-right">
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Vacantes</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'postulacionesEmpresa' %}">Postulaciones</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'solicitudEmpresa' %}">Nueva Vacante</a> </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Cursos</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'cursosListaEmpresa' %}">Inscribir a curso</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'cursosInscritoEmpresa' %}">Cursos inscrito</a> </li>
+                        </ul>
+                    </li>
 
-                    <li><a href="{% url 'capacitadorRegistroVC' %}" class="sub-menu-item">Nuevo capacitador</a></li>
-                    <li><a href="{% url 'listaCapacitadores' %}" class="sub-menu-item">Capacitadores</a></li>
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a href="javascript:void(0)">Mis cursos</a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'listaCapacitadores' %}">Capacitadores</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'cursosEmpresa' %}">Mis cursos</a> </li>
+                            <li class="has-submenu parent-menu-item"><a href="{% url 'formularioCurso' %}">Nuevo Curso</a> </li>
+                        </ul>
+                    </li>
+
                     
                 </ul>
+
+                
+
+                
+        
                 <!--end navigation menu-->
             </div>
 

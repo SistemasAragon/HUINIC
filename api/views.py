@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 # Create your views here.
+from django.core.paginator import Paginator
 
 
 class login(APIView):
@@ -160,6 +161,42 @@ class postulacionesEmpresa(APIView):
     template_name= "postulacionesEmpresa.html"
     def get(self,request):
         return render(request,self.template_name)
+
+class perfilEmpresa(APIView):
+    template_name= "perfilEmpresa.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class solicitudesCursoCapacitador(APIView):
+    template_name= "solicitudesCursoCapacitador.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class cursosEmpresa(APIView):
+    template_name = "cursosEmpresa.html"
+
+    def get(self, request):
+        # Simulación de cursos como una lista de diccionarios
+        cursos = [
+            {'nombre': 'Motores de inyección', 'imagen': 'images/1.jpg'},
+            {'nombre': 'Tuning de motos', 'imagen': 'images/4.jpg'},
+            {'nombre': 'Motos general', 'imagen': 'images/3.jpg'},
+            {'nombre': 'Motores de inyección', 'imagen': 'images/1.jpg'},
+            {'nombre': 'Tuning de motos', 'imagen': 'images/4.jpg'},
+            {'nombre': 'Motos general', 'imagen': 'images/3.jpg'},
+            {'nombre': 'Curso 7', 'imagen': 'images/1.jpg'},
+            {'nombre': 'Curso 8', 'imagen': 'images/4.jpg'},
+            {'nombre': 'Curso 9', 'imagen': 'images/3.jpg'},
+            # Añade más cursos si es necesario
+        ]
+
+        # Paginación: mostrar 6 cursos por página
+        paginator = Paginator(cursos, 6)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
+        # Pasar la página de objetos al template
+        return render(request, self.template_name, {'page_obj': page_obj})
     
         
 class perfilEmpresaLogo(APIView):

@@ -1,11 +1,11 @@
-{% include  'includeCandidato.html' %}
+{% include  'includeEmpresa.html' %}
 {% load static%}
 <!DOCTYPE html>
 <html lang="en">
 
 
 <head>
-    <title>HUINIC | Habilidades Candidato</title>
+    <title>HUINIC | Perfil Empresa</title>
     
 </head>
 
@@ -19,8 +19,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">  Registra tus habilidades y conocimientos </h3>
-                                <h3 class="title-pager mb-0">  Recuerda que esto aparecera en tu perfil</h3>
+                                <h3 class="title-pager mb-0"> Mi perfil</h3>
                             </div>
                         </div>
                         <!--end col-->
@@ -61,7 +60,7 @@
                                                             
                                                             <li class="nav-item">
                                                                 <div class="image-container">
-                                                                    <img src="{% static 'images/home/home06.png'%}" alt="User Image">
+                                                                    <img src="{% static 'images/cude.png'%}" alt="User Image">
                                                                     <div class="edit-icon">
                                                                         <i class="mdi mdi-grease-pencil"></i> <!-- Usa Font Awesome para el ícono de edición -->
                                                                     </div>
@@ -71,20 +70,11 @@
                                                             <li class="nav-item mt-3">
                                                                 <a class="nav-link rounded shadow active" id="pills-buying-tab" data-bs-toggle="pill" href="#pills-buying" role="tab" aria-controls="pills-buying" aria-selected="false">
                                                                     <div class="text-start py-1 px-3">
-                                                                        <h6 class="mb-0">Datos Personales</h6>
+                                                                        <h6 class="mb-0">Datos Empresa</h6>
                                                                     </div>
                                                                 </a><!--end nav link-->
                                                                 
                                                             </li><!--end nav item-->
-                                                            
-                                                            <li class="nav-item mt-3">
-                                                                <a class="nav-link rounded shadow" id="pills-general-tab" data-bs-toggle="pill" href="#pills-general" role="tab" aria-controls="pills-general" aria-selected="false">
-                                                                    <div class="text-start py-1 px-3">
-                                                                        <h6 class="mb-0">Habilidades y conocimientos</h6>
-                                                                    </div>
-                                                                </a><!--end nav link-->
-                                                            </li><!--end nav item-->
-                                                            
                                                         </ul><!--end nav pills-->
                                                     </div>
                                                 </div>
@@ -93,7 +83,7 @@
                                                     <div class="tab-content" id="pills-tabContent">
                                                         <div class="tab-pane fade show active" id="pills-buying" role="tabpanel" aria-labelledby="pills-buying-tab">
                                                             <div class="section-title" id="tech">
-                                                                <h5>Datos Personales </h5>
+                                                                <h5>Datos Empresa </h5>
                                                             </div>
                                     
                                                             <div class="accordion mt-4 pt-2" id="buyingquestion">
@@ -287,139 +277,6 @@
                                                             </div>
                                                         </div><!--end teb pane-->
                                                         
-                                                        <div class="tab-pane fade" id="pills-general" role="tabpanel" aria-labelledby="pills-general-tab">
-                                                            <div class="section-title" id="general">
-                                                                <h5>Mi Curriculum</h5>
-                                                            </div>
-                                    
-                                                            <div class="accordion mt-4 pt-2" id="generalquestion">
-                                                                <div class="accordion-item rounded">
-                                                                    <h2 class="accordion-header" id="headingOne">
-                                                                        <button class="accordion-button border-0 bg-light" type="button"
-                                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                                            aria-expanded="true" aria-controls="collapseOne">
-                                                                            Habilidades
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOne" class="accordion-collapse border-0 collapse show"
-                                                                        aria-labelledby="headingOne" data-bs-parent="#generalquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            <label class="form-label fs-5 text-center">HABILIDADES <span class="text-danger"></span></label>
-                                                                            <div class="col-md-12 mt-3">
-                                                                                <label class="form-label fs-5">Selecciona hasta 5 habilidades <span class="text-danger">*</span></label>
-                                                                                <div class="form-icon position-relative">
-                                                                                    <div class="row">
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad1" name="habilidad" value="Trabajo en equipo" checked>
-                                                                                            <label for="habilidad1">Trabajo en equipo</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad2" name="habilidad" value="Comunicación efectiva">
-                                                                                            <label for="habilidad2">Comunicación efectiva</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row mt-2">
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad3" name="habilidad" value="Resolución de problemas" checked>
-                                                                                            <label for="habilidad3">Resolución de problemas</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad4" name="habilidad" value="Liderazgo" checked>
-                                                                                            <label for="habilidad4">Liderazgo</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row mt-2">
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad5" name="habilidad" value="Adaptabilidad" checked>
-                                                                                            <label for="habilidad5">Adaptabilidad</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad6" name="habilidad" value="Creatividad">
-                                                                                            <label for="habilidad6">Creatividad</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row mt-2">
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad7" name="habilidad" value="Pensamiento crítico" checked>
-                                                                                            <label for="habilidad7">Pensamiento crítico</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad8" name="habilidad" value="Gestión del tiempo">
-                                                                                            <label for="habilidad8">Gestión del tiempo</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row mt-2">
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad9" name="habilidad" value="Empatía">
-                                                                                            <label for="habilidad9">Empatía</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad10" name="habilidad" value="Capacidad de aprendizaje">
-                                                                                            <label for="habilidad10">Capacidad de aprendizaje</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row mt-2">
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad11" name="habilidad" value="Negociación">
-                                                                                            <label for="habilidad11">Negociación</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad12" name="habilidad" value="Toma de decisiones">
-                                                                                            <label for="habilidad12">Toma de decisiones</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row mt-2">
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad13" name="habilidad" value="Pensamiento analítico">
-                                                                                            <label for="habilidad13">Pensamiento analítico</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad14" name="habilidad" value="Autoconfianza">
-                                                                                            <label for="habilidad14">Autoconfianza</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row mt-2">
-                                                                                        <div class="col-md-6">
-                                                                                            <input type="checkbox" id="habilidad15" name="habilidad" value="Resiliencia">
-                                                                                            <label for="habilidad15">Resiliencia</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div id="mensaje-habilidades" class="mt-2" style="display: none;">
-                                                                                        <p class="text-danger">Ya has seleccionado las 5 habilidades. No puedes seleccionar más.</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                
-                                                                <!-- INICIO CONOCIMIENTOS -->
-                                                                <div class="accordion-item rounded mt-2">
-                                                                    <h2 class="accordion-header" id="headingTwo">
-                                                                        <button class="accordion-button border-0 bg-light collapsed"
-                                                                            type="button" data-bs-toggle="collapse"
-                                                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                                                            aria-controls="collapseTwo">
-                                                                            Conocimientos
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseTwo" class="accordion-collapse border-0 collapse"
-                                                                        aria-labelledby="headingTwo" data-bs-parent="#generalquestion">
-                                                                        <div class="accordion-body text-muted">
-                                                                            <form id="profileForm">
-                                                                                <div id="profileContainer">
-                                                                                </div>
-                                                                                <button type="button" class="btn btn-primary mt-3" onclick="addProfile()">Agregar Perfil</button>
-                                                                            </form>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- FIN CONOCIMIENTOS -->
-                                                                
-                                                            </div>
-                                                        </div><!--end teb pane-->
-                                
-                                                        
                                                     </div><!--end tab content-->
                                                 </div><!--end col-->
                                             </form>
@@ -564,145 +421,6 @@
             });
         });
     </script>
-
-    <!-- SCRIPT DE CONOCIMIENTOS -->
-    <script>
-        let profileCount = 0;
-    
-        function addProfile() {
-            profileCount++;
-            const profileContainer = document.getElementById('profileContainer');
-            const newProfile = document.createElement('div');
-            newProfile.classList.add('profile');
-            newProfile.innerHTML = `
-                <h5>Conocimiento ${profileCount}</h5>
-                <div class="form-group">
-                    <label for="firstSelect${profileCount}">Selecciona el vehiculo</label>
-                    <select id="firstSelect${profileCount}" class="form-control" onchange="handleFirstSelect(${profileCount})">
-                        <option value="">Selecciona una opción</option>
-                        <option value="auto">Automóvil</option>
-                        <option value="moto">Moto</option>
-                    </select>
-                </div>
-                <div class="form-group" id="secondSelectGroup${profileCount}" style="display:none;">
-                    <label for="secondSelect${profileCount}">Seleccione el area</label>
-                    <select id="secondSelect${profileCount}" class="form-control" onchange="handleSecondSelect(${profileCount})">
-                        <!-- Opciones serán agregadas por el script -->
-                    </select>
-                </div>
-                <div class="form-group" id="thirdSelectGroup${profileCount}" style="display:none;">
-                    <label for="thirdSelect${profileCount}">Seleccione el sistema</label>
-                    <select id="thirdSelect${profileCount}" class="form-control" onchange="handleThirdSelect(${profileCount})">
-                        <!-- Opciones serán agregadas por el script -->
-                    </select>
-                </div>
-                <div class="form-group" id="fourthSelectGroup${profileCount}" style="display:none;">
-                    <label for="fourthSelect${profileCount}">Seleccione el nivel</label>
-                    <select id="fourthSelect${profileCount}" class="form-control">
-                        <!-- Opciones serán agregadas por el script -->
-                    </select>
-                </div>
-            `;
-            profileContainer.appendChild(newProfile);
-        }
-    
-        function updateOptions(profileId, selectId, options) {
-            const selectElement = document.getElementById(selectId + profileId);
-            selectElement.innerHTML = '';
-            options.forEach(option => {
-                const opt = document.createElement('option');
-                opt.value = option.value;
-                opt.text = option.text;
-                selectElement.appendChild(opt);
-            });
-            selectElement.parentElement.style.display = 'block';
-        }
-    
-        function handleFirstSelect(profileId) {
-            const firstSelectValue = document.getElementById('firstSelect' + profileId).value;
-            if (firstSelectValue === 'auto') {
-                updateOptions(profileId, 'secondSelect', [
-                    { value: 'gasolina', text: 'Gasolina' },
-                    { value: 'diesel', text: 'Diesel' },
-                    { value: 'electrico', text: 'Eléctrico' }
-                ]);
-                document.getElementById('thirdSelectGroup' + profileId).style.display = 'none';
-                document.getElementById('fourthSelectGroup' + profileId).style.display = 'none';
-            } else if (firstSelectValue === 'moto') {
-                updateOptions(profileId, 'secondSelect', [
-                    { value: 'frenos', text: 'Frenos' },
-                    { value: 'motor', text: 'Motor' },
-                    { value: 'suspension', text: 'Suspensión' },
-                    { value: 'transmision', text: 'Transmisión' },
-                    { value: 'electricidad', text: 'Electricidad' }
-                ]);
-                document.getElementById('thirdSelectGroup' + profileId).style.display = 'none';
-                document.getElementById('fourthSelectGroup' + profileId).style.display = 'none';
-            } else {
-                document.getElementById('secondSelectGroup' + profileId).style.display = 'none';
-                document.getElementById('thirdSelectGroup' + profileId).style.display = 'none';
-                document.getElementById('fourthSelectGroup' + profileId).style.display = 'none';
-            }
-        }
-    
-        function handleSecondSelect(profileId) {
-            const secondSelectValue = document.getElementById('secondSelect' + profileId).value;
-            if (secondSelectValue === 'gasolina') {
-                updateOptions(profileId, 'thirdSelect', [
-                    { value: 'combustion_interna', text: 'Combustión Interna' },
-                    { value: 'inyeccion', text: 'Inyección' },
-                    { value: 'escape', text: 'Escape' },
-                    { value: 'enfriamiento', text: 'Enfriamiento' }
-                ]);
-            } else if (secondSelectValue === 'diesel') {
-                updateOptions(profileId, 'thirdSelect', [
-                    { value: 'combustion_interna', text: 'Combustión Interna' },
-                    { value: 'inyeccion', text: 'Inyección' },
-                    { value: 'turbo', text: 'Turbo' },
-                    { value: 'filtro_particulas', text: 'Filtro de Partículas' }
-                ]);
-            } else if (secondSelectValue === 'electrico') {
-                updateOptions(profileId, 'thirdSelect', [
-                    { value: 'baterias', text: 'Baterías' },
-                    { value: 'motor_electrico', text: 'Motor Eléctrico' },
-                    { value: 'sistema_recarga', text: 'Sistema de Recarga' },
-                    { value: 'controlador', text: 'Controlador' }
-                ]);
-            } else if (secondSelectValue === 'frenos' || secondSelectValue === 'motor' || secondSelectValue === 'suspension' || secondSelectValue === 'transmision' || secondSelectValue === 'electricidad') {
-                updateOptions(profileId, 'thirdSelect', [
-                    { value: 'opcion1', text: 'Aprendiz' },
-                    { value: 'opcion2', text: 'Intermedio' },
-                    { value: 'opcion3', text: 'Avanzado' },
-                    { value: 'opcion4', text: 'Desarrollador' }
-                ]);
-            } else {
-                document.getElementById('thirdSelectGroup' + profileId).style.display = 'none';
-            }
-        }
-    
-        function handleThirdSelect(profileId) {
-            const thirdSelectValue = document.getElementById('thirdSelect' + profileId).value;
-            if (thirdSelectValue) {
-                updateOptions(profileId, 'thirdSelect', [
-                    { value: 'opcion1', text: 'Aprendiz' },
-                    { value: 'opcion2', text: 'Intermedio' },
-                    { value: 'opcion3', text: 'Avanzado' },
-                    { value: 'opcion4', text: 'Desarrollador' }
-                ]);
-            } else {
-                document.getElementById('fourthSelectGroup' + profileId).style.display = 'none';
-            }
-        }
-    
-        
-        window.onload = function() {
-            addProfile();
-        }
-    </script>
-    <!-- FIN SCRIPT DE CONOCIMIENTOS -->
-    
-    <!--end section-->
-    <!-- End Section -->
 
 
     <!-- Footer End -->

@@ -72,7 +72,7 @@
                         <!--INICIO DE USUARIO-->
                         <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <div style="display: flex; align-items: center;">
-                                <img src="{% static 'images/home/home06.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
+                                <img src="{% static 'images/cude.png'%}" alt="user-image" width="32" class="rounded-circle" style="margin-right: 20px;">
                                 <div>
                                     <h7 class="my-0">CUDE </h7>
                                     <h6 class="my-0 fw-normal menu-arrow">Empresa</h6>
@@ -85,6 +85,10 @@
                                 <h6 class="text-overflow m-0">¡Bienvenido!</h6>
                             </div>
                             <!-- item-->
+                            <a href="{% url 'perfilEmpresa' %}" class="dropdown-item">
+                                <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
+                                <span>Mi perfil</span>
+                            </a>
                             
                             <a href="{% url 'homeGeneral' %}" class="dropdown-item">
                                 <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
@@ -99,7 +103,6 @@
                 <div id="navigation">
                     <!-- Navigation Menu-->
                     <ul class="navigation-menu nav-light nav-right">
-                        <li><a href="{% url 'homeEmpresa' %}" class="sub-menu-item">Inicio</a></li>
                         <li><a href="{% url 'postulacionesEmpresa' %}" class="sub-menu-item">Postulaciones</a></li>
                         <li><a href="{% url 'solicitudEmpresa' %}" class="sub-menu-item">Nueva Vacante</a></li>
 

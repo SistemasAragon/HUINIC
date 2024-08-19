@@ -34,25 +34,23 @@
     <!-- End Home -->
 
 
-    <!-- START -->
-    <section class="section">
+     <!-- START -->
+     <section class="section-50">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-12">
+                <div class="col-lg-6 col-md-6 col-12">
                     <div class="row">
                         <div class="col-12">
                             <div class="service-detail">
+                                
                                 <div class="img">
-                                    <img src="{% static 'images/1.jpg'%}" class="img-fluid mx-auto rounded d-block" alt="">
+                                    <img style="height:200px; width: 350px;" src="{% static 'images/1.jpg'%}" class="img-fluid mx-auto rounded d-block" alt="">
                                 </div>
                                 <div class="content mt-4">
                                     <h5 class="title pb-3 border-bottom">Acerca de:</h5>
                                     <p class="text-muted">Curso de marketing digital en sistemas de informacion con el 
                                         proposito de crear medios que ayuden a la actualizacion informactica en la 
                                         meta de innovación </p>
-                                    <blockquote class="blockquote">
-                                        <p class="text-muted mb-0">" No solo se trata de aprender, se trata de saber vender "</p>
-                                    </blockquote>
                                 </div>
                                 <!--end row-->
                             </div>
@@ -60,22 +58,40 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div class="col-lg-6 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                     <div class="sidebar p-4 rounded bg-light ms-lg-3">
-                        <!-- RELATED SERVICES -->
-                        <div class="widget mb-4">
+
+                        <div class="row">
                             <h5 class="pb-2 widget-title border-bottom">Caracteristicas</h5>
-                            <ul class="list-unstyled mt-4 mb-0 catagories">
-                                <li> <i class="mdi mdi-arrow-right me-1 fs-6">Precio: 15 pesos</i></li>
-                                <li> <i class="mdi mdi-arrow-right me-1 fs-6">Duración: 10 dias</i></li>
-                                <li> <i class="mdi mdi-arrow-right me-1 fs-6">Formato: En linea</i></li>
-                            </ul>
                         </div>
-                        <!-- RELATED SERVICES -->
+
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- RELATED SERVICES -->
+                                <div class="widget mb-4">
+                                    <ul class="list-unstyled mt-2 mb-0 catagories">
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Duracion: 34 horas</i></li>
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Nivel: Desarrollador</i></li>
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Modalidad: En linea</i></li>
+                                    </ul>
+                                </div>
+                                <!-- RELATED SERVICES -->
+                            </div>
+                            <div class="col-6">
+                                <!-- RELATED SERVICES -->
+                                <div class="widget mb-4">
+                                    <ul class="list-unstyled mt-2 mb-0 catagories">
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Costo: $450 MXN</i></li>
+                                        <li> <i class="mdi mdi-arrow-right me-1 fs-6">Capacitador: Victor Patiño Mejia</i></li>
+                                    </ul>
+                                </div>
+                                <!-- RELATED SERVICES -->
+                            </div>
+                        </div>
 
 
                         <!-- SLIDER -->
-                        <div class="widget mb-4">
+                        <div class="widget ">
                             <h5 class="pb-2 widget-title border-bottom">Calificaciones clientes</h5>
                             <div class="tiny-single-item">
                                 <div class="tiny-slide text-center testimonial mt-2">
@@ -97,11 +113,10 @@
                             <div class="widget">
                                 <div class="newsletter-spacingbox mt-4 mb-0">
                                     <form>
-                                        <a href="#" class="btn btn-primary w-100 mt-2" onclick="mostrarAlerta()">Solicitar</a>
+                                        <a href="#" class="btn btn-primary w-100 mt-2" id="solicitar-btn">Solicitar</a>
                                     </form>
                                 </div>
                             </div>
-                            
                             <!-- NEWSLETTER -->
                         </div>
                     </div>
@@ -111,7 +126,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="service-detail">
-                                <h5 class="mt-5 pb-3 border-bottom">Objetivos</h5>
+                                <h5 class="mt-3 pb-3 border-bottom">Habilidades a aprender</h5>
                             </div>
                         </div>
                     </div>
@@ -126,7 +141,7 @@
                                 class="mdi mdi-star-outline h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
                         </div>
                         <div class="content">
-                            <h5 class="text-dark mt-2">Objetivo 1 </h5>
+                            <h5 class="text-dark mt-2">Habilidad 1 </h5>
                             <p class="text-muted mt-2"> Dar a conocer los diferentes
                                 medios de comunicación
                             </p>
@@ -142,9 +157,8 @@
                                 class="mdi mdi-dna h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
                         </div>
                         <div class="content">
-                            <h5 class="text-dark mt-2">Objetivo 2</h5>
+                            <h5 class="text-dark mt-2">Habilidad 2</h5>
                             <p class="text-muted mt-2"> Enseñar a usar herramientas de informatica</p>
-                            <!-- <div class="read-more fs-6 mt-2"><a href="#" class="text-dark"> Read More</a></div> -->
                         </div>
                     </div>
                 </div>
@@ -156,11 +170,10 @@
                                 class="mdi mdi-atom h4 text-center justify-content-center align-items-center d-flex mx-auto rounded-circle"></i>
                         </div>
                         <div class="content">
-                            <h5 class="text-dark mt-2"> Objetivo 3</h5>
+                            <h5 class="text-dark mt-2"> Habilidad 3</h5>
                             <p class="text-muted mt-2"> Implementar conocimientos de informatica 
                                 en la vida
                             </p>
-                            <!-- <div class="read-more mt-2 fs-6"><a href="#" class="text-dark"> Read More</a></div> -->
                         </div>
                     </div>
                 </div>
@@ -168,19 +181,20 @@
         </div>
         <!-- end container -->
     </section>
+    <!-- END -->
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    function mostrarAlerta() {
-        Swal.fire({
-            title: '¡Gracias!',
-            text: 'Hemos enviado tu solicitud.',
-            icon: 'success',
-            confirmButtonText: 'Aceptar',
-            confirmButtonColor: '#ff9034'
-        });
-    }
-</script>
+    <script>
+        function mostrarAlerta() {
+            Swal.fire({
+                title: '¡Gracias!',
+                text: 'Hemos enviado tu solicitud.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#ff9034'
+            });
+        }
+    </script>
 
     <!-- END -->
 
