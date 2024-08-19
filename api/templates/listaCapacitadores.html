@@ -247,9 +247,10 @@
                         '</div>' +
                     `</div>`,
                 focusConfirm: false,
-                showCancelButton: false,
-                showConfirmButton: true,
+                showCancelButton: true,
+                showConfirmButton: false,
                 showCloseButton: true,
+                cancelButtonText: 'Aceptar',
                 confirmButtonText: 'Aceptar',
                 allowOutsideClick: false,
                 customClass: {
@@ -257,7 +258,7 @@
                     popup: 'my-swal-popup2',
                     title: 'my-swal-title2',
                     input: 'my-swal-input2',
-                    cancelButton: 'my-swal-cancel-button2',
+                    cancelButton: 'my-swal-confirm-button2',
                     confirmButton: 'my-swal-confirm-button2',
                 }, 
                 preConfirm: () => {
