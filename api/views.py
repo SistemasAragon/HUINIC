@@ -251,8 +251,8 @@ class homeCapacitador(APIView):
     def get(self,request):
         return render(request,self.template_name)
 
-class homeGeneral(APIView):
-    template_name= "homeGeneral.html"
+class HomeGeneral(APIView):
+    template_name= "HomeGeneral.html"
     def get(self,request):
         return render(request,self.template_name)
 
