@@ -5,7 +5,7 @@
 
 
 <head>
-    <title>HUINIC | Postulaciones empresa</title>
+    <title>HUINIC | Residencias empresa</title>
 
     
     <!-- Luego incluye DataTables -->
@@ -30,7 +30,7 @@
                     <div class="row align-items-center">
                         <div class="col-12 mt-4">
                             <div class="text-center">
-                                <h3 class="title-pager mb-0">Postulaciones HUINIC </h3>
+                                <h3 class="title-pager mb-0">Residencias HUINIC </h3>
                             </div>
                         </div>
                         <!--end col-->
@@ -75,9 +75,9 @@
                                 </a>
                                 <a href="javascript:void(0);" onclick="mostrarTablaCandidatos()" class="btn btn-primary mt-2">Soli</a>
 
-                                <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
+                                {% comment %} <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
-                                </a>
+                                </a> {% endcomment %}
                             </td>
                         </tr>
                         <tr>
@@ -93,9 +93,9 @@
                                 </a>
                                 <a href="javascript:void(0);" onclick="mostrarTablaCandidatos()" class="btn btn-primary mt-2">Soli</a>
 
-                                <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
+                                {% comment %} <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
-                                </a>
+                                </a> {% endcomment %}
                             </td>
                         </tr>
                         <tr>
@@ -111,9 +111,9 @@
                                 </a>
                                 <a href="javascript:void(0);" onclick="mostrarTablaCandidatos()" class="btn btn-primary mt-2">Soli</a>
 
-                                <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
+                                {% comment %} <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
-                                </a>
+                                </a> {% endcomment %}
                             </td>
                         </tr>
                         <tr>
@@ -129,9 +129,9 @@
                                     Editar 
                                 </a>
                                 <a href="javascript:void(0);" onclick="mostrarTablaCandidatos()" class="btn btn-primary mt-2">Soli</a>
-                                <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
+                                {% comment %} <a onclick="mostrarResultados()" class="btn btn-primary mt-2">
                                     Mejores 
-                                </a>
+                                </a> {% endcomment %}
                             </td>
                         </tr>
                     </tbody>
@@ -269,7 +269,7 @@
     <script>
         function editarPostulacion() {
             Swal.fire({
-                title: 'Información de postulación',
+                title: 'Información de residencia',
                 html:
                 `<div class="my-swal-label-container">` +
                         '<div class="row">' +
@@ -581,7 +581,7 @@
     </script>
 
     <!-- Script de resultados-->
-    <script>
+    {% comment %} <script>
         function mostrarResultados() {
             Swal.fire({
                 title: 'Vacantes de gerente en ingeniería mecatronica',
@@ -660,7 +660,7 @@
                 },
             });
         }
-    </script>
+    </script> {% endcomment %}
 
 
 

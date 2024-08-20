@@ -10,7 +10,7 @@ class login(APIView):
     template_name= "login.html"
     def get(self,request):
         return render(request,self.template_name)
-   
+    
     def post(self,request):
         correo = request.POST.get('correo').strip()
         password = request.POST.get('password').strip()
@@ -54,6 +54,16 @@ class perfilEmpresaCurso(APIView):
     
 class postulacionesEmpresaVC(APIView):
     template_name= "postulacionesEmpresaVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class residenciasEmpresaVC(APIView):
+    template_name= "residenciasEmpresaVC.html"
+    def get(self,request):
+        return render(request,self.template_name)
+    
+class residenciasEmpresa(APIView):
+    template_name= "residenciasEmpresa.html"
     def get(self,request):
         return render(request,self.template_name)
     
